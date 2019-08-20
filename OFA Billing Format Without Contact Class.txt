@@ -1,0 +1,795 @@
+public class OFA_Billing_Format_Without_Contact {
+    
+    public Billing__c ibl = new Billing__c();
+    public Billing__c getibl(){ return ibl;}
+    public List<Billing__c> lstbill = new List<Billing__c>();
+    public Billing_Line_Item__c ibli = new Billing_Line_Item__c();
+    public Billing_Line_Item__c getibli(){ return ibli;}
+    public List<Billing_Line_Item__c> lstblli = new List<Billing_Line_Item__c>();
+    public List<Billing_Line_Item__c> getlstblli(){ return lstblli; }
+    
+    public List<OFA_Product_Line_Items__c> lstofa = new List<OFA_Product_Line_Items__c>();
+    public List<OFA_Product_Line_Items__c> getlstofa(){ return lstofa; }
+    
+    public List<Mandate_Line_Item__c> lstmlli = new List<Mandate_Line_Item__c>();
+    public List<Mandate_Line_Item__c> getlstmlli(){ return lstmlli; }
+    public List<Milestone__c> lstmlsli = new List<Milestone__c>();
+    public List<Milestone__c> getlstmlsli(){ return lstmlsli; }
+    public set<String> setCostCentre = new set<String>();
+    public String strHSN { get; set; }
+    public Map<String, Mandate_Line_Item__c> mapmanLineItems = new Map<String, Mandate_Line_Item__c>();
+    public Map<String, Product2> Prodmap = new Map<String, Product2>();
+    public List<Mandate_Product_Line_Item__c> lstmpli = new List<Mandate_Product_Line_Item__c>();
+    public List<Mandate_Product_Line_Item__c> getlstmpli(){ return lstmpli;}
+    public Map<String,List<Mandate_Product_Line_Item__c>> mapoop = new Map<String,List<Mandate_Product_Line_Item__c>>();
+    public Map<String,List<Mandate_Product_Line_Item__c>> getmapoop() {return mapoop;}
+    public Double Amount { get; set; }
+    public Double sum = 0.00;
+    public Long n { get; set; }
+    public string AmountInWords { get; set; }
+    public Double igst { get; set; }
+    public Double sgst { get; set; }
+    public Double cgst { get; set; }
+    public Double tax { get; set; }
+    public Double total { get; set; }
+    public Double igst_per { get; set; }
+    public Double sgst_per { get; set; }
+    public Double cgst_per { get; set; }
+    public String strcom { get; set; }
+    public String strGST { get; set; }
+    public String strStateCode { get; set; }
+    public String strAddress { get; set; }
+    public string Amount_Total{ get; set;}
+    public string strprdname { get; set;}
+    public set<String> setbillcode = new  set<String>();
+    public set<String> setbillGST = new  set<String>();
+    public set<String> setbillStateCode = new  set<String>();
+    public set<String> setbillgstCode = new  set<String>();
+    public set<String> setbillAddress = new  set<String>();
+    public set<String> setprdcat = new  set<String>();
+    public List<Billing_Location__c> lstbloc = new List<Billing_Location__c>();
+    //List<String> args = new String[]{'0','number','###,###,##'};
+    public string wordText { set; get;}
+    public long numberval { get; set; }
+    public integer convertion { set;get;}
+    public Double totalword { set;get;}
+    public String numInWords { get; set;}
+    public String Split { get; set;}
+    public String str_final { get; set;}
+    public String igst_final { get; set;}
+    public String Amount_final { get; set;}
+    Public String sgst_final { set; get;}
+    Public String cgst_final { set; get;}
+    Public Boolean Message { set; get;}
+    
+    public boolean displayPopup {get; set;}   
+    
+    Set<Mandate_Line_Item__c> myset = new Set<Mandate_Line_Item__c>();
+    Set<Mandate_Line_Item__c> result = new set<Mandate_Line_Item__c>();
+    
+    //map mli for uniq dates    
+    Public Map<String, list<Mandate_Line_Item__c>>maplstMLITostrDate = new Map<String, list<Mandate_Line_Item__c>>();
+    Public Map<String, list<Mandate_Line_Item__c>>getmaplstMLITostrDate(){
+        return maplstMLITostrDate;
+    }
+    Public list<string>lstUniqDate = new list<string>();
+    Public list<string>getlstUniqDate(){
+        return lstUniqDate;
+    }
+    
+    Public Map<String, Integer>mapCountTostrDate = new Map<String, Integer>();
+    Public Map<String, Integer>getmapCountTostrDate(){
+        return mapCountTostrDate;
+    }    
+    
+    //mandate ofa li for uniq dates
+    Public Map<String, list<OFA_Product_Line_Items__c>>maplstOPLITostrDate = new Map<String, list<OFA_Product_Line_Items__c>>();
+    Public Map<String, list<OFA_Product_Line_Items__c>>getmaplstOPLITostrDate(){
+        return maplstOPLITostrDate;
+    }
+    Public list<string>lstOFAUniqDate = new list<string>();
+    Public list<string>getlstOFAUniqDate(){
+        return lstOFAUniqDate;
+    }
+    
+    Public Map<String, Integer>mapOFACountTostrDate = new Map<String, Integer>();
+    Public Map<String, Integer>getmapOFACountTostrDate(){
+        return mapOFACountTostrDate;
+    } 
+    
+    public List<OFA_Product_Line_Items__c> lstFundsofa = new List<OFA_Product_Line_Items__c>();
+    public List<OFA_Product_Line_Items__c> getlstFundsofa(){ return lstFundsofa; }    
+    
+    public PageReference Cancel() {
+        return null;
+    }
+    
+    public OFA_Billing_Format_Without_Contact(){
+        
+        String strblid = Apexpages.Currentpage().Getparameters().get('id');
+        system.debug('***strblid'+strblid);
+        
+        ibl = [SELECT id, Name, Billing_Contact__c, Billing_Contact__r.Name, Billing_Contact__r.Designation__c, Billing_Contact__r.Company_code__c,
+               Billing_Contact__r.salutation__c, Billing_Customer__r.BillingCity, Billing_Customer__r.BillingPostalCode, Billing_Customer__r.Name,
+               Billing_Customer__r.BillingStreet, Billing_Customer__r.BillingCountry, Billing_Customer__r.BillingState, Invoice_Date__c, Invoice_Number__c,
+               Billing_Customer__r.GST_number__c, Billing_Customer__r.PAN__c, Mandate__r.Subscription_Start_Date__c, Mandate__c, OFA_Bill_Number__c,
+               Mandate__r.Subscription_End_Date__c, Mandate__r.Purchase_Order_Reference_Number__c, Billing_Customer__r.GST_state_code__c,
+               Mandate__r.Crisil_Billing_Location__c, Mandate__r.CGST_Amount__c, Mandate__r.AmountInWords__c, Billing_Customer__r.Company_code__c,
+               Mandate__r.IGST_Amount__c, Mandate__r.SGST_Amount__c, Mandate__r.Amount__c, Mandate__r.Bill_Start_Date__c, Mandate__r.Bill_End_Date__c,
+               Billing_Customer__r.State_id__c, Mandate__r.Billing_Currency__c, PO_Number__c, Mandate__r.Tax_Amount__c, Mandate__r.IGST__c, 
+               Mandate__r.SGST__c, Mandate__r.CGST__c, Billing_Contact__r.Contact_Name_Readonly__c, Billing_Contact__r.Salutation, Status__c,
+               Billing_Customer__r.OneSource_Customer_Id__c, Billing_Customer__r.Code__c, Billing_Customer__r.Account_Name_ReadOnly__c,
+               Billing_Contact__r.Department, Billing_Contact__r.Contact_State_Code__c, Billing_Contact__r.MailingCity, Billing_Contact__r.MailingStreet,
+               IGST__c, SGST__c, CGST__c, IGST_Amount__c, SGST_Amount__c, CGST_Amount__c, Billing_Contact__r.MailingState, OFA_Invoice_Date__c,
+               Billing_Contact__r.FirstName, Billing_Contact__r.LastName, Billing_Contact__r.MailingCountry, Billing_Contact__r.MailingPostalCode
+               From Billing__c WHERE id = : strblid /*AND Invoice_Number__c != NULL*/];
+        
+        lstbill.add(ibl);
+        
+        ID Mandate_ID ;
+        //Set<Id> setMandate_ID = new  Set<Id>();  
+        for(Billing_Line_Item__c ibli : [Select id, Name, Amount__c, Mandate__c, Mandate__r.IGST__c, Mandate__r.SGST__c, Mandate__r.CGST__c,
+                                         Mandate__r.Crisil_Billing_Location__c, Mandate__r.Billing_Currency__c, Mandate__r.CurrencyIsoCode,
+                                         Mandate__r.GST_REG_Number__r.Name
+                                         From Billing_Line_Item__c where Billing__c  =: strblid]){
+                                             lstblli.add(ibli);
+                                             system.debug('lstblli :'+lstblli);
+                                             // setMandate_ID.add(ibli.Mandate__c);
+                                             // Mandate_ID = ibli.Mandate__c;
+                                         }
+        
+        setbillcode.add(lstblli[0].Mandate__r.Crisil_Billing_Location__c);       
+        system.debug('setbillcode :'+setbillcode);
+        
+        setbillGST.add(lstblli[0].Mandate__r.Crisil_Billing_Location__c);  
+        system.debug('setbillGST :'+setbillGST);
+        
+        setbillStateCode.add(lstblli[0].Mandate__r.Crisil_Billing_Location__c);       
+        system.debug('setbillStateCode :'+setbillStateCode);
+        
+        setbillAddress.add(lstblli[0].Mandate__r.Crisil_Billing_Location__c);       
+        system.debug('setbillAddress :'+setbillAddress);
+        
+        Set<Id> setMandate_ID = new  Set<Id>();
+        for(OFA_Product_Line_Items__c ofa : [Select id, IGST__c, SGST__c, CGST__c, IGST_Amount__c, SGST_Amount__c, CGST_Amount__c,
+                                             Mandate__c, Line_Item_Amount__c, Mandate_Line_Item__c, Mandate_Line_Item__r.Product_Category__r.Name,
+                                             Mandate__r.Invoice_Description__c, Assignment_Name__c, Assignment_Milestone_Name__c,
+                                             Product_Category__r.Product_Type__c, Product_Category__r.Cost_Center__c, Mandate_Line_Item__r.Start_Date__c,
+                                             Mandate_Line_Item__r.End_Date__c,Product_Category__r.OFA_Product_Category_Id__c, Product_Category__r.Name, 
+                                             Payment_Term_Details__r.Milestone_Name__c, Mandate_Line_Item__r.Product_Name__c,
+                                             Mandate_Line_Item__r.Product_Category__r.Cost_Center__c,  Mandate_Line_Item__r.Programme_Name__c
+                                             From OFA_Product_Line_Items__c where Billing__c =: strblid
+                                             AND Product_Category__r.OFA_Product_Category_Id__c != '200109']){
+                                                 sum = sum + ofa.Line_Item_Amount__c;
+                                                 lstofa.add(ofa);
+                                                 system.debug('lstofa :'+lstofa);
+                                                 setMandate_ID.add(ofa.Mandate_Line_Item__c);
+                                                 // Mandate_ID = ibli.Mandate__c;
+                                                 if(ofa.Product_Category__r.Cost_Center__c == 'Funds and Fixed Income' && 
+                                                    ofa.Product_Category__r.Product_Type__c == 'Standard'){
+                                                        lstFundsofa.add(ofa);
+                                                        setprdcat.add(ofa.Mandate_Line_Item__c);       
+                                                        system.debug('setprdcat :'+setprdcat);
+                                                    }
+                                             }
+        
+        // ID Mandate_ID = ibli.Mandate__c;
+        
+        for(Mandate_Line_Item__c imli : [Select id, Name, Product_Category__r.Name, Sales_Price__c, Product_Type__c, Product_Count__c,
+                                         Product_Category__r.Cost_Center__c, Discount_Price__c, List_Price__c, Start_Date__c, End_Date__c,
+                                         Product_Category__r.Product_Type__c, Product_Category__r.OFA_Product_Category_Id__c
+                                         From Mandate_Line_Item__c where id  IN: setMandate_ID 
+                                         And Product_Category__r.OFA_Product_Category_Id__c != '200109']){
+                                             //And Product_Category__r.Name != 'Open Training']){
+                                             //sum = sum + imli.Sales_Price__c;
+                                             lstmlli.add(imli); 
+                                             system.debug('lstmlli :'+lstmlli);                                
+                                             system.debug('Cost_Center__c :'+imli.Product_Category__r.Cost_Center__c);
+                                             
+                                             setCostCentre.add(imli.Product_Category__r.Cost_Center__c);       
+                                             system.debug('setCostCentre :'+setCostCentre);
+                                             mapmanLineItems.put(imli.Product_Category__r.Name, imli);
+                                             myset.addAll(lstmlli);   result.addAll(myset);
+                                             system.debug('result :'+result);
+                                             
+                                         }
+        
+        //Date wise grouping
+        for(Mandate_Line_Item__c irow : lstmlli){
+            
+            if(maplstMLITostrDate.containsKey(irow.Start_Date__c +' to ' +irow.End_Date__c)){
+                
+                list<Mandate_Line_Item__c>lstMLI = new list<Mandate_Line_Item__c>();
+                lstMLI.add(irow);
+                lstMLI.addAll(maplstMLITostrDate.get(irow.Start_Date__c +' to ' +irow.End_Date__c));
+                maplstMLITostrDate.put(irow.Start_Date__c +' to ' +irow.End_Date__c, lstMLI);
+            }else{
+                list<Mandate_Line_Item__c>lstMLI = new list<Mandate_Line_Item__c>();
+                lstMLI.add(irow);
+                maplstMLITostrDate.put(irow.Start_Date__c +' to ' +irow.End_Date__c, lstMLI);
+            }
+        }
+        system.debug('***maplstMLITostrDate'+maplstMLITostrDate);
+        
+        for(String strDate : maplstMLITostrDate.keySet()){
+            
+            lstUniqDate.add(strDate);            
+            mapCountTostrDate.put(strDate, maplstMLITostrDate.get(strDate).size());
+        }
+        system.debug('***lstUniqDate'+lstUniqDate);
+        system.debug('***mapCountTostrDate'+mapCountTostrDate);
+        
+        //Date wise grouping OFA line items
+        for(OFA_Product_Line_Items__c irow : lstFundsofa){
+            
+            if(maplstOPLITostrDate.containsKey(irow.Mandate_Line_Item__r.Start_Date__c +' to ' +irow.Mandate_Line_Item__r.End_Date__c)){
+                
+                list<OFA_Product_Line_Items__c>lstMLI = new list<OFA_Product_Line_Items__c>();
+                lstMLI.add(irow);
+                lstMLI.addAll(maplstOPLITostrDate.get(irow.Mandate_Line_Item__r.Start_Date__c +' to ' +irow.Mandate_Line_Item__r.End_Date__c));
+                maplstOPLITostrDate.put(irow.Mandate_Line_Item__r.Start_Date__c +' to ' +irow.Mandate_Line_Item__r.End_Date__c, lstMLI);
+            }else{
+                list<OFA_Product_Line_Items__c>lstMLI = new list<OFA_Product_Line_Items__c>();
+                lstMLI.add(irow);
+                maplstOPLITostrDate.put(irow.Mandate_Line_Item__r.Start_Date__c +' to ' +irow.Mandate_Line_Item__r.End_Date__c, lstMLI);
+            }
+        }
+        system.debug('***maplstOPLITostrDate'+maplstOPLITostrDate);
+        
+        for(String strDate : maplstOPLITostrDate.keySet()){
+            
+            lstOFAUniqDate.add(strDate);            
+            mapOFACountTostrDate.put(strDate, maplstOPLITostrDate.get(strDate).size());
+        }
+        system.debug('***lstOFAUniqDate'+lstOFAUniqDate);
+        system.debug('***mapOFACountTostrDate'+mapOFACountTostrDate);
+        
+        for(Mandate_Line_Item__c mli : lstmlli){
+            
+            //sum = sum + mli.Sales_Price__c;
+            for(Milestone__c m:[select Name, Mandate_Line_Item__r.Name, Mandate_Line_Item__r.Product_Type__c, Milestone_Name__c, Amount__c
+                                From Milestone__c Where Mandate_Line_Item__c =: mli.Id]){
+                                    
+                                    system.debug('     Milestone Name:'+m.Milestone_Name__c+'     Mandate Line Item:'+m.Mandate_Line_Item__r.Name);
+                                    lstmlsli.add(m);
+                                    
+                                }
+            
+        }
+        
+        if(lstmlli.size() > 0){
+            Amount = sum;
+            
+            system.debug('***Amount'+Amount);
+            system.debug('***Amount'+Amount);
+            if(ibl.IGST__c != null)
+            {
+                igst = Amount * ((ibl.IGST__c) / 100);
+                igst_per = ibl.IGST__c;
+            }
+            else{
+                igst = 0;
+                igst_per = 0;
+            }
+            if(ibl.CGST__c != null){
+                cgst = Amount * ((ibl.CGST__c) / 100);
+                cgst_per = ibl.CGST__c;
+            }   
+            else{
+                cgst = 0;
+                cgst_per = 0;
+            }
+            if(ibl.SGST__c != null){
+                sgst = Amount * ((ibl.SGST__c) / 100);
+                sgst_per = ibl.SGST__c;
+            }
+            else{
+                sgst = 0;
+                sgst_per = 0;
+            }
+            
+            total = Amount + igst + cgst + sgst;
+            
+            str_final = '';
+            Integer num = total.intValue(); 
+            if(total != 0){
+                String str_initial = String.valueOf(num);
+                System.debug(str_initial);
+                
+                // storing last 3 digits seperately
+                String str_2 = str_initial.right(3);
+                System.debug('str_2 is             '+str_2);
+                
+                
+                System.debug('before cutting last 3 digits   '+str_initial);
+                // To cut out last 3 digits
+                String s1 = str_initial.substring(0, str_initial.length() - 3);
+                System.debug('after cutting last 3 digits     '+s1);
+                String s1_FirstWord = '';
+                String str_1 = '';
+                
+                if(math.mod(s1.length(), 2) == 0){
+                    str_1 = s1.replaceAll('.{2}', '$0,');
+                    system.debug('from if loop str_1  is  '+str_1); 
+                }
+                
+                else{
+                    System.debug('else loop - s1 before cutting is    '+s1);
+                    // to store the first value 
+                    s1_FirstWord = s1.substring(0, 1); 
+                    System.debug('else loop - s1 - step 2 aftr substring is    '+s1);
+                    // to remove the first character
+                    s1 = s1.substring(1);
+                    System.debug('else loop - s1 aftr length-1 is    '+s1);
+                    
+                    str_1 = s1.replaceAll('.{2}', '$0,');
+                    System.debug('else loop - s1 aftr cutting is    '+str_1);
+                    
+                    str_1 = s1_FirstWord + ',' + str_1;
+                    system.debug('from else loop str_1  is                     '+str_1); 
+                }
+                
+                str_final = str_1 + str_2;
+                system.debug('str_final  is  '+str_final);
+            }
+            else{
+                str_final = '0';
+            }
+            
+            igst_final = '';
+            Integer numigst = igst.intValue(); 
+            if(igst != 0){
+                String str_initial_igst = String.valueOf(numigst);
+                System.debug(str_initial_igst);
+                
+                // storing last 3 digits seperately
+                String igst_str_2 = str_initial_igst.right(3);
+                System.debug('igst_str_2 is             '+igst_str_2);
+                
+                
+                System.debug('before cutting last 3 digits   '+str_initial_igst);
+                // To cut out last 3 digits
+                String igst_s1 = str_initial_igst.substring(0, str_initial_igst.length() - 3);
+                System.debug('after cutting last 3 digits     '+igst_s1);
+                String igst_s1_FirstWord = '';
+                String igst_str_1 = '';
+                
+                if(math.mod(igst_s1.length(), 2) == 0){
+                    igst_str_1 = igst_s1.replaceAll('.{2}', '$0,');
+                    system.debug('from if loop igst_str_1  is  '+igst_str_1); 
+                }
+                
+                else{
+                    System.debug('else loop - igst_s1 before cutting is    '+igst_s1);
+                    // to store the first value 
+                    igst_s1_FirstWord = igst_s1.substring(0, 1); 
+                    System.debug('else loop - igst_s1 - step 2 aftr substring is    '+igst_s1);
+                    // to remove the first character
+                    igst_s1 = igst_s1.substring(1);
+                    System.debug('else loop - igst_s1 aftr length-1 is    '+igst_s1);
+                    
+                    igst_str_1 = igst_s1.replaceAll('.{2}', '$0,');
+                    System.debug('else loop - igst_s1 aftr cutting is    '+igst_str_1);
+                    
+                    igst_str_1 = igst_s1_FirstWord + ',' + igst_str_1;
+                    system.debug('from else loop igst_str_1  is                     '+igst_str_1); 
+                }
+                
+                igst_final = igst_str_1 + igst_str_2;
+                system.debug('igst_final  is  '+igst_final);
+            }
+            else{
+                igst_final = '0';
+            }
+            
+            system.debug('Amount'+Amount);
+            
+            cgst_final = '';
+            Integer numcgst = cgst.intValue(); 
+            if(cgst != 0){
+                String str_initial_cgst = String.valueOf(numcgst);
+                System.debug(str_initial_cgst);
+                
+                // storing last 3 digits seperately
+                String cgst_str_2 = str_initial_cgst.right(3);
+                System.debug('cgst_str_2 is             '+cgst_str_2);
+                
+                
+                System.debug('before cutting last 3 digits   '+str_initial_cgst);
+                // To cut out last 3 digits
+                String cgst_s1 = str_initial_cgst.substring(0, str_initial_cgst.length() - 3);
+                System.debug('after cutting last 3 digits     '+cgst_s1);
+                String cgst_s1_FirstWord = '';
+                String cgst_str_1 = '';
+                
+                if(math.mod(cgst_s1.length(), 2) == 0){
+                    cgst_str_1 = cgst_s1.replaceAll('.{2}', '$0,');
+                    system.debug('from if loop cgst_str_1  is  '+cgst_str_1); 
+                }
+                
+                else{
+                    System.debug('else loop - cgst_s1 before cutting is    '+cgst_s1);
+                    // to store the first value 
+                    cgst_s1_FirstWord = cgst_s1.substring(0, 1); 
+                    System.debug('else loop - cgst_s1 - step 2 aftr substring is    '+cgst_s1);
+                    // to remove the first character
+                    cgst_s1 = cgst_s1.substring(1);
+                    System.debug('else loop - cgst_s1 aftr length-1 is    '+cgst_s1);
+                    
+                    cgst_str_1 = cgst_s1.replaceAll('.{2}', '$0,');
+                    System.debug('else loop - cgst_s1 aftr cutting is    '+cgst_str_1);
+                    
+                    cgst_str_1 = cgst_s1_FirstWord + ',' + cgst_str_1;
+                    system.debug('from else loop cgst_str_1  is                     '+cgst_str_1); 
+                }
+                
+                cgst_final = cgst_str_1 + cgst_str_2;
+                system.debug('cgst_final  is  '+cgst_final);
+            }
+            else{
+                cgst_final = '0';
+            }
+            
+            sgst_final = '';
+            Integer numsgst = sgst.intValue(); 
+            if(sgst != 0){
+                String str_initial_sgst = String.valueOf(numsgst);
+                System.debug(str_initial_sgst);                
+                
+                // storing last 3 digits seperately
+                String sgst_str_2 = str_initial_sgst.right(3);
+                System.debug('sgst_str_2 is             '+sgst_str_2);
+                
+                
+                System.debug('before cutting last 3 digits   '+str_initial_sgst);
+                // To cut out last 3 digits
+                String sgst_s1 = str_initial_sgst.substring(0, str_initial_sgst.length() - 3);
+                System.debug('after cutting last 3 digits     '+sgst_s1);
+                String sgst_s1_FirstWord = '';
+                String sgst_str_1 = '';
+                
+                if(math.mod(sgst_s1.length(), 2) == 0){
+                    sgst_str_1 = sgst_s1.replaceAll('.{2}', '$0,');
+                    system.debug('from if loop sgst_str_1  is  '+sgst_str_1); 
+                }
+                
+                else{
+                    System.debug('else loop - sgst_s1 before cutting is    '+sgst_s1);
+                    // to store the first value 
+                    sgst_s1_FirstWord = sgst_s1.substring(0, 1); 
+                    System.debug('else loop - sgst_s1 - step 2 aftr substring is    '+sgst_s1);
+                    // to remove the first character
+                    sgst_s1 = sgst_s1.substring(1);
+                    System.debug('else loop - sgst_s1 aftr length-1 is    '+sgst_s1);
+                    
+                    sgst_str_1 = sgst_s1.replaceAll('.{2}', '$0,');
+                    System.debug('else loop - sgst_s1 aftr cutting is    '+sgst_str_1);
+                    
+                    sgst_str_1 = sgst_s1_FirstWord + ',' + sgst_str_1;
+                    system.debug('from else loop sgst_str_1  is                     '+sgst_str_1); 
+                }
+                
+                sgst_final = sgst_str_1 + sgst_str_2;
+                system.debug('sgst_final  is  '+sgst_final);
+            }
+            else{
+                sgst_final = '0';
+            }
+            
+            Amount_final = '';
+            Integer num_Amount = Amount.intValue(); 
+            if(Amount != 0){
+                String str_initial_Amount = String.valueOf(num_Amount);
+                System.debug(str_initial_Amount);
+                
+                // storing last 3 digits seperately
+                String Amount_str_2 = str_initial_Amount.right(3);
+                System.debug('Amount_str_2 is             '+Amount_str_2);
+                
+                
+                System.debug('before cutting last 3 digits   '+str_initial_Amount);
+                // To cut out last 3 digits
+                String Amount_s1 = str_initial_Amount.substring(0, str_initial_Amount.length() - 3);
+                System.debug('after cutting last 3 digits     '+Amount_s1);
+                String Amount_s1_FirstWord = '';
+                String Amount_str_1 = '';
+                
+                if(math.mod(Amount_s1.length(), 2) == 0){
+                    Amount_str_1 = Amount_s1.replaceAll('.{2}', '$0,');
+                    system.debug('from if loop Amount_str_1  is  '+Amount_str_1); 
+                }
+                
+                else{
+                    System.debug('else loop - Amount_s1 before cutting is    '+Amount_s1);
+                    // to store the first value 
+                    Amount_s1_FirstWord = Amount_s1.substring(0, 1); 
+                    System.debug('else loop - Amount_s1 - step 2 aftr substring is    '+Amount_s1);
+                    // to remove the first character
+                    Amount_s1 = Amount_s1.substring(1);
+                    System.debug('else loop - Amount_s1 aftr length-1 is    '+Amount_s1);
+                    
+                    Amount_str_1 = Amount_s1.replaceAll('.{2}', '$0,');
+                    System.debug('else loop - Amount_s1 aftr cutting is    '+Amount_str_1);
+                    
+                    Amount_str_1 = Amount_s1_FirstWord + ',' + Amount_str_1;
+                    system.debug('from else loop Amount_str_1  is                     '+Amount_str_1); 
+                }
+                
+                Amount_final = Amount_str_1 + Amount_str_2;
+                system.debug('Amount_final  is  '+Amount_final);
+            }
+            else{
+                Amount_final = '0';
+            }
+            
+            strHSN = '';
+            for(HSN_Master__c iHSN : [SELECT id, HSN_Code__c, Cost_Center__c FROM HSN_Master__c WHERE Cost_Center__c IN :setCostCentre]){
+                
+                system.debug('iHSN'+iHSN);
+                
+                if(strHSN == ''){
+                    strHSN = strHSN + iHSN.Cost_Center__c+'-'+iHSN.HSN_Code__c;
+                }
+                else{
+                    strHSN = strHSN + ',' + iHSN.Cost_Center__c+'-'+iHSN.HSN_Code__c;
+                }
+            }
+            
+            strcom = '';
+            strGST = '';
+            strStateCode = '';
+            strAddress = '';
+            for(Billing_Location__c lstbloc : [SELECT id, Billing_Location_Code__c, Billing_Location_Name__c,GST_State_Code__c,
+                                               Billing_Location_GST__c, Id__c, Billing_Location_Address__c
+                                               FROM Billing_Location__c WHERE Billing_Location_Name__c IN :setbillcode
+                                               AND Billing_Location_Name__c IN :setbillGST]){
+                                                   system.debug('lstbloc'+lstbloc);
+                                                   
+                                                   if(strcom == ''){
+                                                       strcom = strcom + lstbloc.GST_State_Code__c;
+                                                   }
+                                                   else{
+                                                       strcom = strcom + ',' + lstbloc.GST_State_Code__c;
+                                                   } 
+                                                   
+                                                   if(strGST == ''){
+                                                       strGST = strGST + lstbloc.Billing_Location_GST__c;
+                                                   }
+                                                   else{
+                                                       strGST = strGST + ',' + lstbloc.Billing_Location_GST__c;
+                                                   } 
+                                                   
+                                                   if(strGST == ''){
+                                                       strStateCode = strStateCode + lstbloc.Id__c;
+                                                   }
+                                                   else{
+                                                       strStateCode = strStateCode + lstbloc.Id__c;
+                                                   } 
+                                                   
+                                                   if(strAddress == ''){
+                                                       strAddress = strAddress + lstbloc.Billing_Location_Address__c;
+                                                   }
+                                                   else{
+                                                       strAddress = strAddress + lstbloc.Billing_Location_Address__c;
+                                                   } 
+                                                   
+                                               }
+            
+            for(Mandate_Line_Item__c mli : lstmlli){
+                
+                for(Mandate_Product_Line_Item__c impli : [Select id, Name, Product2ID__r.Name,Product2ID__r.Product_Category__r.Name, 
+                                                          Mandate_Line_Item__r.Name, ListPrice__c
+                                                          From Mandate_Product_Line_Item__c Where Mandate__c =: Mandate_ID 
+                                                          And Mandate_Line_Item__c =: mli.Id AND Product2ID__r.IsActive = true ]){
+                                                              
+                                                              if(mapoop.containskey(impli.Product2ID__r.Product_Category__r.Name)){
+                                                                  mapoop.get(impli.Product2ID__r.Product_Category__r.Name).add(impli);
+                                                              }
+                                                              else
+                                                              {
+                                                                  List<Mandate_Product_Line_Item__c> templist = new List<Mandate_Product_Line_Item__c>();
+                                                                  templist.add(impli);
+                                                                  mapoop.put(impli.Product2ID__r.Product_Category__r.Name,templist);
+                                                              }
+                                                              
+                                                              //lstmlli.add(impli);                                                 
+                                                          }
+            }
+            
+            strprdname = '';
+            
+            for(Mandate_Product_Line_Item__c lstmpli : [Select id, Name, Product2ID__r.Name,Product2ID__r.Product_Category__r.Name, 
+                                                        Mandate_Line_Item__r.Name, ListPrice__c From Mandate_Product_Line_Item__c 
+                                                        Where Mandate_Line_Item__c IN :setprdcat]){
+                                                            
+                                                            if(strprdname == ''){
+                                                                
+                                                                strprdname = strprdname + lstmpli.Product2ID__r.Name;
+                                                            }
+                                                            else{
+                                                                strprdname = strprdname + ', ' + lstmpli.Product2ID__r.Name;
+                                                            } 
+                                                            
+                                                        }
+            
+            if (total != null && total >= 0) {
+                
+                Long n = total.longValue();
+                String str = NumberToWord.english_number(n);
+                String strNew = '';
+                
+                for(String irow : str.split(' ')){
+                    system.debug(irow.capitalize());   
+                    strNew = strNew + ' ' + irow.capitalize();
+                }
+                AmountInWords = strNew; 
+            } 
+            else{
+                
+                AmountInWords = null;
+            }
+            
+            NumberTOWordConvertion nwcObj = new NumberTOWordConvertion();
+            numInWords = nwcObj.getNumberTOWordConvertion(total);
+        }
+        else{
+            Message = false;
+            ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'No Open Training Present'));
+        }
+    }
+    
+    public pagereference print(){
+        pageReference printpdf = new pageReference('/apex/OFA_Without_Contact?id='+ibl.Id);
+        printpdf.setRedirect(true);
+        return printpdf;
+    }
+    
+    /* public pagereference print(){
+pageReference printpdf = new pageReference('/apex/OFA_Bill_Group?id='+ibl.Id);
+printpdf.setRedirect(true);
+return printpdf;
+}*/
+    
+    public pagereference saveQuote(){
+        pageReference pdf = page.OFA_Without_Contact;
+        pdf.getParameters().put('id',ibl.Id);
+        Blob body;
+        pdf.setRedirect(true);
+        
+        try {
+            // returns the output of the page as a PDF
+            if(!test.isrunningtest()){
+                body = pdf.getContent();
+            }
+            else
+            {
+                body =blob.valueof('c');
+            }
+            
+            Attachment qd = new Attachment (Parentid = ibl.Id, body = body , Name = ibl.Name + '(' +Datetime.now().format('dd-MM-yyyy') + ')' +'.pdf',IsPrivate = false);
+            insert qd; //Datetime.now().format('dd-MM-yyyy')+'.pdf'
+            //ibl.Invoice_PDF_Generated__c = True;
+            update ibl;
+            PageReference qPage = new PageReference('/'+ibl.Id);
+            qPage.setRedirect(true);
+            return qPage;          
+        }catch (Exception e) {
+            ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR, e.getMessage()));
+        } 
+        return null;       
+    } 
+    
+    public void sendEmail(){
+        showPopup();
+    } 
+    
+    /*  public pagereference sendEmailQuote(){
+
+pageReference pdf = page.OFA_Bill_Group;
+pdf.getParameters().put('id',ibl.Id);
+// the contents of the attachment from the pdf
+string sendemailadd = '';
+String sendemailCC = '';
+String[] arrsendemailadd = new String[]{};
+String[] arrsendemailCC = new String[]{};
+
+Blob pageContent;
+
+if(!test.isrunningtest()){
+pageContent = pdf.getContent();
+}
+else
+{
+pageContent = blob.valueof('c');
+}
+
+Blob body;
+pdf.setRedirect(true);
+
+
+try {
+// returns the output of the page as a PDF
+
+if(!test.isrunningtest()){
+body = pdf.getContent();
+}
+else
+{
+body = blob.valueof('c');
+}
+Attachment qd = new Attachment (Parentid = ibl.Id, body = body ,Name = Datetime.now().format('dd-MM-yyyy')+'.pdf',IsPrivate = false);
+insert qd;
+}catch (VisualforceException e) {
+body = Blob.valueOf('Some Text');
+}
+
+try{
+Messaging.EmailFileAttachment attach = new Messaging.EmailFileAttachment();
+attach.setFileName(ibl.Name+'.pdf');
+attach.setBody(body);
+
+Messaging.SingleEmailMessage email = new Messaging.SingleEmailMessage();
+email.setToAddresses(arrsendemailadd);
+email.setCcAddresses(arrsendemailCC);
+//String mailSubject = wraprow.emailSubject;
+//email.setSubject(mailSubject);
+//String mailbody = wraprow.emailbody;
+//email.setHtmlBody(mailbody);
+//email.setWhatId(opp.Id);
+email.setSaveAsActivity(true);
+email.setFileAttachments(new Messaging.EmailFileAttachment[] { attach });  
+
+// Send the email
+Messaging.SendEmailResult [] r = Messaging.sendEmail(new Messaging.SingleEmailMessage[] {email});
+PageReference qPage = new PageReference('/'+ibl.Id);
+qPage.setRedirect(true);
+return qPage;      
+//ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO, 'Email with PDF sent to '+sendemailadd));
+}Catch(Exception ex){
+ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO, 'The Email Address Provided in the contact information is not valid one and the Email address is:'+sendemailadd));
+}
+return null;
+} */
+    
+    //sendEmailQuotePOPUP
+    public void closePopup()
+    {       
+        displayPopup = false;   
+    }    
+    public void showPopup()
+    {       
+        displayPopup = true;   
+    }   
+    
+    /*public class Wrapper{
+
+public String emailSubject{get;set;}
+public String emailBody{get;set;}
+public String emailAddr{get;set;}
+public String emailCC{get;set;}
+
+}
+
+public class TaxWrapper{        
+public String TaxType{get;set;}        
+public Decimal TaxAmount{get;set;}
+public Decimal TaxPer{get;set;}        
+public Decimal SubTotal{get;set;}
+public Integer Count{get;set;}     
+}
+
+public class EntryTaxWrapper{        
+public Decimal EntryTaxAmount{get;set;}
+public Decimal EntryTaxPer{get;set;}    
+}
+
+public class AdditionalTaxWrapper{        
+public Decimal AdditionalTaxAmount{get;set;}
+public Decimal AdditionalTaxPer{get;set;}    
+}
+public class SurchargeTaxWrapper{        
+public Decimal SurchargeTaxAmount{get;set;}
+public Decimal SurchargePer{get;set;}    
+}*/
+    
+}

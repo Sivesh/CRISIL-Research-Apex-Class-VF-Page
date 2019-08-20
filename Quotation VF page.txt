@@ -1,0 +1,459 @@
+<apex:page controller="Quotation" contentType="application/msWord#Quotation.doc">
+    <html xmlns:o='urn:schemas-microsoft-com:office:office' 
+      xmlns:w='urn:schemas-microsoft-com:office:word' 
+      xmlns='<a target="_blank" href="http://www.w3.org/TR/REC-html40" rel="nofollow">http://www.w3.org/TR/REC-html40</a>'>
+	<head>
+	    <style>
+	        p.MsoHeader, li.MsoHeader, div.MsoHeader{
+	            margin:0in;
+	            margin-top:.0001pt;
+	            mso-pagination:widow-orphan;
+	            tab-stops:center 3.0in right 6.0in;
+	        }
+	        p.MsoFooter, li.MsoFooter, div.MsoFooter{
+	            margin:0in;
+	            margin-bottom:.0001pt;
+	            mso-pagination:widow-orphan;
+	            tab-stops:center 3.0in right 6.0in;
+	        }
+	        @page Section1{
+	            size:8.5in 11.0in; 
+	            margin:0.5in 0.5in 0.5in 0.5in;
+	            mso-header-margin:0in;
+	            mso-header:h1;
+	            mso-footer:f1; 
+	            mso-footer-margin:0in;
+	            mso-paper-source:0;
+	        }
+	        div.Section1{
+	            page:Section1;
+	        }
+	        /*Below is the style to prevent the repetition of header and Footer.. Cheers!!!*/
+	        table#hrdftrtbl{
+	            margin:0in 0in 0in 9in;
+	            width:1px;
+	            height:1px;
+	            overflow:hidden;
+	        }        
+	    </style>
+	</head>
+<body>
+	<div class="Section1"><!--Section1 div starts-->
+		<table style="width: 100%" border="0">
+            <tbody>
+                <tr>
+                    <td style="text-align: justify;text-align: center; font-family: Arial, sans-serif;font-size: 10.0pt;">
+                        <strong>Quotation</strong>
+                    </td>
+                </tr>
+               <!-- <tr>
+                    <td style="text-align: justify;text-align: left; font-family: Arial, sans-serif;font-size: 10.0pt;">
+                        Date: {!DAY(TODAY())} - {!MONTH(TODAY())} - {!YEAR(TODAY())}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: justify;text-align: left; font-family: Arial, sans-serif;font-size: 10.0pt;">
+                        <apex:outputText value="{!iOpp.Billing_Contact_Person__r.salutation}{!iOpp.Billing_Contact_Person__r.Contact_Name_Readonly__c}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: justify;text-align: left; font-family: Arial, sans-serif;font-size: 10.0pt;">
+                        <apex:outputText value="{!iOpp.Billing_Contact_Person__r.Designation__c}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: justify;text-align: left; font-family: Arial, sans-serif;font-size: 10.0pt;">
+                        <apex:outputText value="{!iOpp.Account.Name}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: justify;text-align: left; font-family: Arial, sans-serif;font-size: 10.0pt;">
+                        <apex:outputText value="{!iOpp.Account.BillingStreet}" />, 
+                    </td>
+                </tr> -->
+               <!-- <tr>
+                    <td style="text-align: justify;text-align: left; font-family: Arial, sans-serif;font-size: 10.0pt;">
+                       <!-- The total amount payable towards subscription to CRISIL Research for the period of Subscription period is Rs <!-- <span style="color: black;"><apex:outputText value="{!total}" /></span> -->
+                       <!-- <apex:outputText value="{0, number, #,###}">
+                            <apex:param value="{!ROUND(total,0)}" />
+                        </apex:outputText>/-. -->
+                      <!--  <apex:outputText value="{!iOpp.Account.BillingCity}" />, <apex:outputText value="{!iOpp.Account.BillingState}" /> - <apex:outputText value="{!iOpp.Account.BillingPostalCode}" />, <apex:outputText value="{!iOpp.Account.BillingCountry}" />
+                    </td> 
+                </tr>
+                <tr>
+                    <td style="text-align: justify;text-align: left; font-family: Arial, sans-serif;font-size: 10.0pt;">
+                        <strong>Bill Details:</strong>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+        <p style="text-align: left; font-family: Arial, sans-serif;font-size: 10.0pt;">
+            Date:&amp;nbsp; <!-- {!DAY(TODAY())} - {!MONTH(TODAY())} - {!YEAR(TODAY())} -->
+            <apex:outputText value="{0,date,dd' 'MMMMM' 'yyyy}">
+                <apex:param value="{!TODAY()}" /> 
+            </apex:outputText><br/>
+            <apex:outputText value="{!iOpp.Billing_Contact_Person__r.salutation}{!iOpp.Billing_Contact_Person__r.Contact_Name_Readonly__c}" />
+            <apex:outputText rendered="{!iOpp.Billing_Contact_Person__r.Designation__c != ''}"><br/></apex:outputText>
+            <apex:outputText value="{!iOpp.Billing_Contact_Person__r.Designation__c}" /><br/>
+            <apex:outputText value="{!iOpp.Account.Name}" /><br/>
+            <apex:outputText value="{!iOpp.Billing_Contact_Person__r.MailingStreet}" />,<br/>
+            <apex:outputText value="{!iOpp.Billing_Contact_Person__r.MailingCity}" />, <apex:outputText value="{!iOpp.Billing_Contact_Person__r.MailingState}" /> - <apex:outputText value="{!iOpp.Billing_Contact_Person__r.MailingPostalCode}" />, <apex:outputText value="{!iOpp.Billing_Contact_Person__r.MailingCountry}" /><br/>
+        </p>
+        <span style="text-align: left; font-family: Arial, sans-serif;font-size: 10.0pt;"><strong>Bill Details:</strong></span>
+        <table style=" width: 100%; border-collapse: collapse;line-height:11pt" border="1">
+            <tbody>
+                <tr>
+                    <td style="width: 80%; text-align: center; "><strong><span style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">Particulars</span></strong></td>
+                    <td style="width: 20%; text-align: center; "><strong><span style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">Amount ({!iOpp.CurrencyIsoCode})</span></strong></td>
+                </tr>
+                <tr >
+                    <td style="width: 80%; height: 18px;font-size: 10.0pt; font-family: 'Arial','sans-serif'; Padding-left:20px" valign="top">
+                        
+                     <!--   <apex:repeat value="{!lstOppli}" var="oli">
+                            <apex:outputText style="font-size:10pt; font-family:Arial,sans-serif" value="{!oli.Product_Category__r.Name}"></apex:outputText>
+                            <apex:outputText rendered="{!Text(oli.Product_Count__c) != ''}">
+                                <apex:outputText rendered="{!if((oli.Product_Category__r.Name == 'Industry Research' 
+                                                           || oli.Product_Category__r.Name == 'City Real(i)ty'
+                                                           || oli.Product_Category__r.Name == 'Super 16 Sectors'
+                                                           || oli.Product_Category__r.Name == 'Industry Risk Scores'
+                                                           || oli.Product_Category__r.Name == 'CrisilView'),true, false)}">
+                                    ({!oli.Product_Count__c})
+                       </apex:outputText>
+                            </apex:outputText><br/>
+                            <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}">
+                                <apex:outputText rendered="{!if(oli.Product_Category__r.Cost_Center__c != 'Funds and Fixed Income'
+                                                           && oli.Product_Category__r.Cost_Center__c != 'Customised'
+                                                           && oli.Product_Category__r.Cost_Center__c != 'Executive Training'
+                                                           && oli.Product_Category__r.Product_Type__c != 'Customized', true, false)}">
+                                            <Strong>Subscription Period: </Strong>
+                                </apex:outputText> 
+                            </apex:outputText>
+                            <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}">
+                                <apex:outputText rendered="{!if(oli.Product_Category__r.Cost_Center__c == 'Funds and Fixed Income', true, false)}">                               
+                                    <Strong>Bill Date: </Strong>
+                                </apex:outputText> 
+                            </apex:outputText>
+                            <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}">
+                                <apex:outputText rendered="{!if(oli.Product_Category__r.Cost_Center__c == 'Customised' 
+                                                           || oli.Product_Category__r.Product_Type__c == 'Customized', true, false)}"> 
+                                    <Strong>Assignment Date: </Strong>
+                                </apex:outputText>
+                            </apex:outputText>
+                            <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}">
+                                <apex:outputText rendered="{!if(oli.Product_Category__r.Cost_Center__c == 'Executive Training', true, false)}">
+                                    <Strong>Program Date: </Strong>
+                                </apex:outputText>
+                            </apex:outputText> 
+                            <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}" style="font-family: arial, helvetica, sans-serif; font-size: 9pt;" value="{0,date,dd/MM/yy}">
+                                <apex:param value="{!oli.Start_Date__c}" />
+                            </apex:outputText> 
+                            <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}">&amp;nbsp;to&amp;nbsp;</apex:outputText> 
+                            <apex:outputText rendered="{!if(oli.End_Date__c != null, true, false)}" style="font-family: arial, helvetica, sans-serif; font-size: 9pt;" value="{0,date,dd/MM/yyyy}">
+                                <apex:param value="{!oli.End_Date__c}" />
+                            </apex:outputText>
+                            <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}"><br/></apex:outputText>
+                        </apex:repeat> -->
+                        
+                          <apex:repeat value="{!lstOFAUniqDate}" var="ofud"> 
+                            <apex:variable var="cntofa" value="{!1}" /> 
+                            <apex:repeat value="{!maplstOPLITostrDate[ofud]}" var="oli"> 
+                                <apex:outputText style="font-size:10pt; font-family:Arial,sans-serif" value="{!oli.Product_Category__r.Name}"></apex:outputText>
+                                <apex:outputText rendered="{!Text(oli.Product_Count__c) != ''}">
+                                    <apex:outputText rendered="{!if((oli.Product_Category__r.Name == 'Industry Research' 
+                                                               || oli.Product_Category__r.Name == 'City Real(i)ty'
+                                                               || oli.Product_Category__r.Name == 'Super 16 Sectors'
+                                                               || oli.Product_Category__r.Name == 'Industry Risk Scores'
+                                                               || oli.Product_Category__r.Name == 'CrisilView'),true, false)}">
+                                        ({!oli.Product_Count__c})
+                                    </apex:outputText>
+                                </apex:outputText><br/>
+                                
+                                <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}">
+                                    <apex:outputText rendered="{!if(oli.Product_Category__r.Cost_Center__c != 'Funds and Fixed Income'
+                                                               && oli.Product_Category__r.Cost_Center__c != 'Customised'
+                                                               && oli.Product_Category__r.Cost_Center__c != 'Executive Training'
+                                                               && oli.Product_Category__r.Product_Type__c != 'Customized'
+                                                               && cntofa == mapOFACountTostrDate[ofud], true, false)}">
+                                        <Strong>Subscription Period: </Strong>
+                                        
+                                        <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}" style="font-family: arial, helvetica, sans-serif; font-size: 9pt;" value="{0,date,dd/MM/yy}">
+                                            <apex:param value="{!oli.Start_Date__c}" />
+                                        </apex:outputText> 
+                                        <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}">&amp;nbsp;to&amp;nbsp;</apex:outputText> 
+                                        <apex:outputText rendered="{!if(oli.End_Date__c != null, true, false)}" style="font-family: arial, helvetica, sans-serif; font-size: 9pt;" value="{0,date,dd/MM/yyyy}">
+                                            <apex:param value="{!oli.End_Date__c}" />
+                                        </apex:outputText>
+                                        <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}"><br/></apex:outputText>                                    
+                                    </apex:outputText> 
+                                </apex:outputText>
+                                
+                                <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}">
+                                    <apex:outputText rendered="{!if(oli.Product_Category__r.Cost_Center__c == 'Funds and Fixed Income'
+                                                               && cntofa == mapOFACountTostrDate[ofud], true, false)}">                               
+                                        <Strong>Bill Date: </Strong>
+                                        
+                                        <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}" style="font-family: arial, helvetica, sans-serif; font-size: 9pt;" value="{0,date,dd/MM/yy}">
+                                            <apex:param value="{!oli.Start_Date__c}" />
+                                        </apex:outputText> 
+                                        <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}">&amp;nbsp;to&amp;nbsp;</apex:outputText> 
+                                        <apex:outputText rendered="{!if(oli.End_Date__c != null, true, false)}" style="font-family: arial, helvetica, sans-serif; font-size: 9pt;" value="{0,date,dd/MM/yyyy}">
+                                            <apex:param value="{!oli.End_Date__c}" />
+                                        </apex:outputText>
+                                        <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}"><br/></apex:outputText>
+                                        
+                                    </apex:outputText> 
+                                </apex:outputText>
+                                
+                                <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}">
+                                    <apex:outputText rendered="{!if(oli.Product_Category__r.Cost_Center__c == 'Customised' 
+                                                               || oli.Product_Category__r.Product_Type__c == 'Customized'
+                                                               && cntofa == mapOFACountTostrDate[ofud], true, false)}"> 
+                                        <Strong>Assignment Date: </Strong>
+                                        
+                                        <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}" style="font-family: arial, helvetica, sans-serif; font-size: 9pt;" value="{0,date,dd/MM/yy}">
+                                            <apex:param value="{!oli.Start_Date__c}" />
+                                        </apex:outputText> 
+                                        <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}">&amp;nbsp;to&amp;nbsp;</apex:outputText> 
+                                        <apex:outputText rendered="{!if(oli.End_Date__c != null, true, false)}" style="font-family: arial, helvetica, sans-serif; font-size: 9pt;" value="{0,date,dd/MM/yyyy}">
+                                            <apex:param value="{!oli.End_Date__c}" />
+                                        </apex:outputText>
+                                        <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}"><br/></apex:outputText>
+                                        
+                                    </apex:outputText>
+                                </apex:outputText>
+                                
+                                <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}">
+                                    <apex:outputText rendered="{!if(oli.Product_Category__r.Cost_Center__c == 'Executive Training'
+                                                               && cntofa == mapOFACountTostrDate[ofud], true, false)}">
+                                        <Strong>Program Date: </Strong>
+                                        
+                                        <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}" style="font-family: arial, helvetica, sans-serif; font-size: 9pt;" value="{0,date,dd/MM/yy}">
+                                            <apex:param value="{!oli.Start_Date__c}" />
+                                        </apex:outputText> 
+                                        <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}">&amp;nbsp;to&amp;nbsp;</apex:outputText> 
+                                        <apex:outputText rendered="{!if(oli.End_Date__c != null, true, false)}" style="font-family: arial, helvetica, sans-serif; font-size: 9pt;" value="{0,date,dd/MM/yyyy}">
+                                            <apex:param value="{!oli.End_Date__c}" />
+                                        </apex:outputText>
+                                        <apex:outputText rendered="{!if(oli.Start_Date__c != null, true, false)}"><br/></apex:outputText>
+                                        
+                                    </apex:outputText>
+                                </apex:outputText>                             
+                                
+                                <apex:variable var="cntofa" value="{!cntofa+1}"/>
+                            </apex:repeat> 
+                        </apex:repeat> 
+                        
+                    </td>
+                    <td style="width: 20%; text-align: center; height: 18px;font-size: 10.0pt; font-family: 'Arial','sans-serif';" valign="Center">
+                      <!--  <apex:repeat value="{!lstOppli}" var="oli">
+                            <!--{!oli.Sales_Price__c}<br/> 
+                            <apex:outputText value="{0, number, #,###}">
+                                <apex:param value="{!ROUND(oli.Sales_Price__c,0)}" />
+                            </apex:outputText><br/>
+                        </apex:repeat> -->
+                        <!-- <apex:outputText value="{0, number, #,###}">
+                                <apex:param value="{!ROUND(Amount,0)}" />
+                            </apex:outputText> -->
+                        {!Amount_final}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 80%; font-size: 10pt;font-family: Arial, sans-serif;Padding-left:20px">
+                        C.G.S.T@<!-- {!iOpp.CGST__c} --><apex:outputLabel value="{!TEXT(ROUND(cgst_per,0))}" />%<br/>
+                        S.G.S.T@<!-- {!iOpp.SGST__c} --><apex:outputLabel value="{!TEXT(ROUND(sgst_per,0))}" />%<br/>
+                        I.G.S.T@<!-- {!iOpp.IGST__c} --><apex:outputLabel value="{!TEXT(ROUND(igst_per,0))}" />%<br/>
+                    </td>
+                    <td style="width: 20%; font-size: 10pt;font-family: Arial, sans-serif;text-align: center;"><!-- text-align: center;"><span style="font-size: 11.0pt; line-height: 107%; font-family: 'Arial','sans-serif';"></span> -->
+                        <!-- <apex:outputText value="{!iOpp.CGST_Amount__c}" /> -->
+                            <!-- <apex:outputText value="{0, number, #,###}">
+                                <apex:param value="{!ROUND(cgst,0)}" />
+                            </apex:outputText> --> 
+                        {!cgst_final}<br/>
+                        <!-- <apex:outputText value="{!iOpp.SGST_Amount__c}" /> -->
+                            <!-- <apex:outputText value="{0, number, #,###}">
+                                <apex:param value="{!ROUND(sgst,0)}" />
+                            </apex:outputText> -->
+                        {!sgst_final}<br/>
+                        <!-- <apex:outputText value="{!iOpp.IGST_Amount__c}" /> -->
+                            <!-- <apex:outputText value="{0, number, #,###}">
+                                <apex:param value="{!ROUND(igst,0)}" />
+                            </apex:outputText> -->
+                        {!igst_final}<br/>
+                    </td>
+                </tr>
+                <tr >
+                    <td style="width: 80%; font-size: 10.0pt; font-family: 'Arial','sans-serif';Padding-left:20px"><strong>Total Amount Payable</strong></td>
+                    <td style="width: 20%; font-size: 10.0pt; font-family: 'Arial','sans-serif'; text-align: center;"><strong>
+                        <!-- <apex:outputText value="{!total}" /> -->
+                        <!-- <apex:outputText value="{0, number, #,###}">
+                            <apex:param value="{!ROUND(total,0)}" />
+                        </apex:outputText> -->
+                        {!total_final}</strong>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <table style="border-collapse: collapse; width: 100%;" border="0">
+            <tr>
+                <td style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">
+                    (Rupees <apex:outputText value="{!numInWords}" />)
+                </td>
+            </tr>
+        </table> -->
+        <p style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">
+            (Rupees {!numInWords})
+        </p>
+        <table style="border-collapse: collapse; width: 100%;" border="1">
+            <tbody>
+                <tr>
+                    <td style="width: 100%;text-align: left">
+                        <!-- <ul style="list-style-type: disc;">
+                            <span style="border: none;font-size: 10.0pt; font-family: 'Arial','sans-serif';"><strong><u>Wire Transfer Details:</u></strong></span>
+                            <li style="font-size: 10.0pt; font-family: 'Arial','sans-serif';line-height: 8pt;">For online fund transfer from <strong>ICICI Bank</strong>: A/c No 003205000032, IFSC Code: ICIC0000032, Bank Name: ICICI Bank Limited, Branch Detail, Branch Address : Poonawadi, Dr Ambedkar Road, Dadar, Mumbai 400014, India</li>
+                            <p style="border: none; padding: 0cm;font-size: 11.0pt; font-family: 'Arial','sans-serif';text-align: left;line-height: 8pt;"><strong><u>Note:</u></strong></p>
+                            <li style="font-size: 10.0pt; font-family: 'Arial','sans-serif';line-height: 8pt;">Kindly draw the Cheque in favour of 'CRISIL Ltd'. Please make the payment within 10 days of receiving the invoice</li>
+                            <li style="font-size: 10.0pt; font-family: 'Arial','sans-serif';line-height: 8pt;">S.T. No.: 27AAACT3151E1ZP, Pan No.: AAACT3151E</li>
+                            <li style="font-size: 10.0pt; font-family: 'Arial','sans-serif';line-height: 8pt;">Location of supplier: Maharashtra (27), HSN Code:{!strHSN}</li>
+                            <li style="font-size: 10.0pt; font-family: 'Arial','sans-serif';line-height: 8pt;">Incase tax is deducted, kindly issue a TDS Certificate at the earliest</li>
+                            <li style="font-size: 10.0pt; font-family: 'Arial','sans-serif';line-height: 8pt;">Incase of any clarification on Invoice, please contact Mr. Harish Gaggar on his email id <a href="mailto:harish.gaggar@crisil.com">gaggar@crisil.com</a>or courier it to 'CRISIL House, 5th Floor, Accounts &amp; Finance Department, Central Avenue Road, Hiranandani Business Park, Powai, Mumbai - 400 076'</li>
+                            <li style="font-size: 10.0pt; font-family: 'Arial','sans-serif';line-height: 8pt;">For any business or product related queries, you can contact your Relationship Manager or send an email to our Business Team on <a href="mailto:research@crisil.com">research@crisil.com</a>.</li>
+                        </ul> -->
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 100%;font-family: Arial, sans-serif; font-size: 10.0pt;text-align: justify;"><strong><u>Wire Transfer Details:</u></strong></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 100%; padding-left: 40px;font-family: Arial, sans-serif; font-size: 10.0pt;text-align: justify;"><li style="font-size: 10.0pt; font-family: 'Arial','sans-serif';line-height: 8pt;">For online fund transfer from <strong>ICICI Bank</strong>: A/c No 003205000032, IFSC Code: ICIC0000032, Bank Name: ICICI Bank Limited, Branch Detail, Branch Address : Poonawadi, Dr Ambedkar Road, Dadar, Mumbai 400014, India</li></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 100%;font-family: Arial, sans-serif; font-size: 10.0pt;text-align: justify;"><strong><u>Note:</u></strong></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 100%; padding-left: 40px;font-family: Arial, sans-serif; font-size: 10.0pt;">
+                                        <li style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">Kindly draw the Cheque in favour of 'CRISIL Ltd'.</li>
+                                        <li style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">G.S.T No: <!-- {!strGST} -->{!iOpp.CRISIL_Billing_Master__r.Billing_Location_GST__c}, Pan No: <!-- {!iOpp.Account.PAN__c} -->AAACT3151E.</li>
+                                        <li style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">Location of supply: <!-- {!iOpp.Account.BillingState} -->{!iOpp.CRISIL_Billing_Master__r.Name} (<!-- <apex:outputText >{!strcom}</apex:outputText> -->{!iOpp.CRISIL_Billing_Master__r.GST_State_Code__c}), HSN/SAC Code: {!strHSN}</li>
+                                        <li style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">Incase tax is deducted, kindly issue a TDS Certificate at the earliest</li>
+                                        <li style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">
+                                            In case of any clarification on Invoice, please contact Ms. Swati Kulshreshtha (022 - 3342 5851) at Swati.Kulshreshtha@ext-crisil.com at CRISIL Limited, 5th Floor, Finance, CRISIL House, Central Avenue Road, Hiranandani Business Park, Powai, Mumbai- 400 076.  
+                                        </li>
+                                       <!-- <li style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">For any business or product related queries, you can contact your Relationship Manager or send an   email to our Business Team on <a href="mailto:research@crisil.com">research@crisil.com</a>.</li> -->        
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-size: 10.0pt; font-family: 'Arial','sans-serif';line-height:11pt">Yours sincerely,<br/>
+        <!-- <p style="margin-left: -36.0pt; text-align: justify; text-indent: 36.0pt;"><span style="font-size: 11.0pt; font-family: 'Arial','sans-serif';"></span></p> -->
+            <apex:outputText value="{!iOpp.Primary_Marketing_Contact_PMC__r.Name}" /><br/>
+        <apex:outputText value="{!iOpp.Primary_Marketing_Contact_PMC__r.HRMS_Designation__c}" /></p>
+        <br style="page-break-after: always" />
+        <p style="font-size: 10.0pt; font-family: 'Arial','sans-serif';"><strong>Annexures:</strong></p>
+        <!-- <apex:repeat value="{!lstOppli}" var="oli">
+            <strong><apex:outputText style="font-size:11pt; font-family:Arial,sans-serif" value="{!oli.Product_Category__r.Name}"></apex:outputText></strong><br/>
+        	<apex:repeat value="{!mapoop}" var="prd">
+            {!mapoop[oli.Product_Category__r.Name]}
+        </apex:repeat> -->
+    <!-- /// <apex:repeat value="{!mapoop}" var="prd">
+            <strong><apex:outputText style="font-size: 10.0pt; font-family: 'Arial','sans-serif';" value="{!prd}" /></strong><br/>
+            <apex:repeat value="{!mapoop[prd]}" var="cprd">
+                <apex:outputText style="font-size: 10.0pt; font-family: 'Arial','sans-serif';" value="{!cprd.Product2ID__r.Name}" /><br/><br/>
+            </apex:repeat>
+</apex:repeat>///
+        <!---<table border = "1" rowClasses="row">
+            <tr>
+                <td><span class="counter" value="1"></span></td>
+                <td><apex:repeat value="{!mapoop}" var="prd">
+                    <strong><apex:outputText style="font-size: 12.0pt; font-family: 'Arial','sans-serif';" value="{!prd}" /></strong><br/>
+                    <apex:repeat value="{!mapoop[prd]}" var="cprd">
+                        <apex:outputText style="font-size: 11.0pt; font-family: 'Arial','sans-serif';" value="{!cprd.Product2ID__r.Name}" /><br/><br/>
+                    </apex:repeat>
+                    </apex:repeat></td>
+            </tr>
+        </table> -->
+    <table style="width:100%" border="0">
+        <tbody>
+            <apex:variable value="{!1}" var="count" />
+            <apex:repeat value="{!mapoop}" var="prd">
+                <tr>
+                    <td style="width:100%;font-size: 10.0pt; font-family: 'Arial','sans-serif';">
+                        {!count}
+                        <apex:variable value="{!count+1}" var="count" />.
+                        <strong><apex:outputText style="font-size: 10.0pt; font-family: 'Arial','sans-serif';" value="{!prd}" /></strong>
+                    </td>
+                    <td style="width:70%:padding-left:30px">
+                        <apex:repeat value="{!mapoop[prd]}" var="cprd">
+                            <tr>
+                                <td style="width:100%:padding-left:30px">
+                                    <apex:outputText style="font-size: 10.0pt; font-family: 'Arial','sans-serif';" value="{!cprd.Product2ID__r.Name}" />
+                                </td>
+                            </tr>
+                        </apex:repeat>
+                    </td>
+                </tr>
+            </apex:repeat>
+        </tbody>
+    </table>
+    <br style="page-break-after: always" />
+    <p style="font-size: 10.0pt; font-family: 'Arial','sans-serif';"><strong>Crisil Research</strong></p>
+    <br style="page-break-after: always" />
+    <p style="margin-bottom: 3.0pt; "><span style="font-family: Arial, sans-serif;font-size: 10.0pt;"><strong>About CRISIL Limited </strong></span></p>
+    <p style="margin-bottom: 3pt;  text-align: justify;"><span style="font-size: 10pt;  color: windowtext; font-family: arial, helvetica, sans-serif;">CRISIL is a leading, agile and innovative global analytics company driven by its mission of making markets function better.</span></p>
+    <p style="margin-bottom: 3pt;  text-align: justify;"><span style="font-size: 10pt;  color: windowtext; font-family: arial, helvetica, sans-serif;">It is India's foremost provider of ratings, data, research, analytics and solutions, with a strong track record of growth, culture of innovation and global footprint.</span></p>
+    <p style="margin-bottom: 3pt;  text-align: justify;"><span style="font-size: 10pt;  color: windowtext; font-family: arial, helvetica, sans-serif;">It has delivered independent opinions, actionable insights, and efficient solutions to over 100,000 customers. </span></p>
+    <p style="margin-bottom: 3pt;  text-align: justify;"><span style="font-size: 10pt;  color: windowtext; font-family: arial, helvetica, sans-serif;">It is majority owned by S&amp;P Global Inc, a leading provider of transparent and independent ratings, benchmarks, analytics and data to the capital and commodity markets worldwide.</span></p>
+    <p style="margin-bottom: 6pt;  text-align: justify;"><span style="font-size: 10pt;  color: windowtext; font-family: arial, helvetica, sans-serif;"></span></p>
+    <p style="margin-bottom: 3.0pt; "><span style="font-family: Arial, sans-serif;font-size: 10.0pt;"><strong>About CRISIL Research</strong></span></p>
+    <p style="margin-bottom: 12pt;  text-align: justify;"><span style=" font-size: 10pt; font-family: Arial, helvetica, sans-serif;">CRISIL Research is India's largest independent integrated research house. We provide insights, opinion and analysis on the Indian economy, industry, capital markets and companies. We also conduct training programs to financial sector professionals on a 
+        wide array of technical issues. We are India's most credible provider of economy and industry research. Our industry research covers 86 sectors and is known for its rich insights and perspectives. Our analysis is supported by inputs from our large network sources, including industry experts, industry associations and trade channels. We play a key role in India's fixed income markets. We are the largest provider
+        of valuation of fixed income securities to the mutual fund, insurance and banking industries in the country. We are also the sole provider of debt and hybrid indices to India's mutual fund and life insurance industries. We pioneered independent equity research in India, and are today the country's largest independent equity research house. Our defining trait is the ability to convert information and data into 
+        expert judgments and forecasts with complete objectivity. We leverage our deep understanding of the macro-economy and our extensive sector coverage to provide unique insights on micro-macro and cross-sectoral linkages. Our talent pool comprises economists, sector experts, company analysts and information management specialists.</span></p>
+    <p style="margin-bottom: 3.0pt; "><span style="font-family: Arial, sans-serif;font-size: 10.0pt;"><strong>CRISIL Privacy</strong></span></p>
+    <p style=" text-align: justify;"><span style="font-size: 10pt;  color: windowtext; font-family: Arial, helvetica, sans-serif;">CRISIL respects your privacy. We may use your contact information, such as your name, address, and email id to fulfil your request and service your account and to provide you with additional information from CRISIL. For further information on CRISIL's privacy policy please visit www.crisil.com.</span></p>
+    <p style="margin-bottom: 3.0pt; "><span style="font-family: Arial, sans-serif;font-size: 10.0pt;"><strong>Disclaimer</strong></span></p>
+    <p style=" text-align: justify;"><span style="font-size: 10pt;  font-family: Arial, helvetica, sans-serif;">CRISIL Research, a division of CRISIL Limited (CRISIL) has taken due care and caution in preparing this Report based on the information obtained by CRISIL from sources which it considers reliable (Data). However, CRISIL does not guarantee the accuracy, adequacy or completeness
+        of the Data / Report and is not responsible for any errors or omissions or for the results obtained from the use of Data / Report. This Report is not a recommendation to invest / disinvest in any company covered in the Report. CRISIL especially states that it has no financial liability whatsoever to the subscribers/ users/ transmitters/ distributors of this Report. CRISIL Research operates independently of, and does not have access to information obtained by
+        CRISIL's Ratings Division / CRISIL Risk and Infrastructure Solutions Limited (CRIS), which may, in their regular operations, obtain information of a confidential nature. The views expressed in this Report are that of CRISIL Research and not of CRISIL's Ratings Division / CRIS. No part of this Report may be published / reproduced in any form without CRISIL's prior written approval.</span></p>
+    <p style="text-align: justify; text-justify: inter-ideograph; line-height: 14.0pt;"><span style="font-family: Arial, helvetica, sans-serif;"></span></p>
+
+            <table id='hrdftrtbl' border='0' cellspacing='0' cellpadding='0'>
+                <tr>
+                    <td>
+                        <!--Header-->
+                        <div style='mso-element:header' id="h1" >
+                            <p class="MsoHeader">
+                                <table border="0" width="100%">
+                                    <tr>
+                                        <td width="100%" align="center">
+                                            <apex:image url="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DWjU&oid=00D0w0000008cDW&lastMod=1554872313000" width="700" height="100"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <!--Footer-->
+                        <div style='mso-element:footer' id="f1">
+                            <p class="MsoFooter">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td width="100%" align="center">
+                                        <!-- <apex:image url="imageurl" width="100%" height="122px"/> -->
+                                        </td>
+                                    </tr>
+                                </table>
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div><!--Section1 div ends-->
+    </body>
+</html>
+</apex:page>

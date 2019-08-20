@@ -1,0 +1,399 @@
+<apex:page controller="OPE_Invoice_Without_Contact" showHeader="false" sidebar="false" standardStylesheets="false">  
+    <apex:form >            
+        <HTML>
+            
+            <style type="text/css">
+                .menu { position: fixed; right: 55px; top: 0; background-color: #cfcfcf; width: auto; border-radius: 0 0 1em 1em; padding: 5px 20px; opacity: 0.75; }
+                .menu:hover { opacity: 1; border-bottom: 1px solid gray; }
+                .menu a { text-decoration: none; display: inline-block; text-align: center; border: 1px solid #7595ff ; background-color: #f5f5ff; width: 75px; } 
+                .menu a { color: #444444; padding: 3px; font-family: TimesNewRoman, Arial, sans-serif; opacity: 1; }
+                .mar10 { margin-left: 10px; margin-right: 10px; }
+                .menu a:hover { color: #f5f5ff; background-color: #7595ff; border-color: #444444; }
+                
+                
+                .popup
+                {
+                background-color: white;
+                border-width: 2px;
+                border-style: solid;
+                z-index: 9999;
+                left: 50%;
+                padding:10px;
+                position: absolute;
+                width: 500px;
+                margin-left: -250px;
+                top:80px;
+                }
+                
+                .popupBg
+                {
+                background-color:black;
+                opacity: 0.20;
+                filter: alpha(opacity = 70);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 9998;
+                }
+                .nobreak { page-break-inside:avoid; }
+                
+            </style> 
+            
+            <style>
+                @top-center {
+                content: "Sample Header Test";
+                background-image: url('{!$Resource.Logo}');  
+                }
+            </style>
+            
+            <div class="menu">
+                <apex:outputText rendered="{!if(ibl.Status__c == 'Accounted', true, false)}">
+                    <a href="" onclick="savelinkcr_proposal();" style="text-decoration: none" class="mar10">Save</a></apex:outputText>
+                <a href="" onclick="savecr_proposal();" style="text-decoration: none" class="mar10">PDF</a>
+                <!--<a href="" onclick="backcr_proposal();" style="text-decoration: none" class="mar10">Back</a>-->
+            </div>
+            
+            <apex:actionFunction id="savelinkcr_proposal" name="savelinkcr_proposal" action="{!saveQuote}"/>
+            <apex:actionFunction id="savecr_proposal" name="savecr_proposal" action="{!print}"/>
+            <apex:actionFunction id="emailcr_proposal" name="emailcr_proposal" action="{!Cancel}"/>
+            
+            <div style="Border:0px Solid;margin-bottom:0px;margin-top: 55px;background-color:smokewhite;" width="100%"  >
+                
+                <!--<div align="center">
+<apex:commandButton value="Save" action="{!Cancel}"/>&nbsp;
+<apex:commandButton value="PDF" action="{!Cancel}"/> 
+<apex:commandButton value="Cancel" action="{!Cancel}"/>         
+</div> <br/>-->
+                
+                <div align="center" >
+                    <apex:image url="{!$Resource.Logo}"/>
+                </div>
+                
+                <p Style="text-align: center;"><span style="font-size: 9pt; font-family: arial, helvetica, sans-serif;"><strong>Tax Invoice - Original for Recipient
+                    </strong></span></p>
+                
+                <table align="center" style="border-collapse: collapse; width: 75%;" border="0">
+                    <tbody>
+                        <tr>
+                            <td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;">                                        
+                                <strong>{!ibl.Billing_Customer__r.Name}</strong>
+                            </td>
+                            <td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;padding-left: 120px;">
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;">
+                                
+                                {!ibl.Billing_Contact__r.MailingStreet} <br/> {!ibl.Billing_Contact__r.MailingCity}, {!ibl.Billing_Contact__r.MailingState}
+                                <apex:outputText rendered="{!if(ibl.Billing_Contact__r.MailingPostalCode != '', true, false)}">&nbsp;-&nbsp;</apex:outputText>{!ibl.Billing_Contact__r.MailingPostalCode}, {!ibl.Billing_Contact__r.MailingCountry}.
+                                
+                            </td>
+                            <td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;padding-left: 120px;">
+                                Customer State Code: <!-- {!strStateCode} --><apex:outputText rendered="{!if(ibl.Billing_Contact__r.MailingCountry == 'India', true, false)}">
+                                {!ibl.Billing_Contact__r.Contact_State_Code__c}({!ibl.Billing_Contact__r.MailingState})</apex:outputText>
+                                <apex:outputText rendered="{!if(ibl.Billing_Contact__r.MailingCountry != 'India', true, false)}">
+                                    N.A</apex:outputText><br/>
+                                Place of Supply: <apex:outputText rendered="{!if(ibl.Billing_Contact__r.MailingCountry == 'India', true, false)}">
+                                {!ibl.Billing_Contact__r.Contact_State_Code__c}({!ibl.Billing_Contact__r.MailingState})</apex:outputText>
+                                <apex:outputText rendered="{!if(ibl.Billing_Contact__r.MailingCountry != 'India', true, false)}">
+                                    N.A</apex:outputText>
+                            </td>
+                        </tr>
+                        <!-- <tr>
+<td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;line-height: 16pt;">
+
+</td>
+<td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;line-height: 16pt;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;line-height: 16pt;">
+
+</td>
+<td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;line-height: 16pt;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;line-height: 16pt;">
+
+</td>
+<td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;line-height: 16pt;">&nbsp;</td>
+</tr> -->
+                        <tr>
+                            <td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;">
+                                GST Number:&nbsp;<apex:outputText rendered="{!if(lstblli[0].Mandate__r.GST_REG_Number__r.Name != null, true, false)}">{!lstblli[0].Mandate__r.GST_REG_Number__r.Name}</apex:outputText>
+                                <apex:outputText rendered="{!if(lstblli[0].Mandate__r.GST_REG_Number__r.Name == null, true, false)}">N.A</apex:outputText>                                    </td>
+                            <td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;padding-left: 120px;">
+                                PAN:&nbsp;<apex:outputText rendered="{!if(ibl.Billing_Customer__r.PAN__c != null, true, false)}">{!ibl.Billing_Customer__r.PAN__c}</apex:outputText>
+                                <apex:outputText rendered="{!if(ibl.Billing_Customer__r.PAN__c == null, true, false)}">N.A</apex:outputText>
+                            </td>
+                        </tr>
+                        <!--  <tr>
+<td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;line-height: 16pt;">
+Purchase Order Reference Number : {!ibl.Mandate__r.Purchase_Order_Reference_Number__c}
+</td>
+<td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;line-height: 16pt;">&nbsp;</td>
+</tr> -->
+                        <apex:outputText rendered="{!if(ibl.PO_Number__c != '', true, false)}">
+                            <tr>
+                                <td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;">
+                                    PO Number: {!ibl.PO_Number__c}
+                                </td>
+                                <td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;">
+                                    
+                                </td>
+                            </tr>
+                        </apex:outputText>
+                        <tr>
+                            <td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;"><br/>
+                                <strong><span>Invoice Number: {!ibl.Invoice_Number__c}</span></strong>
+                            </td>
+                            <td style="width: 50%;text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;padding-left: 120px;">
+                                <br/><strong>Invoice Date:&nbsp;
+                                <apex:outputText value="{0,date,dd' 'MMMMM' 'yyyy}">
+                                    <apex:param value="{!ibl.OFA_Invoice_Date__c}" /> 
+                                </apex:outputText>
+                                </strong>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table align="center" style="border-collapse: collapse; width: 75%;" border="0">
+                    <tbody>
+                        <tr>
+                            <td style="width: 70%; border: 1pt solid black; padding: 0cm 0pt;text-align: center;font-size: 9pt; font-family: arial" colspan="4">
+                                <strong>Particulars</strong>
+                            </td>
+                            <td style="width: 30%; border-top: 1pt solid black; border-right: 1pt solid black; border-bottom: 1pt solid black; border-image: initial; border-left: none; padding: 0cm 0pt;text-align: center;font-size: 9pt; font-family: arial">
+                                <strong>Amount({!lstblli[0].Mandate__r.CurrencyIsoCode})</strong>
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td style="border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; 
+                                       text-align: left;
+                                       font-family: arial, helvetica, sans-serif; font-size: 9pt; Padding-left:20px" colspan="4" valign="top">
+                                <apex:repeat value="{!lstblli}" var="par">
+                                    <!-- <apex:outputText value="{!par.Particulars__c}">
+(<apex:outputText value="{!par.Details__c}">
+</apex:outputText>)
+</apex:outputText> -->
+                                    {!par.Particulars__c}
+                                    <apex:outputText rendered="{!if(par.Details__c != '', true, false)}">
+                                        ({!par.Details__c})
+                                    </apex:outputText>
+                                    <br/>
+                                </apex:repeat>
+                            </td>
+                            <td style="width: 100%; border-top: none; border-left: none; border-bottom: 1pt solid black; 
+                                       border-right: 1pt solid black; padding: 0cm 0pt;text-align: center;
+                                       font-family: arial, helvetica, sans-serif; font-size: 9pt;" valign="center">
+                                <apex:repeat value="{!lstblli}" var="amt">
+                                    <!--  <apex:outputText>{!amt.Amount__c}</apex:outputText> -->
+                                    <apex:outputText rendered="{!(amt.Particulars__c) != ''}">
+                                        <apex:outputText value="{0, number, #,###}">
+                                            <apex:param value="{!ROUND(amt.Amount__c,0)}" />
+                                        </apex:outputText> <br/>
+                                    </apex:outputText>
+                                </apex:repeat>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 70%; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-image: initial; border-top: none;text-align: left; padding: 0cm 1.4pt;Padding-left:20px" colspan="4" valign="left">
+                                <span style="margin-bottom: .0001pt; text-align: left;font-family: arial, helvetica, sans-serif; font-size: 9pt;">
+                                    <apex:outputText style="font-family: arial, helvetica, sans-serif; font-size: 9pt;">CGST @ <apex:outputLabel value="{!TEXT(ROUND(cgst_per,0))}" />%<br/></apex:outputText>
+                                    <apex:outputText style="font-family: arial, helvetica, sans-serif; font-size: 9pt;">SGST @ <apex:outputLabel value="{!TEXT(ROUND(sgst_per,0))}" />%<br/></apex:outputText>
+                                    <apex:outputText style="font-family: arial, helvetica, sans-serif; font-size: 9pt;">IGST @ <apex:outputLabel value="{!TEXT(ROUND(igst_per,0))}" />%<br/></apex:outputText>
+                                </span>
+                            </td>
+                            <td style="width: 30%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 1.4pt;text-align: center;" valign="Center">
+                                <span style="margin-bottom: .0001pt; font-family: arial, helvetica, sans-serif; font-size: 9pt;">
+                                    <apex:outputText style="font-family: arial, helvetica, sans-serif; font-size: 9pt;"><!-- {!igst} <apex:outputLabel value="{!TEXT(ROUND(igst,0))}"></apex:outputLabel> -->
+                                        <!-- <apex:outputText value="{0, number, #,###}">
+<apex:param value="{!ROUND(igst,0)}" /><apex:outputText rendered="{!(lstblli[0].Particulars__c) != ''}">
+</apex:outputText> -->{!cgst_final}
+                                        <br/></apex:outputText>
+                                    <apex:outputText style="font-family: arial, helvetica, sans-serif; font-size: 9pt;"><!-- {!cgst} <apex:outputLabel value="{!TEXT(ROUND(cgst,0))}"></apex:outputLabel> -->
+                                        <!-- <apex:outputText value="{0, number, #,###}">
+<apex:param value="{!ROUND(cgst,0)}" />
+</apex:outputText> -->{!sgst_final}
+                                        <br/></apex:outputText>
+                                    <apex:outputText style="font-family: arial, helvetica, sans-serif; font-size: 9pt;"><!-- {!sgst} <apex:outputLabel value="{!TEXT(ROUND(sgst,0))}"></apex:outputLabel> -->
+                                        <!-- <apex:outputText value="{0, number, #,###}">
+<apex:param value="{!ROUND(sgst,0)}" />
+</apex:outputText> -->{!igst_final}
+                                        <br/></apex:outputText>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 70%; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-image: initial; border-top: none; padding: 0cm 1.4pt;text-align: left;Padding-left:20px" colspan="4">
+                                <span style="margin-bottom: .0001pt; text-align: left;font-family: arial, helvetica, sans-serif; font-size: 9pt;">
+                                    Total Amount Payable:<br/>Rupees {!numInWords}
+                                </span>
+                            </td>
+                            <td style="width: 70%; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 1.4pt;text-align: center;" Valign="Center">
+                                <span style="margin-bottom: .0001pt; font-family: arial, helvetica, sans-serif; font-size: 9pt;">
+                                    <apex:outputText >{!str_final}</apex:outputText>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                &nbsp;
+                <apex:outputText rendered="{!lstblli[0].Mandate__r.CurrencyIsoCode = 'INR'}">
+                    <table align="center" style="border-collapse: collapse; width: 75%;" border="0">
+                        <tbody>
+                            <tr>
+                                <td style="width: 100%; border: solid black 1.0pt; font-size: 9.0pt; font-family: 'Arial','sans-serif';text-align: left;">
+                                    <strong>&nbsp;Payment mode:</strong>
+                                    <li style="font-size: 9pt;  font-family: Arial, sans-serif;text-align: justify;">
+                                        For online NEFT/RTGS from Non-ICICI Bank: A/c No. {!ibl.Billing_Customer__r.Code__c}, IFSC Code: ICIC0000104, Bank Name: ICICI Bank Limited, Branch: CMS Branch 1st Floor Empire Complex 414 S.B Marg, Mumbai Maharastra.
+                                    </li>
+                                    <li style="font-size: 9pt;  font-family: Arial, sans-serif;text-align: justify;">
+                                        For online fund transfer from ICICI Bank: A/c No 003205000032, IFSC Code: ICIC0000032, Bank Name: ICICI Bank Limited, Branch Detail, Branch Address : Poonawadi, Dr Ambedkar Road, Dadar, Mumbai 400014, India.
+                                    </li>
+                                    <li style="font-size: 9pt;  font-family: Arial, sans-serif;text-align: justify;">
+                                        Kindly issue the cheque in favour of CRISIL Limited.
+                                    </li>
+                                    <strong>&nbsp;Note:</strong>
+                                    <li style="font-size: 9pt;  font-family: Arial, sans-serif;text-align: justify;">
+                                        Please make the payment within 10 days of receiving the invoice. Kindly ignore if already paid.
+                                    </li>
+                                    <li style="font-size: 9pt; font-family: Arial,helvetica, sans-serif;text-align: left;">
+                                        G.S.T.No: {!strGST}, Pan No: <!-- {!ibl.Billing_Customer__r.PAN__c} -->AAACT3151E.
+                                    </li>
+                                    <li style="font-size: 9pt; font-family: Arial,helvetica, sans-serif;text-align: left;">
+                                        Location of supply:&nbsp;<!-- {!ibl.Billing_Customer__r.BillingCity},--><apex:outputText >{!strcom}</apex:outputText><!-- {!ibl.Billing_Customer__r.GST_state_code__c} --> ({!lstblli[0].Mandate__r.Crisil_Billing_Location__c}), HSN/SAC Code:&nbsp;<apex:outputText >{!strHSN}</apex:outputText>, Billing Address: {!strAddress}.
+                                    </li>
+                                    <li style="font-size: 9pt; font-family: Arial,helvetica, sans-serif;text-align: left;">
+                                        In case tax is deducted, kindly issue a TDS Certificate at the earliest.
+                                    </li>
+                                    <li style="font-size: 9pt; font-family: A rial,helvetica, sans-serif;text-align: left;">
+                                        In case of any clarification on Invoice, please contact Ms. Swati Kulshreshtha (022 &ndash; 3342 5851) at Swati.Kulshreshtha@ext-crisil.com at CRISIL Limited, 5th Floor, Finance, CRISIL House, Central Avenue Road, Hiranandani Business Park, Powai, Mumbai- 400 076.
+                                    </li> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </apex:outputText>
+                <apex:outputText rendered="{!lstblli[0].Mandate__r.CurrencyIsoCode = 'USD'}">
+                    <table align="center" style="border-collapse: collapse; width: 75%;" border="0">
+                        <tbody>
+                            <tr>
+                                <td style="width: 100%; border: solid black 1.0pt; font-size: 9pt;  font-family: Arial, sans-serif;text-align: justify;line-height: 9pt;" >
+                                    <ul>
+                                        <strong>&nbsp;Payment mode:</strong>
+                                        <li style="font-size: 9pt;  font-family: Arial, sans-serif;line-height: 9pt;">Name of the Company :- CRISIL Limited</li>
+                                        <li style="font-size: 9pt;  font-family: Arial, sans-serif;line-height: 9pt;">Name of Bank : J P Morgan Chase Bank, New York </li>
+                                        <li style="font-size: 9pt;  font-family: Arial, sans-serif;line-height: 9pt;">A/c. No. : 001 1 427374, Swift Code : CHASUS33XXX, ICICI Bank Swift Code : ICICINBBCTS</li>
+                                        <li style="font-size: 9pt;  font-family: Arial, sans-serif;line-height: 9pt;">FXRPTG Names: CHMNA </li>
+                                        <li style="font-size: 9pt;  font-family: Arial, sans-serif;line-height: 9pt;">IBAN No.:ABA FED No 021000021</li>
+                                        For further credit to:
+                                        <li style="font-size: 9pt;  font-family: Arial, sans-serif;line-height: 9pt;">Name of the Company :- CRISIL Limited </li>
+                                        <li style="font-size: 9pt;  font-family: Arial, sans-serif;line-height: 9pt;">Name of the Bank : - ICICI Bank Limited </li>
+                                        <li style="font-size: 9pt;  font-family: Arial, sans-serif;line-height: 9pt;">Bank Address: Trans Trade Centre, Nr Floral Deck Plaza, Seepz MIDC, Andheri (East), Mumbai - 400 093</li>
+                                        <li style="font-size: 9pt;  font-family: Arial, sans-serif;line-height: 9pt;">EEFC A/c. No.:- 054406000067, MICR Code : 400229010, IFSC Code: ICIC0000032 </li>
+                                        <strong>&nbsp;Note:</strong>
+                                        <li style="font-size: 9pt;  font-family: Arial, sans-serif;text-align: justify;">
+                                            Please make the payment within 10 days of receiving the invoice. Kindly ignore if already paid.
+                                        </li>
+                                        <li style="font-size: 9pt; font-family: Arial,helvetica, sans-serif;text-align: left;">
+                                            G.S.T.No: {!strGST}, Pan No: <!-- {!ibl.Billing_Customer__r.PAN__c} -->AAACT3151E.
+                                        </li>
+                                        <li style="font-size: 9pt; font-family: Arial,helvetica, sans-serif;text-align: left;">
+                                            Location of supply:&nbsp;<!-- {!ibl.Billing_Customer__r.BillingCity},--><apex:outputText >{!strcom}</apex:outputText><!-- {!ibl.Billing_Customer__r.GST_state_code__c} --> ({!lstblli[0].Mandate__r.Crisil_Billing_Location__c}), HSN/SAC Code:&nbsp;<apex:outputText >{!strHSN}</apex:outputText>, Billing Address: {!strAddress}.
+                                        </li>
+                                        <li style="font-size: 9pt; font-family: Arial,helvetica, sans-serif;text-align: left;">
+                                            In case tax is deducted, kindly issue a TDS Certificate at the earliest.
+                                        </li>
+                                        <li style="font-size: 9pt; font-family: A rial,helvetica, sans-serif;text-align: left;">
+                                            In case of any clarification on Invoice, please contact Ms. Swati Kulshreshtha (022 &ndash; 3342 5851) at Swati.Kulshreshtha@ext-crisil.com at CRISIL Limited, 5th Floor, Finance, CRISIL House, Central Avenue Road, Hiranandani Business Park, Powai, Mumbai- 400 076.
+                                        </li>     
+                                    </ul> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </apex:outputText>
+                <apex:outputText rendered="{!lstblli[0].Mandate__r.CurrencyIsoCode = 'EUR'}">
+                    <table align="center" style="border-collapse: collapse; width: 75%;" border="0">
+                        <tbody>
+                            <tr>
+                                <td style="width: 100%; border: solid black 1.0pt; padding: 0cm 1.4pt 0cm 1.4pt;font-size: 9pt;  font-family: Arial, sans-serif;text-align: left;line-height: 10pt;">
+                                    <strong>&nbsp;Payment mode:</strong>
+                                    <p style="font-size: 9.0pt;font-family: Arial,helvetica, sans-serif;text-align: left; ">
+                                        ICICI Bank Ltd , Trans Trade Centre, Nr Floral Deck Plaza, Seepz MIDC, Andheri (East), Mumbai -
+                                        400 093, Bank Current Account No : 054406000066, the Swift Code being CHASDEFXXXX with NOSTRA A/C No : 6231605970 with J P
+                                        MORGAN CHASE BANK, FRANKFURT, FXRPTG Names: GTSUEUR ,IBAN No.:DE92501108006231605970
+                                    </p>
+                                    <strong>&nbsp;Note: </strong>
+                                    <ul>
+                                        <li style="font-size: 9pt;  font-family: Arial, sans-serif;text-align: justify;">
+                                            Please make the payment within 10 days of receiving the invoice. Kindly ignore if already paid.
+                                        </li>
+                                        <li style="font-size: 9pt; font-family: Arial,helvetica, sans-serif;text-align: left;">
+                                            G.S.T.No: {!strGST}, Pan No: <!-- {!ibl.Billing_Customer__r.PAN__c} -->AAACT3151E.
+                                        </li>
+                                        <li style="font-size: 9pt; font-family: Arial,helvetica, sans-serif;text-align: left;">
+                                            Location of supply:&nbsp;<!-- {!ibl.Billing_Customer__r.BillingCity},--><apex:outputText >{!strcom}</apex:outputText><!-- {!ibl.Billing_Customer__r.GST_state_code__c} --> ({!lstblli[0].Mandate__r.Crisil_Billing_Location__c}), HSN/SAC Code:&nbsp;<apex:outputText >{!strHSN}</apex:outputText>, Billing Address: {!strAddress}.
+                                        </li>
+                                        <li style="font-size: 9pt; font-family: Arial,helvetica, sans-serif;text-align: left;">
+                                            In case tax is deducted, kindly issue a TDS Certificate at the earliest.
+                                        </li>
+                                        <li style="font-size: 9pt; font-family: A rial,helvetica, sans-serif;text-align: left;">
+                                            In case of any clarification on Invoice, please contact Ms. Swati Kulshreshtha (022 &ndash; 3342 5851) at Swati.Kulshreshtha@ext-crisil.com at CRISIL Limited, 5th Floor, Finance, CRISIL House, Central Avenue Road, Hiranandani Business Park, Powai, Mumbai- 400 076.
+                                        </li>
+                                    </ul> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </apex:outputText>
+                <apex:outputText rendered="{!lstblli[0].Mandate__r.CurrencyIsoCode = 'GBP'}">
+                    <table align="center" style="border-collapse: collapse; width: 75%;" border="0">
+                        <tbody>
+                            <tr>
+                                <td style="width: 100%; border: solid black 1.0pt; padding: 0cm 1.4pt 0cm 1.4pt;font-size: 9pt;  font-family: Arial, sans-serif;text-align: justify;line-height: 10pt;">
+                                    <li style="font-size: 9.0pt;font-family: 'Arial','sans-serif';text-align: left;line-height: 10pt;"><strong>&nbsp;Payment mode:</strong></li>
+                                    <li style="font-size: 9.0pt;font-family: Arial,helvetica, sans-serif;text-align: left; line-height: 10pt;">Bank Name: ICICI Bank Ltd</li>
+                                    <li style="font-size: 9.0pt;font-family: Arial,helvetica, sans-serif;text-align: left; line-height: 10pt;">Bank Current Account No : 054406000065,</li>
+                                    <li style="font-size: 9.0pt;font-family: Arial,helvetica, sans-serif;text-align: left; line-height: 10pt;">The Swift Code being NWBKGB2LXXX with NOSTRA A/C No : 600004 10001247 with NATIONAL WESTMINISTER BANK LONDON,</li>
+                                    <li style="font-size: 9.0pt;font-family: Arial,helvetica, sans-serif;text-align: left; line-height: 10pt;">FXRPTG Names: GTSUGBP</li>
+                                    <p style="font-size: 9.0pt;font-family: 'Arial','sans-serif';text-align: left;line-height: 10pt;"><strong>&nbsp;Note: </strong></p>
+                                    <ul>
+                                        <li style="font-size: 9pt;  font-family: Arial, sans-serif;text-align: justify;">
+                                            Please make the payment within 10 days of receiving the invoice. Kindly ignore if already paid.
+                                        </li>
+                                        <li style="font-size: 9pt; font-family: Arial,helvetica, sans-serif;text-align: left;">
+                                            G.S.T.No: {!strGST}, Pan No: <!-- {!ibl.Billing_Customer__r.PAN__c} -->AAACT3151E.
+                                        </li>
+                                        <li style="font-size: 9pt; font-family: Arial,helvetica, sans-serif;text-align: left;">
+                                            Location of supply:&nbsp;<!-- {!ibl.Billing_Customer__r.BillingCity},--><apex:outputText >{!strcom}</apex:outputText><!-- {!ibl.Billing_Customer__r.GST_state_code__c} --> ({!lstblli[0].Mandate__r.Crisil_Billing_Location__c}), HSN/SAC Code:&nbsp;<apex:outputText >{!strHSN}</apex:outputText>, Billing Address: {!strAddress}.
+                                        </li>
+                                        <li style="font-size: 9pt; font-family: Arial,helvetica, sans-serif;text-align: left;">
+                                            In case tax is deducted, kindly issue a TDS Certificate at the earliest.
+                                        </li>
+                                        <li style="font-size: 9pt; font-family: A rial,helvetica, sans-serif;text-align: left;">
+                                            In case of any clarification on Invoice, please contact Ms. Swati Kulshreshtha (022 &ndash; 3342 5851) at Swati.Kulshreshtha@ext-crisil.com at CRISIL Limited, 5th Floor, Finance, CRISIL House, Central Avenue Road, Hiranandani Business Park, Powai, Mumbai- 400 076.
+                                        </li>
+                                    </ul> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </apex:outputText>
+                
+                <table align="center" style="font-size: 10pt;" width="75%" cellspacing="0">
+                    <tbody><tr><td>
+                        <p style="text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;">For CRISIL Limited </p>
+                        <!--- <p style="text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;">&laquo;Digitalsignature&raquo; </p> ---->
+                        &nbsp;
+                        <p style="text-align: left;font-size: 9pt; font-family: arial, helvetica, sans-serif;">Authorized Signatory</p>
+                        </td></tr></tbody>
+                </table>
+                
+            </div>
+        </HTML>
+    </apex:form>
+</apex:page>

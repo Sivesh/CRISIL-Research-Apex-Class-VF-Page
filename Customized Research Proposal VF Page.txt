@@ -1,0 +1,970 @@
+<apex:page controller="Customized_New" contentType="application/msWord#Customize_Research_Proposal.doc" cache="true" standardStylesheets="false" >
+    <html xmlns:o='urn:schemas-microsoft-com:office:office'
+          xmlns:w='urn:schemas-microsoft-com:office:word' 
+          xmlns='<a target="_blank" href="http://www.w3.org/TR/REC-html40" rel="nofollow">http://www.w3.org/TR/REC-html40</a> '>
+        <head>
+           <style>
+                  p.MsoHeader, li.MsoHeader, div.MsoHeader{
+                    margin:0in;
+                    margin-top:.0000pt;
+                    mso-pagination:widow-orphan;
+                    tab-stops:center 3.0in right 6.0in;
+                }
+                p.MsoFooter, li.MsoFooter, div.MsoFooter{
+                    margin:0in;
+                    margin-bottom:.0001pt;
+                    mso-pagination:widow-orphan;
+                    tab-stops:center 3.0in right 6.0in;
+                }
+                @page Section1{
+                    size:8.5in 11.0in; 
+                    margin:0.5in 0.5in 0.5in 0.5in;
+                    mso-header-margin:0.2in;
+                    mso-header:h1;
+                    mso-footer:f1; 
+                    mso-footer-margin:0.5in;
+                    mso-paper-source:0;
+                }
+                div.Section1{
+                    page:Section1;
+                }
+                /*Below is the style to prevent the repetition of header and Footer.. Cheers!!!*/
+                table#hrdftrtbl{
+                    margin:0in 0in 0in 9in;
+                }        
+            </style>
+        </head>
+        
+        <body>
+            <!-- Content -->
+            <div class="Section1"><!--Section1 div starts-->
+                <!--Header and Footer Starts-->
+                <table id='hrdftrtbl' border='0' cellspacing='0' cellpadding='0'>
+                    <tr>
+                        <td>
+                            <!--Header-->
+                            <div style='mso-element:header' id="h1" >
+                                <p class="MsoHeader">
+                                    <table border="0" width="100%">
+                                        <tr>
+                                            <!-- <td width="30%">
+Left <br/>Header
+</td>
+<td align="center" width="40%">
+Center<br/> Header
+</td>
+<td align="right" width="30%">
+Right<br/>Header
+</td> -->
+                                            <apex:image url="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DWjU&oid=00D0w0000008cDW&lastMod=1554872313000" width="700" height="100"/>
+                                        </tr>
+                                </table>
+                            </p>
+                        </div>
+                </td>
+                
+                <td>
+                    <!--Footer-->
+                   <!-- <div style='mso-element:footer' id="f1">
+                        <p class="MsoFooter">
+                            <table width="100%" border="1" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="30%">
+                                        Left<br/>Footer
+                                    </td>
+                                    <td align="center" width="40%">
+                                        Center<br/>Footer
+                                    </td>
+                                    <td align="right" width="30%">
+                                        Page <span style='mso-field-code: PAGE '></span> of <span style='mso-field-code: NUMPAGES '></span>
+                                    </td>
+                                </tr>
+                        </table>
+                    </p>
+                </div> -->
+        </td>
+    </tr>
+</table>
+</div><!--Section1 div ends-->
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <!-- <p><span style="font-size: 29.0pt; line-height: 115%;font-family:Arial">Proposal Title</span></p> 
+            <apex:repeat value="{!mapoop}" var="prd">
+                <!-- <strong><apex:outputText style="font-size: 10.0pt; font-family: 'Arial','sans-serif';" value="{!prd}" /></strong><br/> 
+                <apex:repeat value="{!mapoop[prd]}" var="cprd">
+                    <apex:outputText style="font-size: 25.0pt; font-family: 'Arial','sans-serif';" value="{!cprd.Product_Name__C}" /><br/>
+                </apex:repeat>
+            </apex:repeat> -->
+            <apex:repeat value="{!lstOpppli}" var="prna">
+                <!-- <apex:outputPanel rendered="{!lstOpppli[0].id != prna.id}">, </apex:outputPanel> -->
+                <apex:outputText style="font-size: 10.0pt; font-family: 'Arial','sans-serif';" value="{!prna.Product_Name__c}" /><br/>
+            </apex:repeat>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <p><span style="font-size: 29.0pt; line-height: 115%;"></span></p>
+            <p><strong><span style="font-size: 10.0pt; font-family: 'Arial';">{!iOpp.Account.Name}.</span></strong></p>
+            <apex:outputText style="font-size:10pt; font-family:Arial,sans-serif;font-size: 10.0pt; line-height: 115%;" value="{0, date, long}">
+                <apex:param value="{!NOW()}" /> 
+            </apex:outputText>
+            <p></p>
+            <br style="page-break-after: always" />
+            
+            
+            <p><span style="font-size: 10.0pt; line-height: 115%; color: #1a4877; font-family: Arial, sans-serif;">About CRISIL Limited</span></p>
+            <p style="margin-right: 31.5pt; text-align: justify;"><span style="font-size: 10.0pt; line-height: 115%; color: black; font-family: Arial, sans-serif;">CRISIL is a global analytical company providing ratings, research, and risk and policy advisory services. We are India's leading ratings agency. We are also the foremost provider of high-end research to the world's largest banks and leading corporations.</span></p>
+            <p style="margin-right: 31.5pt; text-align: justify;"><span style="font-size: 10.0pt; line-height: 115%; color: black; font-family: Arial, sans-serif;">CRISIL is majority owned by S&amp;P Global Inc., a leading provider of transparent and independent ratings,benchmarks, analytics and data to the capital and commodity markets worldwide.</span></p>
+            <p style="margin-right: 31.5pt;"><span style="font-size: 10.0pt; line-height: 115%; color: #1a4877; font-family: Arial, sans-serif;">About CRISIL Research</span></p>
+            <p style="margin-right: 31.5pt; text-align: justify;"><span style="font-size: 10.0pt; line-height: 115%; color: black; font-family: Arial, sans-serif;">CRISIL Research is India's largest independent integrated research house. We provide insights, opinion and analysis on the Indian economy, industry, capital markets and companies. We also conduct training programs to financial sector professionals on a wide array of technical issues. We are India's most credible provider of economy and industry research. Our industry research covers 86 sectors and is known for its rich insights and perspectives. Our analysis is supported by inputs from our network of more than 5,000 primary sources, including industry experts, industry associations and trade channels. We play a key role in India's fixed income markets. We are the largest provider of valuation of fixed income securities to the mutual fund, insurance and banking industries in the country. We are also the sole provider of debt and hybrid indices to India's mutual fund and life insurance industries. We pioneered independent equity research in India, and are today the country's largest independent equity research house. Our defining trait is the ability to convert information and data into expert judgements and forecasts with complete objectivity. We leverage our deep understanding of the macro-economy and our extensive sector coverage to provide unique insights on micro-macro and cross-sectoral linkages. Our talent pool comprises economists, sector experts, company analysts and information management specialists.</span></p>
+            <p style="margin-right: 31.5pt;"><span style="font-family: Arial, sans-serif;"><span style="font-size: 10.0pt; line-height: 115%; color: #1a4877;">CRISIL Privacy</span><span style="line-height: 115%; color: #1a4877;"></span></span></p>
+            <p style="margin-right: 31.5pt; text-align: justify;"><span style="font-size: 10.0pt; line-height: 115%; color: black; font-family: Arial, sans-serif;">CRISIL respects your privacy. We use your contact information, such as your name, address, and email id, to fulfil your request and service your account and to provide you with additional information from CRISIL and other parts of McGraw Hill Financial you may find of interest. </span></p>
+            <p style="margin-bottom: 2.0pt; text-align: left; text-align: justify; line-height: normal; text-autospace: ideograph-numeric ideograph-other;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;"><strong><span style="color: windowtext;">For further information, or to let us know your preferences with respect to receiving marketing materials, please visit www.crisil.com/privacy. You can view McGraw Hill Financial's Customer Privacy Policy at http://www.mhfi.com/privacy.</span></strong></span></p>
+            <p style="margin-bottom: 2.0pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other;"></p>
+            <br style="page-break-after: always" />
+            
+            
+            <p><strong><span style="font-size: 20.0pt; line-height: 115%; font-family: 'Arial'; ">Content</span></strong></p>
+            <p></p>
+            <table style="border-collapse: collapse; width: 100%;line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 4.90057%;font-family: 'Arial';font-size: 10.0pt;">1.</td>
+                        <td style="width: 90.6148%;font-family: 'Arial';font-size: 10.0pt;">Background and objective of the assignment</td>
+                        <td style="width: 4.48448%;font-family: 'Arial';font-size: 10.0pt;">1</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 4.90057%;font-family: 'Arial';font-size: 10.0pt;">2.</td>
+                        <td style="width: 90.6148%;font-family: 'Arial';font-size: 10.0pt;">Scope and deliverables</td>
+                        <td style="width: 4.48448%;font-family: 'Arial';font-size: 10.0pt;">2</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 4.90057%;font-family: 'Arial';font-size: 10.0pt;">3.</td>
+                        <td style="width: 90.6148%;font-family: 'Arial';font-size: 10.0pt;">Approach and methodology</td>
+                        <td style="width: 4.48448%;font-family: 'Arial';font-size: 10.0pt;">3</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 4.90057%;font-family: 'Arial';font-size: 10.0pt;">4.</td>
+                        <td style="width: 90.6148%;font-family: 'Arial';font-size: 10.0pt;">Proposed Engagement Team</td>
+                        <td style="width: 4.48448%;font-family: 'Arial';font-size: 10.0pt;">4</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 4.90057%;font-family: 'Arial';font-size: 10.0pt;">5.</td>
+                        <td style="width: 90.6148%;font-family: 'Arial';font-size: 10.0pt;">Time Estimates and Deliverable Format</td>
+                        <td style="width: 4.48448%;font-family: 'Arial';font-size: 10.0pt;">5</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 4.90057%;font-family: 'Arial';font-size: 10.0pt;">6.</td>
+                        <td style="width: 90.6148%;font-family: 'Arial';font-size: 10.0pt;">Professional Fees</td>
+                        <td style="width: 4.48448%;font-family: 'Arial';font-size: 10.0pt;">6</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 4.90057%;font-family: 'Arial';font-size: 10.0pt;">7.</td>
+                        <td style="width: 90.6148%;font-family: 'Arial';font-size: 10.0pt;">Master Terms and Conditions</td>
+                        <td style="width: 4.48448%;font-family: 'Arial';font-size: 10.0pt;">8</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 4.90057%;font-family: 'Arial';font-size: 10.0pt;">8.</td>
+                        <td style="width: 90.6148%;font-family: 'Arial';font-size: 10.0pt;">About CRISIL Limited and CRISIL Research</td>
+                        <td style="width: 4.48448%;font-family: 'Arial';font-size: 10.0pt;">15</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>
+            <br />
+            <br style="page-break-after: always" />
+            
+            
+            <table style="height: 18px; width: 100%; border-collapse: collapse; border-color: #302d2c; background-color: #302d2c;" border="0">
+                <tbody>
+                    <tr style="height: 18px; border-color: #302d2c; background-color: #302d2c;">
+                        <td style="width: 100%; border-style: solid; border-color: #302d2c; background-color: #302d2c;"><span style="color: #ffffff; font-family: arial, helvetica, sans-serif;"><span style="font-size: 10.0pt;">1.</span> <span style="font-size: 10.0pt;">BACKGROUND AND OBJECTIVE OF THE ASSIGNMENT</span></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><span style="font-family: Arial, sans-serif; font-size: 10pt;">{!iOpp.Account.Name}</span></p>
+            <p><span style="font-family: Arial, sans-serif; font-size: 10pt;"><br />""TO BE INSERTED"".........................</span></p>
+            <p><span style="font-family: Arial, sans-serif;font-size: 10.0pt;">Background and Objective</span></p>
+            <p><span style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">""TO BE INSERTED"".........................</span></span></p>
+            <p></p>
+            <br style="page-break-after: always" />
+            
+            
+            <table style="height: 18px; width: 100%; border-collapse: collapse; border-color: #302d2c; background-color: #302d2c;" border="0">
+                <tbody>
+                    <tr style="height: 18px; border-style: solid; border-color: #302d2c; background-color: #302d2c;">
+                        <td style="width: 100%; border-style: solid; border-color: #302d2c; background-color: #302d2c;"><span style="color: #ffffff; font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">2. SCOPE AND DELIVERABLES</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>
+            <p style="font-family: Arial, sans-serif;font-size:10pt">""TO BE INSERTED"" -------------------------- </p>
+            <p></p>
+            <br />
+            <br style="page-break-after: always" />
+            
+            
+            <table style="height: 18px; width: 100%; border-collapse: collapse; border-color: #302d2c; background-color: #302d2c;" border="0">
+                <tbody>
+                    <tr style="height: 18px; border-style: solid; border-color: #302d2c; background-color: #302d2c;">
+                        <td style="width: 100%; border-style: solid; border-color: #302d2c; background-color: #302d2c;"><span style="color: #ffffff; font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">3. APPROACH AND METHODOLOGY</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>
+            <br />
+            <p style="font-family: Arial, sans-serif;font-size:10pt">""TO BE INSERTED"" ----------------------------------- </p>
+            <p></p>
+            <br />
+            <br style="page-break-after: always" />
+            
+            
+            <table style="height: 18px; width: 100%; border-collapse: collapse; border-color: #302d2c; background-color: #302d2c;" border="0">
+                <tbody>
+                    <tr style="height: 18px; border-color: #302d2c; background-color: #302d2c; border-style: solid;">
+                        <td style="width: 100%; border-color: #302d2c; background-color: #302d2c; border-style: solid;"><span style="color: #ffffff; font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">4. PROPOSED ENHANCEMENT TEAM</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><span style="font-size: 10.0pt; line-height: 115%; font-family: 'Arial','sans-serif';">CRISIL Research will constitute a dedicated team comprising analysts and sectoral experts to provide relevant inputs to the assignment</span></p>
+            <table style="height: 72px; width: 21.1762%; border-collapse: collapse; border-color: #229faa; background-color: #229faa; border-style: solid; margin-left: auto; margin-right: auto;align:center;border=1; " align="Center" >
+                <tbody>
+                    <tr style="border-style: solid; border-color: #229faa; background-color: #229faa;">
+                        <td style="width: 100%; border-style: solid; border-color: #229faa; background-color: #229faa;">
+                            <p style="text-align: center; vertical-align: baseline;"><strong><span style="font-size: 10.0pt; font-family: 'Arial'; color: black;">Project Reviewer <br /></span></strong><strong><span style="font-size: 10.0pt; font-family: 'Arial'; color: black;">Mr. Nagarajan Narasimhan</span></strong></p>
+                            <p style="text-align: center; vertical-align: baseline;"><strong><span style="font-size: 10.0pt; font-family: 'Arial'; color: black;">(Senior Director)</span></strong></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <table style="border-collapse: collapse; width: 100%;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 100%; text-align: center;">
+                            <div style="float:justify">
+                                <apex:image style="align: center;padding-left: 280px;" url="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DXsN&oid=00D0w0000008cDW&lastMod=1556605135000" width="16" height="20"/>  
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <!--- <p style="font-size: 25px; text-align: center;">?</p> ---->
+            <table style="height: 72px; width: 21.1762%; border-collapse: collapse; border-color: #2959d1; background-color: #2959d1; border-style: solid; margin-left: auto; margin-right: auto; " border="1" align="Center" >
+                <tbody>
+                    <tr style="border-style: solid; border-color: #2959d1; background-color: #2959d1;">
+                        <td style="width: 100%; border-style: solid; border-color: #2959d1; background-color: #2959d1;">
+                            <p style="text-align: center; vertical-align: baseline;"><strong><span style="font-size: 10.0pt; font-family: 'Arial'; color: white;">Project Leader <br /></span></strong><strong><span style="font-size: 10.0pt; font-family: 'Arial'; color: white;">Mr. xxx</span></strong></p>
+                            <p style="text-align: center; vertical-align: baseline;"><strong><span style="font-size: 10.0pt; font-family: 'Arial'; color: white;">(Director)</span></strong></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <table style="border-collapse: collapse; width: 100%;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 100%; text-align: center;">
+                            <div style="float:justify">
+                                <apex:image style="align: center;padding-left: 280px;" url="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DXsN&oid=00D0w0000008cDW&lastMod=1556605135000" width="16" height="20"/>  
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <!--- <p style="font-size: 25px; text-align: center;">?</p> --->
+            <table style="height: 72px; width: 21.1762%; border-collapse: collapse; border-color: #98b7cd; background-color: #98b7cd; border-style: solid; margin-left: auto; margin-right: auto; " border="1" align="Center" >
+                <tbody>
+                    <tr style="border-style: solid; border-color: #98b7cd; background-color: #98b7cd;">
+                        <td style="width: 100%; border-style: solid; border-color: #98b7cd; background-color: #98b7cd;font-size: 10.0pt;">
+                            <p style="text-align: center; vertical-align: baseline;"><strong><span style="font-size: 10.0pt; font-family: 'Arial'; color: black;">Mr. xxx</span></strong></p>
+                            <p style="text-align: center; vertical-align: baseline;"><strong><span style="font-size: 10.0pt; font-family: 'Arial'; color: black;">(Project Leader)</span></strong></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <table style="border-collapse: collapse; width: 100%;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 100%; text-align: center;">
+                            <div style="float:justify">
+                                <apex:image style="align: center;padding-left: 280px;" url="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DXsN&oid=00D0w0000008cDW&lastMod=1556605135000" width="16" height="20"/>  
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <!----- <p style="font-size: 25px; text-align: center;">&#8592;</p> color: #7b1e29;----->
+            <table style="width: 100%; border-collapse: collapse; border-color: #2a2cb7; background-color: #2a2cb7; height: 18px;" border="0">
+                <tbody>
+                    <tr style="height: 18px; border-style: solid; border-color: #2a2cb7; background-color: #2a2cb7;font-size: 10.0pt;">
+                        <td style="width: 100%; height: 18px; color: white; border-style: solid; border-color: #2a2cb7; background-color: #2a2cb7; text-align: center;font-size: 10.0pt;font-family:'Arial';">Execution Team</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <table style="width: 100%; border-collapse: collapse;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 20%; background-color: #98b7cd; border-color: #98b7cd; text-align: center;font-size: 10.0pt;"><span style="font-family: 'Arial';font-size: 10.0pt;">Analyst</span></td>
+                        <td style="width: 20%; text-align: center;"></td>
+                        <td style="width: 20%; background-color: #98b7cd; border-color: #98b7cd; text-align: center;font-size: 10.0pt;"><span style="font-family: 'Arial';font-size: 10.0pt;">Analyst</span></td>
+                        <td style="width: 20%;"></td>
+                        <td style="width: 20%; background-color: #98b7cd; border-color: #98b7cd; text-align: center;font-size: 10.0pt;"><span style="font-family: 'Arial';font-size: 10.0pt;">Analyst</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>
+            <br />
+            <br style="page-break-after: always" />
+            
+            
+            
+            <table style="height: 18px; width: 100%; border-collapse: collapse; border-color: #302d2c; background-color: #302d2c;" border="0">
+                <tbody>
+                    <tr style="height: 18px; border-style: solid; border-color: #302d2c; background-color: #302d2c;">
+                        <td style="width: 100%; border-style: solid; border-color: #302d2c; background-color: #302d2c;"><span style="color: #ffffff; font-family: arial, helvetica, sans-serif;"><span style="font-size: 10.0pt;">5.</span> <span style="font-size: 10.0pt;">TIME ESTIMATES AND DELIVERABLES FORMAT</span></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>
+            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">1. The target timelines for providing the Deliverables are as stated below:</span></p>
+            <table style="height: 72px; width: 75%; border-collapse: collapse; border-color: #000000;" border="1">
+                <tbody>
+                    <tr style="height: 18px; border-color: #000000;">
+                        <td style="width: 50%; height: 18px; border-style: solid; border-color: #000000;"><span style="font-size: 10.0pt; line-height: 115%; font-family: 'Arial','sans-serif';">MILESTONE</span></td>
+                        <td style="width: 50%; height: 18px; border-style: solid; border-color: #000000;"><span style="font-size: 10.0pt; line-height: 115%; font-family: 'Arial','sans-serif';">TIMELINES</span></td>
+                    </tr>
+                    <tr style="border-color: #000000; background-color: #afafb1; height: 18px;">
+                        <td style="width: 50%; height: 18px; border-style: solid; border-color: #000000;"><span style="font-size: 10.0pt; line-height: 115%; font-family: 'Arial','sans-serif';">Inception meeting/telecon</span></td>
+                        <td style="width: 50%; height: 18px; border-style: solid; border-color: #000000;"><span style="font-size: 10.0pt; line-height: 115%; font-family: 'Arial','sans-serif';">Within 2-3 days of receipt of mandate</span></td>
+                    </tr>
+                    <tr style="border-color: #000000; background-color: #afafb1; height: 18px;">
+                        <td style="width: 50%; height: 18px;  border-style: solid; border-color: #000000;"><span style="font-size: 10.0pt; line-height: 115%; font-family: 'Arial','sans-serif';">Submission of Draft Report</span></td>
+                        <td style="width: 50%; height: 18px;  border-style: solid; border-color: #000000;"><span style="font-size: 10.0pt; line-height: 115%; font-family: 'Arial','sans-serif';">Within xx weeks of inception meeting</span></td>
+                    </tr>
+                    <tr style="border-color: #000000; background-color: #afafb1; height: 18px;">
+                        <td style="width: 50%; height: 18px;  border-style: solid; border-color: #000000;"><span style="font-size: 10.0pt; line-height: 115%; font-family: 'Arial','sans-serif';">Submission of Final Report</span></td>
+                        <td style="width: 50%; height: 18px;  border-style: solid; border-color: #000000;"><span style="font-size: 10.0pt; line-height: 115%; font-family: 'Arial','sans-serif';">Within 1-2 weeks of receipt of client feedback</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>
+            <br />
+            <table style="width: 100%; border-collapse: collapse; text-align: justify; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 2.30114%;font-size: 10.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">2.</span></td>
+                        <td style="width: 97.0817%;font-size: 10.0pt;" valign="top">
+                            <span style="font-family: Arial, sans-serif;">These target timelines are only indicative and subject to changes. CRISIL Research will notify the client as soon as reasonably practicable if it is necessary to revise the target timelines. In addition to the T&amp;C, the target timelines are subject to: </span>
+                            <ul>
+                                <li><span style="font-family: Arial, sans-serif;font-size: 10.0pt;">Timely availability of any sourced information; and</span></li>
+                                <li><span style="font-family: Arial, sans-serif;font-size: 10.0pt;">The client generally cooperating with CRISIL Research in the provision of the Services. </span></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><span style="font-family: Arial, sans-serif;font-size: 10.0pt;">3.The final document will be in PDF presentation format</span></p>
+            <p></p>
+            <br style="page-break-after: always" />
+            
+            
+            
+            <table style="height: 18px; width: 100%; border-collapse: collapse; border-color: #302d2c; background-color: #302d2c;" border="0">
+                <tbody>
+                    <tr style="height: 18px; border-style: solid; border-color: #302d2c; background-color: #302d2c;">
+                        <td style="width: 100%;font-size: 10.0pt;"><span style="color: #ffffff; font-family: arial, helvetica, sans-serif;"><span style="font-size: 10.0pt;">6.</span> <span style="font-size: 10.0pt;">PROFESSIONAL FEES</span></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">6.1 Professional fees</span></h2>
+            <p><span style="line-height: 125%; font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;"> 1.Fees:</span></span></p>
+            <p style="text-align: justify; line-height: 125%; margin: 12.0pt 0cm 6.0pt 42.55pt;"><span style="line-height: 125%; font-size: 10.0pt; font-family: Arial, sans-serif;">Lump sum professional fees payable to CRISIL Limited for the scope of work outlined above shall be <strong>Rs. <apex:outputText value="{!total}" />(Rupees <apex:outputText value="{!AmountInWords}" /> only).</strong></span></p>
+            <p style="text-align: justify; line-height: 125%; margin: 12.0pt 0cm 6.0pt 42.55pt;"><span style="font-size: 10.0pt; font-family: Arial, sans-serif;"><strong><span style="line-height: 125%;">Besides, GST @18 per cent shall be applicable on the abovementioned fee. In case of any change in Government notification with regard to taxes, revised tax rates would be applicable.</span></strong></span></p>
+            <h2><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">6.2 Payment Schedule</span></h2>
+            <p><span style="line-height: 125%; font-family: Arial, sans-serif;">1. The client shall pay in accordance with the payment schedule set out below:</span></p>
+            <p></p>
+            <table style="width: 75%; border-collapse: collapse; margin-left: auto; margin-right: auto;" border="1">
+                <tbody>
+                    <tr style="border-color: #000000; background-color: #000000;">
+                        <td style="width: 50%; border-style: solid; border-color: #000000; text-align: left;"><span style="font-size: 10.0pt; line-height: 115%; font-family: 'Arial','sans-serif'; color: white;">MILESTONE</span></td>
+                        <td style="width: 50%; border-style: solid; border-color: #000000;"><strong><span style="font-size: 10.0pt; line-height: 115%; font-family: 'Arial','sans-serif'; color: white;">FEE (% BREAK-UP)</span></strong></td>
+                    </tr>
+                    <tr style="border-color: #000000; background-color: #afafb1;">
+                        <td style="width: 50%; border-style: solid; border-color: #000000;"><span style="font-size: 10.0pt; line-height: 115%; font-family: 'Arial','sans-serif';">Commencement fee</span></td>
+                        <td style="width: 50%; border-color: #000000; border-style: solid; text-align: center;">50%</td>
+                    </tr>
+                    <tr style="border-color: #000000;">
+                        <td style="width: 50%; border-style: solid; border-color: #000000; text-align: left;"><span style="font-size: 10.0pt; line-height: 115%; font-family: 'Arial','sans-serif';">Post Submission of Draft Report</span></td>
+                        <td style="width: 50%; border-color: #000000; border-style: solid; text-align: center;">30%</td>
+                    </tr>
+                    <tr style="border-color: #000000;">
+                        <td style="width: 50%; border-style: solid; border-color: #000000;"><span style="font-size: 10.0pt; line-height: 115%; font-family: 'Arial','sans-serif';">Post Submission of Final Report</span></td>
+                        <td style="width: 50%; border-style: solid; border-color: #000000; text-align: center;">20%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>
+            <br />
+            <table style="width: 100%; border-collapse: collapse; text-align: justify; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 2.30114%;" valign="top"><span style="font-family: Arial, sans-serif;">2.</span></td>
+                        <td style="width: 97.0817%;font-size: 10.0pt;" valign="top">
+                            <span style="font-family: Arial, sans-serif;">The client shall pay each invoice within 15 working days from the date of invoice. Work will commence only after the above mentioned fee is received. All payments will be made by cheque or other normal banking channels to the order of CRISIL Limited payable at par in Mumbai. If the client wishes to remit money by online transfer or similar mode, the client may do so to the credit of CRISIL Limited, the details of which are given below:</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <ol style="list-style-type: lower-alpha;font-size: 10.0pt;line-height: 16.0pt;">
+                <li><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Name of the Bank: ICICI Bank Limited</span></li>
+                <li><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Account Number: 003205000032</span></li>
+                <li><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Account Type: Current</span></li>
+                <li><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">SWIFT Code: ICICINBBCTS</span></li>
+                <li><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">IFSC Code: ICIC0000032</span></li>
+                <li><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Branch Code: 0032</span></li>
+            </ol>
+            <h2><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">6.3 Currency of Payment</span></h2>
+            <p style="text-align: justify; line-height: 16.0pt; margin: 12.0pt 0cm 6.0pt 0cm;"><span style="line-height: 16.0pt; font-size: 10.0pt; font-family: Arial, sans-serif;">Charges are payable in Indian Rupees, unless CRISIL expressly agrees otherwise in writing. Where the client remits the charges in a currency other than Indian Rupees, the client shall remit such amount in the remitting currency as would ensure CRISIL receives in Indian Rupees an amount no less than the charges.</span></p>
+            <h2><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">6.4 Taxes and Statutory Levies</span></h2>
+            <table style="width: 100%; border-collapse: collapse; text-align: justify; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 2.30114%;font-size: 10.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">1.</span></td>
+                        <td style="width: 97.0817%;font-size: 10.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">Where the client is located in India and makes payment under the Agreement out of its offices in India (and not otherwise) the following provisions shall apply with respect to payment of Fees:</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul style="text-align: justify; line-height: 16.0pt; font-size: 10.0pt;">
+                <li style="font-family: Arial, sans-serif;"><span>The client may deduct income tax at source from its payment of fees (and other charges if applicable) under this Agreement at the least rate required for the client to comply with applicable tax laws (TDS).</span></li>
+                <li style="font-family: Arial, sans-serif;"><span>In the case of each TDS, the client shall within the timeline specified under law (or if no timeline is specified under law, within the earlier of 3 months from the date the client deducts TDS or 1 month from the end of the then current taxation year) provide CRISIL with a properly rendered certificate or relevant document evidencing the client having complied with applicable tax laws with respect to the TDS (TDS certificate).</span></li>
+                <li style="font-family: Arial, sans-serif;"><span>If the client fails to provide the TDS certificate as stated afore, the client shall pay CRISIL such amount as would after TDS be equivalent to the amount covered TDS Certificate not provided by the client. The client agrees that such amount shall be recoverable as a debt from the client.</span></li>
+            </ul>
+            <p style="font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;"><strong>6.5 CRISIL Rights</strong></span></p>
+            <p style="text-align: justify; font-size: 10.0pt;line-height: 16.0pt;"><span style="font-family: Arial, sans-serif;">In the event the client fails to pay any charges when due, the following terms shall apply (without limiting CRISIL's r rights under law or the Agreement):</span></p>
+            <table style="width: 100%; border-collapse: collapse; text-align: justify; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 2.30114%; font-size: 10.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">1.</span></td>
+                        <td style="width: 97.0817%; font-size: 10.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">CRISIL may at its discretion withhold any Deliverables not handed over to the client.  However, if CRISIL has anyway has provided any Deliverables to the client, it will not operate as a waiver of CRISIL's right to receive payment of charges. Where CRISIL withholds any Deliverables in accordance with this Section 6.5, it shall not be considered a breach of CRISIL's obligations under the Agreement.</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table style="width: 100%; border-collapse: collapse;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 2.30114%;font-size: 10.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">2.</span></td>
+                        <td style="width: 97.0817%;font-size: 10.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">The client agrees that it is not entitled to use the deliverables unless and until the client has paid the charges in full.</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>
+            <br />
+            <br style="page-break-after: always" />
+            
+            
+            
+            <table style="height: 18px; width: 100%; border-collapse: collapse; border-color: #302d2c; background-color: #302d2c;" border="0">
+                <tbody>
+                    <tr style="height: 18px; border-style: solid; border-color: #302d2c; background-color: #302d2c;">
+                        <td style="width: 100%; border-style: solid; border-color: #302d2c; background-color: #302d2c;font-size: 10.0pt;text-align: justify;"><span style="color: #ffffff; font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">7. MASTER TERMS AND CONDITIONS</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><span style="font-family: Arial, sans-serif;font-size: 10.0pt;">1. DOCUMENT FRAMEWORK, DEFINITIONS</span></p>
+            <table style="width: 100%; border-collapse: collapse; text-align: justify; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 2.30114%;font-size: 10.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">1.1</span></td>
+                        <td style="width: 97.0817%;font-size: 10.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">From time to time Client and CRISIL or their respective affiliates may execute order form(s) (each an Order Form) setting out the services agreed to be provided under the Order Form(s) (Services) incorporating the MTC. Each such Order Form and the MTC (together with the relevant annexure or schedules) will operate as an independent contract between the parties executing that Order Form and shall be called the Agreement.  References to "CRISIL" and "Client" in the MTC shall refer to the relevant parties executing the Order Form.  Where the parties executing an Order Form have agreed to changes to the terms of the MTC as incorporated into the Order Form, the changes shall apply only to that Order Form (and not to any other Order Form).  To the extent of a conflict between the MTC and the Order Form, the Order Form will prevail.</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="text-align: justify;font-size: 10.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">1.2 Definitions are given in clause 11.</span></p>
+            <p style="text-align: justify;font-size: 10.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">2. Services, Use, Change Control Procedure and Timelines</span></p>
+            <p style="text-align: justify;font-size: 10.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">2.1 CRISIL will provide the Services in accordance with the Agreement.</span></p>
+            <table style="width: 97.6422%; border-collapse: collapse; text-align: justify; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 2.30114%;font-size: 10.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">2.2</span></td>
+                        <td style="width: 97.0817%;font-size: 10.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">Client may use the Services for no purpose other than: (a) its own internal business purposes; and (b) any other purpose if specified in the Order Form.</span></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 2.30114%;font-size: 10.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">2.3</span></td>
+                        <td style="width: 97.0817%;font-size: 10.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">For the avoidance of doubt, Client shall not (exceptwhere CRISIL has consented in writing and Client has agreed to pay the applicable charges):</span>
+                            <table style="width: 100%; border-collapse: collapse;" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">(a)</span></td>
+                                        <td style="width: 96.2644%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">Redistribute, resell, display, reproduce or publish any part of any Service;</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">(b)</span></td>
+                                        <td style="width: 96.2644%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">use any part of any Service to create any index (whether, single, composite or otherwise) or any derivative without the express prior written consent of CRISIL in each case;</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">(c)</span></td>
+                                        <td style="width: 96.2644%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">directly or indirectly permit any third party or users to do what it is not permitted to do under the Agreement; or</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">2.4</span></td>
+                        <td style="width: 97.0817%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">Where CRISIL consents to Client's use as stated in clause 2.2 and 2.3, additional conditions may apply as CRISIL may specify at the relevant time (including Client providing additional indemnity, documentation and display of appropriate disclaimers).</span></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">2.5</span></td>
+                        <td style="width: 97.0817%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">Change Control:</span>
+                            <table style="width: 100%; border-collapse: collapse;" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">(a)</span></td>
+                                        <td style="width: 95.0151%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">Upon Client request for changes to Service Particulars applying to Packaged Services, CRISIL will within a commercially reasonable time notify Client of the feasibility of effecting those changes, the timeline for effecting those changes, and any revisions to the Fees. Upon Client confirming in writing its acceptance of how the changes will be effected to the Packaged Services, CRISIL will commence implementing the agreed changes.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">(b)</span></td>
+                                        <td style="width: 95.0151%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">CRISIL may make changes to be made to Packaged Services as follows: For Service Particulars which are specific to the Client, CRISIL may make changes with the prior written consent of the Client which will not be unreasonably withheld or delayed. For Service Particulars which are not specific to the Client, CRISIL may make changes so long as they are generally applied to the Services.</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!---<p><span style="font-family: Arial, sans-serif;">                     "LINE TO BE INSERTED"</span></p> ---->
+            <table style="border-collapse: collapse; width: 100%; text-align: justify; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 2.30114%;font-size: 10.0pt;" valign="top"></td>
+                        <td style="width: 97.2954%;font-size: 10.0pt;">
+                            <table style="border-collapse: collapse; width: 100%;line-height: 16.0pt;" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">(c)</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">Notwithstanding anything to the contrary stated elsewhere in the Agreement, CRISIL reserves the right to modify any Service Particulars as follows: (a) in the case of Standard Services, CRISIL may make changes so long as those changes are generally applied to the relevant Standard Services; (b) in the case of all Services, where a change is required to comply with applicable laws, regulations, or orders of a government, statutory, regulatory, judicial or other authority.</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">2.6</span></td>
+                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">Finalisation of the Report</span></span>
+                            <table style="border-collapse: collapse; width: 100%;line-height: 16.0pt;" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;text-align: justify;line-height: 16.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">(a)</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;text-align: justify;line-height: 16.0pt;"><span style="font-family: Arial, sans-serif;">Subject to CRISIL receiving full payment of the Charges, upon completion of the study, CRISIL will share with the Client a draft report (the 'Report') for Client's inputs (as CRISIL may request), and verification of the factual content of the draft Report (and not for any other purpose).</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;text-align: justify;line-height: 16.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">(b)</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;text-align: justify;line-height: 16.0pt;"><span style="font-family: Arial, sans-serif;">Within 7 calendar days of receiving the draft Report, Client will provide the inputs where requested and may notify CRISIL of any factual inaccuracy in the draft Report. CRISIL will consider the submissions made by the Client and, where it considers necessary in its professional judgement, revise the draft Report and finalise the Report.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;text-align: justify;line-height: 16.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">(c)</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;text-align: justify;line-height: 16.0pt;"><span style="font-family: Arial, sans-serif;">If CRISIL receives no communication from the Client under clause 2.6(b), CRISIL shall be entitled to assume Client has no submissions to make and CRISIL may thereafter proceed to finalise the Report with the information/materials available with CRISIL. Thereafter, CRISIL shall not be obliged to consider any further submissions made by the Client or accede to requests for changes made by the Client to the finalised Report.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;text-align: justify;line-height: 16.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">(d)</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;text-align: justify;line-height: 16.0pt;"><span style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">At any time before finalisation of the Report, CRISIL may at its sole discretion forthwith and without incurring liability, terminate the Agreement if:</span></span>
+                                            <table style="border-collapse: collapse; width: 100%;" border="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="width: 2.30114%;font-size: 10.0pt;text-align: justify;line-height: 16.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">(i)</span></td>
+                                                        <td style="width: 97.2954%;font-size: 10.0pt;text-align: justify;line-height: 16.0pt;"><span style="font-family: Arial, sans-serif;">Client does not cooperate and/or provide or inordinately delays providing Client Material or performing its obligations as are necessary for CRISIL to perform the Services;</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 2.30114%;font-size: 10.0pt;text-align: justify;line-height: 16.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">(ii)</span></td>
+                                                        <td style="width: 97.2954%;font-size: 10.0pt;text-align: justify;line-height: 16.0pt;"><span style="font-family: Arial, sans-serif;">the Charges remain unpaid or overdue (including for reasons where a cheque issued by the Client has not been realised);</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 2.30114%;font-size: 10.0pt;text-align: justify;line-height: 16.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">(iii)</span></td>
+                                                        <td style="width: 97.2954%;font-size: 10.0pt;text-align: justify;line-height: 16.0pt;"><span style="font-family: Arial, sans-serif;">CRISIL is of the opinion that circumstances warrant the termination the Agreement.</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>
+            <table style="border-collapse: collapse; width: 100%; text-align: justify; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 2.30114%; font-size: 10.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">3.</span></td>
+                        <td style="width: 97.2954%;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">CHARGES</span>
+                            <table style="width: 100%; border-collapse: collapse;" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">3.1</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">Unless stated otherwise in the Order Form: (a) CRISIL will invoice Client for Charges in advance in accordance with the usual invoicing schedule as contained in the Order Form; (b) Client shall pay to CRISIL the Fees and Charges within 15 calendar days of Client's receipt of CRISIL invoice (Due Date). CRISIL may apply a service charge calculated at the rate of 1.5% per month for each day from the Due Date that Charges remain unpaid. Charges are not refundable.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">3.2</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">In addition to Charges, Client will pay all statutory taxes and levies (except those on CRISIL's net income).If Client deducts tax at source, it shall comply with law with respect to such deduction and provide CRISIL with documentation in support of that in a timely manner.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">3.3</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">Fees are subject to annual revisions.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">3.4</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">The fees and any amounts payable under the Order Form are exclusive of all applicable taxes (including GST), levies, duties etc. Any such tax will be charged over and above the fees and amounts payable to CRISIL under the Order Form. The GST registration number ('GSTIN') provided by the Client will be used by CRISIL for filing of the GST returns.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">3.5</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">With regards to the applicability of Goods and Services Tax, the Client's address as mentioned for the purposes of GST will be considered as the consumption location for the Services provided by CRISIL under the Order Form.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">3.6</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">CRISIL shall not be liable for loss of credit arising on account of incomplete, erroneous or wrong details captured by the Client in the details and documents uploaded to the GSTN. Additionally the Client shall be responsible and liable for providing its correct GSTIN and CRISIL will not be responsible for verification of the Client's GSTIN. Where the Client fails to furnish its GSTIN, CRISIL will treat the Client as being unregistered for GSTIN.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">3.7</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">Where CRISIL issues a credit note to the Client in relation to any invoice, the Client shall adjust and upload its Input Tax Credit on the GSTN on or before the end of the month in which the credit note is issued by CRISIL to the Client. If the Client fails to do so, and this results in additional liability for CRISIL, Client shall be liable to be reimburse CRISIL for any liability incurred by CRISIL (being the tax, interest and any penalties thereon).</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>                        
+            <table style="border-collapse: collapse; width: 100%; text-align: justify; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 2.30114%;font-size: 10.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">4.</span></td>
+                        <td style="width: 97.2954%;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">TERM AND TERMINATION</span>
+                            <table style="width: 100%; border-collapse: collapse;" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">4.1</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">The Agreement shall commence on the Start Date mentioned in the Order Form and continue for one year unless terminated earlier in accordance with this clause 4 (Term).</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">4.2</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">A party may terminate the Agreement with immediate effect by written notice to the other if the other party: (i) has materially breached the Agreement and that breach is incapable of remedy or where the breach is capable of remedy the other party has not remedied it within 1 month of receiving a written notice of the breach; or (ii) re-organises, reconstructs or otherwise undergoes a change in constitution (otherwise than for the purpose of solvent amalgamation or reconstruction where the emerging company assumes the obligations of the party); or (iii) becomes bankrupt, insolvent and/or is unable to pay its debts as they fall due, enters liquidation, is wound up, compounds with its creditors or has an administrator, receiver or other such person appointed over all or any part of its assets or otherwise takes or suffers any similar action in any jurisdiction, or threatens or resolves to do any of the above in consequence of debt. CRISIL may terminate the Agreement on a written notice if CRISIL is unable to provide the Services under the Agreement due to change in any existing applicable law, regulations, government or statutory rules or guidelines.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">4.3</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">CRISIL may terminate the Agreement for no cause by giving the Client a written notice of at least 1 month.  If CRISIL so terminates, CRISIL will refund to Client the unused Fees paid by Client in advance subject to deductions on account of any unpaid dues that Client may owe CRISIL.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">4.4</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">CRISIL is not obliged to provide or continue the provision of any Service where Client is in arrears of any part of the Charges. CRISIL may without incurring liability suspend performance of this Agreement if Client has materially breached its payment obligations or CRISIL's intellectual property rights.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">4.5</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">If at any time CRISIL determines that considering the available information or materials it is not possible to provide any part of the Services conforming to CRISIL's professional standards, CRISIL may at its discretion (but acting reasonably) terminate this Agreement to the extent it relates to such part of the Services.  In such an event, as CRISIL's entire liability, CRISIL will (if applicable) refund to Client any Fees paid in advance for the affected part of the Services after deducting from it Fees as applicable until the effective date of termination.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">4.6</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">A termination of this Agreement shall not limit a party's rights as shall have accrued up to the effective date of termination.</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table style="border-collapse: collapse; width: 100%; text-align: justify; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 2.30114%;font-size: 10.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">5.</span></td>
+                        <td style="width: 97.2954%;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">CONFIDENTIALITY</span>
+                            <table style="width: 100%; border-collapse: collapse;" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">5.1</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">Each receiving party will hold the Confidential Information of the disclosing party in confidence and except with the prior written consent of the disclosing party (or as permitted by the Agreement) not disclose it to any third party whose knowledge of such Confidential Information is not necessary for the party's performance of this Agreement (each a Permitted Recipient). Each receiving party will procure that each of its Permitted Recipients complies with these confidentiality obligations. These confidentiality obligations do not apply to information which is already in the public domain or comes into public domain through no fault of the receiving party. Confidential Information means all information except those excluded afore in this clause whether commercial, financial, legal or otherwise, which is made available to the receiving party or which otherwise comes to the attention of or into the possession of the receiving party, its representatives or persons acting under its control or direction in the course of performance of this Agreement.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">5.2</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">The confidentiality obligations with respect to an item of Confidential Information will be throughout the Term and for a period of 2 years after termination of the Agreement.</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table style="border-collapse: collapse; width: 100%; text-align: justify; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 2.30114%;font-size: 10.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">6.</span></td>
+                        <td style="width: 97.2954%;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;"> INTELLECTUAL PROPERTY</span>
+                            <table style="width: 100%; border-collapse: collapse;" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">6.1</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">As between the parties: (a) all intellectual property rights in the Services including all of its contents (but excluding Client Brands) belong exclusively to CRISIL; and (ii) Client Brands belong exclusively to Client.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">6.2</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">Client will not use the name of any Service (or any part of it) as part of its corporate, business or trading name or style or create or attempt to register or otherwise assert any intellectual property right in any part of the Service or CRISIL Brand.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">6.3</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">CRISIL may use Client's Brands in its marketing or presentation material targeted at specific prospective clients or in CRISIL's marketing in social media, provided that except with the Client's prior written consent (which will not be unreasonably be withheld or delayed), CRISIL may not use any Brands of the Client in any advertisements in any other mass media.  CRISIL will comply with Client's standard branding guidelines (as notified by Client to CRISIL in writing) in the case of any such use.</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>
+            <table style="border-collapse: collapse; width: 100%;text-align: justify; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 2.42718%;font-size: 10.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">7.</span></td>
+                        <td style="width: 97.5728%;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">WARRANTY AND DISCLAIMERS</span></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 2.42718%;font-size: 10.0pt;" valign="top"></td>
+                        <td style="width: 97.5728%;font-size: 10.0pt;">
+                            <table style="border-collapse: collapse; width: 100%;" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 2.42718%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">7.1</span></td>
+                                        <td style="width: 97.5728%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">Client warrants that</span></span>
+                                            <table style="border-collapse: collapse; width: 100%;" border="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="width: 2.42718%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">(a)</span></td>
+                                                        <td style="width: 97.5728%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">Client's access, use and distribution (where permitted by CRISIL) of the Services shall be lawful and that Client has (or shall have) all necessary rights, permissions and licenses for use of the Services as permitted by this Agreement.</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 2.42718%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">(b)</span></td>
+                                                        <td style="width: 97.5728%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">the Client requirements are adequate and complete in all material respects;</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 2.42718%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">(c)</span></td>
+                                                        <td style="width: 97.5728%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">CRISIL may provide the Services relying on the Client requirements. CRISIL is not obliged to independently verify or validate any Client requirement (although CRISIL may at its discretion choose to do so).</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 2.42718%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">(d)</span></td>
+                                                        <td style="width: 97.5728%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">the Client Material is: (i) accurate, adequate and complete in all material respects; (ii) not false or misleading; and (iii) within the rights of the Client to share and use for the purpose of the Services;</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 2.42718%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">(e)</span></td>
+                                                        <td style="width: 97.5728%;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">CRISIL may provide Services relying on and using the Client Material, as it deems appropriate;</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 2.42718%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">(f)</span></td>
+                                                        <td style="width: 97.5728%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">Client shall be responsible (and shall take all reasonable steps) to procure that the Users' access to the Report is subject to the condition that CRISIL is not responsible or liable to any User for the User's access and/or use of the Report;</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 2.42718%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">(g)</span></td>
+                                                        <td style="width: 97.5728%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">the Client shall not, whether directly or indirectly, portray the Report as a substitute or alternative to any other service of CRISIL;</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.42718%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">7.2</span></td>
+                                        <td style="width: 97.5728%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">CRISIL will use reasonable care and skill in preparing and providing the Services.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.42718%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">7.3</span></td>
+                                        <td style="width: 97.5728%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">Client acknowledges that: (a) CRISIL does not guarantee the accuracy or completeness of the information on which the Services is based or the information contained in the Services; (b) preparation of the Services does not constitute an audit or rating of any of the entities whose names may feature in the Services; and (c) nothing in the Services constitutes recommendations or advice as to buy, sell or hold any instruments issued by the entities whose names may feature in the Services or as to entering (or not entering) into any transaction with any of them. EXCEPT AS MENTIONED IN CLAUSE 7.2, CRISIL MAKES NO REPRESENTATIONS OR WARRANTIES WITH REGARD TO THE SERVICES AND EXPRESSLY EXCLUDES ALL REPRESENTATIONS AND WARRANTIES OF WHATEVER KIND INCLUDING, WITHOUT LIMITATION, WARRANTY THAT THE SERVICES WILL BE ERROR-FREE, COMPLETE, OR FIT FOR PURPOSE.</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table> 
+            
+            <table style="border-collapse: collapse; width: 100%; text-align: justify; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 2.30114%;font-size: 10.0pt;" valign="top"><span style="font-family: Arial, sans-serif;">8.</span></td>
+                        <td style="width: 97.2954%;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;"> INDEMNITY&amp; LIABILITY</span>
+                            
+                            <table style="width: 100%; border-collapse: collapse;" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">8.1</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">Client agrees to indemnify CRISIL and hold harmless, its directors, officers and employees, against any costs, loss, damages, claims or expenses incurred or suffered by reason of provision of the Services, including, without limitation those that arise as a result of breach of Client's warranties set out above (but excluding those that arise as a result of CRISIL's breach of this Agreement).</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">8.2</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">Client assumes the entire risk as to Client's use of the Services and the decisions made based on the Services. CRISIL expressly disclaims all liability with respect to any such use or decisions. The Services are not intended to be investment advice or recommendations.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">8.3</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">Neither party will be liable for indirect or consequential losses, exemplary or special damages, or loss of profits, loss of business or economic loss even if advised of the possibility of such losses or damages. The foregoing shall apply regardless of whether such liability is based in contract, tort, (including but not limited to negligence) and strict liability or any other theory of legal liability. CRISIL's aggregate liability will not exceed an amount equivalent to the Fees paid by the Client under the Order Form in the latest twelve month period preceding the date of the claim. Neither party shall be liable for failure or delay in its performance of its obligations under the Agreement (other than in the case of Client, its obligation to pay Charges as are due), to the extent such delay or failure or delay is caused by a force majeure cause.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 2.30114%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;" valign="top"><span style="font-family: Arial, sans-serif;">8.4</span></td>
+                                        <td style="width: 97.2954%;font-size: 10.0pt;line-height: 16.0pt;text-align: justify;"><span style="font-family: Arial, sans-serif;">Without limiting clauses 8.2 or 8.3, under no circumstances will CRISIL's aggregate liability exceed the Fees paid by the Client to CRISIL under the applicable Order Form.</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><span style="font-family: Arial, sans-serif;font-size: 10.0pt;">9.GENERAL</span></p>
+            <p style="text-align: justify; line-height: 16.0pt;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">The Agreement contains the entire agreement of the parties as to its subject matter and supersedes all prior agreements and understandings written or oral in relation to the subject matter. Except as otherwise stated in the Agreement, any amendment to the Agreement shall only be effective if in writing and executed by a duly authorized representative of each party. Client may assign, transfer or novate any of its rights or obligations under the Agreement, provided Client obtains the prior written consent of CRISIL (which will not be unreasonably withheld). CRISIL may assign, transfer or novate any part of the Agreement to any of its affiliate or CRISIL's successors in business upon a written notice to the Client. For the avoidance of doubt, CRISIL may subcontract any part of its obligations, provided that CRISIL shall remain responsible for the performance those obligations by its subcontractors. Any assignment, novation or transfer in breach of this clause shall be null and void. The Agreement will be governed by and construed in accordance with the laws of India and the parties agree to submit to the exclusive jurisdiction of the courts of law in Mumbai, India and their appeal courts to settle any disputes that relate to the Agreement.</span></p>
+            <p style="text-align: justify; line-height: 16.0pt;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">Nothing in the Services/ Report is to be construed as CRISIL providing or intending to provide any services in jurisdictions where CRISIL does not have the necessary permission and/or registration to carry out its business activities with respect to the Services or Report under this Agreement. Client will be responsible for ensuring compliances and consequences of non-compliances for use of the Services/Report or part thereof outside India.</span></p>
+            <p style="text-align: justify; line-height: 16.0pt;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;"><span style="font-size: 10.0pt; line-height: 115%; font-family: 'Arial','sans-serif';">10.SANCTIONS</span></span></p>
+            <p style="text-align: justify; line-height: 16.0pt;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">As of the date of this agreement, (a) neither the client nor any of its subsidiaries, or any director or corporate officer of any of the foregoing entities, is the subject of any economic or trade sanctions or restrictive measures issued by the United Nations, United States or European union ('sanctions'), (b) the client is 50% or more owned or controlled, directly or indirectly, individually or collectively, by one or more persons or entities that is or are the subject of sanctions, and (c) to the best of the client's knowledge, no entity 50% or more owned or controlled by a direct or indirect parent of the client is the subject of sanctions. For purposes of clause (c) in this section, 'parent' is a person or entity owning or controlling, directly or indirectly, 50% or more of the client. For so long as this agreement is in effect, the client will promptly notify crisil if any of these circumstances change. If crisil reasonably determines that it can no longer provide or avail the services to you or from you, in accordance with applicable law, then crisil may terminate this agreement, or any particular services, immediately upon written notice to the client.</span></p>
+            <p style="text-align: justify; line-height: 16.0pt;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">11.DEFINITIONS</span></p>
+            <p style="line-height: 16pt; text-align: justify;font-size: 10.0pt;"><span style="font-size: 10.0pt; font-family: Arial, sans-serif;">Unless opposed to the context, the following terms have the meanings given to them when used in the Agreement: <em>Brands </em>means brands, logos, trade names, trademarks, brand features or other identifiers; <em>Charges</em> means Fees, out of pocket expenses and other amounts payable for the Services by the Client under an Order Form;<em> Fees</em> means the fees for the Services payable by the Client as set out in the Order Form (subject to revisions in accordance with the Agreement);<em> Client Material </em>means the information, material, documents, declarations and confirmations (including any Brands of the Client or the entity to which the Report relates or any other party) provided by the Client pursuant to this Agreement; <em>MTC </em>means this document titled 'Master Terms and Conditions', together with any related annexure or schedule that the parties have agreed in writing;<em> Order Form</em> means an order form executed by the relevant parties incorporating or referencing the MTC, together with any related schedules and annexure; <em>Packaged Services</em> means Services in respect of which Service Particulars shall be as CRISIL generally provides to its clients from time to time except to the extent modified as stated in the Order Form; <em>Service Particulars </em>with respect to a Service means its format, delivery mode, delivery schedule, specifications, content and other relevant particulars; <em>Services</em> means the services subscribed to by the Client under the Order Form and may be Standard Services and/or Packaged Services; <em>Standard Services </em>means the Services in respect of which the Service Particulars shall be as CRISIL generally provides to its clients from time to time; <em>Start Date </em>means the start date of an Order Form; and <em>Users</em> means any third party who has access to the Report through Client whether directly or indirectly.</span></p>
+           <!-- <br style="page-break-after: always" />
+            <br/> -->
+            
+            <table style="height: 18px; width: 100%; border-collapse: collapse; border-color: #302d2c; background-color: #302d2c;" border="0">
+                <tbody>
+                    <tr style="height: 18px; border-style: solid; border-color: #302d2c; background-color: #302d2c;">
+                        <td style="width: 100%;font-size: 10.0pt;"><span style="color: #ffffff; font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">8. ABOUT CRISIL LIMIT AND RESAEARCH</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="line-height: 16.0pt;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;"><strong>Who We Are</strong></span></p>
+            <p style="line-height: 16pt; text-align: justify;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">CRISIL Research is a division of CRISIL Limited. CRISIL Research is India's largest independent and integrated research house providing comprehensive research coverage to more than 1200 Indian and global customers. We provide insights, opinions, and analysis on the Indian economy, industries, capital markets and companies.</span></p>
+            <p style="line-height: 16pt; text-align: justify;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">We are India's most credible provider of economy and industry research. Our industry research covers 90 sectors and is known for its rich insights and perspectives. Our analysis is supported by inputs from our network of more than 5,000 primary sources, including industry experts, industry associations, and trade channels.</span></p>
+            <p style="line-height: 16pt; text-align: justify;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">We play a key role in India's fixed income markets. We are India's largest provider of valuations of fixed income securities, serving the mutual fund, insurance, and banking industries. We are the sole provider of debt and hybrid indices to India's mutual fund and life insurance industries.</span></p>
+            <p style="line-height: 16pt; text-align: justify;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">We pioneered independent equity research in India, and are today India's largest independent equity research house.</span></p>
+            <p style="line-height: 16pt; text-align: justify;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">Our defining trait is the ability to convert information and data into expert judgements and forecasts with complete objectivity. We leverage our deep understanding of the macroeconomics and our extensive sector coverage to provide unique insights on micro-macro and cross-sector linkages.</span></p>
+            <p style="line-height: 16pt; text-align: justify;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">We deliver our research through an innovative web-based research platform. Our talent pool comprises economists, sector experts, company analysts, and information management specialists.</span></p>
+            <p style="line-height: 16.0pt;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;"><strong>Who We Serve</strong></span></p>
+            <p style="line-height: 16pt; text-align: justify;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">We serve more than 1,200 Indian and global clients. These include banks, exchanges, companies, mutual funds, insurance companies, wealth managers, brokers, private equity firms, investment banks, consultants, industry associations, and educational institutions. Our clients include:</span></p>
+            <ul style="list-style-type: disc;font-size: 10.0pt;">
+                <li style="text-align: justify; line-height: 125%;"><span style="line-height: 125%; font-family: Arial, sans-serif;">95% of India's banking industry by asset base</span></li>
+                <li><span style="font-family: Arial, sans-serif;">15 of the top 25 Indian companies by market capitalisation</span></li>
+                <li><span style="font-family: Arial, sans-serif;">Entire Indian mutual fund industry</span></li>
+                <li><span style="font-family: Arial, sans-serif;">Entire life insurance industry in India</span></li>
+                <li><span style="font-family: Arial, sans-serif;">6 of the world's leading consulting firms</span></li>
+            </ul>
+            <p style="line-height: 16.0pt;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;"><strong>How We Add Value</strong></span></p>
+            <p style="line-height: 16pt; text-align: justify;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">Our opinions and insights help our clients to take informed lending, investment and strategic decisions, thereby mitigating and managing risk.</span></p>
+            <p style="line-height: 16pt; text-align: justify;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">Our fixed income valuations and indices provide greater transparency in the fixed income markets and empower investors with independent benchmarks to evaluate the performance of their investments.</span></p>
+            <p style="line-height: 16pt; text-align: justify;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">Our independent equity and company research reports provide insights to investors on under-researched companies. Our reports have improved transparency levels and trading volumes in India's equity markets.</span></p>
+            <p style="margin-bottom: .0001pt;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;"><strong><span style="line-height: 115%;"></span></strong></span><span style="font-family: Arial, sans-serif;"><strong>Our Research offerings</strong></span></p>
+            <p style="line-height: 16pt; text-align: justify;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">CRISIL Research provides the most comprehensive and independent coverage on Indian economy, industries and companies. This integrated offering of research under these three verticals along with Customised research is one of the key differentiators of CRISIL Research.</span></p>
+            <p style="line-height: 16pt; text-align: justify;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;"><strong>Economy Research</strong>: Covers an in- depth analysis of short and medium term trends and outlook on key macroeconomic variables, events, policies and key economic issues.</span></p>
+            <p style="line-height: 16pt;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;"><strong>Industry Research</strong>: Covers detailed research on 90 industries. These provide comprehensive analysis encompassing growth forecasts, profitability analysis, emerging trends, expected investments, industry structure and regulatory frameworks.</span></p>
+            <p><span style="font-family: Arial, sans-serif;font-size: 10.0pt;"><strong><span style="font-size: 10.0pt; line-height: 115%;">CRISIL Research's industry coverage</span></strong></span></p>
+            <!--<p><span style="font-family: Arial, sans-serif;"><strong><span style="font-size: 10.0pt; line-height: 115%;">&lt;!--------------------------------------- IMAGE INSERT -----------------------------------------&gt;</span></strong></span></p> ---->
+            <br />
+            <apex:image style="align: center;" url="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DXsS&oid=00D0w0000008cDW&lastMod=1556607993000" width="500" height="250"/>  
+            <p></p>
+            <br />
+            <br style="page-break-after: always" />
+            
+            
+            
+            <p style="line-height: 16pt; text-align: justify;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;"><strong>Customised Research: </strong>Customised Research typically addresses client needs in the areas of business planning, market sizing, demand and price forecasting, project and location feasibility assessments and specific company credit reports.</span></p>
+            <!---- <p style="line-height: 16.0pt;"><span style="font-family: Arial, sans-serif;">&lt;--------------------------------------------- ! Image insert --------------------------------------&gt;</span></p> --->
+            
+            <apex:image style="align: center;" url="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DXsX&oid=00D0w0000008cDW&lastMod=1556608445000" width="500" height="250"/>  
+            <p style="font-family: Arial, sans-serif;text-align: justify;font-size: 10.0pt;">CRISIL Research usually adopts a two stage model to analyse the specific objective of clients across industries. 
+                The first stage primarily involves gathering information through interactions across the entire value chain of the industry. 
+                Further we utilize published industry information from in-house databases and public information sources to support our analysis. We strongly leverage our knowledge base across multiple industries developed over the period of two decades. 
+                Equipped with insights from our internal databases and from various stakeholders, we analyse critical data points and build an informed view.</p>
+                <p style="font-family: Arial, sans-serif;text-align: justify;font-size: 10.0pt;"><strong>Please return to us the enclosed duplicate of this Letter duly signed by you in acceptance here of.</strong><br/>
+            <strong>We agree, accept and confirm</strong></p>
+            <!-- <table style="border-collapse: collapse; width: 100%;" border="1">
+                <tbody>
+                    <tr>
+                        <td style="width: 50%;font-size: 10.0pt;">
+                            <p style="text-align: justify;"><strong><span style="font-family: 'Arial','sans-serif';">For CRISIL Research, a division of CRISIL Ltd.</span></strong></p>
+                            <p style="text-align: justify;"><strong><span style="font-family: 'Arial','sans-serif';">Authorised Signatory</span></strong></p>
+                            <p style="text-align: justify;"><strong><span style="font-family: 'Arial','sans-serif';">Name: </span></strong></p>
+                            <p style="text-align: justify;"><strong><span style="font-family: 'Arial','sans-serif';">Designation: </span></strong></p>
+                            <strong><span style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">Company Stamp</span></strong></td>
+                        <td style="width: 50%;font-size: 10.0pt;">
+                            <p style="text-align: justify;"><strong><span style="font-family: 'Arial','sans-serif';">For {!iOpp.Account.Name}</span></strong></p>
+                            <p style="text-align: justify;"><strong><span style="font-family: 'Arial','sans-serif';">Authorised Signatory</span></strong></p>
+                            <p style="text-align: justify;"><strong><span style="font-family: 'Arial','sans-serif';">Name:&amp;nbsp;{!iOpp.Billing_Contact_Person__r.salutation}{!iOpp.Billing_Contact_Person__r.Contact_Name_Readonly__c} </span></strong></p>
+                            <p style="text-align: justify;"><strong><span style="font-family: 'Arial','sans-serif';">Designation:&amp;nbsp;{!iOpp.Billing_Contact_Person__r.Designation__c} </span></strong></p>
+                            <strong><span style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">Stamp</span></strong></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 50%;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">Date:&amp;nbsp;</span></td>
+                        <td style="width: 50%;font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">Date:&amp;nbsp;</span></td>
+                    </tr>
+                </tbody>
+            </table> -->
+             <table style="border-collapse: collapse; width: 100%;" border="1">
+                <tbody>
+                    <tr>
+                        <td style="width: 25%;font-family: 'Arial','sans-serif';font-size: 10.0pt;text-align: left;" >Authorised Signatory</td>
+                        <td style="width: 40%;font-family: 'Arial','sans-serif';font-size: 10.0pt;text-align: left;padding-left:20px" >{!iOpp.Account.Name}<br/><br/></td>
+                        <td style="width: 35%;font-family: 'Arial','sans-serif';font-size: 10.0pt;text-align: left;padding-left:20px" >CRISIL Limited<br/><br/></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 25%;font-family: 'Arial','sans-serif';font-size: 10.0pt;text-align: left;" >Name</td>
+                        <td style="width: 40%;font-family: 'Arial','sans-serif';font-size: 10.0pt;text-align: left;padding-left:20px" >{!iOpp.Billing_Contact_Person__r.salutation}{!iOpp.Billing_Contact_Person__r.Contact_Name_Readonly__c}</td>
+                        <td style="width: 35%;font-family: 'Arial','sans-serif';font-size: 10.0pt;text-align: left;padding-left:20px" >{!iOpp.Director__r.Name}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 25%;font-family: 'Arial','sans-serif';font-size: 10.0pt;text-align: left;" >Title</td>
+                        <td style="width: 40%;font-family: 'Arial','sans-serif';font-size: 10.0pt;text-align: left;padding-left:20px" >{!iOpp.Billing_Contact_Person__r.Designation__c}</td>
+                        <td style="width: 35%;font-family: 'Arial','sans-serif';font-size: 10.0pt;text-align: left;padding-left:20px" >{!iOpp.Director__r.HRMS_Designation__c}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 25%;font-family: 'Arial','sans-serif';font-size: 10.0pt;text-align: left;" >Date of Signature</td>
+                        <td style="width: 40%;font-family: 'Arial','sans-serif';font-size: 10.0pt;text-align: left;padding-left:20px" ></td>
+                        <td style="width: 35%;font-family: 'Arial','sans-serif';font-size: 10.0pt;text-align: left;padding-left:20px" ></td>
+                    </tr>
+                </tbody>
+            </table> 
+           <!-- <table style="border-collapse: collapse; width: 100%;" border="1">
+                <tbody>
+                    <tr>
+                        <td style="width: 33.3333%;font-family: 'Arial','sans-serif';font-size: 10.0pt;">Autorised Signature</td>
+                        <td style="width: 33.3333%;font-family: 'Arial','sans-serif';font-size: 10.0pt;">{!iOpp.Account.Name}<br/><br/></td>
+                        <td style="width: 33.3333%;font-family: 'Arial','sans-serif';font-size: 10.0pt;">Crisil Limited<br/><br/></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 33.3333%;font-family: 'Arial','sans-serif';font-size: 10.0pt;">Name</td>
+                        <td style="width: 33.3333%;font-family: 'Arial','sans-serif';font-size: 10.0pt;">{!iOpp.Billing_Contact_Person__r.salutation}{!iOpp.Billing_Contact_Person__r.Contact_Name_Readonly__c}</td>
+                        <td style="width: 33.3333%;font-family: 'Arial','sans-serif';font-size: 10.0pt;">{!iOpp.Director__r.Name}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 33.3333%;font-family: 'Arial','sans-serif';font-size: 10.0pt;">Title</td>
+                        <td style="width: 33.3333%;font-family: 'Arial','sans-serif';font-size: 10.0pt;">{!iOpp.Billing_Contact_Person__r.Designation__c}</td>
+                        <td style="width: 33.3333%;font-family: 'Arial','sans-serif';font-size: 10.0pt;">{!iOpp.Director__r.HRMS_Designation__c}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 33.3333%;font-family: 'Arial','sans-serif';font-size: 10.0pt;">Date of Signature</td>
+                        <td style="width: 33.3333%;font-family: 'Arial','sans-serif';font-size: 10.0pt;"></td>
+                        <td style="width: 33.3333%;font-family: 'Arial','sans-serif';font-size: 10.0pt;"></td>
+                    </tr>
+                </tbody>
+            </table> -->
+        </body>
+    </html>
+</apex:page>

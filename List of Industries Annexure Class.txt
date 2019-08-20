@@ -1,0 +1,108 @@
+public class List_of_Industries_Annexure {
+    
+    public Opportunity iOpp = new Opportunity();
+    public Opportunity getiOpp(){ return iOpp;}
+    public List<Opportunity_Line_Item__c> lstOppli = new List<Opportunity_Line_Item__c>();
+    Set <ID> setoppliid = new Set <ID>();
+    Set <ID> prdid = new Set <ID>();
+    Set <String> setpcid = new Set <String>();
+    public List<Opportunity_Line_Item__c> getlstOppli(){ return lstOppli; } 
+    public List<Product2> lstpro = new List<Product2>();
+    public List<Product2> getlstpro(){ return lstpro; }
+    public Map<String, Opportunity_Line_Item__c> mapOppLineItems = new Map<String, Opportunity_Line_Item__c>();
+    public Map<String, Product2> Prodmap = new Map<String, Product2>();
+    public List<Opportunity_Product_Line_Items__c> lstOpppli = new List<Opportunity_Product_Line_Items__c>();
+    public List<Opportunity_Product_Line_Items__c> getlstOpppli(){ return lstOpppli;}
+    public Map<String,List<Opportunity_Product_Line_Items__c>> mapoop = new Map<String,List<Opportunity_Product_Line_Items__c>>();
+    public Map<String,List<Opportunity_Product_Line_Items__c>> getmapoop() {return mapoop;}
+    public map<string, string>mapSeqtoCateogry = new map<string, string>();
+    public map<string, string>getmapSeqtoCateogry(){ return mapSeqtoCateogry;}
+    
+    public Map<String,List<Product2>> mapprd = new Map<String,List<Product2>>();
+    public Map<String,List<Product2>> getmapprd() {return mapprd;}
+    
+    Public List_of_Industries_Annexure(){
+        
+        String strOppid = Apexpages.Currentpage().Getparameters().get('id');
+        system.debug('***strOppid'+strOppid);
+        iOpp = [SELECT id, Name, Amount, Account.Name, Billing_Contact_Person__c, Billing_Contact_Person__r.Name, 
+                Primary_Marketing_Contact_PMC__c, Primary_Marketing_Contact_PMC__r.Title, Account.BillingStreet,
+                Account.BillingCountry, Account.BillingState, Primary_Marketing_Contact_PMC__r.Name, OLI_Total_Net_Amount__c,
+                Primary_Marketing_Contact_PMC__r.UserRole.Name, CGST_Amount__c, IGST_Amount__c, SGST_Amount__c, Total_Net_Amount_and_GST__c,
+                Account.BillingCity, Account.BillingPostalCode, Billing_Contact_Person__r.LastName, AmountInWords__c, CGST__c, IGST__c, SGST__c,
+                Product_Count__c, Billing_Contact_Person__r.Designation__c, Billing_Contact_Person__r.salutation,
+                Billing_Contact_Person__r.Contact_Name_Readonly__c, Primary_Marketing_Contact_PMC__r.HRMS_Designation__c,
+                CurrencyIsoCode, Account.PAN__c , CRISIL_Billing_Master__r.Billing_Location_GST__c, CRISIL_Billing_Master__r.Billing_Location_PAN__c,
+                CRISIL_Billing_Master__r.GST_State_Code__c, CRISIL_Billing_Master__r.Name, Billing_Contact_Person__r.MailingState, Billing_Contact_Person__r.MailingCity,
+                Billing_Contact_Person__r.MailingCountry, Billing_Contact_Person__r.MailingStreet , Billing_Contact_Person__r.MailingPostalCode
+                From Opportunity WHERE id = :strOppid];
+        
+        for(Opportunity_Product_Line_Items__c iOpppli : [Select id, Name, Product2ID__r.Name,Product2ID__r.Product_Category__r.Name ,
+                                                         Product2ID__r.Product_Category__r.OFA_Product_Category_Id__c, Product2ID__c 
+                                                         From Opportunity_Product_Line_Items__c where Opportunity__c =: strOppid 
+                                                         AND Product2ID__r.IsActive = true order by Product2ID__r.Product_Category__r.Name]){
+                                                             
+                                                             if(iOpppli.Product2ID__r.Product_Category__r.OFA_Product_Category_Id__c == '200019'
+                                                                || iOpppli.Product2ID__r.Product_Category__r.OFA_Product_Category_Id__c == '200007'
+                                                                || iOpppli.Product2ID__r.Product_Category__r.OFA_Product_Category_Id__c == '200020'){
+                                                                    
+                                                                    if(mapoop.containskey(iOpppli.Product2ID__r.Product_Category__r.Name)){ 
+                                                                        mapoop.get(iOpppli.Product2ID__r.Product_Category__r.Name).add(iOpppli);
+                                                                        prdid.add(iOpppli.Product2ID__c);
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        List<Opportunity_Product_Line_Items__c> templist = new List<Opportunity_Product_Line_Items__c>();
+                                                                        templist.add(iOpppli);
+                                                                        mapoop.put(iOpppli.Product2ID__r.Product_Category__r.Name,templist);
+                                                                        prdid.add(iOpppli.Product2ID__c);
+                                                                    }
+                                                                    
+                                                                }
+                                                             
+                                                             lstOpppli.add(iOpppli);  
+                                                         }
+        
+        for(Product2 iPROLI : [Select id, Name, Product2.isActive, Product_Category__c, Product_Category__r.OFA_Product_Category_Id__c,
+                               Product_Category__r.Name FROM Product2 
+                               WHERE Product_Category__r.Name IN: mapoop.keyset() AND Product2.isActive = TRUE AND id NOT IN :prdid ]){
+                                   
+                                   if(iPROLI.Product_Category__r.OFA_Product_Category_Id__c == '200019'
+                                      || iPROLI.Product_Category__r.OFA_Product_Category_Id__c == '200007'
+                                      || iPROLI.Product_Category__r.OFA_Product_Category_Id__c == '200020'){
+                                          
+                                          if(mapprd.containskey(iPROLI.Product_Category__r.Name)){
+                                              
+                                              mapprd.get(iPROLI.Product_Category__r.Name).add(iPROLI);
+                                              
+                                          }
+                                          else
+                                          {
+                                              List<Product2> templistprd = new List<Product2>();
+                                              templistprd.add(iPROLI);
+                                              mapprd.put(iPROLI.Product_Category__r.Name,templistprd);
+                                              
+                                          }
+                                          
+                                      }
+                                   
+                                   lstpro.add(iPROLI);
+                               }
+        
+        Integer i = 0;
+        for(String strCat : mapoop.keyset()){
+            
+            if(i == 0)
+                mapSeqtoCateogry.put(strCat, 'A');
+            
+            if(i == 1)
+                mapSeqtoCateogry.put(strCat, 'B');
+            
+            if(i == 2)
+                mapSeqtoCateogry.put(strCat, 'C');
+            
+            i++;
+        }
+    }
+    
+}

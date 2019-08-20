@@ -1,0 +1,143 @@
+public class Industry_Research_New{
+    
+    /*public String getPrintView()
+    {
+        return
+        '<!--[if gte mso 9]>' +
+            '<xml>' +
+            '<w:WordDocument>' +
+            '<w:View>Print</w:View>' +
+            '<w:Zoom>100</w:Zoom>' +
+            '<w:DoNotOptimizeForBrowser/>' +
+            '</w:WordDocument>' +
+            '</xml>' +
+            '<![endif]>';
+        }*/
+
+    public Opportunity iOpp = new Opportunity();
+    public Opportunity getiOpp(){ return iOpp;}
+    public List<Opportunity_Line_Item__c> lstOppli = new List<Opportunity_Line_Item__c>();
+    public List<Opportunity_Line_Item__c> getlstOppli(){ return lstOppli; }
+    public List<Product2> lstpro = new List<Product2>();
+    public List<Product2> getlstpro(){ return lstpro; }
+    public Account acc = new Account();
+    public List <Document_Annexure__c> DA = new List<Document_Annexure__c>();
+    public set<String> setAnnexure = new set<String>();
+    public String stran { get; set; }
+    public Integer Product_count { get; set; }
+    public List<Opportunity_Line_Item__c> lstOpppli = new List<Opportunity_Line_Item__c>();
+    public List<Opportunity_Line_Item__c> getlstOpppli(){ return lstOpppli;}
+    public Map<String,List<Opportunity_Line_Item__c>> mapoop = new Map<String,List<Opportunity_Line_Item__c>>();
+    public Map<String,List<Opportunity_Line_Item__c>> getmapoop() {return mapoop;}
+    public integer iOpppli{ get; set;}
+    //public String sales_price_final { get; set;}
+    //public Map<String,integer> mapoop = new Map<String,integer>();
+    //public Map<String,integer> getmapoop() {return mapoop;}
+    
+    public Industry_Research_New(){
+        
+        String strOppid = Apexpages.Currentpage().Getparameters().get('id');
+        system.debug('***strOppid'+strOppid);
+        iOpp = [SELECT id, Name, Amount, Account.Name, Billing_Contact_Person__c, Billing_Contact_Person__r.Name, Billing_Contact_Person__r.Email,
+                Primary_Marketing_Contact_PMC__c, Primary_Marketing_Contact_PMC__r.Title, Account.BillingStreet, Billing_Contact_Person__r.Phone,
+                Secondary_Marketing_Contact_SMC__r.UserRole.Name,AmountInWords__c, Primary_Marketing_Contact_PMC__r.Email,
+                Account.BillingCountry,Account.BillingState, Primary_Marketing_Contact_PMC__r.Name, Secondary_Marketing_Contact_SMC__r.Name,
+                Primary_Marketing_Contact_PMC__r.UserRole.Name, Subscription_End_Date__c, Subscription_Start_Date__c, Business_Type__c,
+                Account.BillingCity, Account.BillingPostalCode, Billing_Contact_Person__r.LastName, Primary_Marketing_Contact_PMC__r.Phone,
+                Product_Count__c, Billing_Contact_Person__r.Designation__c, Billing_Contact_Person__r.salutation__c,
+                Billing_Contact_Person__r.salutation, Billing_Contact_Person__r.Contact_Name_Readonly__c, Director__r.Name,
+                Director__r.UserRole.Name, Primary_Marketing_Contact_PMC__r.HRMS_Designation__c, Director__r.HRMS_Designation__c,
+                Secondary_Marketing_Contact_SMC__r.HRMS_Designation__c, CurrencyIsoCode, Billing_Contact_Person__r.MailingStreet,
+                Billing_Contact_Person__r.MailingState, Billing_Contact_Person__r.MailingCity, Billing_Contact_Person__r.MailingPostalCode, 
+                Billing_Contact_Person__r.MailingCountry
+                From Opportunity WHERE id = :strOppid];
+        
+        
+        for(Opportunity_Line_Item__c iPLI : [Select id, ListPrice__c, Sales_Price__c, Product_Category__r.Name, Cost_Center__c, Product_Count__c,
+                                             Product_type__c, Start_Date__c, End_Date__c
+                                             From Opportunity_Line_Item__c where Opportunity__c  =:strOppid AND Cost_Center__c = 'Industry'
+                                             AND Product_type__c = 'Standard']){
+                                                 lstOppli.add(iPLI);
+                                                 setAnnexure.add(iPLI.Product_Category__r.Name);
+                                                 //sales_price = iPLI.Sales_Price__c;
+                                             }
+                
+        Product_count = lstOppli.size();
+        
+        for(Product2 iPROLI : [Select id, Name, Product2.isActive FROM Product2 
+                               WHERE Product2.IsActive = true AND Product_Category_Name__c = 'Industry Research']){
+          lstpro.add(iPROLI);                
+        }
+        
+        stran = '';
+        for(Document_Annexure__c iAX : [SELECT id, Annexure__c, Cost_Center__c FROM Document_Annexure__c 
+                                        WHERE Name IN :setAnnexure AND Cost_Center__c = 'Industry']){
+            
+           /* System.debug('Rich field:');
+            System.debug(iAX.Annexure__c);
+            
+            String firstSubString = iAX.Annexure__c.substringBetween('<img', 'img>');
+            System.debug('First substring: ' + firstSubString);
+            
+            String secondSubString = firstSubString.substringBetween('src="', '"');
+            System.debug('Second substring: ' + secondSubString);
+            
+            String link = secondSubString.replace('amp;', '');
+            System.debug('Link: ' + link); */
+                                          /* Matcher imgMatcher = Pattern.compile( '<img(.+?)>' ).matcher( iAX.Annexure__c );
+                                            
+                                            // iterate each image tag found
+                                            while ( imgMatcher.find() ) {
+                                                
+                                                // get the image tag html
+                                                String imageTag = imgMatcher.group();
+                                                System.debug( 'imageTag=' + imageTag );
+                                                
+                                                // get the value of the src attribute
+                                                // the leading space is significant to avoid other attributes like data-cke-saved-src
+                                                String imageURL = imageTag.substringBetween( ' src="', '"' );
+                                                System.debug( 'imageURL=' + imageURL );
+                                                
+                                                // if url contained parameters they might be html escaped, unescape them
+                                                // or, more conservatively, replace '&amp;' with '&'
+                                                String decodedURL = imageURL.unescapeHtml4();
+                                                System.debug( 'decodedURL=' + decodedURL );
+                                                
+                                                // note, as of API 34.0 or later, getContent() is considered an http callout
+                                                // so take that into consideration for your unit tests and governor limits
+                                                // https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/apex_System_PageReference_getContent.htm
+                                                PageReference page = new PageReference( decodedURL );
+                                                Blob b = page.getContent();
+                                                System.debug( 'blob=' + b );
+                                                
+                                                System.debug(''); // I like blank lines in my logs, easier to scan/read =)
+                                                
+                                            } */
+                                            
+                                            if(stran == ''){
+                                                stran = stran + iAX.Annexure__c;
+                                            }
+                                            else{
+                                                stran = stran + iAX.Annexure__c;
+                                            } 
+                                            DA.add(iAX);
+                                        }
+        
+       /*for(Opportunity_Line_Item__c iOpppli : [Select id, Name, Cost_Center__c, Product_Count__c from Opportunity_Line_Item__c 
+                                                  where Opportunity__c =: strOppid  ]){
+                                                      
+                                                             if(mapoop.containskey(iOpppli.Cost_Center__c)){
+                                                                 mapoop.get(iOpppli.Cost_Center__c).add(iOpppli);
+                                                             }
+                                                             else
+                                                             {
+                                                                 List<Opportunity_Line_Item__c> templist = new List<Opportunity_Line_Item__c>();
+                                                                 templist.add(iOpppli);
+                                                                 mapoop.put(iOpppli.Cost_Center__c,templist);
+                                                             }
+                                                             lstOpppli.add(iOpppli);                                                 
+                                                         }*/
+        
+        }
+        
+    }

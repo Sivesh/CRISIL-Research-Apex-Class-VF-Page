@@ -1,0 +1,657 @@
+<apex:page controller="Industry_Research_New" contentType="application/msWord#Proposal Format with key Term-Fund.doc">
+    <html>
+        <body>
+            <apex:image style="text-align: center;" url="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DWjU&oid=00D0w0000008cDW&lastMod=1554872313000" width="553" height="81"/>
+            <p style="line-height: 32.0pt; tab-stops: 175.5pt; margin: 100.0pt 0cm 12.0pt 0cm;font-family: arial"><strong><span style="font-size: 36.0pt;">Proposal for Valuation Services</span></strong></p>
+            <p style="line-height: 115%; margin: 18.0pt 0cm 6.0pt 0cm;font-family: arial"><span style="font-size: 10.0pt; line-height: 115%; color: #0f2140;">Proposal submitted to</span></p>
+            <p style="line-height: 150%;font-family: arial"><strong><span style="font-size: 24.0pt; line-height: 150%;">{!iOpp.Account.Name}</span></strong></p>
+            <p style="line-height: 115%;"></p>
+            <h2 style="line-height: 115%;font-family: arial"><span style="font-size: 10.0pt; line-height: 115%;">Confidential Document</span></h2>
+            <p></p>
+            <h2 style="text-align: justify; line-height: 115%;font-family: arial, helvetica"><span style="font-size: 10.0pt; line-height: 115%;">Submitted on:<apex:outputText style="font-size:10pt; font-family:Arial,sans-serif" value="{0, date, long}">
+                <apex:param value="{!NOW()}" /> 
+                </apex:outputText></span></h2>
+            <p style="line-height: 115%;font-family: arial, helvetica;font-size: 10.0pt;">Valid upto: --------------------</p>
+            <p></p>
+            <p><span style="font-size: 10.0pt;font-family: arial, helvetica">Reference no: --------------------------</span></p>
+            <br style="page-break-after: always" />
+            <h1 style="margin-left: 0cm; text-indent: 0cm;"><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Confidentiality Clause</span></h1>
+            <p style="line-height: 16pt; text-align: justify;"><span style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">This document is submitted to {!iOpp.Account.Name} by CRISIL Limited (CRISIL) on the understanding that the contents of this document will not be divulged to any third party without the express written consent of CRISIL. It is also understood that CRISIL will not divulge any confidential information about the client that it may have access to in the course of executing the project described in this offer.</span></p>   
+            <p style="text-align: justify;"></p>
+            <p><span style="font-size: 10.0pt;"><span style="font-family: Arial, sans-serif;">Date:&amp;nbsp;<apex:outputText style="font-size:10pt; font-family:Arial,sans-serif" value="{0, date, long}">
+                <apex:param value="{!NOW()}" /> 
+                </apex:outputText> </span></span></p>
+            <br style="page-break-after: always" />
+            <h2 style="line-height: 115%;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Table of Contents</span></h2>
+            <table style="border-collapse: collapse; width: 100%;line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 3.791%;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">1.</span></td>
+                        <td style="width: 90.6148%;font-family: arial, helvetica"><span style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">Background --------------------------------------------------</span></td>
+                        <td style="width: 5.59405%;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 3.791%;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">2.</span></td>
+                        <td style="width: 90.6148%;"><span style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">Scope of work -----------------------------------------------</span></td>
+                        <td style="width: 5.59405%;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 3.791%;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">3.</span></td>
+                        <td style="width: 90.6148%;"><span style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">Change Control ---------------------------------------------</span></td>
+                        <td style="width: 5.59405%;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 3.791%;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">4.</span></td>
+                        <td style="width: 90.6148%;"><span style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">Professional fees -------------------------------------------</span></td>
+                        <td style="width: 5.59405%;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 3.791%;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">5.</span></td>
+                        <td style="width: 90.6148%;"><span style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">About CRISIL ------------------------------------------------</span></td>
+                        <td style="width: 5.59405%;"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br style="page-break-after: always" />
+            <p style="font-size: 10.0pt;font-family: arial, helvetica;">1.Background</p>
+            <br style="page-break-after: always" />
+            <h1><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">2. Scope of work</span></h1>
+            <h1><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">2.1 CRISIL security level valuation</span></h1>
+            <p style="margin-left: 18.0pt; text-indent: -18.0pt; line-height: 115%;"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 10.0pt; line-height: 115%; position: relative; top: -3.0pt;">CRISIL security level valuation methodology</span></strong></span></p>
+            <p style="text-align: justify;line-height: 16.0pt;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt; line-height: 16.0pt;">A.CRISIL will provide the valuation along with modified duration of fixed income securities in the fixed income portfolio. The valuations will be provided based on below methodology used by CRISIL for Security Level Valuations. CRISIL will also make changes time to time to improve the methodology as per CRISIL's discussions with market participants and change in debt markets</span></p>
+            <p></p>
+            <p></p>
+            <table style="width: 100.0%; border-collapse: collapse;" width="100%">
+                <tbody>
+                    <tr style="height: 15.0pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; background: #1E1E1E; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Heads</span></p>
+                        </td>
+                        <td style="width: 55.68%; border: solid windowtext 1.0pt; border-left: none; background: #1E1E1E; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Criteria</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 13.45pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.45pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Priority order for considering data for valuations</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.45pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Trades&gt;Polls&gt;Primary&gt;same issuer similar maturity&gt;similar issuer similar maturity&gt;Carry forward of Spread</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 11.65pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 11.65pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Data Sources: Priority order - Reporting platforms</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 11.65pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">NSE &gt; BSE</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 15.0pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Trade Size : Bonds</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Minimum 5 Crore and more, 1 trade</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 15.0pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Trade Size : CPCD</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Minimum 25 Crore and more, 1 trade</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 15.0pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Settlement convention</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">T+1&gt;T+0&gt;T+2</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 15.0pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Last traded / Weighted average yield is used</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Last traded Yield</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 15.0pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Identification of outlier : Liquid paper</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">10bps over and above matrix movement for bonds and 5bps over and above matrix movement for CPCD</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 25.6pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 25.6pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Identification of outlier : illiquid paper</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 25.6pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Semi Liquid: 15 bps over and above the matrix movement, Illiquid: 30 bps over and above the matrix movement</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 62.5pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 62.5pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Process followed for illiquid outlier trade - inclusion in valuation</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 62.5pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">The trade for illiquid outlier trade is included in the valuation after confirming with market participants whether or not the trade is good. If confirmed the trade is good, it is included in the valuation. If not the security is kept under yield watch. </span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 12.1pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 12.1pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Classification of similar securities / Clustering based on maturity</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 12.1pt;" width="55%">
+                            <p></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 15.0pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Up to 3 months</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">fortnight buckets</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 15.0pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">3 months - 1 year</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Monthly buckets</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 15.0pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">1 year - 5 year</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">+3/-3 months bucket</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 15.0pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">5 year and above</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Yearly buckets</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 15.0pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">In case of no trade on valuation day</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Spread constant, reviewed on rating action, issuer/market specific event </span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 25.6pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 25.6pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">In case of no trade post issuance (highly illiquid securities)</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 25.6pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Issuance spread used, if no trades available post issuance, polling is done to bring the levels in line with the market</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 15.0pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Bond valuer used</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">CRISIL Bond valuer (subject to the terms of the Agreement)</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 15.0pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Valuation of Sat-Sun and other holidays</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 15.0pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Constant yield, settlement date will change</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 22.45pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 22.45pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Maintenance of historical valuation record, quality controls etc.</span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 22.45pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Process in place</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 17.95pt;">
+                        <td style="width: 44.32%; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.95pt;" width="44%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Detailed methodology to arrive at the price from the relevant yield </span></p>
+                        </td>
+                        <td style="width: 55.68%; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 17.95pt;" width="55%">
+                            <p><span style="font-family: Arial, sans-serif; font-size: 10.0pt;">Standard methodology as per CRISIL Bond Valuer</span></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>
+            <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt; line-height: 14.0pt;"><strong><span style="line-height: 115%; position: relative; top: -3pt;">B.Deliverables &amp; Timelines</span></strong></span></p>
+            <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt; line-height: 14.0pt;">CRISIL will provide valuation file on every workingday end by 8.00 PM</span></p>
+            <p style="text-align: justify;"></p>
+            <p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt; line-height: 14.0pt;"><strong>Dissemination of services:</strong>CRISIL will provide the valuation file to the client via E-mail in MS-Excel format.</span></p>
+            <h1 style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt; line-height: 14.0pt;">3. Change Control</span></h1>
+            <p style="text-align: justify;line-height: 16.0pt;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt; line-height: 14.0pt;">Any change to the Deliverables that a party wishes to make, may only be made by following the change control procedure set out in this section 3. A party is not obliged to accept any change to the Deliverables that has not been approved following the change control procedure set out in this section 3.</span></p>
+            <p style="text-align: justify;line-height: 16.0pt;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt; line-height: 14.0pt;">Where during the term of the Agreement a party (Initiator) desires a change to the Deliverables (each a Change), the Initiator will notify the other party (Other Party) in writing giving reasonable particulars of the change and any impact that the Initiator anticipates on the overall delivery of the Services (Change Notice).</span></p>
+            <p style="text-align: justify;line-height: 16.0pt;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt; line-height: 14.0pt;">Within a reasonable time upon receiving the Change Notice (to be no later than 1 week from receiving the Change Notice), the Other Party will communicate to the Initiator its good faith estimate of the impact of the Change on the target timeline for delivery and the Fees. The parties shall discuss to finalize and agree to the particulars of the Change.</span></p>
+            <p style="text-align: justify;line-height: 16.0pt;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt; line-height: 14.0pt;">Each party shall act reasonably and in good faith in responding to a Change Notice and discussing the relevant Change. Once the parties have accepted a Change and any revision to the Fees, the parties will execute a suitable document setting out the details of the agreed Change. Once done, the executed document will be considered part of the Agreement.</span></p>
+            <p style="text-align: justify;line-height: 16.0pt;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt; line-height: 14.0pt;">Unless the document setting out the agreed Change referred to above has been executed by the parties, the Deliverables as last agreed to in writing by the parties will apply</span></p>
+            <h1><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt; line-height: 14.0pt;">4. Professional fees</span></h1>
+            <p style="line-height: 16.0pt;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt; line-height: 14.0pt;">Based on the discussion CRISIL proposes the following client slabs for valuation with the corresponding fees</span></p>
+            <table style="border-collapse: collapse; border: none;">
+                <tbody>
+                    <tr>
+                        <td style="width: 154.0pt; border: solid black 1.0pt; background: #262626; padding: 0cm 5.4pt 0cm 5.4pt;" width="205">
+                            <p style="margin-bottom: .0001pt; text-align: center; line-height: normal;"><strong><span style="font-size: 10.0pt; font-family: 'arial','sans-serif'; color: white;">Particulars of service</span></strong></p>
+                        </td>
+                        <td style="width: 154.05pt; border: solid black 1.0pt; border-left: none; background: #262626; padding: 0cm 5.4pt 0cm 5.4pt;" width="205">
+                            <p style="margin-bottom: .0001pt; text-align: center; line-height: normal;"><strong><span style="font-size: 10.0pt; font-family: 'arial','sans-serif'; color: white;">Security slabs</span></strong></p>
+                        </td>
+                        <td style="width: 154.05pt; border: solid black 1.0pt; border-left: none; background: #262626; padding: 0cm 5.4pt 0cm 5.4pt;" width="205">
+                            <p style="margin-bottom: .0001pt; text-align: center; line-height: normal;"><strong><span style="font-size: 10.0pt; font-family: 'arial','sans-serif'; color: white;">Fees in INR</span></strong></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 5.05pt;">
+                        <td style="width: 154.0pt; border: solid black 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 5.05pt;" rowspan="3" width="205">
+                            <p style="margin-bottom: .0001pt; text-align: center; line-height: normal;"><span style="font-size: 10.0pt; color: black;"></span></p>
+                            <p style="margin-bottom: .0001pt; text-align: center; line-height: normal;"><span style="font-size: 10.0pt; color: black;font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Security level valuation</span></p>
+                        </td>
+                        <td style="width: 154.05pt; border-top: none; border-left: none; border-bottom: solid black 1.0pt; border-right: solid black 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 5.05pt;" width="205">
+                            <p style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 10.0pt; color: black;font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">1.Upto 50 securities</span></p>
+                        </td>
+                        <td style="width: 154.05pt; border-top: none; border-left: none; border-bottom: solid black 1.0pt; border-right: solid black 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 5.05pt;" width="205">
+                            <p style="margin-bottom: .0001pt; line-height: normal;"></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 5.0pt;">
+                        <td style="width: 154.05pt; border-top: none; border-left: none; border-bottom: solid black 1.0pt; border-right: solid black 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 5.0pt;" width="205">
+                            <p style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 10.0pt; color: black;font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">2.Upto 100 securities</span></p>
+                        </td>
+                        <td style="width: 154.05pt; border-top: none; border-left: none; border-bottom: solid black 1.0pt; border-right: solid black 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 5.0pt;" width="205">
+                            <p style="margin-bottom: .0001pt; line-height: normal;"></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 5.0pt;">
+                        <td style="width: 154.05pt; border-top: none; border-left: none; border-bottom: solid black 1.0pt; border-right: solid black 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 5.0pt;" width="205">
+                            <p style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 10.0pt; color: black;font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">3. Incremental lot of 10</span></p>
+                        </td>
+                        <td style="width: 154.05pt; border-top: none; border-left: none; border-bottom: solid black 1.0pt; border-right: solid black 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 5.0pt;" width="205">
+                            <p style="margin-bottom: .0001pt; line-height: normal;"></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>
+            <p style="font-family: arial;font-size: 10.0pt;"><strong>Note:</strong></p>
+            <ul style="line-height: 14.0pt;">
+                <li><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Fees is towards valuation of g-sec, SDL, T Bill, CP, CD and corporate bonds forming part of the investment portfolio.</span></li>
+                <li><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Valuation services proposed is for domestic clients of <strong>{!iOpp.Account.Name}</strong></span></li>
+                <li style="font-family: arial;"><span style="font-size: 10.0pt;"><strong>{!iOpp.Account.Name}</strong> to notify the names of clients under service</span></li>
+            </ul>
+            <h3><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Payment Terms:</span></h3>
+            <ul style="line-height: 14.0pt;">
+                <li><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">The above mentioned fee is exclusive of taxes</span></li>
+                <li><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">All applicable taxes will be borne by the client</span></li>
+                <li><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">100% of the fee is payable at beginning of assignment. The fee is non-refundable.</span></li>
+            </ul>
+            <p style="text-align: justify;line-height: 16.0pt;"><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;"><strong>{!iOpp.Account.Name}</strong> shall pay invoice within 15 working days from the date of invoice. All payments will be made by cheque or other normal banking channels to the order of CRISIL Limited payable at par in Mumbai. Client may also remit money by online transfer or similar mode to the credit of CRISIL Limited, the details of whichare given below:</span></p>
+            <p><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Name of the Bank: ICICI Bank Limited</span></p>
+            <p><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Account Number: 003205000032</span></p>
+            <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Account Type: Current</span></p>
+            <p style="text-align: left; line-height: 16.0pt; margin: 0cm 0cm 6.0pt 36.0pt;"><span style="font-family: arial, helvetica, sans-serif;"> <span style="font-size: 10.0pt;">- SWIFT Code: ICICINBBCTS </span></span></p>
+            <p style="text-align: left; line-height: 16.0pt; margin: 0cm 0cm 6.0pt 36.0pt;"><span style="font-family: arial, helvetica, sans-serif;"> <span style="font-size: 10.0pt;">- IFSC Code: ICIC0000032 </span></span></p>
+            <p style="text-align: left; line-height: 16.0pt; margin: 0cm 0cm 6.0pt 36.0pt;"><span style="font-family: arial, helvetica, sans-serif;"> <span style="font-size: 10.0pt;">- Branch Code: 000032</span></span></p>
+            <h3 style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">4.2 Currency of Payment</span></h3>
+            <p style="text-align: justify;line-height: 16.0pt;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Charges are payable in Indian Rupees, unless CRISIL expressly agrees otherwise in writing. Where Client remits Charges in a currency other than Indian Rupees, Client shall remit such amount in the remitting currency as would ensure CRISIL receives in Indian Rupees an amount no less than the Charges.</span></p>
+            <h3><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">4.3 Taxes and Statutory Levies</span></h3>
+            <p style="text-align: justify;line-height: 16.0pt;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt; line-height: 14.0pt;">In addition to Fees, Client shall pay CRISIL all taxes and statutory levies as may apply, such that after paying the applicable taxes and statutory levies (other than those that apply on CRISIL's net income), the Fees that CRISIL receives, is not less than as set out in section 3 above</span></p>
+            <p style="text-align: justify;line-height: 16.0pt;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt; line-height: 14.0pt;">Where Client is located in India and makes payment under the Agreement out of its offices in India (and not otherwise) the following provisions shall apply with respect to payment of Fees:</span></p>
+            <ul style="line-height: 14.0pt;">
+                <li style="line-height: 16pt; margin: 0cm 0cm 6pt 18pt; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Client may deduct income tax at source from its payment of Fees (and other Charges if applicable) under this Agreement at the least rate required for the Client to comply with applicable tax laws (TDS).</span></li>
+                <li style="line-height: 16pt; margin: 0cm 0cm 6pt 18pt; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">In the case of each TDS, Client shall within the timeline specified under law (or if no timeline is specified under law, within the earlier of 3 months from the date Client deducts TDS or 1 month from the end of the then current taxation year) provide CRISIL with a properly rendered certificate or relevant document evidencing the Client having complied with applicable tax laws with respect to the TDS (TDS Certificate).</span></li>
+                <li style="line-height: 16pt; margin: 0cm 0cm 6pt 18pt; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">If Client fails to provide the TDS Certificate as stated afore, Client shall pay CRISIL such amount as would after TDS be equivalent to the amount covered TDS Certificate not provided by the Client. Client agrees that such amount shall be recoverable as a debt from the Client.</span></li>
+            </ul>
+            <h3><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">4.4 CRISIL Rights</span></h3>
+            <p style="text-align: left;line-height: 16.0pt;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">In the event Client fails to pay any Charges when due, the following terms shall apply (without limiting CRISIL's rights under law or the Agreement):</span></p>
+            <ul style="line-height: 14.0pt;">
+                <li style="line-height: 16pt; margin: 0cm 0cm 6pt 18pt; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">CRISIL shall be entitled to charge and recover from the Client interest at the rate of 18% per annum (applied on a daily basis from the date of the relevant invoice) for each day that, as relevant, the Charges remain overdue (i.e. until the date CRISIL receives the Charges in full).</span></li>
+                <li style="line-height: 16pt; margin: 0cm 0cm 6pt 18pt; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">CRISIL may at its discretion withhold any Deliverables not handed over to Client. However, if CRISIL has anyway has provided any Deliverables to Client, it will not operate as a waiver of CRISIL's right to receive payment of Charges. Where CRISIL withholds any Deliverables, it shall not be considered a breach of CRISIL's obligations under the Agreement.</span></li>
+                <li style="line-height: 16pt; margin: 0cm 0cm 6pt 18pt; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Client agrees that it is not entitled to use the Deliverables unless and until Client has paid the Charges in full.</span></li>
+            </ul>
+            <h3 style="margin: 0cm; margin-bottom: .0001pt; text-indent: 0cm; line-height: 14.0pt;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;"><u>Key terms and conditions</u></span></h3>
+            <p style="text-align: justify; line-height: 14.0pt;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">CRISIL's services procured and provided under this Proposal are subject to and governed by the following terms and conditions, which shall be superseded by any formal agreement that may be entered into between CRISIL and {!iOpp.Account.Name}:-</span></p>
+            <!-- <table style="border-collapse: collapse; width: 100%; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 50%;">
+                            <p style="font-size: 10.0pt;"><strong><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Confidentiality</span></strong></p>
+                            <p style="text-align: justify;"><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif; line-height: 14.0pt;">Each receiving party will hold the Confidential Information of the disclosing party in confidence and except with the prior written consent of the disclosing party not disclose it to any third party whose knowledge of such Confidential Information is not necessary for the party's performance of its obligations herein (each a Permitted Recipient). Each receiving party will procure that each of its Permitted Recipients complies with these confidentiality obligations. These confidentiality obligations do not apply to information which is already in the public domain or comes into public domain through no fault of the receiving party. Confidential Information means all information except those excluded afore in this clause whether commercial, financial, legal or otherwise, which is made available to the receiving party or which otherwise comes to the attention of or into the possession of the receiving party, its representatives or persons acting under its control or direction in the course of performance of its obligations herein.The confidentiality obligations with respect to an item of Confidential Information will apply throughout the performance of the obligations herein and for a period of three (3) years after termination or expiry of such obligations.</span></p>
+                            <p><strong><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Intellectual Property</span></strong></p>
+                            <ol style="list-style-type: lower-alpha; line-height: 16.0pt;">
+                                <li style="margin-bottom: 0.0001pt; line-height: 14pt; text-align: justify;"><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">As between the parties, all intellectual property rights in (i) the servicesincluding all of its contents (but excluding Client brands) vest with and belongexclusively to CRISIL; and (ii) Client brands belong exclusively to Client.</span></li>
+                                <li style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Client will not use the name of any service (or any part of it) as part of its corporate, business or trading name or style or create or attempt to register or otherwise assert any intellectual property right in any part of CRISIL's service or CRISIL brand.</span></li>
+                            </ol>
+                        </td>
+                        <td style="width: 50%; padding-left: 40px;">
+                            <p style="font-size: 10.0pt;"><strong><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Warranty and Disclaimers</span></strong></p>
+                            <ol style="list-style-type: lower-alpha; line-height: 16.0pt;">
+                                <li style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Client warrants that Client's access, use and distribution (where permitted by CRISIL) of the services provided hereunder shall be lawful and that Client has (or shall have) all necessary rights, permissions and licenses for use of the services.</span></li>
+                                <li style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Client warrants that: (i) the Client requirements are adequate and complete in all material respects; and (ii) CRISIL may provide the services relying on the Client requirements. CRISIL is not obliged to independently verify or validate any Client requirement (although CRISIL may at its discretion choose to do so).</span></li>
+                                <li style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">CRISIL will use reasonable care and skill in preparing and providing the Services.</span></li>
+                                <li style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Client acknowledges that: (a) CRISIL does not guarantee the accuracy or completeness of the information on which the services is based or the information contained in the services; (b) the preparation of the services does not constitute an audit or rating of any of the entities whose names may feature in the services; and (c) nothing in the services constitutes recommendations or advice as to buy, sell or hold any instruments issued by the entities whose names may feature in the Services or as to entering (or not entering) into any transaction with any of them.</span></li>
+                            </ol>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <br style="page-break-after: always" /> 
+            <table style="border-collapse: collapse; width: 100%; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 50%;">
+                            <p style="margin-bottom: 0.0001pt; line-height: 14pt; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">EXCEPT AS MENTIONED HEREABOVE IN THIS SECTION TITLED 'WARRANTY AND DISCLAIMERS', CRISIL MAKES NO REPRESENTATIONS OR WARRANTIES WITH REGARD TO THE SERVICES AND EXPRESSLY EXCLUDES ALL REPRESENTATIONS AND WARRANTIES OF WHATEVER KIND INCLUDING, WITHOUT LIMITATION, WARRANTY THAT THE SERVICES WILL BE ERROR-FREE, COMPLETE, OR FIT FOR PURPOSE.</span></p>
+                            <p><strong><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Indemnity and Liability</span></strong></p>
+                            <ol style="list-style-type: lower-alpha;">
+                                <li style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Client agrees to indemnify CRISIL and hold harmless, its directors, officers and employees, against any costs, loss, damages, claims or expenses incurred or suffered by reason of provision of the services, including, without limitation those that arise as a result of breach of Client's warranties set out above (but excluding those that arise as a result of CRISIL's breach of these terms and conditions).</span></li>
+                                <li style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Client assumes the entire risk as to Client's use of the services and the decisions made based on the services. CRISIL expressly disclaims all liability with respect to any such use or decisions. The services are not intended to be investment advice or recommendations.</span></li>
+                                <li style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Neither party will be liable for indirect or consequential losses, exemplary or special damages, or loss of profits, loss of business or economic loss even if advised of the possibility of such losses or damages. The foregoing shall apply regardless of whether such liability is based in contract, tort, (including but not limited to negligence) and strict liability or any other theory of legal liability.</span></li>
+                                <li style="text-align: justify;"><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Notwithstanding anything contained herein, under no circumstances will CRISIL's aggregate liability to the Client exceedan amount equivalent to the Fees paid by the Client to CRISIL in connection with CRISIL's obligations herein in the latest twelve month period preceding the date of the claim.</span></li>
+                                <li style="text-align: justify;"><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Neither party shall be liable for failure or delay in its performance of its obligations herein (other than in the case of Client, its obligation to pay the Fees as are due), to the extent such delay or failure or delay is caused by a force majeure cause.</span></li>
+                            </ol>
+                        </td>
+                        <td style="width: 50%;">
+                            <p style="margin-bottom: .0001pt; line-height: 14.0pt;"></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table> --->
+            <table style="border-collapse: collapse; width: 100%; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 50%;">
+                            <p style="font-size: 10.0pt;"><strong><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Confidentiality</span></strong></p>
+                            <p style="text-align: justify;"><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif; line-height: 14.0pt;">Each receiving party will hold the Confidential Information of the disclosing party in confidence and except with the prior written consent of the disclosing party not disclose it to any third party whose knowledge of such Confidential Information is not necessary for the party's performance of its obligations herein (each a Permitted Recipient). Each receiving party will procure that each of its Permitted Recipients complies with these confidentiality obligations. These confidentiality obligations do not apply to information which is already in the public domain or comes into public domain through no fault of the receiving party. Confidential Information means all information except those excluded afore in this clause whether commercial, financial, legal or otherwise, which is made available to the receiving party or which otherwise comes to the attention of or into the possession of the receiving party, its representatives or persons acting under its control or direction in the course of performance of its obligations herein.The confidentiality obligations with respect to an item of Confidential Information will apply throughout the performance of the obligations herein and for a period of three (3) years after termination or expiry of such obligations.</span></p>
+                            <p><strong><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Intellectual Property</span></strong></p>
+                            <ol style="list-style-type: lower-alpha; line-height: 16.0pt;">
+                                <li style="margin-bottom: 0.0001pt; line-height: 14pt; text-align: justify;"><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">As between the parties, all intellectual property rights in (i) the servicesincluding all of its contents (but excluding Client brands) vest with and belongexclusively to CRISIL; and (ii) Client brands belong exclusively to Client.</span></li>
+                                <li style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Client will not use the name of any service (or any part of it) as part of its corporate, business or trading name or style or create or attempt to register or otherwise assert any intellectual property right in any part of CRISIL's service or CRISIL brand.</span></li>
+                            </ol>
+                            <p style="font-size: 10.0pt;"><strong><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Warranty and Disclaimers</span></strong></p>
+                            <ol style="list-style-type: lower-alpha; line-height: 16.0pt;">
+                                <li style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Client warrants that Client's access, use and distribution (where permitted by CRISIL) of the services provided hereunder shall be lawful and that Client has (or shall have) all necessary rights, permissions and licenses for use of the services.</span></li>
+                                <li style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Client warrants that: (i) the Client requirements are adequate and complete in all material respects; and (ii) CRISIL may provide the services relying on the Client requirements. CRISIL is not obliged to independently verify or validate any Client requirement (although CRISIL may at its discretion choose to do so).</span></li>
+                                <li style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">CRISIL will use reasonable care and skill in preparing and providing the Services.</span></li>
+                                <li style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Client acknowledges that: (a) CRISIL does not guarantee the accuracy or completeness of the information on which the services is based or the information contained in the services; (b) the preparation of the services does not constitute an audit or rating of any of the entities whose names may feature in the services; and (c) nothing in the services constitutes recommendations or advice as to buy, sell or hold any instruments issued by the entities whose names may feature in the Services or as to entering (or not entering) into any transaction with any of them.</span></li>
+                            </ol>
+                        </td>
+                        <td style="width: 50%; padding-left: 40px;">
+                            <p style="margin-bottom: 0.0001pt; line-height: 14pt; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">EXCEPT AS MENTIONED HEREABOVE IN THIS SECTION TITLED 'WARRANTY AND DISCLAIMERS', CRISIL MAKES NO REPRESENTATIONS OR WARRANTIES WITH REGARD TO THE SERVICES AND EXPRESSLY EXCLUDES ALL REPRESENTATIONS AND WARRANTIES OF WHATEVER KIND INCLUDING, WITHOUT LIMITATION, WARRANTY THAT THE SERVICES WILL BE ERROR-FREE, COMPLETE, OR FIT FOR PURPOSE.</span></p>
+                            <p><strong><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Indemnity and Liability</span></strong></p>
+                            <ol style="list-style-type: lower-alpha;">
+                                <li style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Client agrees to indemnify CRISIL and hold harmless, its directors, officers and employees, against any costs, loss, damages, claims or expenses incurred or suffered by reason of provision of the services, including, without limitation those that arise as a result of breach of Client's warranties set out above (but excluding those that arise as a result of CRISIL's breach of these terms and conditions).</span></li>
+                                <li style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Client assumes the entire risk as to Client's use of the services and the decisions made based on the services. CRISIL expressly disclaims all liability with respect to any such use or decisions. The services are not intended to be investment advice or recommendations.</span></li>
+                                <li style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Neither party will be liable for indirect or consequential losses, exemplary or special damages, or loss of profits, loss of business or economic loss even if advised of the possibility of such losses or damages. The foregoing shall apply regardless of whether such liability is based in contract, tort, (including but not limited to negligence) and strict liability or any other theory of legal liability.</span></li>
+                                <li style="text-align: justify;"><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Notwithstanding anything contained herein, under no circumstances will CRISIL's aggregate liability to the Client exceedan amount equivalent to the Fees paid by the Client to CRISIL in connection with CRISIL's obligations herein in the latest twelve month period preceding the date of the claim.</span></li>
+                                <li style="text-align: justify;"><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Neither party shall be liable for failure or delay in its performance of its obligations herein (other than in the case of Client, its obligation to pay the Fees as are due), to the extent such delay or failure or delay is caused by a force majeure cause.</span></li>
+                            </ol>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br style="page-break-after: always" />
+            <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">Please contact the following in case you need any additional information/clarification:</span></p>
+            <table style="border-collapse: collapse; width: 100%;" border="1">
+                <tbody>
+                    <tr>
+                        <td style="width: 50%;font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">
+                            <p style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;"><strong>RM Contact details</strong></p>
+                            <p style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">{!iOpp.Primary_Marketing_Contact_PMC__r.Name}</p>
+                            <p style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">{!iOpp.Primary_Marketing_Contact_PMC__r.HRMS_Designation__c}</p>
+                        </td>
+                        <td style="width: 50%;font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">
+                            <p style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;"><span style="font-size: 10.0pt;"><strong>AD contact details</strong></span></p>
+                            <p style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">{!iOpp.Secondary_Marketing_Contact_SMC__r.Name}</p>
+                            <p style="font-family: arial, helvetica, sans-serif; font-size: 10.0pt;">{!iOpp.Secondary_Marketing_Contact_SMC__r.HRMS_Designation__c}</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br style="page-break-after: always" />
+            <p style="line-height: 115%; tab-stops: 13.5pt; border: none; padding: 0cm;font-size: 10.0pt"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 26.0pt; line-height: 115%; position: relative; top: -10.0pt;">Profile</span></strong></span></p>
+            <table style="height: 20px; width: 100.716%; border-collapse: collapse; border-color: #828282; background-color: #828282;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 100%;"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <table style="border-collapse: collapse;">
+                <tbody>
+                    <tr>
+                        <td style="width: 506.95pt; padding: 0cm 0cm 0cm 0cm;" width="676">
+                            <p style="line-height: 115%;"><span style="font-size: 10.0pt; line-height: 115%; color: windowtext; font-family: arial, helvetica, sans-serif;">CRISIL Research</span></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <table style="width: 100%; border-collapse: collapse; text-align: justify; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 50%; text-align: justify; padding-right: 50px;">
+                            <p style="margin-top: 12.0pt;font-size: 10.0pt"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="color: windowtext;">Who We Are</span></strong></span></p>
+                            <p><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">CRISIL Research is India's largest independent integrated research house. We provide insights, opinion and analysis on the Indian economy, industry, capital markets and companies. We also conduct training programs to financial sector professionals on a wide array of technical issues.</span></p>
+                            <p><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">We are India's most credible provider of economy and industry research. Our industry research covers 86 sectors and is known for its rich insights and perspectives. Our analysis is supported by inputs from our network of more than 5,000 primary sources, including industry experts, industry associations and trade channels.</span></p>
+                            <span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">We play a key role in India's fixed income markets. We are the largest provider of valuation of fixed income securities to the mutual fund, insurance and banking industries in the </span></td>
+                        <td style="width: 50%; text-align: justify; padding-left: 50px;">
+                            <p><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">country. We are also the sole provider of debt and hybrid indices to India's mutual fund and life insurance industries.</span></p>
+                            <p><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">We pioneered independent equity research in India, and are today the country's largest independent equity research house.</span></p>
+                            <p><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Our defining trait is the ability to convert information and data into expert judgements and forecasts with complete objectivity. We leverage our deep understanding of the macro-economy and our extensive sector coverage to provide unique insights on micro-macro and cross-sectoral linkages.</span></p>
+                            <p><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Our talent pool comprises economists, sector experts, company analysts and information management specialists.</span></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table style="height: 707px; width: 100%; border-collapse: collapse; text-align: justify; line-height: 16.0pt;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 50%;">
+                            <p style="margin-top: 12.0pt;font-size: 10.0pt"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="color: windowtext;">Who We Serve</span></strong></span></p>
+                            <p><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">We serve more than 1,200 Indian and global clients. These include banks, exchanges, companies, mutual funds, insurance companies, wealth managers, brokers, private equity firms, investment banks, consultants, industry associations and educational institutions.</span></p>
+                            <p><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Our clientele includes:</span></p>
+                            <ul style="list-style-type: disc;">
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">95% of India's banking industry by asset base</li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">15 of the top 25 Indian companies by market capitalisation</li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Entire Indian mutual fund industry</li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Entire life insurance industry in India</li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">6 of the world's leading consulting firms</li>
+                            </ul>
+                            <p style="font-size: 10.0pt"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="color: windowtext;">How We Add Value</span></strong></span></p>
+                            <p><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Our opinions and insights, delivered through an innovative web-based platform, help our clients take informed lending, investment and strategic decisions, thereby mitigating and managing risk.</span></p>
+                            <p><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Our fixed income valuations and indices provide greater transparency in the fixed income markets and empower investors with independent benchmarks to evaluate the performance of their investments.</span></p>
+                            <p><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Our independent equity and company research reports provide insights to investors on under-researched companies. Our reports have improved transparency levels and trading volumes for companies under coverage.</span></p>
+                            <p><span style="line-height: 115%; font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Our executive training service helps train and equip finance professionals to meet real-life business situations.</span></p>
+                            <p></p>
+                        </td>
+                        <td style="width: 50%;"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br style="page-break-after: always" />
+            <table style="border-collapse: collapse; border: none;">
+                <tbody>
+                    <tr>
+                        <td style="width: 505.25pt; padding: 0cm 0cm 0cm 0cm;" width="674">
+                            <p style="line-height: 14.0pt; margin: 2.0pt 0cm 2.0pt 4.3pt;"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 10.0pt;">Our Capabilities</span></strong></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 505.25pt; padding: 0cm 0cm 0cm 0cm;" width="674">
+                            <p style="line-height: 14.0pt; margin: 2.0pt 0cm 2.0pt 4.3pt;"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 10.0pt;">Making Markets Function Better</span></strong></span></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <table style="border-collapse: collapse; border: none; text-align: justify; line-height: 16.0pt; width=100%">
+                <tbody>
+                    <tr>
+                        <td style="width: 523.35pt; background: #A6A6A6; padding: 0cm 0cm 0cm 0cm;" width="698">
+                            <p style="line-height: 14.0pt; margin: 2.0pt 0cm 2.0pt 10.8pt;"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 10.0pt;">Economy and Industry Research</span></strong></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 523.35pt; background: #DBD9D6; padding: 0cm 0cm 0cm 0cm;" width="698">
+                            <ul>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;"><span style="color: windowtext;">Largest team of economy and industry research analysts in India</span></li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;"><span style="color: windowtext;">Acknowledged premium, high quality research provider with track record spanning two decades</span></li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;"><span style="color: windowtext;">95% of India's commercial banking industry by asset base uses our industry research for credit decisions</span></li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;"><span style="color: windowtext;">Coverage on 86 industries: We provide analysis and forecast on key industry parameters including demand, supply, prices, investments and profitability, along with insightful opinions on emerging trends and impact of key events</span></li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;"><span style="color: windowtext;">Research on sectors and clusters dominated by small and medium enterprises covering analysis of relative attractiveness, growth prospects and financial performance</span></li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;"><span style="color: windowtext;">High-end customised research for many leading Indian and global corporates in areas such as market sizing,demand forecasting, project feasibility and entry strategy</span></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 523.35pt; padding: 0cm 0cm 0cm 0cm;">
+                            <p></p>
+                        </td>
+                    </tr>
+                    <br />
+                    <tr>
+                        <td style="width: 523.35pt; background: #A6A6A6; padding: 0cm 0cm 0cm 0cm;">
+                            <p style="line-height: 14.0pt; margin: 2.0pt 0cm 2.0pt 10.8pt;"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 10.0pt;">Funds and Fixed Income Research</span></strong></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 523.35pt; background: #DBD9D6; padding: 0cm 0cm 0cm 0cm;">
+                            <ul>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;"><span style="color: windowtext;">Largest and most comprehensive database on India's debt market, covering more than 18,000 securities</span></li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;"><span style="color: windowtext;">Largest provider of fixed income valuations in India</span></li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;"><span style="color: windowtext;">Provide valuation for more than Rs.70 trillion (USD 1,167billion) of Indian debt securities </span></li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;"><span style="color: windowtext;">Sole provider of fixed income and hybrid indices to mutual funds and insurance companies; we maintain 38 standard indices and over 100 customised indices</span></li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;"><span style="color: windowtext;">Ranking of Indian mutual fund schemes covering 73% of assets under management and Rs.7.2 trillion (USD 120 billion) by value</span></li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;"><span style="color: windowtext;">Business review consultants to The Employees' Provident Fund Organisation (EPFO) and The National Pension System(NPS) Trust in monitoring performance of their fund managers</span></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 523.35pt; padding: 0cm 0cm 0cm 0cm;"></td>
+                    </tr>
+                    <br />
+                    <tr>
+                        <td style="width: 523.35pt; background: #A6A6A6; padding: 0cm 0cm 0cm 0cm;">
+                            <p style="line-height: 14.0pt; margin: 2.0pt 0cm 2.0pt 10.8pt;"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 10.0pt;">Equity and Company Research</span></strong></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 523.35pt; background: #DBD9D6; padding: 0cm 0cm 0cm 0cm; line-height: 16.0pt;">
+                            <ul style="line-height: 16.0pt;">
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;"><span style="color: windowtext;">Largest independent equity research house in India, coverage exceeds 140 companies </span></li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;"><span style="color: windowtext;">First research house to release exchange-commissioned equity research reports in India; covered 1,488 firms listed and traded on the National Stock Exchange</span></li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;"><span style="color: windowtext;">Assigned the first IPO grade in India; graded more than 100 IPOs till date</span></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <table style="border-collapse: collapse; border: none; height: 136px; width: 100%;">
+                <tbody>
+                    <tr style="height: 24px;">
+                        <td style="width: 696px; background: #a6a6a6; padding: 0cm; height: 24px;">
+                            <p style="line-height: 14.0pt; margin: 2.0pt 0cm 2.0pt 10.8pt;"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 10.0pt;">Executive Training</span></strong></span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 105px;">
+                        <td style="width: 696px; background: #dbd9d6; padding: 0cm; height: 105px; line-height: 16.0pt;">
+                            <ul>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif; color: windowtext;">Conducted 1000+ training programs on a wide spectrum of topics including credit, risk, retail finance, treasury, and corporate advisory; trained 20,000 more than professionals till date</li>
+                                <li style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif; color: windowtext;">Training programs being conducted in India, Sri Lanka and Bangladesh through an extensive network of well-qualified financial professionals</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br style="page-break-after: always" />
+            <p style="margin: 6.0pt 0cm 4.0pt 0cm;"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 10.0pt;">About CRISIL Limited</span></strong></span></p>
+            <p style="text-align: justify; line-height: 14.0pt; text-autospace: none;"><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">CRISIL is a global analytical company providing ratings, research, and risk and policy advisory services. We are India's leading ratings agency. We are also the foremost provider of high-end research to the world's largest banks and leading corporations.</span></p>
+            <p style="text-align: justify; line-height: 14.0pt; text-autospace: none;"><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">CRISIL is majority owned by S&amp;P Global Inc., a leading provider of transparent and independent ratings, benchmarks, analytics and data to the capital and commodity markets worldwide.</span></p>
+            <p style="margin: 6.0pt 0cm 4.0pt 0cm;"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 10.0pt;">About CRISIL Research</span></strong></span></p>
+            <p style="text-align: justify; line-height: 14.0pt; text-autospace: none;"><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">CRISIL Research is India's largest independent integrated research house. We provide insights, opinion and analysis on the Indian economy, industry, capital markets and companies. We also conduct training programs to financial sector professionals on a wide array of technical issues. We are India's most credible provider of economy and industry research. Our industry research covers 86 sectors and is known for its rich insights and perspectives. Our analysis is supported by inputs from our network of more than 5,000 primary sources, including industry experts, industry associations and trade channels. We play a key role in India's fixed income markets. We are the largest provider of valuation of fixed income securities to the mutual fund, insurance and banking industries in the country. We are also the sole provider of debt and hybrid indices to India's mutual fund and life insurance industries. We pioneered independent equity research in India, and are today the country's largest independent equity research house. Our defining trait is the ability to convert information and data into expert judgements and forecasts with complete objectivity. We leverage our deep understanding of the macro-economy and our extensive sector coverage to provide unique insights on micro-macro and cross-sectoral linkages. Our talent pool comprises economists, sector experts, company analysts and information management specialists.</span></p>
+            <p style="margin: 6.0pt 0cm 4.0pt 0cm;"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 10.0pt;">CRISIL Privacy</span></strong></span></p>
+            <p style="text-align: justify; line-height: 12.0pt;"><span style="font-size: 8pt; font-family: arial, helvetica, sans-serif;">CRISIL respects your privacy. We use your contact information, such as your name, address, and email id, to fulfil your request and service your account and to provide you with additional information from CRISIL and other parts of S&amp;P Global Inc. and its subsidiaries (collectively, the "Company") you may find of interest.</span></p>
+            <p></p>
+            <p style="text-align: justify; line-height: 12.0pt;"><span style="font-size: 8pt; font-family: arial, helvetica, sans-serif;">For further information, or to let us know your preferences with respect to receiving marketing materials, please visit www.crisil.com/privacy. You can view the Company's Customer Privacy at https://www.spglobal.com/privacy</span></p>
+            <p></p>
+            <p style="text-align: justify; line-height: 12.0pt;"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 8.0pt;">Last updated: April 2016</span></strong></span></p>
+            <p style="margin: 6.0pt 0cm 4.0pt 0cm;"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 10.0pt;">Disclaimer</span></strong></span></p>
+            <p style="text-align: justify; line-height: 14.0pt; text-autospace: none;"><span style="font-size: 8pt; font-family: arial, helvetica, sans-serif;">CRISIL Research, a division of CRISIL Limited (CRISIL) has taken due care and caution in preparing this Report based on the information obtained by CRISIL from sources which it considers reliable (Data). However, CRISIL does not guarantee the accuracy, adequacy or completeness of the Data / Report and is not responsible for any errors or omissions or for the results obtained from the use of Data / Report. This Report is not a recommendation to invest / disinvest in any company / entity covered in the Report and no part of this report should be construed as an investment advice. CRISIL especially states that it has no financial liability whatsoever to the subscribers/ users/ transmitters/ distributors of this Report. CRISIL Research operates independently of, and does not have access to information obtained by CRISIL's Ratings Division / CRISIL Risk and Infrastructure Solutions Limited (CRIS), which may, in their regular operations, obtain information of a confidential nature. The views expressed in this Report are that of CRISIL Research and not of CRISIL's Ratings Division / CRIS. No part of this Report may be published / reproduced in any form without CRISIL's prior written approval.</span></p>
+            <p><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 10.0pt;">CRISIL Fixed Income Research Internal Governance Structure:</span></strong></span></p>
+            <ul style="line-height: 16.0pt;">
+                <li style="margin-left: 36.0pt;"><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 10.0pt;">CRISIL has a d</span><span style="font-size: 10.0pt;">edicated 40 member team with specialists in fixed income markets &ndash; with dealing and bond mathematics background</span></span></li>
+                <li style="margin-left: 36.0pt;"><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Average experience of the team is over 6 years</span></li>
+                <li style="margin-left: 36.0pt;"><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">Team includes people with varied academic background - CFA, FRM, MBA, CA, MCA, B-Tech and B.Com</span></li>
+                <!-- <apex:image style="text-align: center;" url="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DXtL&oid=00D0w0000008cDW&lastMod=1556802756000" width="500" height="250"/>
+                <p></p>
+                <apex:image style="text-align: center;" url="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DXtQ&oid=00D0w0000008cDW&lastMod=1556802803000" width="500" height="250"/>
+                <p></p>
+                <apex:image style="text-align: center;" url="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DXtV&oid=00D0w0000008cDW&lastMod=1556802837000" width="500" height="250"/>
+                <p></p> --->
+                <table style="border-collapse: collapse; width: 100%;" border="0">
+                    <tbody>
+                        <tr>
+                            <td style="width: 100%;">
+                                <apex:image style="text-align: center;" url="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DXtL&oid=00D0w0000008cDW&lastMod=1556802756000" width="500" height="250"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100%;">
+                                <apex:image style="text-align: center;" url="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DXtQ&oid=00D0w0000008cDW&lastMod=1556802803000" width="500" height="250"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100%;"></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100%;">
+                                <apex:image style="text-align: center;" url="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DXtV&oid=00D0w0000008cDW&lastMod=1556802837000" width="500" height="250"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100%;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <li style="text-align: justify;"><span style="font-size: 10.0pt; line-height: 150%; color: black;font-family: arial, helvetica, sans-serif;">Largest and most comprehensive database on India's debt market, covering more than 18,000 securities </span></li>
+                <li style="text-align: justify;"><span style="font-size: 10.0pt; line-height: 150%; color: black;font-family: arial, helvetica, sans-serif;">Largest provider of fixed income valuations in India </span></li>
+                <li style="text-align: justify;"><span style="font-size: 10.0pt; line-height: 150%; color: black;font-family: arial, helvetica, sans-serif;">Provide valuation for more than Rs.91 trillion (USD 1.37 trillion) of Indian debt securities </span></li>
+                <li style="text-align: justify;"><span style="font-size: 10.0pt; line-height: 150%; color: black;font-family: arial, helvetica, sans-serif;">Provide valuation for more than 7000 securities on the corporate bonds, commercial papers and certificate of deposits put together and more than 2000 sovereign debt instruments covering Government Securities, Treasury Bills and State Development Loans (SDLs) on a daily basis.</span></li>
+                <li style="text-align: justify;"><span style="font-size: 10.0pt; line-height: 150%; color: black;font-family: arial, helvetica, sans-serif;">Provide valuations for structured products, market linked instruments and other complex debt structures.</span></li>
+            </ul>
+            <p style="text-align: justify; line-height: 150%; text-autospace: none;"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 10.0pt; line-height: 150%; color: black;">CRISIL Indices:</span></strong><span style="font-size: 10.0pt; line-height: 150%; color: black;"> CRISIL is the leading provider of debt and hybrid indices in India. We focus on developing indices that are representative, transparent and investible. We maintain 46 standard indices covering government securities, treasury bills, corporate bonds, money market instruments and gold. Besides our standard indices, we also provide indices that are customised to suit specific benchmarking requirements of our clients. </span></span></p>
+            <h2><span style="font-size: 10.0pt; font-family: arial, helvetica, sans-serif;">CRISIL also maintain indices for fixed income markets in Sri Lanka.</span></h2>
+            <p style="line-height: 150%; text-autospace: none;"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 10.0pt; line-height: 150%;">S&amp;P parentage</span></strong></span></p>
+            <p style="margin-bottom: 10.0pt; text-align: justify; line-height: 150%; text-autospace: none;"><span style="font-size: 10.0pt; line-height: 150%; color: black; font-family: arial, helvetica, sans-serif;">CRISIL's majority shareholder is S&amp;P Global, the world's foremost provider of independent credit ratings, indices, risk evaluation, investment research and data. With offices in 26 countries and markets, S&amp;P is an essential part of the world's financial infrastructure and has played a leading role for more than 150 years in providing investors who want to make investment decisions with market intelligence in the form of credit ratings, indices, investment research and risk evaluations and solutions. The association with S&amp;P gives CRISIL the added advantage of drawing from major developments in the international context and benchmarking the Indian financial sector on a global basis on key risk parameters.</span></p>
+            <p style="text-align: justify; line-height: 150%; text-autospace: none;"><span style="font-size: 10.0pt; line-height: 150%; color: black; font-family: arial, helvetica, sans-serif;">S&amp;P Dow Jones Indices is the world's largest global resource for index-based concepts, data and research, and hosts iconic financial market indicators such as the S&amp;P 500 and the Dow Jones Industrial Average. With over 115 years of experience constructing innovative and transparent solutions that fulfil the needs of institutional and retail investors, and over 1 million indices covering a wide range of asset classes across the globe, S&amp;P Dow Jones Indices continues to define the way investors measure and trade the markets.</span></p>
+            <p style="margin: 6.0pt 0cm 4.0pt 0cm;"><span style="font-family: arial, helvetica, sans-serif;"><strong><span style="font-size: 10.0pt;">CRISIL Privacy</span></strong></span></p>
+            <p style="text-align: justify; line-height: 150%; text-autospace: none;"><span style="font-size: 10.0pt; line-height: 150%; color: black; font-family: arial, helvetica, sans-serif;">CRISIL respects your privacy. We use your contact information, such as your name, address, and email id, to fulfil your request and service your account and to provide you with additional information from CRISIL and other parts of S&amp;P Global Inc. and its subsidiaries (collectively, the "Company") you may find of interest.</span></p>
+            <p style="text-align: justify; line-height: 150%; text-autospace: none;"><span style="font-size: 10.0pt; line-height: 150%; color: black; font-family: arial, helvetica, sans-serif;">For further information, or to let us know your preferences with respect to receiving marketing materials, please visit www.crisil.com/privacy. You can view the Company's Customer Privacy at https://www.spglobal.com/privacy</span></p>
+        </body>
+    </html>
+</apex:page>

@@ -1,0 +1,498 @@
+<apex:page controller="Industry_Research_New" contentType="application/msWord#Industry_Research_Proposal.doc">
+    <html xmlns:o='urn:schemas-microsoft-com:office:office'
+          xmlns:w='urn:schemas-microsoft-com:office:word' 
+          xmlns='<a target="_blank" href="http://www.w3.org/TR/REC-html40" rel="nofollow">http://www.w3.org/TR/REC-html40</a> '>
+        <head>
+            <style>
+                p.MsoHeader, li.MsoHeader, div.MsoHeader{
+                margin:0in;
+                margin-top:.0000pt;
+                mso-pagination:widow-orphan;
+                tab-stops:center 3.0in right 6.0in;
+                }
+                p.MsoFooter, li.MsoFooter, div.MsoFooter{
+                margin:0in;
+                margin-bottom:.0001pt;
+                mso-pagination:widow-orphan;
+                tab-stops:center 3.0in right 6.0in;
+                }
+                @page Section1{
+                size:8.5in 11.0in; 
+                margin:0.5in 0.5in 0.5in 0.5in;
+                mso-header-margin:0.2in;
+                mso-header:h1;
+                mso-footer:f1; 
+                mso-footer-margin:0.5in;
+                mso-paper-source:0;
+                }
+                div.Section1{
+                page:Section1;
+                }
+                /*Below is the style to prevent the repetition of header and Footer.. Cheers!!!*/
+                table#hrdftrtbl{
+                margin:0in 0in 0in 9in;
+                }        
+            </style>
+        </head>
+        
+        <body>
+            <!-- Content -->
+            <div class="Section1"><!--Section1 div starts-->
+                <!--Header and Footer Starts-->
+                <table id='hrdftrtbl' border='0' cellspacing='0' cellpadding='0'>
+                    <tr>
+                        <td>
+                            <!--Header-->
+                            <div style='mso-element:header' id="h1" >
+                                <p class="MsoHeader">
+                                    <table border="0" width="100%">
+                                        <tr>
+                                            <!-- <td width="30%">
+Left <br/>Header
+</td>
+<td align="center" width="40%">
+Center<br/> Header
+</td>
+<td align="right" width="30%">
+Right<br/>Header
+</td> -->
+                                            <apex:image url="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DWjU&oid=00D0w0000008cDW&lastMod=1554872313000" width="700" height="100"/>
+                                        </tr>
+                                </table>
+                            </p>
+                        </div>
+                </td>
+                
+                <td>
+                    <!--Footer-->
+                    <!-- <div style='mso-element:footer' id="f1">
+<p class="MsoFooter">
+<table width="100%" border="1" cellspacing="0" cellpadding="0">
+<tr>
+<td width="30%">
+Left<br/>Footer
+</td>
+<td align="center" width="40%">
+Center<br/>Footer
+</td>
+<td align="right" width="30%">
+Page <span style='mso-field-code: PAGE '></span> of <span style='mso-field-code: NUMPAGES '></span>
+</td>
+</tr>
+</table>
+</p>
+</div> -->
+                </td>
+            </tr>
+        </table>
+    </div><!--Section1 div ends-->
+    <table style="height: 599px;" width="100%">
+        <tbody>
+            <tr>
+                <td style="width: 791px; height: 19px; text-align:left;font-family:Arial,sans-serif;">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:8pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><strong><span style="font-size:18.0pt"><span style="line-height:150%">Proposal submitted to {!iOpp.Account.Name}</span></span></strong></span></span></span></p>
+                    <p style="font-family:Arial,sans-serif;"><strong>For Renewal of Subscription to CRISIL Research Product and Services.</strong> </p>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <apex:outputText style="font-size:10pt; font-family:Arial,sans-serif" value="{0, date, long}">
+                        <apex:param value="{!NOW()}" /> 
+                    </apex:outputText>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br style="page-break-after: always" />
+    <apex:outputText style="font-size:10pt; font-family:Arial,sans-serif" value="{0, date, long}">
+        <apex:param value="{!NOW()}" /> 
+    </apex:outputText><br/>
+    <apex:outputText style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;"
+                     value="{!iOpp.Billing_Contact_Person__r.salutation}{!iOpp.Billing_Contact_Person__r.Contact_Name_Readonly__c}"></apex:outputText><apex:outputText rendered="{!if(iOpp.Billing_Contact_Person__r.Designation__c != '', true, false)}"><br /></apex:outputText>
+    <apex:outputText style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;" value="{!iOpp.Billing_Contact_Person__r.Designation__c}"></apex:outputText><br />
+    <apex:outputText style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;" value="{!iOpp.Account.Name}"></apex:outputText><br />
+    <apex:outputText style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;" value="{!iOpp.Billing_Contact_Person__r.MailingStreet}"></apex:outputText><br />
+    <apex:outputText style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;" value="{!iOpp.Billing_Contact_Person__r.MailingCity}"></apex:outputText><br />
+    <apex:outputText style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;" value="{!iOpp.Billing_Contact_Person__r.MailingState}"></apex:outputText><br />
+    <apex:outputText style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;" value="{!iOpp.Billing_Contact_Person__r.MailingCountry} - {!iOpp.Billing_Contact_Person__r.MailingPostalCode}"></apex:outputText>
+    <p><center><span style="color: #ff0000;font-family:Arial,sans-serif; font-size:10.0pt;"> Renewal of subscription to CRISIL Research products and services</span></center></p>
+    <p style="margin-left:0cm; margin-right:0cm; text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;"><span style="font-size:9pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Dear {!iOpp.Billing_Contact_Person__r.salutation}
+        {!iOpp.Billing_Contact_Person__r.Contact_Name_Readonly__c}</span></span></span></span></span></p>
+    <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">It has been our pleasure servicing your research and information needs and we trust it has helped your organization in taking more informed business decisions. We wish to inform you that the renewal of subscription to CRISIL Research's Service is due for renewal on <apex:outputText style="font-size:10pt; font-family:Arial,sans-serif" value="{0, date, long}"> <apex:param value="{!NOW()}" /> </apex:outputText>.</p>
+    <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">Your current subscription to the following CRISIL Research products detailed below:</p>
+    <ul>
+        <apex:repeat value="{!lstOppli}" var="oli">
+            <li>
+                <apex:outputText style="font-size:10pt; font-family:Arial,sans-serif;" rendered="{!oli.Cost_Center__c == 'Industry'}" value="{!oli.Product_Category__r.Name}"></apex:outputText><br/><p/>
+            </li>
+        </apex:repeat> 
+    </ul>
+    <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">Furthermore, we are pleased to announce a ground-up overhaul of our Industry Research platform. We are raising the bar on sector and company research with fresh in-depth intelligence you will not get anywhere else and ahead-of-the-curve analysis that will help you with a complete picture of your industry. All of this housed within one powerful web-based platform with new tools to improve the user experience. Details of enhancements have been shared as a part of the proposal.</p>
+    <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">For easy reference, we have divided this proposal in the following modules:</p>
+    <ul style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">
+        <li> Plan of Engagement during the Subscription Cycle</li>
+        <li> Unique strengths of CRISIL Research</li>
+        <li> Enhancements in our delivery platform</li>
+        <li> Our special offer to {!iOpp.Account} for the renewal of current subscription</li>
+        <li> Our special offer to {!iOpp.Account} for other offerings of your interest</li>
+    </ul>
+    <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">Furthermore, we would like to inform you that we have received feedbacks from 46 employees of {!iOpp.Account}. We have given below a summary of the feedbacks received:</p>
+    <ul style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;"> 
+        <li> 100% of them have responded saying that our research product helped in taking better informed decisions (43 users)</li>
+        <li> 100% of them have rated their experience with CRISIL Research's products &amp; services as excellent, good or satisfactory (44 users) of which 89% have rated Excellent or Good (36 users)</li>
+        <li> 100% of them have responded saying that they would like to continue benefiting from our services (43 users)</li>
+        <li> 50% of them have responded saying that they will be interested in availing Special report on Special Report On SME</li>
+    </ul>
+    <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">We look forward to further strengthening our long standing relationship with {!iOpp.Account} by servicing a larger spectrum of your business research and information requirements.</p>
+    <p style="font-family:Arial,sans-serif;font-size:10.0pt;">Warm Regards,<br/>{!iOpp.Primary_Marketing_Contact_PMC__r.Name}<br/>
+        {!iOpp.Primary_Marketing_Contact_PMC__r.HRMS_Designation__c}<br/>CRISIL Research.</p> 
+    <br style="page-break-after: always" />
+    <br/>
+    <h2 style="background-color: #dbd9d6;font-family:Arial,sans-serif; font-size:10.0pt;">
+        Our plan of engagement during the subscription cycle
+    </h2>
+    <ul style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">
+        <li> Presentation to {!iOpp.Account.Name} Senior Management : We can present our views on economy/industry to your senior management</li>
+        <p> Knowledge Sharing Sessions (KSS): Our experts can present views on economy/industries at your office</p>
+        <p>a) Under your subscription we shall be pleased to include 2 sessions at no additional cost of each of such session is Rs. 75,000 thus amounting to Rs. 1,50,000 for 2 sessions</p>
+        <p>b) We would be happy to arrange presentations by our Chief Economist or Senior Industry Experts on macro economy or select industries at no additional cost of one such session is Rs. 1,00,000</p>
+        <li> Analyst interaction: Users will have the flexibility to interact with our analysts for any clarifications or understanding the current trends of the respective industries:</li>
+        <p>-To ensure better interaction, we request you to send the broad areas of discussion in advance</p>
+        <p>- Such analyst interactions are limited to our regular coverage under the subscription</p>
+        <li> Client servicing facility: For any additional secondary information on any subscribed industry, you can email your query to our client servicing helpdesk (clientservicing@crisil.com):</li>
+        <p>- We will service those queries within 8-10 working hours if the information is available with us</p>
+        <li> Training of users on our research platform: Our dedicated team will train the users to ensure that our services are most effectively used</li>
+        <li> Webinar: In a year, we typically conduct around 6-8 web-conferences which is open for our key clients to attend. Your team will be entitled to participate in these web-conferences</li>
+    </ul>
+    <p></p>
+    <p></p>
+    <br style="page-break-after: always" />
+    <table style="border-collapse: collapse; width: 100%; background-color: #dbd9d6;" border="0">
+        <tbody>
+            <tr>
+                <td style="width: 100%; font-family: Arial,sans-serif; font-size: 10.0pt;"><strong>CRISIL Research Unique Strengths</strong></td>
+            </tr>
+        </tbody>
+    </table>
+    <br /><p style="text-decoration: underline;;font-family:Arial,sans-serif; font-size:10.0pt;">A RESEARCH HOUSE LIKE NO OTHER</p>
+    <ul style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">
+        <li> Largest integrated research house</li>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">- CRISIL Research  a highly focused division of CRISIL, is the largest integrated research house in the country with a 250 member strong dedicated team</p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">- CRISIL Research integrates a deep understanding of economy, industry, capital markets and companies which help us better comprehend the macro-micro linkages, translating into sharper analysis and unbiased opinions. We are able to provide early warning indicators to our clients</p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">- We are also the largest research house in India in terms of breadth of coverage which includes ongoing analysis on almost 90 industries</p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;"><li>Update frequency, analytical rigour</li></p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">- Updated research for better decisions  unmatched frequency with more than 25,000 updates across industries in a year</p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">- Large network of almost 5000 primary sources providing ground-level data and perspectives enabling us to stay ahead of the curve</p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">- All our research study is vetted by panel of experts with cumulative experience of more than 200 years</p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">- CRISIL Research is the fastest to market with impact analysis on major events</p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;"><li> Servicing a wide range of clients across segments</li></p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">- We serve more than 1,200 Indian and global clients</p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">- 6 of the worlds leading consulting firms</p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">- More than 90% of banks in India</p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">- 15 of the top 25 Indian companies by market capitalisation</p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">- Entire Indian mutual fund and life insurance industry in India industry</p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">- Our state-of-the-art, online delivery platform gets 1 million page views a year</p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;"><li> Credibility, Track record, Experience</li></p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">- Unbiased, credible opinion provider with a long track record of forecasts</p>
+        <p style="text-align:justify;font-family:Arial,sans-serif; font-size:10.0pt;">- Unmatched grasp of nuances from covering multiple economic cycles</p>
+    </ul>
+    <br style="page-break-after: always" />
+    <br/>
+    <table style="height: 565px;text-align:justify;" width="100%">
+        <tbody>
+            <tr style="height: 17px;">
+                <td style="width: 685px; height: 17px;">
+                    <table style="border-collapse: collapse; width: 100%; background-color: #dbd9d6;" border="0">
+                        <tbody>
+                            <tr>
+                                <td style="width: 100%; font-family: Arial,sans-serif; font-size: 10.0pt;"><strong>Unique features of CRISIL Research Delivery Platform</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <td></td>
+            <tr style="height: 18px;">
+                <td style="width: 685px; height: 18px;font-family:Arial,sans-serif; font-size:10.0pt;">We have a unique web-based delivery platform (<a href="http://www.crisilresearch.com">www.crisilresearch.com</a>) which provides relevant information, analysis and outlook on a near real-time basis with interactive tools and features as mentioned below:</td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;"><strong>1.</strong><strong>Frequency / updates: </strong>There have been more than 25,000 updates across 70 industries in the last one year and there are more than 200 thematic articles and 200 impact analysis reports on our web-based platform.</td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;"><strong>2.</strong> <strong>Analyst presentation: </strong>This provides CRISIL Research's views on and outlook for various industries in a crisp presentation format covering key parameters such as demand-supply, prices, costs, profitability, etc. These enable users to get a quick overview and update on the industry scenario.</td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;"><strong>3.</strong> <strong>Alerts:</strong> Since we update data and analysis on our website on a near real-time basis, we have built a facility for alerts. Users can set alerts for one or many sectors of their choice. They receive an e-mail with the relevant link as soon as any section in the selected industries is updated.</td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;"><strong>4. In Motion:</strong> 'Animated format' of representing the manufacturing process or supply-chain structure which enables quick understanding to the user of the processes without the need of a plant visit by the officers/business analysts.</td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;"><strong>5. Video clips of vertical experts:</strong> This allows swift dissemination of CRISIL's reaction to, say, the impact of major events on the macroeconomic environment. Our experts also regularly update the outlook on industries along with the key drivers of change.</td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;"><strong>6.</strong> <strong>Ratings Corner </strong>provides a snapshot of the credit profile of the sector, the changes in median rating and weighted average rating of the industry. The shifting trend of the ratio of upgrades on downgrades (credit ratio) gives further insight of changing fortunes of the sector.</td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;"><strong>7.</strong><strong>Results corner </strong>providing forecast before the start of the quarterly reporting season, helping you understand the industry trends faster.</td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;"><strong>8. News </strong>and analysis to conveniently access key sector news without missing any. We also provide CRISIL Research's views on important developments.</td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;"><strong>9.</strong> <strong>Financial aggregates </strong>on key parameters for each sector helps user to track sector trends and benchmark companies against the sector's performance.</td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;"><strong>10.</strong> <strong>Company information: </strong>We have significantly augmented our coverage on companies making it an even more comprehensive research platform providing annual and quarterly financials of all NSE-listed companies in each sector with option to export data directly to excel.</td>
+            </tr>
+            <tr style="height: 45px;">
+                <td style="width: 685px; height: 45px;font-family:Arial,sans-serif; font-size:10.0pt;"><strong>11. Company credit reports </strong>for large listed companies providing detailed, insightful analysis on operational and financial performance along with a credit score, updated on a quarterly basis.</td>
+            </tr>
+            <tr style="height: 45px;">
+                <td style="width: 685px; height: 45px;font-family:Arial,sans-serif; font-size:10.0pt;">
+                    <strong>12. Operating Metrics: </strong>We track the changing trend of operational parameters within each sector which are not easily available.</td>
+            </tr>
+        </tbody>
+    </table>
+    <br style="page-break-after: always" />
+    <table style="height: 638px;font-family:Arial,sans-serif; font-size:10.0pt;" width="100%">
+        <tbody><p>
+            </p>
+            <tr style="height: 45px;">
+                <td style="width: 685px; height: 45px;">
+                    <h2 style="background-color: #dbd9d6;font-family:Arial,sans-serif; font-size:10.0pt;"><p>
+                        Enhancements in our Delivery Platform
+                        </p></h2>
+                </td>
+            </tr>
+            <tr style="height: 63px;">
+                <td style="width: 685px; height: 63px;font-family:Arial,sans-serif; font-size:10.0pt;">
+                    <p style="text-align:justify">To meet the evolving needs of clients for more actionable analysis and insights, we are pleased to announce a ground-up overhaul of our Industry Research platform. We are raising the bar on sector and company research with fresh in-depth intelligence you will not get anywhere else and ahead-of-the-curve analysis that will help you with a complete picture of your industry. All of this housed within one powerful web-based platform with new tools to improve the efficiency of your teams.</p>
+                </td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;"></td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;">
+                    <p><strong>A few salient features of the new platform are:</strong></p>
+                    <p><strong><em>More actionable content&hellip;</em></strong></p>
+                </td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;">
+                    <ul style="text-align:justify;">
+                        <li><strong>Operational benchmarks:</strong> Analyse complex business situations with industry-specific intelligence on project costs, input-output ratios, operating costs, pricing and realisations with detailed nuances</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;">
+                    <ul style="text-align:justify">
+                        <li><strong>Working capital analysis:</strong> Insights on how various segments in an industry manage their working capital</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;">
+                    <ul style="text-align:justify">
+                        <li><strong>Dashboards:</strong> Dig into meaningful metrics that define the performance of an industry, along with upstream and downstream sectors, in a single place</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;">
+                    <ul style="text-align:justify">
+                        <li><strong>Information on key projects:</strong> Learn about key ongoing projects for major industries with important information on capacity and investment costs overlain on an interactive map</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;">
+                    <ul style="text-align:justify">
+                        <li><strong>Essential company research:</strong> Get financial as well as business information on companies thoughtfully chosen to represent various segments of the industry</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;">
+                    <ul style="text-align:justify">
+                        <li><strong>Peer comparison:</strong> Learn what differentiates the out-performers or what encumbers laggards in the industry</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;">
+                    <p><strong><em>Delivered via an unrivalled experience</em></strong></p>
+                </td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif; font-size:10.0pt;">
+                    <ul style="text-align:justify">
+                        <li><strong>Refreshed look:</strong> A modern and immersive platform redesigned making it easier than ever to discover our data and analysis</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr style="height: 45px;">
+                <td style="width: 685px; height: 45px;font-family:Arial,sans-serif; font-size:10.0pt;">
+                    <ul style="text-align:justify">
+                        <li><strong>Intuitive tools:</strong> Simplify internal processes with easy-to-use yet powerful tools that let you focus more on deeper analysis and less on administrative tasks</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr style="height: 45px;">
+                <td style="width: 685px; height: 45px;font-family:Arial,sans-serif; font-size:10.0pt;">
+                    <p></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br style="page-break-after: always" />
+    <table style="height: 212px;" width="100%">
+        <tbody>
+            <tr style="height: 17px;">
+                <td style="width: 685px; height: 17px;font-family:Arial,sans-serif; font-size:10.0pt;">
+                    <h2 style="background-color: #dbd9d6;font-family:Arial,sans-serif; font-size:10.0pt;"><p>Subscription Renewal offer to {!iOpp.Account.Name}</p></h2>
+                </td>
+            </tr>
+            <tr style="height: 63px;">
+                <td style="width: 685px; height: 63px;font-family:Arial,sans-serif; font-size:10.0pt;">
+                    <p><strong>Renewal of subscription for the period <apex:outputText value="{0,date,dd' 'MMMMM' 'yyyy}">
+                        <apex:param value="{!lstOppli[0].Start_Date__c}" />
+                        </apex:outputText>&amp;nbsp;to&amp;nbsp;<apex:outputText value="{0,date,dd' 'MMMMM' 'yyyy}">
+                        <apex:param value="{!lstOppli[0].End_Date__c}" /> 
+                        </apex:outputText>:</strong></p>
+                </td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;">
+                    <table style="border-collapse: collapse; width: 100%;" border="1">
+                        <tbody>
+                            <tr>
+                                <td style="width: 50%; background-color: #062060; font-family: Arial,sans-serif; font-size: 10.0pt; color: #ffffff; text-align: center;">Particulars</td>
+                                <td style="width: 50%; background-color: #062060; font-family: Arial,sans-serif; font-size: 10.0pt; color: #ffffff; text-align: center;">Special offer to {!iOpp.Account.Name} (In Rs)</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 50%; background-color: #dbd9d6; font-family: Arial,sans-serif; font-size: 10.0pt;text-align: left;">
+                                    <apex:repeat value="{!lstOppli}" var="oli">
+                                        <apex:outputText style="font-size:10pt; font-family:Arial,sans-serif" rendered="{!oli.Cost_Center__c == 'Industry'}">{!oli.Product_Category__r.Name}</apex:outputText><br/>
+                                    </apex:repeat> 
+                                </td>
+                                <td style="width: 50%; background-color: #dbd9d6; font-family: Arial,sans-serif; font-size: 10.0pt;text-align: left;"><!--{!iOpp.Amount}/- -->
+                                    <apex:repeat value="{!lstOppli}" var="oli">
+                                        <apex:outputText value="{0, number, #,###}" rendered="{!oli.Cost_Center__c == 'Industry'}">
+                                            <apex:param value="{!ROUND(oli.Sales_Price__c,0)}" />
+                                        </apex:outputText>
+                                        <br/><p/>
+                                    </apex:repeat>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <br/>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;">
+                    <p style="font-family:Arial,sans-serif; font-size: 10.0pt;"><strong>Please note: </strong></p>
+                    <ul style="text-align:justify;font-family:Arial,sans-serif;font-size: 10.0pt;">
+                        <li>As an exception and considering our long standing association with {!iOpp.Account.Name} we are marinating the same renewal fees as of last year</li>
+                        <li>Prices are exclusive of taxes which are payable as applicable</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr style="height: 44px;">
+                <td style="width: 685px; height: 44px;font-family:Arial,sans-serif;font-size: 10.0pt;">
+                    <p style="text-align:justify"><strong><em>Confidentiality:</em></strong><em> This communication is highly confidential and {!iOpp.Account.Name} shall take all necessary steps and ensure to maintain the confidentiality including the fees and charges and to protect the proprietary rights and confidential information of CRISIL and not disclose it to any third party for any purpose (except under an order of the court or statutory / regulatory body) without the prior written consent of CRISIL</em><em>. </em></p>
+                </td>
+            </tr>
+            <p></p>
+            <p></p>
+        </tbody>
+    </table>
+    <br style="page-break-after: always" />
+    <table style="border-collapse: collapse; width: 100%;" border="0">
+        <tbody>
+            <tr>
+                <td style="width: 100%;background-color: #dbd9d6;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Subscription offer for other CRISIL Research products of your interest.</strong></span></td>
+            </tr>
+        </tbody>
+    </table>
+    <br/>
+    <table style="border-collapse: collapse; width: 100%;" border="1">
+        <tbody>
+            <tr>
+                <td style="width: 33.3333%; background-color: #062060; ;font-family: Arial,sans-serif; font-size: 10.0pt; color: #ffffff; text-align: center;">&amp;nbsp;</td>
+                <td style="width: 33.3333%; background-color: #062060; ;font-family: Arial,sans-serif; font-size: 10.0pt; color: #ffffff; text-align: center;">&amp;nbsp;</td>
+                <td style="width: 33.3333%; background-color: #062060; ;font-family: Arial,sans-serif; font-size: 10.0pt; color: #ffffff; text-align: center;">&amp;nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 33.3333%; font-family: Arial, sans-serif; font-size: 10pt; text-align: center; background-color: #dbd9d6;">&amp;nbsp;</td>
+                <td style="width: 33.3333%; font-family: Arial, sans-serif; font-size: 10pt; text-align: center; background-color: #dbd9d6;">&amp;nbsp;</td>
+                <td style="width: 33.3333%; font-family: Arial, sans-serif; font-size: 10pt; text-align: center; background-color: #dbd9d6;">&amp;nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 33.3333%; font-family: Arial, sans-serif; font-size: 10pt; text-align: center; background-color: #dbd9d6;">&amp;nbsp;</td>
+                <td style="width: 33.3333%; font-family: Arial, sans-serif; font-size: 10pt; text-align: center; background-color: #dbd9d6;">&amp;nbsp;</td>
+                <td style="width: 33.3333%; font-family: Arial, sans-serif; font-size: 10pt; text-align: center; background-color: #dbd9d6;">&amp;nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 33.3333%; font-family: Arial, sans-serif; font-size: 10pt; text-align: center; background-color: #dbd9d6;">&amp;nbsp;</td>
+                <td style="width: 33.3333%; font-family: Arial, sans-serif; font-size: 10pt; text-align: center; background-color: #dbd9d6;">&amp;nbsp;</td>
+                <td style="width: 33.3333%; font-family: Arial, sans-serif; font-size: 10pt; text-align: center; background-color: #dbd9d6;">&amp;nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Please note: Prices are exclusive of taxes which are payable as applicable</span></strong></p>
+    <p></p>
+    <apex:outputText style="font-family:Arial,serif; font-size:10.0pt">{!stran}</apex:outputText>
+    <br style="page-break-after: always" />
+    <table style="height: 629px;" width="100%">
+        <tbody>
+            <tr>
+                <td style="width: 687px;;font-family:Arial,sans-serif; font-size:10.0pt;">
+                    <p style="text-align:justify">CRISIL is a global analytical company providing ratings, research, and risk and policy advisory services. We are India's leading ratings agency. We are also the foremost provider of high-end research to the world's largest banks and leading corporations.</p>
+                    <p style="text-align:justify">CRISIL is majority owned by S&amp;P Global Inc., a leading provider of transparent and independent ratings, benchmarks, analytics and data to the capital and commodity markets worldwide.</p>
+                    <p style="text-align:justify"><strong>About CRISIL Research</strong></p>
+                    <p style="text-align:justify">CRISIL Research is India's largest independent integrated research house. We provide insights, opinion and analysis on the Indian economy, industry, capital markets and companies. We also conduct training programs to financial sector professionals on a wide array of technical issues. We are India's most credible provider of economy and industry research. Our industry research covers 86 sectors and is known for its rich insights and perspectives. Our analysis is supported by inputs from our network of more than 5,000 primary sources, including industry experts, industry associations and trade channels. We play a key role in India's fixed income markets. We are the largest provider of valuation of fixed income securities to the mutual fund, insurance and banking industries in the country. We are also the sole provider of debt and hybrid indices to India's mutual fund and life insurance industries. We pioneered independent equity research in India, and are today the country's largest independent equity research house. Our defining trait is the ability to convert information and data into expert judgements and forecasts with complete objectivity. We leverage our deep understanding of the macro-economy and our extensive sector coverage to provide unique insights on micro-macro and cross-sectoral linkages. Our talent pool comprises economists, sector experts, company analysts and information management specialists.</p>
+                    <p style="text-align:justify"><strong>CRISIL Privacy</strong></p>
+                    <p style="text-align:justify">CRISIL respects your privacy. We use your contact information, such as your name, address, and email id, to fulfil your request and service your account and to provide you with additional information from CRISIL and other parts of S&amp;P Global Inc. and its subsidiaries (collectively, the 'Company') you may find of interest.</p>
+                    <p style="text-align:justify">For further information, or to let us know your preferences with respect to receiving marketing materials, please visit www.crisil.com/privacy. You can view the Company's Customer Privacy at https://www.spglobal.com/privacy</p>
+                    <p style="text-align:justify"><strong>Last updated: April 2016</strong></p>
+                    <p style="text-align:justify"><strong>Disclaimer</strong></p>
+                    <p style="text-align:justify">CRISIL Research, a division of CRISIL Limited (CRISIL) has taken due care and caution in preparing this Report based on the information obtained by CRISIL from sources which it considers reliable (Data). However, CRISIL does not guarantee the accuracy, adequacy or completeness of the Data / Report and is not responsible for any errors or omissions or for the results obtained from the use of Data / Report. This Report is not a recommendation to invest / disinvest in any company / entity covered in the Report and no part of this report should be construed as an investment advice. CRISIL especially states that it has no financial liability whatsoever to the subscribers/ users/ transmitters/ distributors of this Report. CRISIL Research operates independently of, and does not have access to information obtained by CRISIL's Ratings Division / CRISIL Risk and Infrastructure Solutions Limited (CRIS), which may, in their regular operations, obtain information of a confidential nature. The views expressed in this Report are that of CRISIL Research and not of CRISIL's Ratings Division / CRIS. No part of this Report may be published / reproduced in any form without CRISIL's prior written approval.</p>
+                    <p></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+</apex:page>

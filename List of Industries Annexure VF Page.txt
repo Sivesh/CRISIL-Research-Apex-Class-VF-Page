@@ -1,0 +1,101 @@
+<apex:page controller="List_of_Industries_Annexure" contentType="application/msWord#List of Industries.doc"> <!-- contentType="application/msWord#List of Industries.doc" -->
+    <table style="background-color:#E4E2E9">
+        <tbody>
+            <tr>
+                <td Style="font-Size: 16pt; font-Style: Arial;">
+                    <strong>Annexure 1: Details of CRISIL Research Products Currently Subscribed/not Subscribed.</strong>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br/>
+    
+    <apex:repeat value="{!mapoop}" var="prd">
+        <apex:variable value="{!1}" var="count" />
+        <strong>
+            <apex:outputText style="font-size: 10.0pt; font-family: 'Arial','sans-serif';">
+                {!mapSeqtoCateogry[prd]}.{!prd}
+            </apex:outputText>
+        </strong>
+        <br/><br/>
+        <strong>List of Industries subscribed:</strong><br/><br/>
+        
+      <!--  <apex:dataTable value="{!mapoop[prd]}" var="cprd" border="1" width="100%">
+            // <apex:repeat value="{!mapoop[prd]}" var="cprd"> 
+            <apex:column >
+                <apex:facet name="header">S.No</apex:facet>
+                {!count}
+                <apex:variable value="{!count+1}" var="count" />.
+            </apex:column>
+            <apex:column >
+                <apex:facet name="header">Products</apex:facet>
+                <apex:outputText style="font-size: 10.0pt; font-family: 'Arial','sans-serif';" value="{!cprd.Product2ID__r.Name}" />
+            </apex:column>
+            // </apex:repeat> 
+        </apex:dataTable><br/> -->
+        
+        <table style= "width: 100%; border-collapse: collapse;" border="1">
+            <thead>
+                <th>
+                    S.No
+                </th>
+                <th>
+                    Products
+                </th>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!mapoop[prd]}" var="cprd">
+                    <tr>
+                        <td style="width: 1%">
+                            {!count}
+                            <apex:variable value="{!count+1}" var="count" />.
+                        </td>
+                        <td style="width: 99%">
+                            <apex:outputText style="font-size: 10.0pt; font-family: 'Arial','sans-serif';" value="{!cprd.Product2ID__r.Name}" />
+                        </td>
+                    </tr>
+                </apex:repeat>
+            </tbody>
+        </table><br/>
+        
+        <strong>List of Industries not subscribed:</strong><br/><br/>
+        <apex:variable value="{!1}" var="cnt" />
+     <!--   <apex:dataTable value="{!mapprd[prd]}" var="pro" border="1" width="100%">
+// <apex:repeat value="{!mapoop[prd]}" var="cprd"> 
+            <apex:column >
+                <apex:facet name="header">S.No</apex:facet>
+                {!cnt}
+                <apex:variable value="{!cnt+1}" var="cnt" />.
+            </apex:column>
+            <apex:column >
+                <apex:facet name="header">Products</apex:facet>
+                <apex:outputText style="font-size: 10.0pt; font-family: 'Arial','sans-serif';" value="{!pro.Name}" />
+            </apex:column>
+//  </apex:repeat> 
+        </apex:dataTable><br/> -->
+        
+        <table style= "width: 100%; border-collapse: collapse;" border="1">
+            <thead>
+                <th>
+                    S.No
+                </th>
+                <th>
+                    Products
+                </th>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!mapprd[prd]}" var="pro">
+                    <tr>
+                        <td style="width: 1%">
+                            {!cnt}
+                            <apex:variable value="{!cnt+1}" var="cnt" />.
+                        </td>
+                        <td style="width: 99%">
+                            <apex:outputText style="font-size: 10.0pt; font-family: 'Arial','sans-serif';" value="{!pro.Name}" />
+                        </td>
+                    </tr>
+                </apex:repeat>
+            </tbody>
+        </table><br/>
+    </apex:repeat>
+</apex:page>

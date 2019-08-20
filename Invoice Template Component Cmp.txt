@@ -1,0 +1,41 @@
+<aura:component controller="Invoice_Template_Single" implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="parentId" type="Id" />
+    <aura:attribute name="templatelist" type="object" />
+    <aura:attribute name="templatelistcredit" type="object" />
+    <aura:handler name="init" value="{!this}" action="{!c.fetchdata}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.fetchdatacredit}"/>
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th>Name</th>
+                <th>Action</th>
+                <!-- <th>Save</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.templatelist}" var="item" indexVar="index">
+                <tr class="slds-hint-parent">
+                    <td>
+                        {!item.template_name}
+                    </td>
+                    <td>
+                        <lightning:button variant="brand" label="Preview" name="{!'f'+index}" onclick="{!c.gotoURL}" class="{!if(item.iInvoiceGenerated == FALSE,'slds-truncate slds-show','slds-hide')}"/>
+                        <div class="{!if(item.iInvoiceGenerated == TRUE,'slds-truncate slds-show','slds-hide')}">Invoice already generated</div>
+                    </td>
+                </tr>
+            </aura:iteration>
+            
+            <aura:iteration items="{!v.templatelistcredit}" var="cr" indexVar="indexcredit">
+                <tr class="slds-hint-parent">
+                    <td>
+                        {!cr.template_name}
+                    </td>
+                    <td>
+                        <lightning:button variant="brand" label="Open" name="{!'f'+indexcredit}" onclick="{!c.gotoURLcredit}"/>
+                    </td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>

@@ -1,0 +1,727 @@
+<apex:page controller="Industry_Research_New" contentType="application/msWord#Software Master Terms and Conditions.doc">
+    <html>
+        <!-- <p style="text-align: center;"><span style="font-family: calibri, sans-serif; font-size: 10pt;"><strong>Software Licence - Master Terms and Conditions</strong></span></p>
+        <p><span style="font-size: 9pt; font-family: calibri, sans-serif;">MTC Reference No. _________</span></p>
+        <table style="border-collapse: collapse; width: 100%;" border="0">
+<tbody>
+<tr>
+<td style="width: 50%;" valign="top">
+<p><strong><span style="font-family: calibri, sans-serif; font-size: 9pt;">1.Document FrameWork, Definition</span></strong></p>
+<table style="border-collapse: collapse; width: 100%;" border="0">
+<tbody>
+<tr>
+<td style="width: 6.33803%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">1.1</span></td>
+<td style="width: 93.662%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">From time to time Client and CRISIL or their respective affiliates may execute order form(s) (each an Order Form) setting out the services agreed to be provided under the Order Form(s) (Services) incorporating the MTC.Each such Order Form and the MTC (together with the relevant annexure or schedules) will operate as an independent contract between the parties executing that Order Form and shall be called the Agreement. References to 'CRISIL' and 'Client' in the MTCshall refer to the relevant parties executing the Order Form. Where the parties executing an Order Formhave agreed to changes to the terms of the MTCas incorporated into the Order Form, the changes shall apply only to that Order Form (and not to any other Order Form). To the extent of a conflict between the MTCand the Order Form, the Order Form will prevail.</span></td>
+</tr>
+<tr>
+<td style="width: 6.33803%;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">1.2</span></td>
+<td style="width: 93.662%;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Definitions are given in clause 12</span></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-family: calibri, sans-serif; font-size: 9pt;">2.Software License</span></p>
+<table style="border-collapse: collapse; width: 100%;" border="0">
+<tbody>
+<tr>
+<td style="width: 6.48415%;"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">2.1</span></td>
+<td style="width: 93.5159%;" valign="top">
+<p style="text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Subject to the terms and conditions set out in the Agreement, CRISIL grants to the Client a non-exclusive, non-transferable licence to use the Softwarein the object code form during the Term for no purpose other than its own internal business use and, if stated in the Order Form, the Additional Permitted Use, and for such purpose to:</span></p>
+<ol style="list-style-type: lower-alpha;">
+<li style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">install the Software, in object code only, solely on the Designated Server Computers and at the Designated Server Location(s) that are identified on the Order Form by the Client (changes only with prior written consent of CRISIL, not to be unreasonably withheld); </span></li>
+<li style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">permit Authorized Users to access and use the Software from the Client computers to the extent permitted under the applicable Order Form; and </span></li>
+<li style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">use the Documentation, in the form in which it is supplied by CRISIL, solely in connection with use of the Software in accordance with the Agreement.</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td style="width: 6.48415%;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">2.2</span></td>
+<td style="width: 93.5159%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Where the Software licenceis priced on the basis of number of accesses or users or other usage based pricing, then Client may not use the Software except to the extent subscribed for.</span></td>
+</tr>
+<tr>
+<td style="width: 6.48415%;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">2.3</span></td>
+<td style="width: 93.5159%;" valign="top">
+<p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Client shall not use the Software in a manner:</span><span style="font-family: calibri, sans-serif; font-size: 9pt;">(a)not expressly permitted by the Agreement;</span><span style="font-family: calibri, sans-serif; font-size: 9pt;">(b)inconsistent with the Documentation or any other written usage guidelines provided by CRISIL.</span><span style="font-family: calibri, sans-serif; font-size: 9pt;"><span style="line-height: 115%; font-family: Calibri, sans-serif;">Without limiting the foregoing, the Clientmay not:</span></span><span style="font-family: calibri, sans-serif; font-size: 9pt;">(a)authorize or allow access to, or use of any part of the Softwareby more than the number of Authorized Users specified on the applicable Order Form;</span><span style="font-family: calibri, sans-serif; font-size: 9pt;">(b)sell, market, assign, license, sublicense, distribute, transmit or otherwise convey to any person any right or interest in any Software, Documentation, whether on a Client's behalf or otherwise;</span><span style="font-family: calibri, sans-serif; font-size: 9pt;">(c)use the software in an ASP, &lsquo;software as a service' or service bureau environment; </span><span style="font-family: calibri, sans-serif; font-size: 9pt;">(d)use or copy any part of the Software or Documentation for the purpose of (i) developing software products with functionality, visual expression or other features that are substantially similar to those of the Software or (ii) otherwise directly compete with CRISIL within the credit risk solution and analytical service industry for the financial industry.</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 6.48415%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">2.4</span></td>
+<td style="width: 93.5159%;" valign="top">
+<p><span style="font-family: calibri, sans-serif; font-size: 9pt;">Trial Licenses</span></p>
+<p style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">Where CRISIL has expressly agreed in an Order Form, CRISIL will provide Client with trial license to the Software for the trial period set out in the Order Form. Client may use the trial licences only for testing and evaluation purposes to determine suitability of the Software to its own internal business need and not for any other purposes (including any commercial use). All terms and conditions of the Agreement apply to the trial licenses except that: (a) Fees are not payable by Client for trial licences (unless Order Form states otherwise); (b) CRISILwarranty obligations shall not apply to trial licences; (c) CRISIL aggregate liability for trial licences shall not exceed one month's licence fee payable for regular use of similar software. On the end of the trial period, the Client's licence to use the Software on trial shall end and Client shall as requested by CRISIL return or destroy all copies of the Software and Documentation in its possession.</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 6.48415%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">2.5</span></td>
+<td style="width: 93.5159%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 10pt;">Client acknowledges that CRISIL exclusively owns all rights (including intellectual property rights) inthe Software, Documentation and Customised Software and CRISIL Brands.</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.Charges</span></strong></p>
+<table style="border-collapse: collapse; width: 100%;" border="0">
+<tbody>
+<tr>
+<td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.1</span></td>
+<td style="width: 93.804%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">Unless stated otherwise in the Order Form: (a) CRISIL will invoice Client for Charges in advance (annually)in accordance with the usual invoicing schedule; (b) Client shall pay to CRISIL the Charges within 15 calendar days of Client's receipt of CRISIL invoice (Due Date). CRISIL may apply a service charge calculated at the rate of 1.5% per month for each day from the Due Date that Charges remain unpaid. Except as stated in clause 8.4, Charges are not refundable.</span></td>
+</tr>
+<tr>
+<td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.2</span></td>
+<td style="width: 93.804%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">In addition to Fees, Client will pay all statutory taxes and levies (except those on CRISIL's net income).If Client deducts tax at source, it shall comply with law with respect to such deduction and provide CRISIL with documentation in support of that in a timely manner.</span></td>
+</tr>
+<tr>
+<td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.3</span></td>
+<td style="width: 93.804%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">The fees and any amounts payable under the Order Form are exclusive of all applicable taxes (including GST), levies, duties etc. Any such tax will be charged over and above the fees and amounts payable to CRISIL under the Order Form. The GST registration number ('GSTIN') provided by the Client will be used by CRISIL for filing of the GST returns. </span></td>
+</tr>
+<tr>
+<td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.4</span></td>
+<td style="width: 93.804%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">With regards to the applicability of Goods and Services Tax, the Client's address as mentioned for the purposes of GST will be considered as the consumption location for the Services provided by CRISIL under the Order Form.</span></td>
+</tr>
+<tr>
+<td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.5</span></td>
+<td style="width: 93.804%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">CRISIL shall not be liable for loss of credit arising on account of incomplete, erroneous or wrong details captured by the Client in the details and documents uploaded to the GSTN. Additionally the Client shall be responsible and liable for providing its correct GSTIN and CRISIL will not be responsible for verification of the Client's GSTIN. Where the Client fails to furnish its GSTIN, CRISIL will treat the Client as being unregistered for GSTIN.</span></td>
+</tr>
+<tr>
+<td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.6</span></td>
+<td style="width: 93.804%; text-align: justify;" valign="top">
+<p><span style="font-size: 9pt; font-family: calibri, sans-serif;" valign="top">Where CRISIL issues a credit note to the Client in relation to any invoice, the Client shall adjust and upload its Input Tax Credit on the GSTN on or before the end of the month in which the credit note is issued by CRISIL to the Client. If the Client fails to do so, and this results in additional liability for CRISIL, Client shall be liable to be reimburse CRISIL for any liability incurred by CRISIL (being the tax, interest and any penalties thereon).</span></p>
+<p style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">Fees are subject to annual revisions. Delivery, Installation and Acceptance and Professional Services</span></p>
+<p style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">CRISIL will deliver and install the Software on or about the date specified in the Order Form. Once CRISIL installs the Software and confirms in writing to the Client that the Software has been installed, the Software will be considered accepted.Where agreed in an Order Form CRISIL will provide Customised Software and any agreed Professional Services. A similar acceptance procedure shall apply to Professional Services, Updates and, where Client has obtained licence(s) on payment, Upgrades.</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p><strong><span style="font-size: 9pt; font-family: calibri, sans-serif;">9.Liability</span></strong></p>
+<p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Neither party will be liable for indirect or consequential losses, exemplary or special damages, or loss of profits, loss of business or economic loss even if advised of the possibility of such losses or damages. The foregoing shall apply regardless of whether such liability is based in contract, tort, (including but not limited to negligence) and strict liability or any other theory of legal liability. CRISIL's aggregate liability will not exceed an amount equivalent to the Fees paid by the Client under the Order Form in the latest twelve month period preceding the date of the claim. Neither party shall be liable for failure or delay in its performance of its obligations under the Agreement (other than in the case of Client, its obligation to pay Charges as are due), to the extent such delay or failure or delay is caused by a force majeure cause.</span></p>
+<p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;"><strong>10. General</strong> </span></p>
+<p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">The Agreement contains the entire agreement of the parties as to its subject matter and supersedes all prior agreements and understandings written or oral in relation to the subject matter. Except as otherwise stated in the Agreement, any amendment to the Agreement shall only be effective if in writing and executed by a duly authorized representative of each party. Client may assign, transfer or novate any of its rights or obligations under the Agreement, provided Client obtains the prior written consent of CRISIL (which will not be unreasonably withheld). CRISIL may assign, transfer or novate any part of the Agreement to any of its affiliate or CRISIL's successors in business upon a written notice to the Client. For the avoidance of doubt, CRISIL may subcontract any part of its obligations, provided that CRISIL shall remain responsible for the performance those obligations by its subcontractors. Any assignment, novation or transfer in breach of this clause shall be null and void.The Agreement will be governed by and construed in accordance with the laws of India and the parties irrevocably submit to the jurisdiction of the courts of law in Mumbai, India and their appeal courts to settle any disputes that relate to the Agreement.</span></p>
+<p style="text-align: justify;"><strong><span style="font-family: calibri, sans-serif; font-size: 9pt;">11. Sanctions:</span></strong></p>
+<p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;"> As of the date of this Agreement, (a) neither the Client nor any of its subsidiaries, or any director or corporate officer of any of the foregoing entities, is the subject of any economic or trade sanctions or restrictive measures issued by the United Nations, United States or European Union ('Sanctions'), (b) the Client is 50% or more owned or controlled, directly or indirectly, individually or collectively, by one or more persons or entities that is or are the subject of Sanctions, and (c) to the best of the Client's knowledge, no entity 50% or more owned or controlled by a direct or indirect parent of the Client is the subject of Sanctions. For purposes of clause (c) in this section, 'parent' is a person or entity owning or controlling, directly or indirectly, 50% or more of the Client. For so long as this Agreement is in effect, the Client will promptly notify CRISIL if any of these circumstances change. If CRISIL reasonably determines that it can no longer provide or avail the services to you or from you, in accordance with applicable law, then CRISIL may terminate this Agreement, or any particular services, immediately upon written notice to the Client.</span></p>
+</td>
+<td style="width: 50%;padding:20px">
+<p><span style="font-size: 9pt; font-family: calibri, sans-serif;" >4.Software Support</span></p>
+<table style="border-collapse: collapse; width: 100%;" border="0">
+<tbody>
+<tr>
+<td style="width: 6.6474%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">4.1</span></td>
+<td style="width: 93.3526%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">Software Updates and Upgrades. During the Term, Client will have access to the Updates and Upgradesthat CRISIL makes generally available to clients.Fees include charges for Updates; however, CRISIL may apply additional charge for Upgrades. CRISIL will at no additional cost remotely install for Client the Updates and, where Client has obtained them, Upgrades (and Client shall facilitate such installation). Alternatively, CRISIL may provide Client with instructions for installation of the Updates and, if applicable, Upgrades (and Client shall promptly install such Updates and Upgrades). Where Client desires an onsite installation at the Designated Server Location, Client will pay the applicable charges and out-of-pocket expenses for such installation.</span></td>
+</tr>
+<tr>
+<td style="width: 6.6474%; font-family: calibri, sans-serif; font-size: 9pt;" valign="top">4.2</td>
+<td style="width: 93.3526%; font-family: calibri, sans-serif; font-size: 9pt;" valign="top">Support Services:
+<!-- <ol style="list-style-type: lower-alpha;">
+<li style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">During the Term, CRISILwill provide Support Services in accordance with CRISIL's then current Support Policy to Authorized Users of Client for the latest version of the Software made available by CRISIL generally. Support Services will be provided remotely unless CRISIL determines that they must be provided onsite. Where Client desires onsite Support Services, additional Charges may apply. </span></li>
+<li style="text-align: justify; font-family: calibri, sans-serif; font-size: 9pt; ">Support Services consists of professional efforts to rectify Errors notified by the Client or providing a work-around that mitigates or removes the adverse impact of the Error in accordance with the Support Policy. In addition, any response times as set forth in the Support Policy are conditioned upon Client providing temporary access to the Designated Server Computers via VPN and performing any reasonable tasks that CRISIL may request Client to. Support Services do not include services requested as a result of, or with respect to, errors which are not attributable to CRISIL or the Software (<strong><em>Excluded Errors</em></strong>). Excluded Errors may include, but are not limited to: (a) errors caused by Client's improper or unauthorised use of the Software; (b) errors that result from or are exacerbated by: (1) Client's failure to provide CRISIL access to the Software to diagnose or fix Errors, or (2) Client's failure to install the applicable Updates and Upgrades; (c) (or attempts at) installation, modification, customization, alteration or addition of the Software undertaken by any party other than CRISIL or an authorized designee of CRISIL; (d) any failure of the Client systems (including computer hardware and /or any operating system software hosting the Software) not caused by the Software; (e)errors arising out of misuse, abuse, negligence, misapplication, or wilful acts of Client or any third party.Support Services performed by CRISIL</li>
+</ol>/////
+<table style="border-collapse: collapse; width: 100%;" border="0">
+<tbody>
+<tr>
+<td style="width: 6.06936%;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">a.</span></td>
+<td style="width: 96.7406%; text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">During the Term, CRISILwill provide Support Services in accordance with CRISIL's then current Support Policy to Authorized Users of Client for the latest version of the Software made available by CRISIL generally. Support Services will be provided remotely unless CRISIL determines that they must be provided onsite. Where Client desires onsite Support Services, additional Charges may apply.</span></td>
+</tr>
+<tr>
+<td style="width: 6.06936%;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">b.</span></td>
+<td style="width: 96.7406%; text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Support Services consists of professional efforts to rectify Errors notified by the Client or providing a work-around that mitigates or removes the adverse impact of the Error in accordance with the Support Policy. In addition, any response times as set forth in the Support Policy are conditioned upon Client providing temporary access to the Designated Server Computers via VPN and performing any reasonable tasks that CRISIL may request Client to. Support Services do not include services requested as a result of, or with respect to, errors which are not attributable to CRISIL or the Software (Excluded Errors). Excluded Errors may include, but are not limited to: (a) errors caused by Client's improper or unauthorised use of the Software; (b) errors that result from or are exacerbated by: (1) Client's failure to provide CRISIL access to the Software to diagnose or fix Errors, or (2) Client's failure to install the applicable Updates and Upgrades; (c) (or attempts at) installation, modification, customization, alteration or addition of the Software undertaken by any party other than CRISIL or an authorized designee of CRISIL; (d) any failure of the Client systems (including computer hardware and /or any operating system software hosting the Software) not caused by the Software; (e)errors arising out of misuse, abuse, negligence, misapplication, or wilful acts of Client or any third party. Support Services performed by CRISIL in an effort to resolve any Excluded Errors will be billed to Client at CRISIL's then-current rates.</span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-family: calibri, sans-serif; font-size: 9pt;">5.Parties' Obligations</span></p>
+<table style="border-collapse: collapse; width: 100%;" border="0">
+<tbody>
+<tr>
+<td style="width: 6.06936%;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;" valign="top">5.1</span></td>
+<td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">CRISIL will provide the Services with reasonable care and skill. Prior to installation CRISIL shall test the Software (including Updates and applicable Upgrades) using a latest generally commercially available antivirus programme and will not install the Software on Client's systems in the event in the test the antivirus software indicates that Software contains any viruses, worms, Trojan horses, trap doors, time bombs or other destructive elements. EXCEPT FOR THE FOREGOING, CRISIL OR ITS SUPPLIERS MAKE NO WARRANTIES OR REPRESENTATIONS OF WHATEVER NATURE, WHETHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, WARRANTIES OF FITNESS OF PURPOSE, OR THAT THE SOFTWARE OR PROFESSIONAL SERVICES ARE ERROR-FREE OR WILL WORK WITHOUT INTERRUPTION.</span></td>
+</tr>
+<tr>
+<td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">5.2</span></td>
+<td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">The Client shall (at its own cost) ensure it has all necessary devices, infrastructure, systems, software, hardware, equipment, configuration and/or communications links (together, Infrastructure) as required for using the Software, including, without limitation, the key requirements as may be specified initially on the Order Form and agrees to keep the Infrastructure compatible with the Software at all times.</span></td>
+</tr>
+<tr>
+<td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">5.3</span></td>
+<td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">CRISIL may require that Client displays certain disclaimers with regard to the Software and any output obtained using the Software. On CRISIL's written requests from time to time, Client shall display the disclaimer required by CRISIL in an appropriate manner in Client's communications with its clients pertaining to Client's provision of any reports and/or information generated.</span></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-family: calibri, sans-serif; font-size: 9pt;"><strong>6.Indemnity</strong></span></p>
+<p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Client will indemnify CRISIL for Client's use of the Software otherwise than in accordance with the Agreement .</span></p>
+<p style="text-align: justify;"><strong><span style="font-family: calibri, sans-serif; font-size: 9pt;">7.Term and Termination</span></strong></p>
+<table style="border-collapse: collapse; width: 100%;" border="0">
+<tbody>
+<tr>
+<td style="width: 6.06936%;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;" valign="top">7.1</span></td>
+<td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">The Agreement shall commence on the Start Date mentioned in the Order Form and continue for successive one year periods unless terminated earlier in accordance with this clause 8 (Term).</span></td>
+</tr>
+<tr>
+<td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">7.2</span></td>
+<td style="width: 93.9306%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">A party may terminate the Agreement by giving a prior written notice of at least 3 months, such notice to take effect no earlier than the end the then current one-year period.</span></td>
+</tr>
+<tr>
+<td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">7.3</span></td>
+<td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">A party may terminate the Agreement with immediate effect by written notice to the other if the other party: (i) has materially breached the Agreement and that breach is incapable of remedy or where the breach is capable of remedy the other party has not remedied it within 2 weeks of receiving a written notice of the breach; or (ii) reorganises, reconstructs or otherwise undergoes a change in constitution (otherwise than for the purpose of solvent amalgamation or reconstruction where the emerging company assumes the obligations of the party); or (iii) becomes bankrupt, insolvent and/or is unable to pay its debts as they fall due, enters liquidation, is wound up, compounds with its creditors or has an administrator, receiver or other such person appointed over all or any part of its assets or otherwise takes or suffers any similar action in any jurisdiction, or threatens or resolves to do any of the above in consequence of debt.</span></td>
+</tr>
+<tr>
+<td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">7.4</span></td>
+<td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">CRISIL may terminate the Agreement for the Services with immediate effect if any organization which is a competitor of CRISIL acquires control of Client, provided that CRISIL shall refund proportionate Fees paid in advance by the Client as relate to the period after the effective date of termination, subject to deductions on account of unpaid dues owed by the Client.</span></td>
+</tr>
+<tr>
+<td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">7.5</span></td>
+<td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Upon termination: (a) Client shall cease all use of the Softwareand shall delete from its systems and record all copies of the Software and Documentation; (b) clauses3 (to the extent of unpaid dues), 7, 9 and10 will survive termination or expiration of the Agreement for any reason.</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong><span style="font-size: 9pt; font-family: calibri, sans-serif;">8.Confidentiality</span></strong></p>
+<table style="border-collapse: collapse; width: 100%;" border="0">
+<tbody>
+<tr>
+<td style="width: 6.06936%;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;" valign="top">8.1</span></td>
+<td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">Each receiving party of the disclosing party's Confidential Information will keep confidential the Confidential Information and take reasonable steps to prevent unauthorised disclosure or access of such Confidential Information. A receiving party may disclose the disclosing party's confidential information to the extent necessary to perform the Agreement or comply with any law, statutory, government or judicial order or demand.Upon the disclosing party's demand or termination of the Agreement, the receiving party shall delete copies of the disclosing party's Confidential Information from its record except for one copy as may be required to be retained by law, regulation, professional standards or reasonable business practice. Confidential Information with respect to a disclosing party means the non-public information of a business, technical or financial nature belonging or pertaining to a party or its affiliate or their customers, suppliers or parties they deal with shared or made available in any form to the receiving party or its affiliates in the course of performance of the Agreement, which is marked or otherwise indicated as being or is, or ought reasonably to be, known to be confidential.</span></td>
+</tr>
+<tr>
+<td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">8.2</span></td>
+<td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">the obligation of confidentiality does not apply to information which: (a) is, at the time of the disclosure, or subsequently through no act or omission of the receiving party or its permitted recipients, becomes generally available to the public; (b) becomes rightfully known to the receiving party or its permitted recipients through a third party with no obligation of confidentiality; (c) the receiving party is able to show was lawfully in the possession of the receiving party or its permitted recipients prior to such disclosure; (d) is independently developed by the receiving party or its permitted recipients; (e) information used by CRISIL in a manner that does not identify the Client as the source of or the party to which the Confidential Information pertains.</span></td>
+</tr>
+<tr>
+<td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;" valign="top">8.3</span></td>
+<td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">The confidentiality obligations with respect to an item of Confidential Information will be throughout the Term and for a period of 3 years after termination of the Agreement.</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong><span style="font-family: calibri, sans-serif; font-size: 9pt;">12. Definitions:</span></strong></p>
+<p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Unless opposed to the context, the following terms have the meanings given to them when used in the Agreement:Brands means brands, logos, trade names, trademarks, brand features or other identifiers; Charges means Fees and other amounts payable by Client under an Order Form; Customised Softwaremeans Standard Software customised under an Order Form;Documentationmeans that documentation related to the Software(as defined below), including without limitation, user manuals and software specifications, provided by CRISIL to Client under the Agreement;Errormeans any defect within the Software that causes a material failure of the Software to perform substantially in accordance with the Documentation; Fees means the licence fees for the Software, fees for Professional Services, and fees for Software Support and any other fees as may apply and payable by the Client, in each case as set out in the Order Form (subject to revisions in accordance with the Agreement); MTC means this document titled 'Software Licence - Master Terms and Conditions', together with any related annexure or schedule that the parties have agreed in writing; Order Form means an order form executed by the relevant parties incorporating or referencing the MTC, together with any related schedules and annexure; Professional Services means the professional services that CRISIL agrees to provide to Client under an Order Form;Services means the deliverables as set out in an Order Form; Softwaremeans the software owned and/or licensed by CRISIL and its related Documentation,including all Updates and Upgrades and Customised Software, as more particularly described in the applicable Order Form; Start Date means the start date of an Order Form;</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /> -->
+        <!-- <table style="border-collapse: collapse; width: 100%;" border="0">
+            <tbody>
+                <tr>
+                    <td style="width: 50%;" valign="top">
+                        <p><strong><span style="font-family: calibri, sans-serif; font-size: 9pt;">1.Document FrameWork, Definition</span></strong></p>
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.33803%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">1.1</span></td>
+                                    <td style="width: 93.662%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">From time to time Client and CRISIL or their respective affiliates may execute order form(s) (each an Order Form) setting out the services agreed to be provided under the Order Form(s) (Services) incorporating the MTC.Each such Order Form and the MTC (together with the relevant annexure or schedules) will operate as an independent contract between the parties executing that Order Form and shall be called the Agreement. References to 'CRISIL' and 'Client' in the MTCshall refer to the relevant parties executing the Order Form. Where the parties executing an Order Formhave agreed to changes to the terms of the MTCas incorporated into the Order Form, the changes shall apply only to that Order Form (and not to any other Order Form). To the extent of a conflict between the MTCand the Order Form, the Order Form will prevail.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.33803%;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">1.2</span></td>
+                                    <td style="width: 93.662%;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Definitions are given in clause 12</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><span style="font-family: calibri, sans-serif; font-size: 9pt;">2.Software License</span></p>
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.48415%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">2.1</span></td>
+                                    <td style="width: 93.5159%;" valign="top">
+                                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Subject to the terms and conditions set out in the Agreement, CRISIL grants to the Client a non-exclusive, non-transferable licence to use the Softwarein the object code form during the Term for no purpose other than its own internal business use and, if stated in the Order Form, the Additional Permitted Use, and for such purpose to:</span></p>
+                                        <ol style="list-style-type: lower-alpha;">
+                                            <li style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">install the Software, in object code only, solely on the Designated Server Computers and at the Designated Server Location(s) that are identified on the Order Form by the Client (changes only with prior written consent of CRISIL, not to be unreasonably withheld); </span></li>
+                                            <li style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">permit Authorized Users to access and use the Software from the Client computers to the extent permitted under the applicable Order Form; and </span></li>
+                                            <li style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">use the Documentation, in the form in which it is supplied by CRISIL, solely in connection with use of the Software in accordance with the Agreement.</span></li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.48415%;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">2.2</span></td>
+                                    <td style="width: 93.5159%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Where the Software licenceis priced on the basis of number of accesses or users or other usage based pricing, then Client may not use the Software except to the extent subscribed for.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.48415%;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">2.3</span></td>
+                                    <td style="width: 93.5159%;" valign="top">
+                                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Client shall not use the Software in a manner:</span><span style="font-family: calibri, sans-serif; font-size: 9pt;">(a)not expressly permitted by the Agreement;</span><span style="font-family: calibri, sans-serif; font-size: 9pt;">(b)inconsistent with the Documentation or any other written usage guidelines provided by CRISIL.</span><span style="font-family: calibri, sans-serif; font-size: 9pt;"><span style="line-height: 115%; font-family: Calibri, sans-serif;">Without limiting the foregoing, the Clientmay not:</span></span><span style="font-family: calibri, sans-serif; font-size: 9pt;">(a)authorize or allow access to, or use of any part of the Softwareby more than the number of Authorized Users specified on the applicable Order Form;</span><span style="font-family: calibri, sans-serif; font-size: 9pt;">(b)sell, market, assign, license, sublicense, distribute, transmit or otherwise convey to any person any right or interest in any Software, Documentation, whether on a Client's behalf or otherwise;</span><span style="font-family: calibri, sans-serif; font-size: 9pt;">(c)use the software in an ASP, &lsquo;software as a service' or service bureau environment; </span><span style="font-family: calibri, sans-serif; font-size: 9pt;">(d)use or copy any part of the Software or Documentation for the purpose of (i) developing software products with functionality, visual expression or other features that are substantially similar to those of the Software or (ii) otherwise directly compete with CRISIL within the credit risk solution and analytical service industry for the financial industry.</span></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.48415%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">2.4</span></td>
+                                    <td style="width: 93.5159%;" valign="top">
+                                        <p><span style="font-family: calibri, sans-serif; font-size: 9pt;">Trial Licenses</span></p>
+                                        <p style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">Where CRISIL has expressly agreed in an Order Form, CRISIL will provide Client with trial license to the Software for the trial period set out in the Order Form. Client may use the trial licences only for testing and evaluation purposes to determine suitability of the Software to its own internal business need and not for any other purposes (including any commercial use). All terms and conditions of the Agreement apply to the trial licenses except that: (a) Fees are not payable by Client for trial licences (unless Order Form states otherwise); (b) CRISILwarranty obligations shall not apply to trial licences; (c) CRISIL aggregate liability for trial licences shall not exceed one month's licence fee payable for regular use of similar software. On the end of the trial period, the Client's licence to use the Software on trial shall end and Client shall as requested by CRISIL return or destroy all copies of the Software and Documentation in its possession.</span></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.48415%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">2.5</span></td>
+                                    <td style="width: 93.5159%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 10pt;">Client acknowledges that CRISIL exclusively owns all rights (including intellectual property rights) inthe Software, Documentation and Customised Software and CRISIL Brands.</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.Charges</span></strong></p>
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.1</span></td>
+                                    <td style="width: 93.804%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">Unless stated otherwise in the Order Form: (a) CRISIL will invoice Client for Charges in advance (annually)in accordance with the usual invoicing schedule; (b) Client shall pay to CRISIL the Charges within 15 calendar days of Client's receipt of CRISIL invoice (Due Date). CRISIL may apply a service charge calculated at the rate of 1.5% per month for each day from the Due Date that Charges remain unpaid. Except as stated in clause 8.4, Charges are not refundable.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.2</span></td>
+                                    <td style="width: 93.804%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">In addition to Fees, Client will pay all statutory taxes and levies (except those on CRISIL's net income).If Client deducts tax at source, it shall comply with law with respect to such deduction and provide CRISIL with documentation in support of that in a timely manner.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.3</span></td>
+                                    <td style="width: 93.804%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">The fees and any amounts payable under the Order Form are exclusive of all applicable taxes (including GST), levies, duties etc. Any such tax will be charged over and above the fees and amounts payable to CRISIL under the Order Form. The GST registration number ('GSTIN') provided by the Client will be used by CRISIL for filing of the GST returns. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.4</span></td>
+                                    <td style="width: 93.804%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">With regards to the applicability of Goods and Services Tax, the Client's address as mentioned for the purposes of GST will be considered as the consumption location for the Services provided by CRISIL under the Order Form.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.5</span></td>
+                                    <td style="width: 93.804%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">CRISIL shall not be liable for loss of credit arising on account of incomplete, erroneous or wrong details captured by the Client in the details and documents uploaded to the GSTN. Additionally the Client shall be responsible and liable for providing its correct GSTIN and CRISIL will not be responsible for verification of the Client's GSTIN. Where the Client fails to furnish its GSTIN, CRISIL will treat the Client as being unregistered for GSTIN.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.6</span></td>
+                                    <td style="width: 93.804%; text-align: justify;" valign="top">
+                                        <p><span style="font-size: 9pt; font-family: calibri, sans-serif;">Where CRISIL issues a credit note to the Client in relation to any invoice, the Client shall adjust and upload its Input Tax Credit on the GSTN on or before the end of the month in which the credit note is issued by CRISIL to the Client. If the Client fails to do so, and this results in additional liability for CRISIL, Client shall be liable to be reimburse CRISIL for any liability incurred by CRISIL (being the tax, interest and any penalties thereon).</span></p>
+                                        <p style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">Fees are subject to annual revisions. Delivery, Installation and Acceptance and Professional Services</span></p>
+                                        <p style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">CRISIL will deliver and install the Software on or about the date specified in the Order Form. Once CRISIL installs the Software and confirms in writing to the Client that the Software has been installed, the Software will be considered accepted.Where agreed in an Order Form CRISIL will provide Customised Software and any agreed Professional Services. A similar acceptance procedure shall apply to Professional Services, Updates and, where Client has obtained licence(s) on payment, Upgrades.</span></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="font-size: 9pt; font-family: calibri, sans-serif;">4.Software Support</p>
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.6474%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">4.1</span></td>
+                                    <td style="width: 93.3526%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Software Updates and Upgrades. During the Term, Client will have access to the Updates and Upgradesthat CRISIL makes generally available to clients.Fees include charges for Updates; however, CRISIL may apply additional charge for Upgrades. CRISIL will at no additional cost remotely install for Client the Updates and, where Client has obtained them, Upgrades (and Client shall facilitate such installation). Alternatively, CRISIL may provide Client with instructions for installation of the Updates and, if applicable, Upgrades (and Client shall promptly install such Updates and Upgrades). Where Client desires an onsite installation at the Designated Server Location, Client will pay the applicable charges and out-of-pocket expenses for such installation.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.6474%; font-family: calibri, sans-serif; font-size: 9pt;" valign="top">4.2</td>
+                                    <td style="width: 93.3526%; font-family: calibri, sans-serif; font-size: 9pt;" valign="top">Support Services: <!-- <ol style="list-style-type: lower-alpha;">
+<li style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">During the Term, CRISILwill provide Support Services in accordance with CRISIL's then current Support Policy to Authorized Users of Client for the latest version of the Software made available by CRISIL generally. Support Services will be provided remotely unless CRISIL determines that they must be provided onsite. Where Client desires onsite Support Services, additional Charges may apply. </span></li>
+<li style="text-align: justify; font-family: calibri, sans-serif; font-size: 9pt; ">Support Services consists of professional efforts to rectify Errors notified by the Client or providing a work-around that mitigates or removes the adverse impact of the Error in accordance with the Support Policy. In addition, any response times as set forth in the Support Policy are conditioned upon Client providing temporary access to the Designated Server Computers via VPN and performing any reasonable tasks that CRISIL may request Client to. Support Services do not include services requested as a result of, or with respect to, errors which are not attributable to CRISIL or the Software (<strong><em>Excluded Errors</em></strong>). Excluded Errors may include, but are not limited to: (a) errors caused by Client's improper or unauthorised use of the Software; (b) errors that result from or are exacerbated by: (1) Client's failure to provide CRISIL access to the Software to diagnose or fix Errors, or (2) Client's failure to install the applicable Updates and Upgrades; (c) (or attempts at) installation, modification, customization, alteration or addition of the Software undertaken by any party other than CRISIL or an authorized designee of CRISIL; (d) any failure of the Client systems (including computer hardware and /or any operating system software hosting the Software) not caused by the Software; (e)errors arising out of misuse, abuse, negligence, misapplication, or wilful acts of Client or any third party.Support Services performed by CRISIL</li>
+///</ol> -->
+                                      <!--  <table style="border-collapse: collapse; width: 100%;" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">a.</span></td>
+                                                    <td style="width: 96.7406%; text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">During the Term, CRISILwill provide Support Services in accordance with CRISIL's then current Support Policy to Authorized Users of Client for the latest version of the Software made available by CRISIL generally. Support Services will be provided remotely unless CRISIL determines that they must be provided onsite. Where Client desires onsite Support Services, additional Charges may apply.</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">b.</span></td>
+                                                    <td style="width: 96.7406%; text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Support Services consists of professional efforts to rectify Errors notified by the Client or providing a work-around that mitigates or removes the adverse impact of the Error in accordance with the Support Policy. In addition, any response times as set forth in the Support Policy are conditioned upon Client providing temporary access to the Designated Server Computers via VPN and performing any reasonable tasks that CRISIL may request Client to. Support Services do not include services requested as a result of, or with respect to, errors which are not attributable to CRISIL or the Software (Excluded Errors). Excluded Errors may include, but are not limited to: (a) errors caused by Client's improper or unauthorised use of the Software; (b) errors that result from or are exacerbated by: (1) Client's failure to provide CRISIL access to the Software to diagnose or fix Errors, or (2) Client's failure to install the applicable Updates and Upgrades; (c) (or attempts at) installation, modification, customization, alteration or addition of the Software undertaken by any party other than CRISIL or an authorized designee of CRISIL; (d) any failure of the Client systems (including computer hardware and /or any operating system software hosting the Software) not caused by the Software; (e)errors arising out of misuse, abuse, negligence, misapplication, or wilful acts of Client or any third party. Support Services performed by CRISIL in an effort to resolve any Excluded Errors will be billed to Client at CRISIL's then-current rates.</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="font-size: 9pt; font-family: calibri, sans-serif;">5.Parties' Obligations</p>
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">5.1</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">CRISIL will provide the Services with reasonable care and skill. Prior to installation CRISIL shall test the Software (including Updates and applicable Upgrades) using a latest generally commercially available antivirus programme and will not install the Software on Client's systems in the event in the test the antivirus software indicates that Software contains any viruses, worms, Trojan horses, trap doors, time bombs or other destructive elements. EXCEPT FOR THE FOREGOING, CRISIL OR ITS SUPPLIERS MAKE NO WARRANTIES OR REPRESENTATIONS OF WHATEVER NATURE, WHETHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, WARRANTIES OF FITNESS OF PURPOSE, OR THAT THE SOFTWARE OR PROFESSIONAL SERVICES ARE ERROR-FREE OR WILL WORK WITHOUT INTERRUPTION.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">5.2</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">The Client shall (at its own cost) ensure it has all necessary devices, infrastructure, systems, software, hardware, equipment, configuration and/or communications links (together, Infrastructure) as required for using the Software, including, without limitation, </span></td>
+                                </tr>
+                                <!-- <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">5.3</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">CRISIL may require that Client displays certain disclaimers with regard to the Software and any output obtained using the Software. On CRISIL's written requests from time to time, Client shall display the disclaimer required by CRISIL in an appropriate manner in Client's communications with its clients pertaining to Client's provision of any reports and/or information generated.</span></td>
+/// </tr> --> 
+                           <!-- </tbody>
+                        </table>
+                    </td>
+                    <td style="width: 50%; padding: 20px;">
+                        <table>
+                             <tr>
+                                <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;"></span></td>
+                                <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;"> the key requirements as may be specified initially on the Order Form and agrees to keep the Infrastructure compatible with the Software at all times.</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">5.3</span></td>
+                                <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">CRISIL may require that Client displays certain disclaimers with regard to the Software and any output obtained using the Software. On CRISIL's written requests from time to time, Client shall display the disclaimer required by CRISIL in an appropriate manner in Client's communications with its clients pertaining to Client's provision of any reports and/or information generated.</span></td>
+                            </tr>
+                        </table>
+                        <p style="font-size: 9pt; font-family: calibri, sans-serif;"><strong>6.Indemnity</strong></p>
+                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Client will indemnify CRISIL for Client's use of the Software otherwise than in accordance with the Agreement .</span></p>
+                        <p style="text-align: justify;font-size: 9pt; font-family: calibri, sans-serif;"><strong>7.Term and Termination</strong></p>
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">7.1</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">The Agreement shall commence on the Start Date mentioned in the Order Form and continue for successive one year periods unless terminated earlier in accordance with this clause 8 (Term).</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">7.2</span></td>
+                                    <td style="width: 93.9306%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">A party may terminate the Agreement by giving a prior written notice of at least 3 months, such notice to take effect no earlier than the end the then current one-year period.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">7.3</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">A party may terminate the Agreement with immediate effect by written notice to the other if the other party: (i) has materially breached the Agreement and that breach is incapable of remedy or where the breach is capable of remedy the other party has not remedied it within 2 weeks of receiving a written notice of the breach; or (ii) reorganises, reconstructs or otherwise undergoes a change in constitution (otherwise than for the purpose of solvent amalgamation or reconstruction where the emerging company assumes the obligations of the party); or (iii) becomes bankrupt, insolvent and/or is unable to pay its debts as they fall due, enters liquidation, is wound up, compounds with its creditors or has an administrator, receiver or other such person appointed over all or any part of its assets or otherwise takes or suffers any similar action in any jurisdiction, or threatens or resolves to do any of the above in consequence of debt.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">7.4</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">CRISIL may terminate the Agreement for the Services with immediate effect if any organization which is a competitor of CRISIL acquires control of Client, provided that CRISIL shall refund proportionate Fees paid in advance by the Client as relate to the period after the effective date of termination, subject to deductions on account of unpaid dues owed by the Client.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">7.5</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Upon termination: (a) Client shall cease all use of the Softwareand shall delete from its systems and record all copies of the Software and Documentation; (b) clauses3 (to the extent of unpaid dues), 7, 9 and10 will survive termination or expiration of the Agreement for any reason.</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="font-size: 9pt; font-family: calibri, sans-serif;"><strong>8.Confidentiality</strong></p>
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">8.1</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">Each receiving party of the disclosing party's Confidential Information will keep confidential the Confidential Information and take reasonable steps to prevent unauthorised disclosure or access of such Confidential Information. A receiving party may disclose the disclosing party's confidential information to the extent necessary to perform the Agreement or comply with any law, statutory, government or judicial order or demand.Upon the disclosing party's demand or termination of the Agreement, the receiving party shall delete copies of the disclosing party's Confidential Information from its record except for one copy as may be required to be retained by law, regulation, professional standards or reasonable business practice. Confidential Information with respect to a disclosing party means the non-public information of a business, technical or financial nature belonging or pertaining to a party or its affiliate or their customers, suppliers or parties they deal with shared or made available in any form to the receiving party or its affiliates in the course of performance of the Agreement, which is marked or otherwise indicated as being or is, or ought reasonably to be, known to be confidential.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">8.2</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">the obligation of confidentiality does not apply to information which: (a) is, at the time of the disclosure, or subsequently through no act or omission of the receiving party or its permitted recipients, becomes generally available to the public; (b) becomes rightfully known to the receiving party or its permitted recipients through a third party with no obligation of confidentiality; (c) the receiving party is able to show was lawfully in the possession of the receiving party or its permitted recipients prior to such disclosure; (d) is independently developed by the receiving party or its permitted recipients; (e) information used by CRISIL in a manner that does not identify the Client as the source of or the party to which the Confidential Information pertains.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">8.3</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">The confidentiality obligations with respect to an item of Confidential Information will be throughout the Term and for a period of 3 years after termination of the Agreement.</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="font-size: 9pt; font-family: calibri, sans-serif;"><strong>9.Liability</strong></p>
+                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Neither party will be liable for indirect or consequential losses, exemplary or special damages, or loss of profits, loss of business or economic loss even if advised of the possibility of such losses or damages. The foregoing shall apply regardless of whether such liability is based in contract, tort, (including but not limited to negligence) and strict liability or any other theory of legal liability. CRISIL's aggregate liability will not exceed an amount equivalent to the Fees paid by the Client under the Order Form in the latest twelve month period preceding the date of the claim. Neither party shall be liable for failure or delay in its performance of its obligations under the Agreement (other than in the case of Client, its obligation to pay Charges as are due), to the extent such delay or failure or delay is caused by a force majeure cause.</span></p>
+                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;"><strong>10. General</strong> </span></p>
+                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">The Agreement contains the entire agreement of the parties as to its subject matter and supersedes all prior agreements and understandings written or oral in relation to the subject matter. Except as otherwise stated in the Agreement, any amendment to the Agreement shall only be effective if in writing and executed by a duly authorized representative of each party. Client may assign, transfer or novate any of its rights or obligations under the Agreement, provided Client obtains the prior written consent of CRISIL (which will not be unreasonably withheld). CRISIL may assign, transfer or novate any part of the Agreement to any of its affiliate or CRISIL's successors in business upon a written notice to the Client. For the avoidance of doubt, CRISIL may subcontract any part of its obligations, provided that CRISIL shall remain responsible for the performance those obligations by its subcontractors. Any assignment, novation or transfer in breach of this clause shall be null and void.The Agreement will be governed by and construed in accordance with the laws of India and the parties irrevocably submit to the jurisdiction of the courts of law in Mumbai, India and their appeal courts to settle any disputes that relate to the Agreement.</span></p>
+                        <p style="text-align: justify;"><strong><span style="font-family: calibri, sans-serif; font-size: 9pt;">11. Sanctions:</span></strong></p>
+                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;"> As of the date of this Agreement, (a) neither the Client nor any of its subsidiaries, or any director or corporate officer of any of the foregoing entities, is the subject of any economic or trade sanctions or restrictive measures issued by the United Nations, United States or European Union ('Sanctions'), (b) the Client is 50% or more owned or controlled, directly or indirectly, individually or collectively, by one or more persons or entities that is or are the subject of Sanctions, and (c) to the best of the Client's knowledge, no entity 50% or more owned or controlled by a direct or indirect parent of the Client is the subject of Sanctions. For purposes of clause (c) in this section, 'parent' is a person or entity owning or controlling, directly or indirectly, 50% or more of the Client. For so long as this Agreement is in effect, the Client will promptly notify CRISIL if any of these circumstances change. If CRISIL reasonably determines that it can no longer provide or avail the services to you or from you, in accordance with applicable law, then CRISIL may terminate this Agreement, or any particular services, immediately upon written notice to the Client.</span></p>
+                        <p><strong><span style="font-family: calibri, sans-serif; font-size: 9pt;">12. Definitions:</span></strong></p>
+                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Unless opposed to the context, the following terms have the meanings given to them when used in the Agreement:Brands means brands, logos, trade names, trademarks, brand features or other identifiers; Charges means Fees and other amounts payable by Client under an Order Form; Customised Softwaremeans Standard Software customised under an Order Form;Documentationmeans that documentation related to the Software(as defined below), including without limitation, user manuals and software specifications, provided by CRISIL to Client under the Agreement;Errormeans any defect within the Software that causes a material failure of the Software to perform substantially in accordance with the Documentation; Fees means the licence fees for the Software, fees for Professional Services, and fees for Software Support and any other fees as may apply and payable by the Client, in each case as set out in the Order Form (subject to revisions in accordance with the Agreement); MTC means this document titled 'Software Licence - Master Terms and Conditions', together with any related annexure or schedule that the parties have agreed in writing; Order Form means an order form executed by the relevant parties incorporating or referencing the MTC, together with any related schedules and annexure; Professional Services means the professional services that CRISIL agrees to provide to Client under an Order Form;Services means the deliverables as set out in an Order Form; Softwaremeans the software owned and/or licensed by CRISIL and its related Documentation,including all Updates and Upgrades and Customised Software, as more particularly described in the applicable Order Form; Start Date means the start date of an Order Form;</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table> --->
+        
+        <p style="text-align: center;"><span style="font-family: calibri, sans-serif; font-size: 10pt;"><strong>Software Licence - Master Terms and Conditions</strong></span></p>
+        <p><span style="font-size: 9pt; font-family: calibri, sans-serif;">MTC Reference No. _________</span></p>
+        <table style="border-collapse: collapse; width: 100%;" border="0">
+            <tbody>
+                <tr>
+                    <td style="width: 50%;" valign="top">
+                        <p><strong><span style="font-family: calibri, sans-serif; font-size: 9pt;">1.Document FrameWork, Definition</span></strong></p>
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.33803%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">1.1</span></td>
+                                    <td style="width: 93.662%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">From time to time Client and CRISIL or their respective affiliates may execute order form(s) (each an Order Form) setting out the services agreed to be provided under the Order Form(s) (Services) incorporating the MTC.Each such Order Form and the MTC (together with the relevant annexure or schedules) will operate as an independent contract between the parties executing that Order Form and shall be called the Agreement. References to 'CRISIL' and 'Client' in the MTCshall refer to the relevant parties executing the Order Form. Where the parties executing an Order Formhave agreed to changes to the terms of the MTCas incorporated into the Order Form, the changes shall apply only to that Order Form (and not to any other Order Form). To the extent of a conflict between the MTCand the Order Form, the Order Form will prevail.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.33803%;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">1.2</span></td>
+                                    <td style="width: 93.662%;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Definitions are given in clause 12</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><span style="font-family: calibri, sans-serif; font-size: 9pt;">2.Software License</span></p>
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.48415%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">2.1</span></td>
+                                    <td style="width: 93.5159%;" valign="top">
+                                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Subject to the terms and conditions set out in the Agreement, CRISIL grants to the Client a non-exclusive, non-transferable licence to use the Softwarein the object code form during the Term for no purpose other than its own internal business use and, if stated in the Order Form, the Additional Permitted Use, and for such purpose to:</span></p>
+                                        <ol style="list-style-type: lower-alpha;">
+                                            <li style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">install the Software, in object code only, solely on the Designated Server Computers and at the Designated Server Location(s) that are identified on the Order Form by the Client (changes only with prior written consent of CRISIL, not to be unreasonably withheld); </span></li>
+                                            <li style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">permit Authorized Users to access and use the Software from the Client computers to the extent permitted under the applicable Order Form; and </span></li>
+                                            <li style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">use the Documentation, in the form in which it is supplied by CRISIL, solely in connection with use of the Software in accordance with the Agreement.</span></li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.48415%;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">2.2</span></td>
+                                    <td style="width: 93.5159%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Where the Software licenceis priced on the basis of number of accesses or users or other usage based pricing, then Client may not use the Software except to the extent subscribed for.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.48415%;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">2.3</span></td>
+                                    <td style="width: 93.5159%;" valign="top">
+                                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Client shall not use the Software in a manner:</span><span style="font-family: calibri, sans-serif; font-size: 9pt;">(a)not expressly permitted by the Agreement;</span><span style="font-family: calibri, sans-serif; font-size: 9pt;">(b)inconsistent with the Documentation or any other written usage guidelines provided by CRISIL.</span><span style="font-family: calibri, sans-serif; font-size: 9pt;"><span style="line-height: 115%; font-family: Calibri, sans-serif;">Without limiting the foregoing, the Clientmay not:</span></span><span style="font-family: calibri, sans-serif; font-size: 9pt;">(a)authorize or allow access to, or use of any part of the Softwareby more than the</span></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="width: 50%; padding: 20px;">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.48415%;" valign="top"></td>
+                                    <td style="width: 93.5159%; text-align: justify;" valign="top">
+                                        <p><span style="font-family: calibri, sans-serif; font-size: 9pt;"> number of Authorized Users specified on the applicable Order Form;(b)sell, market, assign, license, sublicense, distribute, transmit or otherwise convey to any person any right or interest in any Software, Documentation, <span style="font-family: calibri, sans-serif; font-size: 9pt;">whether on a Client's behalf or otherwise;(c)use the software in an ASP, 'software as a service' or service bureau environment; (d)use or copy any part of the Software or Documentation for the purpose of (i) developing software products with functionality, visual expression or other features that are substantially similar to those of the Software or</span>(ii) otherwise directly compete with CRISIL within the credit risk solution and analytical service industry for the financial industry.</span></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.48415%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">2.4</span></td>
+                                    <td style="width: 93.5159%;" valign="top">
+                                        <p><span style="font-family: calibri, sans-serif; font-size: 9pt;">Trial Licenses</span></p>
+                                        <p style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">Where CRISIL has expressly agreed in an Order Form, CRISIL will provide Client with trial license to the Software for the trial period set out in the Order Form. Client may use the trial licences only for testing and evaluation purposes to determine suitability of the Software to its own internal business need and not for any other purposes (including any commercial use). All terms and conditions of the Agreement apply to the trial licenses except that: (a) Fees are not payable by Client for trial licences (unless Order Form states otherwise); (b) CRISILwarranty obligations shall not apply to trial licences; (c) CRISIL aggregate liability for trial licences shall not exceed one month's licence fee payable for regular use of similar software. On the end of the trial period, the Client's licence to use the Software on trial shall end and Client shall as requested by CRISIL return or destroy all copies of the Software and Documentation in its possession.</span></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.48415%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">2.5</span></td>
+                                    <td style="width: 93.5159%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 10pt;">Client acknowledges that CRISIL exclusively owns all rights (including intellectual property rights) inthe Software, Documentation and Customised Software and CRISIL Brands.</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.Charges</span></strong></p>
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.1</span></td>
+                                    <td style="width: 93.804%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">Unless stated otherwise in the Order Form: (a) CRISIL will invoice Client for Charges in advance (annually)in accordance with the usual invoicing schedule; (b) Client shall pay to CRISIL the Charges within 15 calendar days of Client's receipt of CRISIL invoice (Due Date).</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="border-collapse: collapse; width: 100%;" border="0">
+            <tbody>
+                <tr>
+                    <td style="width: 50%;" valign="top">
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;"></span></td>
+                                    <td style="width: 93.804%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;"> CRISIL may apply a service charge calculated at the rate of 1.5% per month for each day from the Due Date that Charges remain unpaid. Except as stated in clause 8.4, Charges are not refundable.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.2</span></td>
+                                    <td style="width: 93.804%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">In addition to Fees, Client will pay all statutory taxes and levies (except those on CRISIL's net income).If Client deducts tax at source, it shall comply with law with respect to such deduction and provide CRISIL with documentation in support of that in a timely manner.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.3</span></td>
+                                    <td style="width: 93.804%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">The fees and any amounts payable under the Order Form are exclusive of all applicable taxes (including GST), levies, duties etc. Any such tax will be charged over and above the fees and amounts payable to CRISIL under the Order Form. The GST registration number ('GSTIN') provided by the Client will be used by CRISIL for filing of the GST returns. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.4</span></td>
+                                    <td style="width: 93.804%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">With regards to the applicability of Goods and Services Tax, the Client's address as mentioned for the purposes of GST will be considered as the consumption location for the Services provided by CRISIL under the Order Form.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.5</span></td>
+                                    <td style="width: 93.804%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">CRISIL shall not be liable for loss of credit arising on account of incomplete, erroneous or wrong details captured by the Client in the details and documents uploaded to the GSTN. Additionally the Client shall be responsible and liable for providing its correct GSTIN and CRISIL will not be responsible for verification of the Client's GSTIN. Where the Client fails to furnish its GSTIN, CRISIL will treat the Client as being unregistered for GSTIN.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.19597%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">3.6</span></td>
+                                    <td style="width: 93.804%; text-align: justify;" valign="top">
+                                        <p><span style="font-size: 9pt; font-family: calibri, sans-serif;">Where CRISIL issues a credit note to the Client in relation to any invoice, the Client shall adjust and upload its Input Tax Credit on the GSTN on or before the end of the month in which the credit note is issued by CRISIL to the Client. If the Client fails to do so, and this results in additional liability for CRISIL, Client shall be liable to be reimburse CRISIL for any liability incurred by CRISIL (being the tax, interest and any penalties thereon).</span></p>
+                                        <p style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">Fees are subject to annual revisions. Delivery, Installation and Acceptance and Professional Services</span></p>
+                                        <p style="text-align: justify;"><span style="font-size: 9pt; font-family: calibri, sans-serif;">CRISIL will deliver and install the Software on or about the date specified in the Order Form. Once CRISIL installs the Software and confirms in writing to the Client that the Software has been installed, the Software will be considered accepted.Where agreed in an Order Form CRISIL will provide Customised Software and any agreed Professional Services. A similar acceptance procedure shall apply to Professional Services, Updates and, where Client has obtained licence(s) on payment, Upgrades.</span></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><span style="font-size: 9pt; font-family: calibri, sans-serif;">4.Software Support</span></p>
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.6474%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">4.1</span></td>
+                                    <td style="width: 93.3526%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Software Updates and Upgrades. During the Term, Client will have access to the Updates and Upgradesthat CRISIL makes generally available to clients.Fees include charges for Updates; however, CRISIL may apply additional charge for Upgrades.</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="width: 50%; padding: 20px;">
+                        <!-- <p><span style="font-size: 9pt; font-family: calibri, sans-serif;">4.Software Support</span></p>  -->
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.6474%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;"></span></td>
+                                    <td style="width: 93.3526%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">CRISIL will at no additional cost remotely install for Client the Updates and, where Client has obtained them, Upgrades (and Client shall facilitate such installation). Alternatively, CRISIL may provide Client with instructions for installation of the Updates and, if applicable, Upgrades (and Client shall promptly install such Updates and Upgrades). Where Client desires an onsite installation at the Designated Server Location, Client will pay the applicable charges and out-of-pocket expenses for such installation.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.6474%; font-family: calibri, sans-serif; font-size: 9pt;" valign="top">4.2</td>
+                                    <td style="width: 93.3526%; font-family: calibri, sans-serif; font-size: 9pt;" valign="top">Support Services:
+                                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">a.</span></td>
+                                                    <td style="width: 96.7406%; text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">During the Term, CRISILwill provide Support Services in accordance with CRISIL's then current Support Policy to Authorized Users of Client for the latest version of the Software made available by CRISIL generally. Support Services will be provided remotely unless CRISIL determines that they must be provided onsite. Where Client desires onsite Support Services, additional Charges may apply.</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">b.</span></td>
+                                                    <td style="width: 96.7406%; text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Support Services consists of professional efforts to rectify Errors notified by the Client or providing a work-around that mitigates or removes the adverse impact of the Error in accordance with the Support Policy. In addition, any response times as set forth in the Support Policy are conditioned upon Client providing temporary access to the Designated Server Computers via VPN and performing any reasonable tasks that CRISIL may request Client to. Support Services do not include services requested as a result of, or with respect to, errors which are not attributable to CRISIL or the Software (Excluded Errors). 
+                                                        Excluded Errors may include, but are not limited to: (a) errors caused by Client's improper or unauthorised use of the Software; 
+                                                        (b) errors that result from or are exacerbated by: 
+                                                        (1) Client's failure to provide CRISIL access to the Software to diagnose or fix Errors, or 
+                                                        (2) Client's failure to install the applicable Updates and Upgrades; 
+                                                        (c) (or attempts at) installation, modification, customization, alteration or addition of the Software undertaken by any party other than CRISIL or an authorized designee of CRISIL; 
+                                                        (d) any failure of the Client systems (including computer hardware and /or any operating system software hosting the Software) not caused by the Software;
+                                                        (e)errors arising out of misuse, abuse, negligence, misapplication, or wilful acts of Client or any third party. Support Services performed by CRISIL in an effort to resolve any Excluded Errors will be billed to Client at CRISIL's then-current rates.</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br style="page-break-after: always" />
+        <table style="border-collapse: collapse; width: 100%;" border="0">
+            <tbody>
+                <tr>
+                    <td style="width: 50%;" valign="top">
+                        <p><strong><span style="font-family: calibri, sans-serif; font-size: 9pt;">5.Parties' Obligations</span></strong></p>
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">5.1</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">CRISIL will provide the Services with reasonable care and skill. Prior to installation CRISIL shall test the Software (including Updates and applicable Upgrades) using a latest generally commercially available antivirus programme and will not install the Software on Client's systems in the event in the test the antivirus software indicates that Software contains any viruses, worms, Trojan horses, trap doors, time bombs or other destructive elements. EXCEPT FOR THE FOREGOING, CRISIL OR ITS SUPPLIERS MAKE NO WARRANTIES OR REPRESENTATIONS OF WHATEVER NATURE, WHETHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, WARRANTIES OF FITNESS OF PURPOSE, OR THAT THE SOFTWARE OR PROFESSIONAL SERVICES ARE ERROR-FREE OR WILL WORK WITHOUT INTERRUPTION.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">5.2</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">The Client shall (at its own cost) ensure it has all necessary devices, infrastructure, systems, software, hardware, equipment, configuration and/or communications links (together, Infrastructure) as required for using the Software, including, without limitation, the key requirements as may be specified initially on the Order Form and agrees to keep the Infrastructure compatible with the Software at all times.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">5.3</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">CRISIL may require that Client displays certain disclaimers with regard to the Software and any output obtained using the Software. On CRISIL's written requests from time to time, Client shall display the disclaimer required by CRISIL in an appropriate manner in Client's communications with its clients pertaining to Client's provision of any reports and/or information generated.</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><span style="font-family: calibri, sans-serif; font-size: 9pt;"><strong>6.Indemnity</strong></span></p>
+                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Client will indemnify CRISIL for Client's use of the Software otherwise than in accordance with the Agreement .</span></p>
+                        <p style="text-align: justify;"><strong><span style="font-family: calibri, sans-serif; font-size: 9pt;">7.Term and Termination</span></strong></p>
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">7.1</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">The Agreement shall commence on the Start Date mentioned in the Order Form and continue for successive one year periods unless terminated earlier in accordance with this clause 8 (Term).</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">7.2</span></td>
+                                    <td style="width: 93.9306%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">A party may terminate the Agreement by giving a prior written notice of at least 3 months, such notice to take effect no earlier than the end the then current one-year period.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">7.3</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">A party may terminate the Agreement with immediate effect by written notice to the other if the other party: (i) has materially breached the Agreement and that breach is incapable of remedy or where the breach is capable of remedy the other party has not remedied it within 2 weeks of receiving a written notice of the breach; or (ii) reorganises, reconstructs or otherwise undergoes a change in constitution (otherwise than for the purpose of solvent amalgamation or reconstruction where the emerging company assumes the obligations of the party); </span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="width: 50%; padding: 20px;">
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;"></span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">or (iii) becomes bankrupt, insolvent and/or is unable to pay its debts as they fall due, enters liquidation, is wound up, compounds with its creditors or has an administrator, receiver or other such person appointed over all or any part of its assets or otherwise takes or suffers any similar action in any jurisdiction, or threatens or resolves to do any of the above in consequence of debt.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">7.4</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">CRISIL may terminate the Agreement for the Services with immediate effect if any organization which is a competitor of CRISIL acquires control of Client, provided that CRISIL shall refund proportionate Fees paid in advance by the Client as relate to the period after the effective date of termination, subject to deductions on account of unpaid dues owed by the Client.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">7.5</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Upon termination: (a) Client shall cease all use of the Softwareand shall delete from its systems and record all copies of the Software and Documentation; (b) clauses3 (to the extent of unpaid dues), 7, 9 and10 will survive termination or expiration of the Agreement for any reason.</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong><span style="font-size: 9pt; font-family: calibri, sans-serif;">8.Confidentiality</span></strong></p>
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">8.1</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">Each receiving party of the disclosing party's Confidential Information will keep confidential the Confidential Information and take reasonable steps to prevent unauthorised disclosure or access of such Confidential Information. A receiving party may disclose the disclosing party's confidential information to the extent necessary to perform the Agreement or comply with any law, statutory, government or judicial order or demand.Upon the disclosing party's demand or termination of the Agreement, the receiving party shall delete copies of the disclosing party's Confidential Information from its record except for one copy as may be required to be retained by law, regulation, professional standards or reasonable business practice. Confidential Information with respect to a disclosing party means the non-public information of a business, technical or financial nature belonging or pertaining to a party or its affiliate or their customers, suppliers or parties they deal with shared or made available in any form to the receiving party or its affiliates in the course of performance of the Agreement, which is marked or otherwise indicated as being or is, or ought reasonably to be, known to be confidential.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">8.2</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">the obligation of confidentiality does not apply to information which: (a) is, at the time of the disclosure, or subsequently through no act or omission of the receiving party or its permitted recipients, becomes generally available to the public; </span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="border-collapse: collapse; width: 100%;" border="0">
+            <tbody>
+                <tr>
+                    <td style="width: 50%;">
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">8.2</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">(b) becomes rightfully known to the receiving party or its permitted recipients through a third party with no obligation of confidentiality; (c) the receiving party is able to show was lawfully in the possession of the receiving party or its permitted recipients prior to such disclosure; (d) is independently developed by the receiving party or its permitted recipients; (e) information used by CRISIL in a manner that does not identify the Client as the source of or the party to which the Confidential Information pertains.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 6.06936%;" valign="top"><span style="font-family: calibri, sans-serif; font-size: 9pt;">8.3</span></td>
+                                    <td style="width: 93.9306%; text-align: justify;" valign="top"><span style="font-size: 9pt; font-family: calibri, sans-serif;">The confidentiality obligations with respect to an item of Confidential Information will be throughout the Term and for a period of 3 years after termination of the Agreement.</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong><span style="font-size: 9pt; font-family: calibri, sans-serif;">9.Liability</span></strong></p>
+                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Neither party will be liable for indirect or consequential losses, exemplary or special damages, or loss of profits, loss of business or economic loss even if advised of the possibility of such losses or damages. The foregoing shall apply regardless of whether such liability is based in contract, tort, (including but not limited to negligence) and strict liability or any other theory of legal liability. CRISIL's aggregate liability will not exceed an amount equivalent to the Fees paid by the Client under the Order Form in the latest twelve month period preceding the date of the claim. Neither party shall be liable for failure or delay in its performance of its obligations under the Agreement (other than in the case of Client, its obligation to pay Charges as are due), to the extent such delay or failure or delay is caused by a force majeure cause.</span></p>
+                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;"><strong>10. General</strong> </span></p>
+                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">The Agreement contains the entire agreement of the parties as to its subject matter and supersedes all prior agreements and understandings written or oral in relation to the subject matter. Except as otherwise stated in the Agreement, any amendment to the Agreement shall only be effective if in writing and executed by a duly authorized representative of each party. Client may assign, transfer or novate any of its rights or obligations under the Agreement, provided Client obtains the prior written consent of CRISIL (which will not be unreasonably withheld). CRISIL may assign, transfer or novate any part of the Agreement to any of its affiliate or CRISIL's successors in business upon a written notice to the Client. For the avoidance of doubt, CRISIL may subcontract any part of its obligations, provided that CRISIL shall remain responsible for the performance those obligations by its subcontractors. Any assignment, novation or transfer in breach of this clause shall be null and void.The Agreement will be governed by and construed in accordance with the laws of India and the parties irrevocably submit to the jurisdiction of the courts of law in Mumbai, India and their appeal courts to settle any disputes that relate to the Agreement.</span></p>
+                        <p style="text-align: justify;"><strong><span style="font-family: calibri, sans-serif; font-size: 9pt;">11. Sanctions:</span></strong></p>
+                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;"></span></p>
+                    </td>
+                    <td style="width: 50%; padding: 20px;">
+                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">As of the date of this Agreement, (a) neither the Client nor any of its subsidiaries, or any director or corporate officer of any of the foregoing entities, is the subject of any economic or trade sanctions or restrictive measures issued by the United Nations, United States or European Union ('Sanctions'), (b) the Client is 50% or more owned or controlled, directly or indirectly, individually or collectively, by one or more persons or entities that is or are the subject of Sanctions, and (c) to the best of the Client's knowledge, no entity 50% or more owned or controlled by a direct or indirect parent of the Client is the subject of Sanctions. For purposes of clause (c) in this section, 'parent' is a person or entity owning or controlling, directly or indirectly, 50% or more of the Client. For so long as this Agreement is in effect, the Client will promptly notify CRISIL if any of these circumstances change. If CRISIL reasonably determines that it can no longer provide or avail the services to you or from you, in accordance with applicable law, then CRISIL may terminate this Agreement, or any particular services, immediately upon written notice to the Client.</span></p>
+                        <p><strong><span style="font-family: calibri, sans-serif; font-size: 9pt;">12. Definitions:</span></strong></p>
+                        <p style="text-align: justify;"><span style="font-family: calibri, sans-serif; font-size: 9pt;">Unless opposed to the context, the following terms have the meanings given to them when used in the Agreement:Brands means brands, logos, trade names, trademarks, brand features or other identifiers; Charges means Fees and other amounts payable by Client under an Order Form; Customised Softwaremeans Standard Software customised under an Order Form;Documentationmeans that documentation related to the Software(as defined below), including without limitation, user manuals and software specifications, provided by CRISIL to Client under the Agreement;Errormeans any defect within the Software that causes a material failure of the Software to perform substantially in accordance with the Documentation; Fees means the licence fees for the Software, fees for Professional Services, and fees for Software Support and any other fees as may apply and payable by the Client, in each case as set out in the Order Form (subject to revisions in accordance with the Agreement); MTC means this document titled 'Software Licence - Master Terms and Conditions', together with any related annexure or schedule that the parties have agreed in writing; Order Form means an order form executed by the relevant parties incorporating or referencing the MTC, together with any related schedules and annexure; Professional Services means the professional services that CRISIL agrees to provide to Client under an Order Form;Services means the deliverables as set out in an Order Form; Softwaremeans the software owned and/or licensed by CRISIL and its related Documentation,including all Updates and Upgrades and Customised Software, as more particularly described in the applicable Order Form; Start Date means the start date of an Order Form;</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br style="page-break-after: always" />
+        <table style="margin-left: 14.4pt; border-collapse: collapse; border: 1;">
+            <tbody>
+                <tr>
+                    <td style="width: 117.0pt; border: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;font-family: calibri, sans-serif; font-size: 9pt;" width="156">
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p>Authorised Signature</p>
+                    </td>
+                    <td style="width: 202.5pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;font-family: calibri, sans-serif; font-size: 9pt;" width="270">
+                        <p>{!iOpp.Account.Name}</p>
+                    </td>
+                    <td style="width: 202.5pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;font-family: calibri, sans-serif; font-size: 9pt;" width="270">
+                        <p>For CRISIL Limited</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 117.0pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;font-family: calibri, sans-serif; font-size: 9pt;" width="156">
+                        <p>Name</p>
+                    </td>
+                    <td style="width: 202.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;font-family: calibri, sans-serif; font-size: 9pt;" width="270">
+                        <p>{!iOpp.Billing_Contact_Person__r.Name}</p>
+                    </td>
+                    <td style="width: 202.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;font-family: calibri, sans-serif; font-size: 9pt;" width="270">
+                        <p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 117.0pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;font-family: calibri, sans-serif; font-size: 9pt;" width="156">
+                        <p>Title</p>
+                    </td>
+                    <td style="width: 202.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;font-family: calibri, sans-serif; font-size: 9pt;" width="270">
+                        <p>{!iOpp.Billing_Contact_Person__r.Designation__c}</p>
+                    </td>
+                    <td style="width: 202.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;font-family: calibri, sans-serif; font-size: 9pt;" width="270">
+                        <p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 117.0pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;font-family: calibri, sans-serif; font-size: 9pt;" width="156">
+                        <p>Date of Signature</p>
+                    </td>
+                    <td style="width: 202.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;font-family: calibri, sans-serif; font-size: 9pt;" width="270">
+                        <p></p>
+                    </td>
+                    <td style="width: 202.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;font-family: calibri, sans-serif; font-size: 9pt;" width="270">
+                        <p></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </html>
+</apex:page>

@@ -1,0 +1,187 @@
+INR:<table style="border-collapse: collapse; width: 100%;" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 100%;text-align: left;font-family: arial, helvetica, sans-serif; font-size: 9pt;"><strong>Payment Mode:</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%; padding-left: 40px;text-align: left;font-family: arial, helvetica, sans-serif; font-size: 9pt;">
+                                            • For online NEFT/RTGS from Non-ICICI Bank: A/c No. {!ibl.Billing_Customer__r.Code__c}, IFSC Code: ICIC0000104, Bank Name: ICICI &nbsp;&nbsp;Bank Limited, Branch: CMS Branch 1st Floor Empire Complex 414 S.B Marg, Mumbai Maharastra.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%; padding-left: 40px;text-align: left;font-family: arial, helvetica, sans-serif; font-size: 9pt;">
+                                            • For online fund transfer from ICICI Bank: A/c No 003205000032, IFSC Code: ICIC0000032, Bank Name: ICICI Bank &nbsp;&nbsp;Limited, Branch Detail, Branch Address : Poonawadi, Dr Ambedkar Road, Dadar, Mumbai 400014, India.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%; padding-left: 40px;text-align: left;text-align: justify;font-family: arial, helvetica, sans-serif; font-size: 9pt;">
+                                            • Kindly issue the cheque in favour of &ldquo;CRISIL Limited&rdquo;.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;text-align: left;text-align: justify; font-family: arial, helvetica, sans-serif; font-size: 9pt;"><strong>Note:</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%; padding-left: 40px;text-align: left;text-align: justify;font-family: arial, helvetica, sans-serif; font-size: 9pt;">
+                                            • Please make the payment within 10 days of receiving the invoice. Kindly ignore if already paid.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%; padding-left: 40px;text-align: left;text-align: justify;font-family: arial, helvetica, sans-serif; font-size: 9pt;">
+                                            • G.S.T.No: {!strGST}, Pan No: <!-- {!ibl.Billing_Customer__r.PAN__c} -->AAACT3151E.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%; padding-left: 40px;text-align: left;font-family: arial, helvetica, sans-serif; font-size: 9pt;">
+                                            • Location of supply:<!-- {!ibl.Billing_Customer__r.BillingCity},--><apex:outputText >{!strcom}</apex:outputText><!-- {!ibl.Billing_Customer__r.GST_state_code__c} --> ({!ibl.Billing_Customer__r.BillingState}), HSN/SAC Code:<apex:outputText >{!strHSN}</apex:outputText>, Billing Address: {!strAddress}.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%; padding-left: 40px;text-align: left;text-align: justify;font-family: arial, helvetica, sans-serif; font-size: 9pt;">
+                                            • In case tax is deducted, kindly issue a TDS Certificate at the earliest.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%; padding-left: 40px;text-align: left;font-family: arial, helvetica, sans-serif; font-size: 9pt;">
+                                            • In case of any clarification on Invoice, please contact Ms. Swati Kulshreshtha (022 &ndash; 3342 5851) at &nbsp;&nbsp;Swati.Kulshreshtha@ext-crisil.com at CRISIL Limited, 5th Floor, Finance, CRISIL House, Central Avenue Road, &nbsp;&nbsp;Hiranandani Business Park, Powai, Mumbai- 400 076.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+usd:
+
+
+<table style="border-collapse: collapse; width: 97.6422%;" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;"><strong>Payment mode:</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• Name of the Company :- CRISIL Limited.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• Name of Bank : J P Morgan Chase Bank, New York.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• A/c. No. : 001 1 427374, Swift Code : CHASUS33XXX, ICICI Bank Swift Code : ICICINBBCTS.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• FXRPTG Names: CHMNA.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• IBAN No:ABA FED No 021000021.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;text-align: left;text-align: justify;">For further credit to:</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• Name of the Company :- CRISIL Limited.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• Name of the Bank : - ICICI Bank Limited.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• Bank Address: Trans Trade Centre, Nr Floral Deck Plaza, Seepz MIDC, Andheri (East), Mumbai - 400 093.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• EEFC A/c. No:- 054406000067, MICR Code : 400229010, IFSC Code: ICIC0000032.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;text-align: left;text-align: justify;"><strong>Note:</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• Please make the payment within 10 days of receiving the invoice. Kindly ignore if already paid.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• G.S.T.No:{!strGST}, Pan No: AAACT3151E</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• Location of supply:{!ibl.Billing_Customer__r.BillingCity}, <apex:outputText >{!strcom}</apex:outputText>({!ibl.Billing_Customer__r.BillingState}), HSN/SAC Code:<apex:outputText >{!strHSN}</apex:outputText></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• In case tax is deducted, kindly issue a TDS Certificate at the earliest.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;">• In case of any clarification on Invoice, please contact Ms. Swati Kulshreshtha (022 &ndash; 3342 5851) at &nbsp;&nbsp;Swati.Kulshreshtha@ext-crisil.com at CRISIL Limited, 5th Floor, Finance, CRISIL House, Central Avenue Road, &nbsp;&nbsp;Hiranandani Business Park, Powai, Mumbai- 400 076.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+
+EUR:
+
+<table style="border-collapse: collapse; width: 97.6422%;" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;"><strong>Payment mode:</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">
+                                            ICICI Bank Ltd , Trans Trade Centre, Nr Floral Deck Plaza, Seepz MIDC, Andheri (East), Mumbai -
+                                            400 093, Bank Current Account No : 054406000066, the Swift Code being CHASDEFXXXX with NOSTRA A/C No : 6231605970 with J P
+                                            MORGAN CHASE BANK, FRANKFURT, FXRPTG Names: GTSUEUR ,IBAN No.:DE92501108006231605970.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;text-align: left;text-align: justify;"><strong>Note:</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• Please make the payment within 10 days of receiving the invoice. Kindly ignore if already paid.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• G.S.T.No:{!strGST}, Pan No:<!-- {!ibl.Billing_Customer__r.PAN__c} -->AAACT3151E</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• Location of supply:<!-- {!ibl.Billing_Customer__r.BillingCity}, --><apex:outputText >{!strcom}</apex:outputText>({!ibl.Billing_Customer__r.BillingState}), HSN/SAC Code:<apex:outputText >{!strHSN}</apex:outputText></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• In case tax is deducted, kindly issue a TDS Certificate at the earliest.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;">• In case of any clarification on Invoice, please contact Ms. Swati Kulshreshtha (022 &ndash; 3342 5851) at &nbsp;&nbsp;Swati.Kulshreshtha@ext-crisil.com at CRISIL Limited, 5th Floor, Finance, CRISIL House, Central Avenue Road, &nbsp;&nbsp;Hiranandani Business Park, Powai, Mumbai- 400 076.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+JPY:
+
+<table style="border-collapse: collapse; width: 97.6422%;" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;"><strong>Payment mode:</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• Bank Name: ICICI Bank Ltd.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• Bank Current Account No : 054406000065.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;">• The Swift Code being NWBKGB2LXXX with NOSTRA A/C No : 600004 10001247 with NATIONAL WESTMINISTER &nbsp;&nbsp;BANK LONDON.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• FXRPTG Names: GTSUGBP.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;text-align: left;text-align: justify;"><strong>Note:</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• Please make the payment within 10 days of receiving the invoice. Kindly ignore if already paid.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• G.S.T.No:{!strGST}, Pan No:<!-- {!ibl.Billing_Customer__r.PAN__c} --></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• Location of supply:<!-- {!ibl.Billing_Customer__r.BillingCity},--> <apex:outputText >{!strcom}</apex:outputText>({!ibl.Billing_Customer__r.BillingState}), HSN/SAC Code:<apex:outputText >{!strHSN}</apex:outputText></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;text-align: justify;">• In case tax is deducted, kindly issue a TDS Certificate at the earliest.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100%;font-family: arial, helvetica, sans-serif; font-size: 9pt;padding-left: 40px;text-align: left;">• In case of any clarification on Invoice, please contact Ms. Swati Kulshreshtha (022 &ndash; 3342 5851) at &nbsp;&nbsp;Swati.Kulshreshtha@ext-crisil.com at CRISIL Limited, 5th Floor, Finance, CRISIL House, Central Avenue Road, &nbsp;&nbsp;Hiranandani Business Park, Powai, Mumbai- 400 076.</td>
+                                    </tr>
+                                </tbody>
+                            </table>

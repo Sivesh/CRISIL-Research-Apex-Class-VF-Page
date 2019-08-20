@@ -1,0 +1,32 @@
+({
+    fetchdata : function(component, event, helper) {
+        var action = component.get("c.fetchProduct_Category");
+        action.setParams({
+            'Recordoppid':component.get('v.recordId')
+        });
+        action.setCallback(this, function(response){
+            var state = response.getState();
+            var resultData = response.getReturnValue();
+            if ( state === "SUCCESS" ) {
+                console.log(response);
+                component.set("v.templatelist", resultData);
+                console.log(component.get("v.templatelist"));
+            }
+        });
+        $A.enqueueAction(action);
+    },
+    gotoURL : function (component, event, helper) {
+        var tlist = component.get("v.templatelist");
+        var selectedItem = event.getSource().get("v.name");
+        console.log('ins0'+selectedItem);
+        var index = selectedItem.substr(1);
+        console.log(index);
+        //alert(tlist[index].url);
+        /*var urlEvent = $A.get("e.force:navigateToURL");
+        urlEvent.setParams({
+            "url": tlist[index].url
+        });
+        urlEvent.fire();*/
+        window.open(tlist[index].url,'_blank');
+    }
+})

@@ -1,0 +1,94 @@
+({
+    fetchdata : function(component, event, helper) {
+        var action = component.get("c.fetchProduct_Category");
+        action.setParams({
+            'Recordbillid':component.get('v.recordId')
+        });
+        action.setCallback(this, function(response){
+            var state = response.getState();
+            var resultData = response.getReturnValue();
+            if ( state === "SUCCESS" ) {
+                console.log(response);
+                component.set("v.templatelist", resultData);
+                console.log(component.get("v.templatelist"));
+            }
+        });
+        $A.enqueueAction(action);
+    },
+    gotoURL : function (component, event, helper) {
+        var tlist = component.get("v.templatelist");
+        var selectedItem = event.getSource().get("v.name");
+        console.log('ins0'+selectedItem);
+        var index = selectedItem.substr(1);
+        console.log(index);
+        //alert(tlist[index].url);
+        /*var urlEvent = $A.get("e.force:navigateToURL");
+        urlEvent.setParams({
+            "url": tlist[index].url
+        });
+        urlEvent.fire();*/
+        window.open(tlist[index].url,'_blank');
+    },
+    
+    savePDF : function(cmp, event, helper) {
+        var action = cmp.get("c.savePDFBilling");
+        
+        action.setParams({
+            'parentId':cmp.get('v.recordId')
+        });
+        action.setCallback(this, function(response) {
+            var state = response.getState();
+            if (state === "SUCCESS") {
+                alert('Attachment saved successfully');
+                
+            }
+            else if (state === "INCOMPLETE") {
+                // do something
+            }
+                else if (state === "ERROR") {
+                    var errors = response.getError();
+                    if (errors) {
+                        if (errors[0] && errors[0].message) {
+                            console.log("Error message: " + 
+                                        errors[0].message);
+                        }
+                    } else {
+                        console.log("Unknown error");
+                    }
+                }
+        });
+        $A.enqueueAction(action);
+    },
+    
+    fetchdatacredit : function(component, event, helper) {
+        var action = component.get("c.fetchProduct_CategoryCredit");
+        action.setParams({
+            'RecordCreditbillid':component.get('v.recordId')
+        });
+        action.setCallback(this, function(response){
+            var state = response.getState();
+            var resultData = response.getReturnValue();
+            if ( state === "SUCCESS" ) {
+                console.log(response);
+                component.set("v.templatelistcredit", resultData);
+                console.log(component.get("v.templatelistcredit"));
+            }
+        });
+        $A.enqueueAction(action);
+    },
+    
+    gotoURLcredit : function (component, event, helper) {
+        var tlist = component.get("v.templatelistcredit");
+        var selectedItem = event.getSource().get("v.name");
+        console.log('ins0'+selectedItem);
+        var indexcredit = selectedItem.substr(1);
+        console.log(indexcredit);
+        //alert(tlist[index].url);
+        /*var urlEvent = $A.get("e.force:navigateToURL");
+        urlEvent.setParams({
+            "url": tlist[index].url
+        });
+        urlEvent.fire();*/
+        window.open(tlist[indexcredit].url,'_blank');
+    },
+})

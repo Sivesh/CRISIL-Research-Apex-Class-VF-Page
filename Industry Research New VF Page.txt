@@ -1,0 +1,412 @@
+<apex:page controller="Industry_Research_New" contentType="application/msWord#Industry_Research_Proposal.doc">
+    <html xmlns:o='urn:schemas-microsoft-com:office:office'
+          xmlns:w='urn:schemas-microsoft-com:office:word' 
+          xmlns='<a target="_blank" href="http://www.w3.org/TR/REC-html40" rel="nofollow">http://www.w3.org/TR/REC-html40</a> '>
+        <head>
+           <style>
+               p.MsoHeader, li.MsoHeader, div.MsoHeader{
+               margin:0in;
+               margin-top:.0000pt;
+               mso-pagination:widow-orphan;
+               tab-stops:center 3.0in right 6.0in;
+               }
+               p.MsoFooter, li.MsoFooter, div.MsoFooter{
+               margin:0in;
+               margin-bottom:.0001pt;
+               mso-pagination:widow-orphan;
+               tab-stops:center 3.0in right 6.0in;
+               }
+               @page Section1{
+               size:8.5in 11.0in; 
+               margin:0.5in 0.5in 0.5in 0.5in;
+               mso-header-margin:0.2in;
+               mso-header:h1;
+               mso-footer:f1; 
+               mso-footer-margin:0.5in;
+               mso-paper-source:0;
+               }
+               div.Section1{
+               page:Section1;
+               }
+               /*Below is the style to prevent the repetition of header and Footer.. Cheers!!!*/
+               table#hrdftrtbl{
+               margin:0in 0in 0in 9in;
+               }        
+            </style>
+        </head>
+        
+        <body>
+            <!-- Content -->
+            <div class="Section1"><!--Section1 div starts-->
+                <!--Header and Footer Starts-->
+                <table id='hrdftrtbl' border='0' cellspacing='0' cellpadding='0'>
+                    <tr>
+                        <td>
+                            <!--Header-->
+                            <div style='mso-element:header' id="h1" >
+                                <p class="MsoHeader">
+                                    <table border="0" width="100%">
+                                        <tr>
+                                            <!-- <td width="30%">
+Left <br/>Header
+</td>
+<td align="center" width="40%">
+Center<br/> Header
+</td>
+<td align="right" width="30%">
+Right<br/>Header
+</td> -->
+                                            <apex:image url="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DWjU&oid=00D0w0000008cDW&lastMod=1554872313000" width="700" height="100"/>
+                                        </tr>
+                                </table>
+                            </p>
+                        </div>
+                </td>
+                
+                <td>
+                    <!--Footer-->
+                   <!-- <div style='mso-element:footer' id="f1">
+                        <p class="MsoFooter">
+                            <table width="100%" border="1" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="30%">
+                                        Left<br/>Footer
+                                    </td>
+                                    <td align="center" width="40%">
+                                        Center<br/>Footer
+                                    </td>
+                                    <td align="right" width="30%">
+                                        Page <span style='mso-field-code: PAGE '></span> of <span style='mso-field-code: NUMPAGES '></span>
+                                    </td>
+                                </tr>
+                        </table>
+                    </p>
+                </div> -->
+        </td>
+    </tr>
+</table>
+</div><!--Section1 div ends-->
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:8pt"><span style="font-family:Arial,sans-serif"><strong><span style="font-size:18.0pt">Proposal submitted to {!iOpp.Account.Name}</span></strong></span></span></p>
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify;font-size:8pt;font-family:Arial,sans-serif;font-size:10.0pt;">Confidential Document.</p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <apex:outputText style="font-size:10pt; font-family:Arial,sans-serif" value="{0, date, long}">
+            <apex:param value="{!NOW()}" /> 
+        </apex:outputText>
+        <br style="page-break-after: always" />
+        <br style="page-break-after: always" />
+        
+        <!--- <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:8pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">{!DAY(TODAY())}-{!MONTH(TODAY())}-{!YEAR(TODAY())}</span></span></span></span></span><br /> ---->
+        <br />
+        <br />
+        <apex:outputText style="font-size:10pt; font-family:Arial,sans-serif" value="{0, date, long}">
+            <apex:param value="{!NOW()}" /> 
+        </apex:outputText><br />
+        <!--- <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:&quot;Arial&quot;,serif"><em><span style="font-family:Arial,sans-serif;">{!DAY(TODAY())}-{!MONTH(TODAY())}-{!YEAR(TODAY())}</span></em></span></span></span></p> ---->
+        <!--- <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:&quot;Arial&quot;,serif"><em> </em></span></span></span></p>
+<p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">{!iOpp.Billing_Contact_Person__r.Name}</span></span></span></p>
+<p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">{!iOpp.Billing_Contact_Person__r.Designation__c}</span></span></span></p>
+<p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">{!iOpp.Account.Name}</span></span></span></p> -->
+        <apex:outputText style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;"
+            value="{!iOpp.Billing_Contact_Person__r.salutation}{!iOpp.Billing_Contact_Person__r.Contact_Name_Readonly__c}"></apex:outputText><apex:outputText rendered="{!if(iOpp.Billing_Contact_Person__r.Designation__c != '', true, false)}"><br /></apex:outputText> 
+        <apex:outputText style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;" value="{!iOpp.Billing_Contact_Person__r.Designation__c}"></apex:outputText><br />
+        <apex:outputText style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;" value="{!iOpp.Account.Name}"></apex:outputText><br />
+        <!---- <p style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;">{!iOpp.Account.BillingStreet}</p>
+<p style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;">{!iOpp.Account.BillingCity}</p> ----->
+        <apex:outputText style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;" value="{!iOpp.Billing_Contact_Person__r.MailingStreet}"></apex:outputText><br />
+        <apex:outputText style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;" value="{!iOpp.Billing_Contact_Person__r.MailingCity}, {!iOpp.Billing_Contact_Person__r.MailingState}, {!iOpp.Billing_Contact_Person__r.MailingCountry} - {!iOpp.Billing_Contact_Person__r.MailingPostalCode}"></apex:outputText><br />
+        <!-- <apex:outputText style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;" value="{!iOpp.Account.BillingState}"></apex:outputText><br />
+        <apex:outputText style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;" value="{!iOpp.Account.BillingCountry} - {!iOpp.Account.BillingPostalCode}"></apex:outputText>
+        <!--- <p style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;"></p>
+<p style="margin-left:0cm; margin-right:0cm; text-align:justify; font-family:Arial,sans-serif; font-size:10.0pt;"></p> --->
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:9pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><strong><u><span style="font-size:10.0pt"><span style="line-height:150%">Subscription to CRISIL Research products and services </span></span></u></strong></span></span></span></p>
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:9pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Dear {!iOpp.Billing_Contact_Person__r.salutation}{!iOpp.Billing_Contact_Person__r.Contact_Name_Readonly__c}</span></span></span></span></span></p>
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:9pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">It was a pleasure meeting you along with the team from Department of Economic and Policy Research and we thank you for your valuable time and feedback. We are glad to have received this opportunity to further fortify our relationship with {!iOpp.Account.Name} of India by offering our Industry Research Services to best cater to your research requirements. CRISIL Research has an existing relationship with xxx for xxx and we look forward to scaling it up to service a larger gamut of {!iOpp.Account.Name}.</span></span></span></span></span></p>
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:9pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">The proposal has a detailed description of the below mentioned products that were discussed during the demonstration we conducted for your team:</span></span></span></span></span></p>
+        <ul>
+            <li style="text-align:justify;font-family:Arial,sans-serif;font-size:10.0pt">Detailed Research on <apex:outputText style="font-family:Arial,serif; font-size:10.0pt" escape="false" > :<!-- {!Product_count} --> </apex:outputText> <!-- Industries :--> </li>
+            <!--- <apex:repeat value="{!lstOppli}" var="oli">
+                <apex:outputText style="font-size:10pt; font-family:Arial,sans-serif" value="{!oli.Product_Count__c}"></apex:outputText><br/>
+            </apex:repeat> --->
+            <!--<li style="text-align:justify"><span style="font-size:9pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Special coverage on [Product Category 1]</span></span></span></span></span></li>
+<li style="text-align:justify"><span style="font-size:9pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">[Product Category 1] Agricultural Value Chain</span></span></span></span></span></li>
+<li style="text-align:justify"><span style="font-size:9pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">[Product Category 2]NBFC Report</span></span></span></span></span></li>
+<li style="text-align:justify"><span style="font-size:9pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">[Product Category 3]SME Report</span></span></span></span></span></li>
+<li style="text-align:justify"><span style="font-size:9pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Real Estate Report</span></span></span></span></span></li>-->
+           <table style="border-collapse: collapse; width: 200%;padding-left: 200px;" border="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 100%;font-size:10pt; font-family:Arial,sans-serif;padding-left: 100px;">
+                            <apex:repeat value="{!lstOppli}" var="oli">
+                                <li><apex:outputText style="font-size:10pt; font-family:Arial,sans-serif;" rendered="{!oli.Cost_Center__c == 'Industry'}" value="{!oli.Product_Category__r.Name}"></apex:outputText>
+                                <apex:outputText style="font-size:10pt; font-family:Arial,sans-serif;" rendered="{!Text(oli.Product_Count__c) != ''}">({!oli.Product_Count__c})</apex:outputText> <br/><p/>
+                           </li> </apex:repeat> 
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </ul>
+            <!--- <apex:repeat value="{!lstq}" var="qli">
+<apex:outputText style="font-size:10pt; font-family:Arial,sans-serif" value="{!qli.Product_Category__r.Name}"></apex:outputText><br/>
+</apex:repeat> --->
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"></p>
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:9pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><em><span style="font-size:10.0pt"><span style="line-height:150%">The details of these products are provided in </span></span></em><span style="color:null"><em><span style="font-size:10.0pt"><span style="line-height:150%">Annexure I.</span></span></em></span></span></span></span></p>
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:8pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">We would be happy to discuss or clarify any aspect of this proposal with you at your convenience. We look forward to initiating a long-standing relationship with {!iOpp.Account.Name} by servicing a larger spectrum of your business research and information requirements.</span></span></span></span></span></p>
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:8pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Best regards,</span></span></span></span></span></p>
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"></p>
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:8pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">{!iOpp.Primary_Marketing_Contact_PMC__r.Name}</span></span></span></span></span></p>
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:8pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">{!iOpp.Primary_Marketing_Contact_PMC__r.HRMS_Designation__c}</span></span></span></span></span></p>
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:8pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">CRISIL Research</span></span></span></span></span></p>
+        <br style="page-break-after: always" />
+        <h2 style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.0pt"><span style="line-height:150%"><span style="font-family:Arial,serif"><span style="color:#3c3c3c"><span style="line-height:150%"><span style="color:red">Unique Strengths of CRISIL Research:</span></span></span></span></span></span></h2>
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"></p>
+        <ol>
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><strong><span style="font-size:10.0pt"><span style="line-height:150%">No. of years in research business :</span></span></strong></span></li>
+        </ol>
+        <ul style="margin-left:70px">
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">CRISIL is into research business for more than 2 decades and has trends across industries over multiple economic cycles </span></span></span></li>
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">CRISIL has a large dedicated research division</span></span></span></li>
+        </ul>
+        <ol start="2">
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><strong><span style="font-size:10.0pt"><span style="line-height:150%">Size of dedicated research team :</span></span></strong></span></li>
+        </ol>
+        <ul style="margin-left:70px">
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">CRISIL has the largest dedicated research team of close to 250 members</span></span></span></li>
+        </ul>
+        <ol start="3">
+            <li style="line-height:150%;font-size:10.0pt;line-height:150%; font-family:Arial,sans-serif"><strong>No. of clients of research business :</strong></li>
+        </ol>
+        <ul style="margin-left:70px">
+            <li style="line-height:150%; font-family:Arial,sans-serif"><span ><span style="font-size:10.0pt"><span style="line-height:150%">CRISIL has largest set of clients with almost 450 clients</span></span></span></li>
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">More than 92% of banks in India by asset base refer CRISIL's research offerings for better decision making</span></span></span></li>
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">In addition to banks there are almost 50 NBFCs, top corporates, private equities, investment banks </span></span></span></li>
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Ministry of Finance, Regulators and Competition Commission of India use CRISIL's research</span></span></span></li>
+        </ul>
+        <ol start="4">
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><strong><span style="font-size:10.0pt"><span style="line-height:150%">Coverage of research :</span></span></strong></span></li>
+        </ol>
+        <ul style="margin-left:70px">
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">CRISIL has the widest coverage spanning across more than 100 industries</span></span></span></li>
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">CRISIL has very granular research uniquely supported by ground-level data and perspectives on lead indicators from large network of primary sources </span></span></span></li>
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Credit Rating Reports on more than 14,000 companies rated by CRISIL</span></span></span></li>
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">CRISIL provides benchmarks/aggregatesacross more than 200 industries</span></span></span></li>
+        </ul>
+        <ol start="5">
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><strong><span style="font-size:10.0pt"><span style="line-height:150%">Frequency of updation of research :</span></span></strong></span></li>
+        </ol>
+        <ul style="margin-left:70px">
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">CRISIL has unmatched frequency with more than 25,000 updates across industries in a year through near real time online platform</span></span></span></li>
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">CRISIL provides real time updation and alerts of Rating actions across ratings on more than 38,000 companies </span></span></span></li>
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">CRISIL provides automatic real time updation of client's credit portfolio of rated borrowers through its online platform</span></span></span></li>
+        </ul>
+        <ol start="6">
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><strong><span style="font-size:10.0pt"><span style="line-height:150%">Alerts:</span></span></strong></span></li>
+        </ol>
+        <ul style="margin-left:70px">
+            <li style="text-align:justify; font-family:Arial,sans-serif"><span style="font-size:8pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Since we update data and analysis on our website on a near real-time basis, we have built a facility for alerts. Users can set alerts for one or many sectors of their choice. They receive an e-mail with the relevant link as soon as any section in the selected industries is update</span></span></span></span></span></li>
+        </ul>
+        <ol start="7">
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><strong><span style="font-size:10.0pt"><span style="line-height:150%">Unique features of products:</span></span></strong></span></li>
+        </ol>
+        <ul style="margin-left:70px">
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Analyst presentation - Full research across each industry is condensed into a crisp presentation to provide users quick overview on the industry</span></span></span></li>
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Video clips of vertical experts - For swifter dissemination of CRISIL's reaction to</span></span></span></li>
+        </ul>
+        <ul style="margin-left:100px">
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Impact of major events on macroeconomic environment</span></span></span></li>
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Change in outlook of the industry</span></span></span></li>
+        </ul>
+        <ul style="margin-left:70px">
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">In Motion - Animated representation of manufacturing process or supply-chain structure enables quick understanding to the user without the need of a plant visit by the officers/business analysts</span></span></span></li>
+        </ul>
+        <ul style="margin-left:70px">
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">News and Analysis - Allows convenient access to sector news without missing any along with CRISIL Research's views on important developments</span></span></span></li>
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Ratings Corner: </span></span></span></li>
+        </ul>
+        <ul style="margin-left:100px">
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Provides credit profile of the sector, changes in the median rating and weighted average rating of the industry</span></span></span></li>
+            <li><span style="line-height:150%; font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Shifting trend of ratio of upgrades on downgrades (credit ratio) gives insights of changing fortunes of sector</span></span></span></li>
+        </ul>
+        <p style="margin-left:0cm; margin-right:0cm"><span style="font-size:8pt"><span style="font-family:Arial,sans-serif"><strong><span style="font-size:10.0pt"><span style="color:red">Forecasting accuracy:</span></span></strong></span></span></p>
+        <p style="margin-left:0cm; margin-right:0cm"></p>
+        <p style="margin-left:0cm; margin-right:0cm"><span style="font-size:8pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">CRISIL Research has an exemplary track record in forecasting the growth outlook across industries with a high degree of accuracy. Here are some of the examples highlighting the convergence between the forecasts of CRISIL Research and the actual trends that were observed across industries.</span></span></span></span></span></p>
+        <ul style="margin-left:47px">
+            <li style="text-align:justify; font-family:Arial,sans-serif"><span style="line-height:150%"><strong><span style="font-size:10.0pt"><span style="line-height:150%">Automobiles - </span></span></strong><span style="font-size:10.0pt"><span style="line-height:150%">Before the beginning of fiscal 2015, we forecasted that domestic passenger vehicles sales volumes would increase by 4-6 per cent in 2014-15, and that of two wheelers would rise by 8-10 per cent. Although we erred slightly on the mix of growth between motorcycles and scooters (largely due to the poor monsoons impacting motor cycle sales), our views in respect of overall growth in these two segments were on track (4.0 per cent for passenger vehicles and 8.1 per cent for two wheelers)</span></span></span></li>
+            <li style="text-align:justify; font-family:Arial,sans-serif"><span style="line-height:150%"><strong><em><span style="font-size:10.0pt"><span style="line-height:150%">Power -</span></span></em></strong><span style="font-size:10.0pt"><span style="line-height:150%"> While the challenges faced by power generation companies because of lack of coal availability and the weak financial position of distribution companies were well known, CRISIL Research was the first to point out that subdued demand in the wake of slower GDP growth is an equally critical issue. Due to weak GDP growth and slowing industrial demand, we forecasted a steep decline in power demand growth to 1 per cent in 2013-14 from 6.5 per cent in 2012-13. In line with our expectations, power demand grew at only 0.4 per cent in 2013-14</span></span></span></li>
+            <li style="text-align:justify; font-family:Arial,sans-serif"><span style="line-height:150%"><strong><em><span style="font-size:10.0pt"><span style="line-height:150%">Refining and marketing - </span></span></em></strong><span style="font-size:10.0pt"><span style="line-height:150%">For 2013-14, </span></span><span style="font-size:10.0pt"><span style="line-height:150%">CRISIL Research</span></span><span style="font-size:10.0pt"><span style="line-height:150%"> had forecasted a sharp slowdown in demand growth of domestic petroleum products to 1-2 per cent vis-&agrave;-vis ~6 per cent demand growth in 2012-13. The actual demand growth turned out to be 0.7 per cent in 2013-14. Our forecast was in line with the actuals as we have a good hold on each of the end user sector and were able to precisely predict the trends</span></span></span></li>
+            <li style="text-align:justify; font-family:Arial,sans-serif"><span style="line-height:150%"><strong><em><span style="font-size:10.0pt"><span style="line-height:150%">Cement -</span></span></em></strong><span style="font-size:10.0pt"><span style="line-height:150%"> CRISIL Research forecasted that cement demand growth would remain subdued for the second consecutive year in 2013-14. Our demand growth estimate of 2.5 per cent was considerably lower than consensus or player estimates. Eventually, we ended the year with 2.7 per cent demand growth. Our views on profitability of players coming under severe pressure were correct. Similarly, towards the beginning of the fiscal, we forecast that demand growth would pick up to 5.5-6.0 per cent in 2014-15. The year ended with 5.2 per cent demand growth. Thus, we were directionally correct though the extent of growth in demand was a tad lower than what we had anticipated</span></span></span></li>
+            <li style="text-align:justify; font-family:Arial,sans-serif"><span style="line-height:150%"><strong><em><span style="font-size:10.0pt"><span style="line-height:150%">Road and Highways - </span></span></em></strong><span style="font-size:10.0pt"><span style="line-height:150%">CRISIL Research was able to spot a trend change and correctly forecasted a steep decline in execution for National Highway projects in 2013-14. In the previous five years, execution had witnessed a steady double digit increase. Similarly, in 2014-15 also, we correctly forecast a further decline in execution, by analysing the awarding, project pipeline and execution capability of players</span></span></span></li>
+            <li style="text-align:justify; font-family:Arial,sans-serif"><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><strong><em><span style="font-size:10.0pt"><span style="line-height:150%">Pharmaceuticals -</span></span></em></strong><span style="font-size:10.0pt"><span style="line-height:150%"> Despite the volatile regulatory environment, both on the domestic (DPCO controls on drug pricing) as well as international front (increased scrutiny and sanctions), CRISIL Research's revenue growth estimates for 2013-14 were largely in line</span></span></span></span></span></li>
+        </ul>
+        <p style="font-size:10pt; font-family:Arial,sans-serif"><span ><span style="color:red">Approach for Industry analysis:</span></span></p>
+        <apex:image style="text-align:center;" value="https://crisil--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150w000000DXSF&oid=00D0w0000008cDW&lastMod=1555482261000" width="558" height="336"/>                        
+        <br />
+        <h2 style="margin-left:0cm; margin-right:0cm"><span style="font-size:10pt"><span style="font-family:Arial,serif"><span style="color:#3c3c3c"><span style="color:red">CRISIL ClientConnect initiatives specially designed for our esteemed clients:</span></span></span></span></h2>
+        <p style="margin-left:0cm; margin-right:0cm"></p>
+        <ul>
+            <li style="text-align:justify"><span style="line-height:1.5"><span style="font-size:10pt"><span style="font-family:Arial,sans-serif"><strong><span style="font-size:10.0pt">Knowledge sharing session (KSS): </span></strong><span style="font-size:10.0pt">We will be pleased to conduct KSS on economy or industries of your interest</span></span></span></span></li>
+            <li style="text-align:justify"><span style="line-height:1.5"><span style="font-size:10pt"><span style="font-family:Arial,sans-serif"><strong><span style="font-size:10.0pt">Presentation to Board members or management committees: </span></strong><span style="font-size:10.0pt">We would be happy to arrange presentations by our Chief Economist or Senior Industry Experts on </span></span></span></span><span style="font-size:9pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%"><span style="line-height:1.5">macro</span></span></span></span></span></span><span style="line-height:1.5"><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"> economy or select industries</span></span></span></span></li>
+            <li style="text-align:justify"><span style="line-height:1.5"><span style="font-size:10pt"><span style="font-family:Arial,sans-serif"><strong><span style="font-size:10.0pt">Webinar: </span></strong><span style="font-size:10.0pt">We propose to conduct </span></span></span></span><span style="font-size:9pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%"><span style="line-height:1.5">few</span></span></span></span></span></span><span style="line-height:1.5"><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"> webinars over the next one year. Users of RBI would be entitled to participate in all these web-conferences </span></span></span></span></li>
+            <li style="text-align:justify"><span style="line-height:1.5"><span style="font-size:10pt"><span style="font-family:Arial,sans-serif"><strong><span style="font-size:10.0pt">Analyst Interaction: </span></strong><span style="font-size:10.0pt">Users will continue to enjoy the flexibility to interact with our analysts for any clarifications or understanding the current trends of industries</span></span></span></span></li>
+            <li style="text-align:justify"><span style="line-height:1.5"><span style="font-size:10pt"><span style="font-family:Arial,sans-serif"><strong><span style="font-size:10.0pt">Client servicing facility</span></strong>:<span style="font-size:10.0pt"> For any additional secondary information on any subscribed industry, you can email your query to our client servicing helpdesk (</span><a href="mailto:clientservicing@crisil.com"><span style="font-size:10.0pt">clientservicing@crisil.com</span></a><span style="font-size:10.0pt">)</span></span></span></span><span style="font-size:9pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%"><span style="line-height:1.5">:We</span></span></span></span></span></span><span style="line-height:1.5"><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"> will service those queries within 8-10 working hours if the information is available with us</span></span></span></span></li>
+            <li style="text-align:justify"><span style="line-height:1.5"><span style="font-size:10pt"><span style="font-family:Arial,sans-serif"><strong><span style="font-size:10.0pt">Training of users on our research platform: </span></strong><span style="font-size:10.0pt">Our dedicated team will train the existing/new users across all major offices to ensure that our services are more effectively used</span></span></span></span></li>
+        </ul>
+        <h2 style="margin-left:0cm; margin-right:0cm"><span style="font-size:10pt"><span style="font-family:Arial,serif"><span style="color:#3c3c3c"><span style="color:red">Examples of some of the recent queries resolved by our Client Servicing Desk:<span></span></span></span></span></span></h2>
+        <p style="margin-left:0cm; margin-right:0cm"><span style="font-size:10pt"><span style="font-family:Arial,serif"><span style="color:#000000"><span style="font-size:10.0pt">Our Client Servicing Desk has resolved more than 1100 queries coming from our leading clients this year across BFSI sector. </span></span></span></span></p>
+        <ul>
+            <li style="text-align:justify"><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">New licensing system under phase III for FM radio stations, stipulates revenue sharing @ 4% in addition to the one-time fee for migration from phase II to phase III. Please share details of various expenses like staff cost, production expenses, royalty fee, operating profit margin etc. for FM players in phase III scenario</span></span></span></span></span></li>
+            <li style="text-align:justify"><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">What is the collection track record of PGCIL under the pooling mechanism for inter-state transmission projects</span></span></span></span></span></li>
+            <li style="text-align:justify"><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Please share the average realization (in Rs/kg) for Passenger Car Radial (PCR), Truck and Bus Radial (TBR), non-radial Truck and Bus and entire tyre industry separately</span></span></span></span></span></li>
+            <li style="text-align:justify"><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">What will be the impact of Mines and Mineral Amendment Act, 2015 on cement sector? Please share the past 10 years trend of royalty rates for limestone?</span></span></span></span></span></li>
+            <li style="text-align:justify"><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Based on the auction what will be the coal cost for Hindalco? What is the capacity of these mines and the distance from the plant? When will the mining start from these coal blocks won in the auction? What will be cheaper - imported coal or coal from auction?</span></span></span></span></span></li>
+            <li style="text-align:justify"><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Please share the cement road traffic in million tonnes for the past six years? What is the average lead distance for cement -road and cement - rail? What is the average freight rate for road- cement for the past five years</span></span></span></span></span></li>
+            <li style="text-align:justify"><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">What is the scenario of demand and supply of Polyethylene Terephthalate Resin (PET) in India?Who are the major players in it? Who are the major consumers? What are the current prices of PET? What would be the impact of fall in crude prices on it?</span></span></span></span></span></li>
+            <li style="text-align:justify"><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Please share the financial performance (sales, OPM, Gearing and ICR) of the Indian steel players rated BBB and below over the last 5 years</span></span></span></span></span></li>
+            <li style="text-align:justify"><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Please share (a) for how many MW has long term competitive bids called by various states in last 2-3 years? (b) How many long term PPAs (MW) signed on competitive basis in last 2-3 years?</span></span></span></span></span></li>
+            <li style="text-align:justify"><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">What would be the impact of Chinese policy on Indian export and the new export markets for Indian yarn? What would be the current capex investment in the spinning and weaving sector by organised textile players?</span></span></span></span></span></li>
+            <li style="text-align:justify"><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">What is the total auto finance outstanding for PVs and CVs separately from FY2011-16 on the basis of which category wise market share is getting calculated</span></span></span></span></span></li>
+            <li style="text-align:justify"><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">What is the statistics for production and demand for each of the fertilizer products - urea, DAP, Complex, MOP, SSP, ANP, CAN, AS updated for FY 2016</span></span></span></span></span></li>
+            <li style="text-align:justify"><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Please highlight the following 1) List of regulatory approvals required for setting of spinning and Dyeing unit in Gujarat 2) Is Import of cotton feasible option for a spinning plant in India &amp; 3) Comparative study of Man-made filers vis a vis Cotton made Garments</span></span></span></span></span></li>
+        </ul>
+        <p style="margin-left:0cm; margin-right:0cm"><span style="font-size:8pt"><span style="font-family:Arial,sans-serif"><strong><span style="font-size:10.0pt"><span style="color:red">Examples of Knowledge Sharing Sessions arranged for our key clients:</span></span></strong></span></span><br />
+            <br />
+            <span style="font-size:13pt"><span style="font-family:Arial,serif"><span style="color:#000000"><span style="font-size:10.0pt">Our Economist and Industry experts have conducted dedicated Knowledge Sharing Sessions for close to 70 clients this year across the BFSI sector on:</span></span></span></span></p>
+        <ul>
+            <li><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Ind AS that gave a brief overview of the key accounting changes that are likely to impact the financials of CRISIL rated companies. It also included a sectoral overview on the accounting changes and covered how CRISIL would treat these accounting changes in its analysis. </span></span></span></span></span></li>
+            <li><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Economy and discussion on the key operational parameters fortifying top-line and bottom-line growth in Fiscal 2017 across Industries</span></span></span></span></span></li>
+            <li><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Outlook on Real Estate</span></span></span></span></span></li>
+            <li><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Outlook on Cement</span></span></span></span></span></li>
+            <li><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Outlook on Renewable Energy, Photo voltaic cells &amp; Solar Panels</span></span></span></span></span></li>
+            <li><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Outlook on commodity prices on MSME industries</span></span></span></span></span></li>
+            <li><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Outlook of NBFCs and discussion on the implications on the financial and operational parameters of NBFCs after harmonization and synchronization of regulatory practices</span></span></span></span></span></li>
+            <li><span style="font-size:10pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Outlook of Pharmaceutical Industry</span></span></span></span></span></li>
+        </ul>
+        <br style="page-break-after: always" />
+        <p style="font-family:Arial,sans-serif;color:red;font-size:10pt;"><strong>Special offer to {!iOpp.Account.Name}:</strong></p>
+        <!--  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:8pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="color:black"><span style="font-size:10.0pt"><span style="line-height:150%">List only Category, list fee and Mandate fee. Products not required</span></span></span></span></span></span></p>
+        <table border="1" cellspacing="0" class="Table" style="border-collapse:collapse; border:solid white 1.0pt; width:100%pt">
+            <tbody>
+                <tr>
+                    <td style="background-color:#a6a6a6; height:1.05pt; width:34.05pt">
+                        <p style="margin-left:0cm; margin-right:0cm; text-align:center"><span style="font-size:12pt"><span style="line-height:16.0pt"><span style="font-family:&quot;Arial&quot;,serif"><strong><span style="font-size:10.0pt"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">S.No</span></span></strong></span></span></span></p>
+                    </td>
+                    <td style="background-color:#a6a6a6; height:1.05pt; width:230.9pt">
+                        <p style="margin-left:0cm; margin-right:0cm; text-align:center"><span style="font-size:12pt"><span style="line-height:16.0pt"><span style="font-family:&quot;Arial&quot;,serif"><strong><span style="font-size:10.0pt"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Product Catagories</span></span></strong></span></span></span></p>
+                    </td>
+                    <td style="background-color:#a6a6a6; height:1.05pt; width:119.0pt">
+                        <p style="margin-left:0cm; margin-right:0cm; text-align:center"><span style="font-size:12pt"><span style="line-height:16.0pt"><span style="font-family:&quot;Arial&quot;,serif"><strong><span style="font-size:10.0pt"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Standard Annual Subscription Fee (Rs.)</span></span></strong></span></span></span></p>
+                    </td>
+                    <td style="background-color:#a6a6a6; height:1.05pt; width:130.15pt">
+                        <p style="margin-left:0cm; margin-right:0cm; text-align:center"><span style="font-size:12pt"><span style="line-height:16.0pt"><span style="font-family:&quot;Arial&quot;,serif"><strong><span style="font-size:10.0pt"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Special Offer</span></span></strong></span></span></span></p>
+                        
+                        <p style="margin-left:0cm; margin-right:0cm; text-align:center"><span style="font-size:12pt"><span style="line-height:16.0pt"><span style="font-family:&quot;Arial&quot;,serif"><strong><span style="font-size:10.0pt"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">(Rs.) </span></span></strong></span></span></span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color:#e5e3cf; height:101.6pt; width:34.05pt">
+                        <p style="margin-left:0cm; margin-right:0cm"><span style="font-size:10pt"><span style="line-height:16.0pt"><span style="font-family:&quot;Arial&quot;,serif"><em><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">1</span></em></span></span></span></p>
+                        <p style="margin-left:0cm; margin-right:0cm"></p>
+                        <p style="margin-left:0cm; margin-right:0cm"></p>
+                        <p style="margin-left:0cm; margin-right:0cm"></p>
+                        <p style="margin-left:0cm; margin-right:0cm"></p>
+                    </td>
+                    <td style="background-color:#e5e3cf; height:101.6pt; width:230.9pt; font-family:Arial,sans-serif; font-size:10pt">
+                        // <p style="margin-left:0cm; margin-right:0cm"><span style="font-size:10pt"><span style="line-height:16.0pt"><span style="font-family:&quot;Arial&quot;,serif"><em><span style="font-family:Arial,sans-serif;">Detailed Industry Research:</span></em></span></span></span></p> 
+                        <apex:repeat value="{!lstOppli}" var="oli">
+                            <apex:outputText value="{!oli.Product_Category__r.Name}" /><p/>
+                        </apex:repeat>
+                        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"></p>
+                    </td>
+                    <td style="background-color:#e5e3cf; height:101.6pt; width:119.0pt; font-family:Arial,sans-serif; font-size:10pt">
+                        <apex:repeat value="{!lstOppli}" var="oli">
+                            <apex:outputText value="{!oli.ListPrice__c}" /><p/>
+                        </apex:repeat> 
+                    </td>
+                    <td style="background-color:#e5e3cf; height:101.6pt; width:130.15pt; font-family:Arial,sans-serif; font-size:10pt">
+                        <p style="margin-left:0cm; margin-right:0cm; text-align:center"></p>
+                        <p style="margin-left:0cm; margin-right:0cm; text-align:center"></p>
+                        <apex:repeat value="{!lstOppli}" var="oli">
+                            <apex:outputText value="{!oli.Sales_Price__c}" /><br/><p/>
+                        </apex:repeat> 
+                        <p style="margin-left:0cm; margin-right:0cm; text-align:center"></p>
+                        <p style="margin-left:0cm; margin-right:0cm; text-align:center"></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table> --->
+        <table style="border-collapse: collapse; width: 100%;" border="1">
+            <tbody>
+                <tr>
+                    <td style="width: 33.3333%; background-color: #a6a6a6; text-align: center;"><strong><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Product Categories</span></strong></td>
+                    <td style="width: 33.3333%; background-color: #a6a6a6; text-align: center;"><strong><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Standard Annual Subscription Fee ({!iOpp.CurrencyIsoCode})</span></strong></td>
+                    <td style="width: 33.3333%; background-color: #a6a6a6; text-align: center;"><strong><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Special Offer ({!iOpp.CurrencyIsoCode})</span></strong></td>
+                </tr>
+                <tr>
+                    <td style="width: 33.3333%; background-color: #e5e3cf;font-family:Arial,sans-serif;font-size: 10pt;padding-left:20px">
+                        <apex:repeat value="{!lstOppli}" var="oli">
+                            <apex:outputText rendered="{!oli.Cost_Center__c == 'Industry'}" />{!oli.Product_Category__r.Name}
+                            <apex:outputText rendered="{!Text(oli.Product_Count__c) != ''}">({!oli.Product_Count__c})</apex:outputText> 
+                            <p/>
+                        </apex:repeat></td>
+                    <td style="width: 33.3333%; background-color: #e5e3cf;font-family:Arial,sans-serif;font-size: 10pt;padding-left:40px">
+                        <apex:repeat value="{!lstOppli}" var="oli">
+                            <!-- <apex:outputText rendered="{!oli.Cost_Center__c == 'Industry'}" value="{!oli.ListPrice__c}" /><p/>-->
+                            <apex:outputText value="{0, number, #,###}" rendered="{!oli.Cost_Center__c == 'Industry'}">
+                                <apex:param value="{!ROUND(oli.ListPrice__c,0)}" />
+                            </apex:outputText>
+                            <br/><p/>
+                        </apex:repeat> 
+                    </td>
+                    <td style="width: 33.3333%; background-color: #e5e3cf;font-family:Arial,sans-serif;font-size: 9pt;padding-left:40px">
+                        <apex:repeat value="{!lstOppli}" var="oli">
+                            <!-- <apex:outputText rendered="{!oli.Cost_Center__c == 'Industry'}" value="{!oli.Sales_Price__c}" /> -->
+                            <apex:outputText value="{0, number, #,###}" rendered="{!oli.Cost_Center__c == 'Industry'}">
+                                <apex:param value="{!ROUND(oli.Sales_Price__c,0)}" />
+                            </apex:outputText><br/><p/>
+                        </apex:repeat> 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"></p>
+        <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:12pt"><span style="line-height:150%"><span style="font-family:&quot;Arial&quot;,serif"><strong><u><span style="font-size:10.0pt"><span style="line-height:150%"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Please note:</span></span></span></u></strong></span></span></span></p>
+        <ul style="margin-left:40px">
+            <li style="text-align:justify"><span style="font-size:8pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style=""><span style="font-size:10.0pt"><span style="line-height:150%">Taxes are extra, will be applicable on the total amount</span></span></span></span></span></span></li>
+        </ul>
+        <ul style="margin-left:40px">
+            <li style="text-align:justify"><span style="font-size:8pt"><span style="line-height:150%"><span style="font-family:Arial,sans-serif"><span style="font-size:10.0pt"><span style="line-height:150%">Access will be provided to the users on our web-based platform </span></span><a href="http://www.crisilresearch.com"><span style="font-size:10.0pt"><span style="line-height:150%">www.crisilresearch.com</span></span></a><span style="font-size:10.0pt"><span style="line-height:150%">. Unique user IDs will be created by the Product Support team and training will be provided to ensure a smooth user-experience on the platform</span></span></span></span></span></li>
+        </ul>
+        <p style="margin-left:0cm; margin-right:0cm"></p>
+        <h2 style="font-size:10pt; text-align:left; font-family:Arial,serif"><span style="color:#3c3c3c"><span style="color:red">Annexure I: Introduction to CRISIL Research Services.</span></span></h2>
+    <apex:outputText style="font-family:Arial,serif; font-size:10.0pt" value="{!stran}" escape="false" />
+</body>
+</html>
+</apex:page>

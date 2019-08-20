@@ -1,0 +1,56 @@
+public class Invoice_Template_Single {
+    
+    @AuraEnabled
+    public static List<wrapperlist> fetchProduct_Category(id Recordbillid) {
+        map<string,wrapperlist> upwrapperlist = new map<string,wrapperlist>();
+        for(OFA_Product_Line_Items__c ofa: [select id,Product_Category__r.Name, Product_Category__r.OFA_Product_Category_Id__c,
+                                            Billing__r.id , Billing_Line_Item__r.id, Billing_Line_Item__r.Particulars__c, 
+                                            Billing_Line_Item__r.Amount__c
+                                            from OFA_Product_Line_Items__c where Billing__c =: Recordbillid]){
+            
+            for(Billing_Line_Item__c bli:[Select id, Particulars__c, Amount__c, Billing__r.id From Billing_Line_Item__c 
+                                          Where Billing__c =: Recordbillid]){
+                
+                
+                    if((ofa.Product_Category__r.OFA_Product_Category_Id__c != '200109' ))
+                    { 
+                        wrapperlist iwrapper = new wrapperlist();
+                        iwrapper.template_name = 'Invoice Without Open Training';
+                        iwrapper.url = '/apex/OFA_Billing_Format?id='+ofa.Billing__r.Id;
+                        upwrapperlist.put(iwrapper.template_name,iwrapper);
+                    }
+                    
+                    if(ofa.Product_Category__r.OFA_Product_Category_Id__c == '200109')
+                    { 
+                        wrapperlist iwrapper3 = new wrapperlist();
+                        iwrapper3.template_name = 'Open Training';
+                        iwrapper3.url = '/apex/Invoice_Open_Training?id='+ofa.Billing__r.Id;
+                        upwrapperlist.put(iwrapper3.template_name,iwrapper3);
+                    }
+                    if((ofa.Product_Category__r.OFA_Product_Category_Id__c == '200109') || (ofa.Product_Category__r.OFA_Product_Category_Id__c != '200109'))
+                    { 
+                        wrapperlist iwrapper4 = new wrapperlist();
+                        iwrapper4.template_name = 'Credit Note';
+                        iwrapper4.url = '/apex/Credit_Note?id='+ofa.Billing__r.Id;
+                        upwrapperlist.put(iwrapper4.template_name,iwrapper4);
+                    }
+                    if((bli.Particulars__c != 'Null'))
+                    { 
+                        wrapperlist iwrapper5 = new wrapperlist();
+                        iwrapper5.template_name = 'OPE Invoice';
+                        iwrapper5.url = '/apex/OPE_Invoice?id='+bli.Billing__r.Id;
+                        upwrapperlist.put(iwrapper5.template_name,iwrapper5);
+                    }
+                }
+            }
+        system.debug(upwrapperlist.values());
+        return upwrapperlist.values();     
+    }
+    public class wrapperlist
+    {
+        @AuraEnabled public string template_name {get;set;}
+        @AuraEnabled public string url {get;set;}
+        
+    }
+    
+}

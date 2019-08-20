@@ -1,0 +1,25 @@
+<aura:component controller="template_landing" implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="templatelist" type="object" />
+    <aura:handler name="init" value="{!this}" action="{!c.fetchdata}"/>
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th>Template Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.templatelist}" var="item" indexVar="index">
+                <tr class="slds-hint-parent">
+                    <td>
+                        {!item.template_name}
+                    </td>
+                    <td>
+                        <lightning:button variant="brand" label="Open" name="{!'f'+index}" onclick="{!c.gotoURL}"/>
+                    </td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>

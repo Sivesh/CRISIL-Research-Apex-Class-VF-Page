@@ -1,0 +1,174 @@
+trigger Mandate_Generation_On_Request_Approval on Opportunity (after update) {
+    
+    Boolean m_CNsetup = false;  
+    
+    // Get current profile custom setting.
+    Trigger_controller__c m_CNprofile = Trigger_controller__c.getvalues(UserInfo.getProfileId()); 
+    system.debug(' m_CNprofile'+m_CNprofile);
+    
+    // Get current Organization custom setting.
+    Trigger_controller__c m_CNOrg = Trigger_controller__c.getvalues(UserInfo.getOrganizationId());
+    system.debug(' m_CNOrg'+m_CNOrg);
+    
+    // Get current User custom setting.
+    Trigger_controller__c m_CNuser = Trigger_controller__c.getValues(UserInfo.getUserId());
+    system.debug(' m_CNuser'+m_CNuser);
+    
+    if(m_CNuser != null){
+        m_CNsetup = m_CNuser.Mandate_Generation_On_Request_Approval__c;
+        system.debug(' m_CNsetup'+m_CNsetup);
+    }     
+    else if(m_CNprofile != null) {
+        m_CNsetup = m_CNprofile.Mandate_Generation_On_Request_Approval__c; 
+        system.debug(' m_CNsetup'+m_CNsetup);
+    }    
+    else if(m_CNOrg != null){
+        m_CNsetup = m_CNOrg.Mandate_Generation_On_Request_Approval__c;
+        system.debug(' m_CNsetup'+m_CNsetup);
+    } 
+    
+    if(m_CNsetup == True){
+        
+        set<id>setOppIds = new set<id>();
+        list<Mandate__c>lstCreatMandate = new list<Mandate__c>();
+        list<Mandate_Line_Item__c>lstCreatMandateLinItems = new list<Mandate_Line_Item__c>();
+        map<id, id>mapMLIIdToOLIId = new map<id, id>();
+        list<Mandate_Product_Line_Item__c>lstMandateProdLinItems = new list<Mandate_Product_Line_Item__c>();
+        list<Mandate_Product_Team__c>lstinsrtManProdTeams = new list<Mandate_Product_Team__c>();
+        list<Related_Company__c>lstRelCompany = new  list<Related_Company__c>();
+        
+        for(Opportunity iOpp : Trigger.New){
+            
+            if(Trigger.oldmap.get(iOpp.id).Mandate_Request_Status__c != iOpp.Mandate_Request_Status__c &&
+               iOpp.Mandate_Request_Status__c == 'Request Accepted'){
+                   
+                   setOppIds.add(iOpp.id);
+               }        
+        }
+        if(setOppIds.size() > 0){
+            
+            //manadate creation            
+            DescribeSObjectResult describeResult = Opportunity.getSObjectType().getDescribe(); 
+            List<String> fieldNames = new List<String>( describeResult.fields.getMap().keySet() );  
+            String query =    ' SELECT ' + String.join( fieldNames, ',' ) +' FROM ' + describeResult.getName() +' WHERE ';
+            query += ' id IN :setOppIds';
+            query += ' LIMIT 1';
+            
+            Opportunity iOpp = Database.query(query);   
+            
+            Mandate__c iMan = new Mandate__c();
+            
+            for(Opportunity_to_Mandate_Mapping__c iOM : Opportunity_to_Mandate_Mapping__c.getAll().values()){
+                
+                iMan.put(iOM.Mandate_Field_API_Name__c, iOpp.get(iOM.Opportunity_Field_API_Name__c));
+            }
+            
+            if(iMan.Collection_Contact_Person__c == null && iOpp.Billing_Contact_Person__c != null){
+                
+                iMan.Collection_Contact_Person__c = iOpp.Billing_Contact_Person__c;
+            }
+            lstCreatMandate.add(iMan);
+            
+            if(lstCreatMandate.size() > 0){
+                
+                insert lstCreatMandate;
+                
+                //mandate products creation
+                String strOppid = iOpp.id;
+                DescribeSObjectResult describeResultMP = Opportunity_Line_Item__c.getSObjectType().getDescribe(); 
+                List<String> fieldNamesMP = new List<String>( describeResultMP.fields.getMap().keySet() );  
+                String queryMP = ' SELECT ' + String.join( fieldNamesMP, ',' ) +' FROM ' + describeResultMP.getName() +' WHERE ';
+                queryMP += ' Opportunity__c = :strOppid';  
+                
+                list<Opportunity_Line_Item__c>lstOLI = Database.query(queryMP);
+                
+                for(Opportunity_Line_Item__c iOLI : lstOLI){
+                    
+                    Mandate_Line_Item__c iManLI = new Mandate_Line_Item__c();
+                    iManLI.Mandate__c = lstCreatMandate[0].id;
+                    iManLI.Opportunity_Line_Item_C__c = iOLI.id;
+                    
+                    for(OLI_to_MLI_Mapping__c iOLIMLI : OLI_to_MLI_Mapping__c.getAll().values()){
+                        
+                        iManLI.put(iOLIMLI.Mandate_Line_Item_API_Name__c, iOLI.get(iOLIMLI.Opportunity_Line_Item_API_Name__c));
+                    }
+                    lstCreatMandateLinItems.add(iManLI);    
+                }
+                if(lstCreatMandateLinItems.size() > 0){
+                    
+                    insert lstCreatMandateLinItems;
+                    
+                    for(Mandate_Line_Item__c iMLI : [SELECT id, Opportunity_Line_Item_C__c FROM Mandate_Line_Item__c
+                                                     WHERE id IN :lstCreatMandateLinItems]){
+                                                         
+                                                         mapMLIIdToOLIId.put(iMLI.Opportunity_Line_Item_C__c, iMLI.id);
+                                                     }        
+                    
+                    //mandate product line items creation
+                    DescribeSObjectResult describeResultOPLI = Opportunity_Product_Line_Items__c.getSObjectType().getDescribe(); 
+                    List<String> fieldNamesOPLI = new List<String>( describeResultOPLI.fields.getMap().keySet() );  
+                    String queryOPLI = ' SELECT ' + String.join( fieldNamesOPLI, ',' ) +' FROM ' + describeResultOPLI.getName() +' WHERE ';
+                    queryOPLI += ' Opportunity_Line_Item_C__c IN :lstOLI';  
+                    
+                    list<Opportunity_Product_Line_Items__c>lstOppPLI = Database.query(queryOPLI);
+                    
+                    for(Opportunity_Product_Line_Items__c iOPLI : lstOppPLI){
+                        
+                        Mandate_Product_Line_Item__c iManPLI = new Mandate_Product_Line_Item__c();
+                        iManPLI.Mandate_Line_Item__c = mapMLIIdToOLIId.get(iOPLI.Opportunity_Line_Item_C__c);
+                        iManPLI.Mandate__c = lstCreatMandate[0].id;
+                        iManPLI.Opportunity_Product_Line_Items__c = iOPLI.id;
+                        
+                        for(OPLI_to_Mandate_PLI_Mapping__c iOPLIMPLI : OPLI_to_Mandate_PLI_Mapping__c.getAll().values()){
+                            
+                            iManPLI.put(iOPLIMPLI.Mandate_Product_Line_Item_API_Name__c, iOPLI.get(iOPLIMPLI.Opportunity_Product_Line_Items_API_Name__c));
+                        }
+                        lstMandateProdLinItems.add(iManPLI);    
+                    }     
+                    
+                    if(lstMandateProdLinItems.size() > 0){
+                        
+                        insert lstMandateProdLinItems;
+                    }
+                    
+                    //Mandate Product Team Creation
+                    DescribeSObjectResult describeResultOPT = Opportunity_Product_Team__c.getSObjectType().getDescribe(); 
+                    List<String> fieldNamesOPT = new List<String>( describeResultOPT.fields.getMap().keySet() );  
+                    String queryOPT = ' SELECT ' + String.join( fieldNamesOPT, ',' ) +' FROM ' + describeResultOPT.getName() +' WHERE ';
+                    queryOPT += ' Opportunity_Line_Item_C__c IN :lstOLI';  
+                    
+                    list<Opportunity_Product_Team__c>lstOppPT = Database.query(queryOPT);
+                    
+                    for(Opportunity_Product_Team__c iOPT : lstOppPT){
+                        
+                        Mandate_Product_Team__c iMPT = new Mandate_Product_Team__c();
+                        iMPT.Designation__c = iOPT.Designation__c;
+                        iMPT.Mandate_Line_Item__c = mapMLIIdToOLIId.get(iOPT.Opportunity_Line_Item_C__c);
+                        iMPT.Man_Days_Charge__c = iOPT.Man_Days_Charge__c;
+                        iMPT.No_of_Days__c = iOPT.No_of_Days__c;
+                        iMPT.Total_Amount__c = iOPT.Total_Amount__c;
+                        lstinsrtManProdTeams.add(iMPT);
+                    }
+                    
+                    if(lstinsrtManProdTeams.size() > 0){
+                        
+                        insert lstinsrtManProdTeams;
+                    }
+                    
+                    //Related Company Update
+                    for(Related_Company__c iRC : [SELECT id, Company_Type__c, Account__c FROM Related_Company__c WHERE Opportunity__c = :strOppid]){
+                        
+                        Related_Company__c irow = new Related_Company__c();
+                        irow.Company_Type__c = iRC.Company_Type__c;
+                        irow.Account__c = iRC.Account__c;
+                        irow.Mandate__c = lstCreatMandate[0].id;
+                        lstRelCompany.add(irow);
+                    }
+                    if(lstRelCompany.size() > 0){
+                        insert lstRelCompany;
+                    }
+                }
+            }             
+        }   
+    }
+}

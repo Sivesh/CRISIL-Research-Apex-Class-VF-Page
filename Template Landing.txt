@@ -1,0 +1,91 @@
+public class template_landing {
+    @AuraEnabled
+     public static List<wrapperlist> fetchProduct_Category(id Recordoppid) {
+         map<string,wrapperlist> upwrapperlist = new map<string,wrapperlist>();
+         for(Opportunity_Line_Item__c iol: [select id,Product_Type__c,Opportunity__c,Opportunity__r.Business_Type__c,Opportunity__r.id,Cost_Center__c,Product_Category__r.name from Opportunity_Line_Item__c where Opportunity__c=:Recordoppid])
+         {
+            if((iol.Cost_Center__c == 'Customised' || iol.Cost_Center__c == 'Data' || iol.Cost_Center__c == 'Funds and Fixed Income' || iol.Cost_Center__c == 'Industry')  && iol.Product_Type__c == 'Customized')
+            { 
+                 wrapperlist iwrapper = new wrapperlist();
+                 iwrapper.template_name = 'Customized Proposal';
+                 iwrapper.url = '/apex/Customize_Research_Proposal?id='+iol.Opportunity__r.Id;
+                 upwrapperlist.put(iwrapper.template_name,iwrapper);
+            }
+            
+            if(iol.Cost_Center__c == 'Executive Training' && iol.Product_Category__r.name == 'Inhouse Training' && iol.Product_Type__c == 'Training')
+            { 
+                 wrapperlist iwrapper3 = new wrapperlist();
+                 iwrapper3.template_name = 'Training - Order Form';
+                 iwrapper3.url = '/apex/Inhouse_Training_Order?id='+iol.Opportunity__r.Id;
+                 upwrapperlist.put(iwrapper3.template_name,iwrapper3);
+            }
+            if(iol.Cost_Center__c == 'Funds and Fixed Income' && iol.Product_Category__r.name == 'Valuation' && iol.Product_Type__c == 'Standard')
+            { 
+                 wrapperlist iwrapper4 = new wrapperlist();
+                 iwrapper4.template_name = 'Valuation - Order Form';
+                 iwrapper4.url = '/apex/Order_Form_Validation?id='+iol.Opportunity__r.Id;
+                 upwrapperlist.put(iwrapper4.template_name,iwrapper4);
+            }
+            if(iol.Cost_Center__c == 'Funds and Fixed Income' && iol.Product_Type__c == 'Standard')
+            { 
+                 wrapperlist iwrapper5 = new wrapperlist();
+                 iwrapper5.template_name = 'F&FI Proposal';
+                 iwrapper5.url = '/apex/Order_Form_Validation?id='+iol.Opportunity__r.Id;
+                 upwrapperlist.put(iwrapper5.template_name,iwrapper5);
+            }
+            if(iol.Cost_Center__c == 'Funds and Fixed Income' && iol.Product_Category__r.name == 'Mutual Funds' && iol.Product_Type__c == 'Standard')
+            { 
+                 wrapperlist iwrapper6 = new wrapperlist();
+                 iwrapper6.template_name = 'MF licensing - Agreement';
+                 iwrapper6.url = '/apex/MF?id='+iol.Opportunity__r.Id;
+                 upwrapperlist.put(iwrapper6.template_name,iwrapper6);
+            }
+            if(iol.Cost_Center__c == 'Industry' && iol.Opportunity__r.Business_Type__c == 'New' && iol.Product_Type__c == 'Standard')
+            { 
+                 wrapperlist iwrapper7 = new wrapperlist();
+                 iwrapper7.template_name = 'IR Proposal';
+                 iwrapper7.url = '/apex/Industry_Research_New?id='+iol.Opportunity__r.Id;
+                 upwrapperlist.put(iwrapper7.template_name,iwrapper7);
+            }
+            if(iol.Cost_Center__c == 'Data' && iol.Opportunity__r.Business_Type__c == 'New' && iol.Product_Type__c == 'Standard')
+            { 
+                 wrapperlist iwrapper8 = new wrapperlist();
+                 iwrapper8.template_name = 'Data';
+                 iwrapper8.url = '/apex/Data_New?id='+iol.Opportunity__r.Id;
+                 upwrapperlist.put(iwrapper8.template_name,iwrapper8);
+            }
+            if(iol.Cost_Center__c == 'Industry' && iol.Opportunity__r.Business_Type__c == 'Renewal' && iol.Product_Type__c == 'Standard')
+            { 
+                 wrapperlist iwrapper7 = new wrapperlist();
+                 iwrapper7.template_name = 'IR Proposal';
+                 iwrapper7.url = '/apex/Industry_Renewal?id='+iol.Opportunity__r.Id;
+                 upwrapperlist.put(iwrapper7.template_name,iwrapper7);
+            }
+            if(iol.Cost_Center__c == 'Data' && iol.Opportunity__r.Business_Type__c == 'Renewal' && iol.Product_Type__c == 'Standard')
+            { 
+                 wrapperlist iwrapper8 = new wrapperlist();
+                 iwrapper8.template_name = 'Data';
+                 iwrapper8.url = '/apex/Industry_Data_Renewal_Proposal?id='+iol.Opportunity__r.Id;
+                 upwrapperlist.put(iwrapper8.template_name,iwrapper8);
+            }
+            /*
+             wrapperlist iwrapper7 = new wrapperlist();
+             iwrapper7.template_name = 'Software Licence Key Terms';
+             iwrapper7.url = '/apex/Software_License_Master_Key_Terms?id='+iol.Opportunity__r.Id;
+             upwrapperlist.put(iwrapper7.template_name,iwrapper7);
+             
+             wrapperlist iwrapper8 = new wrapperlist();
+             iwrapper8.template_name = 'Quotation Template';
+             iwrapper8.url = '/apex/Quotation?id='+iol.Opportunity__r.Id;
+             upwrapperlist.put(iwrapper8.template_name,iwrapper8); */
+         }
+         system.debug(upwrapperlist.values());
+         return upwrapperlist.values();     
+     }
+     public class wrapperlist
+     {
+        @AuraEnabled public string template_name {get;set;}
+        @AuraEnabled public string url {get;set;}
+     
+     }
+   }

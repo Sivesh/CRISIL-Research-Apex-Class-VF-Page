@@ -1,0 +1,155 @@
+public class Invoice_Template_Single {
+    
+    @AuraEnabled
+    public static List<wrapperlist> fetchProduct_Category(id Recordbillid) {
+        map<string,wrapperlist> upwrapperlist = new map<string,wrapperlist>();
+        //map<string,wrapperlist> liuwrapperlist = new map<string,wrapperlist>();
+        for(OFA_Product_Line_Items__c ofa: [select id,Product_Category__r.Name, Product_Category__r.OFA_Product_Category_Id__c,
+                                            Billing__r.id , Billing_Line_Item__r.id, Billing_Line_Item__r.Particulars__c, 
+                                            Billing_Line_Item__r.Amount__c, Billing_Line_Item__r.Billing_Type__c, Billing__r.Billing_Type__c,
+                                            Billing__r.Invoice_PDF_Generated__c, Billing__r.Invoice_Open_Training_PDF_Generated__c 
+                                            From OFA_Product_Line_Items__c where Billing__c =: Recordbillid]){
+                                                
+                                                if(ofa.Product_Category__r.OFA_Product_Category_Id__c != '200109')
+                                                { 
+                                                    wrapperlist iwrapper = new wrapperlist();
+                                                    iwrapper.template_name = 'Invoice';
+                                                    iwrapper.url = '/apex/OFA_Billing_Format_Preview?id='+ofa.Billing__r.Id;
+                                                    if(ofa.Billing__r.Invoice_PDF_Generated__c == TRUE){                                                        
+                                                        iwrapper.iInvoiceGenerated = TRUE;
+                                                    }else{
+                                                        iwrapper.iInvoiceGenerated = FALSE;
+                                                    }
+                                                    upwrapperlist.put(iwrapper.template_name,iwrapper);
+                                                    
+                                                    wrapperlist iwrapper01 = new wrapperlist();
+                                                    iwrapper01.template_name = 'Invoice without Contact Name';
+                                                    iwrapper01.url = '/apex/OFA_Without_Contact_Preview?id='+ofa.Billing__r.Id;
+                                                    if(ofa.Billing__r.Invoice_PDF_Generated__c == TRUE){                                                        
+                                                        iwrapper01.iInvoiceGenerated = TRUE;
+                                                    }else{
+                                                        iwrapper01.iInvoiceGenerated = FALSE;
+                                                    }                                                    
+                                                    upwrapperlist.put(iwrapper01.template_name,iwrapper01);
+                                                }
+                                                
+                                                if(ofa.Product_Category__r.OFA_Product_Category_Id__c == '200109')
+                                                { 
+                                                    wrapperlist iwrapper3 = new wrapperlist();
+                                                    iwrapper3.template_name = 'Invoice for Open Training';
+                                                    iwrapper3.url = '/apex/Invoice_Open_Training_Preview?id='+ofa.Billing__r.Id;
+                                                    if(ofa.Billing__r.Invoice_Open_Training_PDF_Generated__c == TRUE){                                                        
+                                                        iwrapper3.iInvoiceGenerated = TRUE;
+                                                    }else{
+                                                        iwrapper3.iInvoiceGenerated = FALSE;
+                                                    }                                                    
+                                                    upwrapperlist.put(iwrapper3.template_name,iwrapper3);
+                                                    
+                                                    wrapperlist iwrapper03 = new wrapperlist();
+                                                    iwrapper03.template_name = 'Invoice without Contact Open Training';
+                                                    iwrapper03.url = '/apex/Open_Training_Without_Contact_Preview?id='+ofa.Billing__r.Id;
+                                                    if(ofa.Billing__r.Invoice_Open_Training_PDF_Generated__c == TRUE){                                                        
+                                                        iwrapper03.iInvoiceGenerated = TRUE;
+                                                    }else{
+                                                        iwrapper03.iInvoiceGenerated = FALSE;
+                                                    }                                                    
+                                                    upwrapperlist.put(iwrapper03.template_name,iwrapper03);
+                                                }
+                                                
+                                                /* if((ofa.Product_Category__r.OFA_Product_Category_Id__c == '200109') || (ofa.Product_Category__r.OFA_Product_Category_Id__c != '200109'))
+{ 
+wrapperlist iwrapper4 = new wrapperlist();
+iwrapper4.template_name = 'Credit Note';
+iwrapper4.url = '/apex/Credit_Note?id='+ofa.Billing__r.Id;
+upwrapperlist.put(iwrapper4.template_name,iwrapper4);
+}*/
+                                                
+                                            }
+        
+        for(Billing_Line_Item__c bli:[Select id, Particulars__c, Amount__c, Billing__r.id, Billing__r.Billing_Type__c, 
+                                      Billing__r.OPE_Invoice_Generated__c From Billing_Line_Item__c Where Billing__c =: Recordbillid]){
+                                          
+                                          if((bli.Billing__r.Billing_Type__c == 'OPE') && (bli.Particulars__c != ''))
+                                          { 
+                                              wrapperlist iwrapper5 = new wrapperlist();
+                                              iwrapper5.template_name = 'OPE Invoice';
+                                              iwrapper5.url = '/apex/OPE_Invoice_Preview?id='+bli.Billing__r.Id;
+                                              if(bli.Billing__r.OPE_Invoice_Generated__c == TRUE){                                                        
+                                                  iwrapper5.iInvoiceGenerated = TRUE;
+                                              }else{
+                                                  iwrapper5.iInvoiceGenerated = FALSE;
+                                              }                                                  
+                                              upwrapperlist.put(iwrapper5.template_name,iwrapper5);
+                                              
+                                              wrapperlist iwrapper05 = new wrapperlist();
+                                              iwrapper05.template_name = 'OPE Invoice Without Contact';
+                                              iwrapper05.url = '/apex/OPE_Invoice_without_Contact_Preview?id='+bli.Billing__r.Id;
+                                              if(bli.Billing__r.OPE_Invoice_Generated__c == TRUE){                                                        
+                                                  iwrapper05.iInvoiceGenerated = TRUE;
+                                              }else{
+                                                  iwrapper05.iInvoiceGenerated = FALSE;
+                                              }                                               
+                                              upwrapperlist.put(iwrapper05.template_name,iwrapper05);
+                                          }
+                                          
+                                      }
+        
+        system.debug(upwrapperlist.values());
+        return upwrapperlist.values();     
+    }
+    public class wrapperlist
+    {
+        @AuraEnabled public string template_name {get;set;}
+        @AuraEnabled public string url {get;set;}
+        @AuraEnabled public Boolean iInvoiceGenerated {get;set;}
+    }
+    
+   /* @AuraEnabled
+    public static void savePDFBilling(String parentId){
+        
+        PageReference pdfPage = new PageReference('/apex/OFA_Billing_Format');
+        pdfPage.getParameters().put('Id', parentId);
+        Blob pdfContent = pdfPage.getContent();
+        
+        Attachment attach1 = new Attachment();
+        attach1.ParentId = parentId;
+        attach1.Name = 'OFA Billing';
+        attach1.Body = pdfContent;
+        attach1.contentType = 'application/pdf';
+        insert attach1;
+        
+    } */
+    
+    @AuraEnabled
+    public static List<wrapperlist> fetchProduct_CategoryCredit(id RecordCreditbillid) {
+        map<string,wrapperlist> upwrapperlistcredit = new map<string,wrapperlist>();
+        //map<string,wrapperlist> liuwrapperlist = new map<string,wrapperlist>();
+        for(OFA_Product_Line_Items__c ofacredit : [select id,Product_Category__r.Name, Product_Category__r.OFA_Product_Category_Id__c,
+                                                   Billing__r.id , Billing_Line_Item__r.id, Billing_Line_Item__r.Particulars__c, 
+                                                   Billing_Line_Item__r.Amount__c, Billing_Line_Item__r.Billing_Type__c, Billing__r.Billing_Type__c,
+                                                   Billing__r.Invoice_PDF_Generated__c
+                                                   from OFA_Product_Line_Items__c where Billing__c =: RecordCreditbillid]){
+                                                       
+                                                       if((ofacredit.Product_Category__r.OFA_Product_Category_Id__c == '200109') || (ofacredit.Product_Category__r.OFA_Product_Category_Id__c != '200109'))
+                                                       { 
+                                                           wrapperlist iwrapper4 = new wrapperlist();
+                                                           iwrapper4.template_name = 'Credit Note';
+                                                           iwrapper4.url = '/apex/Credit_Note?id='+ofacredit.Billing__r.Id;
+                                                           upwrapperlistcredit.put(iwrapper4.template_name,iwrapper4);
+                                                       }
+                                                       
+                                                   }
+        
+        
+        system.debug(upwrapperlistcredit.values());
+        return upwrapperlistcredit.values();     
+    }
+    public class wrapperlistcredit
+    {
+        @AuraEnabled public string template_name_credit {get;set;}
+        @AuraEnabled public string url {get;set;}
+        
+    }
+    
+    
+}

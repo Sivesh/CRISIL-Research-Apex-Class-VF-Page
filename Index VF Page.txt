@@ -1,0 +1,601 @@
+<apex:page controller="Industry_Research_New" contentType="application/msWord#Index Licensing Terms and Conditions.doc">
+    <html>
+        <p style="text-align: center; font-family: Arial;"><span style="font-size: 10pt;"><strong>Index Licensing Terms and Conditions</strong></span></p>
+        <table style="border-collapse: collapse; width: 100%;" border="0">
+            <tbody>
+                <tr>
+                    <td style="width: 50%;">
+                        <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>1.Definitions and Interpretation</strong></span></p>
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">1.1</span></td>
+                                    <td style="width: 92.8169%;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Definitions are given in clause 12</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">1.2</span></td>
+                                    <td style="width: 92.8169%;">
+                                        <p><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Interpretation:</span></p>
+                                        <ol style="list-style-type: lower-alpha;">
+                                            <li><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Reference to one gender includes the reference to other genders. </span></li>
+                                            <li><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Grammatical variations of a defined term have corollary meaning.</span></li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>2.Agreement Framework:</strong></span><br />
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">2.1</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">These T&amp;C apply separately to each Order Form executed by the parties.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">2.2</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Affiliates of the Client may execute Order Forms for subscription to the Servicesprovided by CRISIL or its Affiliates, each referencing the T&amp;C. Each such Order Form shall be deemed to incorporate the T&amp;C and together with the T&amp;Cshall constitute a separate agreement as between the relevant contracting parties. In each such case in the Agreement, "Client" will refer to the Affiliate of the Client executing the Order Form and "CRISIL" will refer to, as applicable, CRISIL or its Affiliate executing the Order Form.</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>3.Grant of Licence and Terms of Use:</strong></span><br />
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">3.1</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Subject to the terms and conditions of the Agreement, CRISIL grants to the Client a non-exclusive, non-transferable licence tousethe Services during the Term for no purpose other thanthe Permitted Use.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">3.2</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;">
+                                        <p><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Client shall not use any part of any Service otherwise than as permitted by the Agreement. Without limiting the foregoing, the Client may not:</span></p>
+                                        <ol style="list-style-type: lower-alpha;">
+                                            <li><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Redistribute, resell, display, reproduce or publish any part of any Service, other than as expressly permitted bythis Agreement;</span></li>
+                                            <li><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">use any part of any Service to create any other product or index (whether, single, composite or otherwise)without the express prior written consent of CRISIL in each case; </span></li>
+                                            <li><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">directly or indirectlypermit any third party or users to do what it is not permitted to do under this Agreement; or </span></li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">3.3</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;">
+                                        <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">In using the Services in accordance with this Agreement, Client shall:</span></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="width: 50%; padding-left: 20px;">
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">a.</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;">
+                                        <p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">use the full name of the eachService as identified in the Order Form in all references to or use of the Service;</span></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">b.</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;">
+                                        <p style="text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">clearly and prominently identify the Service as data compiled by CRISIL in a manner specified by CRISIL;</span></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">c.</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;">
+                                        <p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">ensure that, the latest text of the disclaimer(s) and&amp;nbsp;copyright notice of CRISIL as communicated to the Client in writing by CRISIL are displayed with reasonable prominence in all its products and services that use the Services (as permitted). The current disclaimer(s) and copyright notice of CRISIL are as follows (Client acknowledges that CRISIL may by a prior written notice to Client revise any of these):</span></p>
+                                        <p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">CRISIL Disclaimer and Copyright Notice:</span></p>
+                                        <p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">"&copy; CRISIL Limited [current year]. All Rights Reserved "CRISIL has taken reasonable care in compilation of the NAV &amp; portfolio data or any part there of (Data) provided herein. The Data has been obtained by CRISIL from publicly available third party sources, which it considers reliable. In compilation of the Data, CRISIL does not independently validate the Data or any part of the Data and assumes the Data is accurate. However, CRISIL does not guarantee the accuracy, adequacy or completeness of any Data and is not responsible for any errors or omissions or for the results obtained from the use of such Data. CRISIL especially states that it has no financial liability whatsoever to the users/subscribers/customers/ of this Data or any product or services of the Licensee where the Data is used. CRISIL or any of its directors/ employees/ representatives does not accept any liability for any direct or consequential loss arising from the use of the Data contained herein. . This Data may not be reproduced or redistributed or communicated directly or indirectly in any form or published or copied in whole or in part except as authorized by CRISIL. Unless CRISIL has expressly agreed in writing, the Data or any part thereof is not intended for use outside India. By accessing and/or using any part of the Data, the user accepts the foregoing disclaimers and exclusion of liability." Any amendments in this Disclaimer will be effected by The Licensee in consultation with CRISIL.</span></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="border-collapse: collapse; width: 100%;" border="0">
+            <tbody>
+                <tr>
+                    <td style="width: 50%;">
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">3.4</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;">
+                                        <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Client may issue its own disclaimers in addition to CRISIL disclaimer, provided that any such disclaimer is separate from CRISIL disclaimers, relates only to Client's own products or services to its clients or users and which CRISIL has consented to in writing in advance. </span></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">3.5</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;">
+                                        <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">CRISIL may at its discretion make any changes with respect to the Services. </span></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>4. Delivery of the Services</strong></span></p>
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">4.1</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Except where clause 4.3 applies, CRISIL shall provide the Information under the relevant Service(s)for each working day on a T+1 working day basis via email at the email address specified by the Client. The Service(s) will ordinarily be sent to the Client by (or around) 1930 hours. CRISIL may change the format, delivery mode or timingby a reasonable prior written notice to the Client. Client acknowledges that CRISIL's delivery time may be impacted due to unforeseen factors that are beyond the control of CRISIL, including but not limited to, extended trading hours, high volatility, lack of trading activity, server breakdowns, etc. If that is the case, CRISIL will use reasonable endeavours to notify Client about the impact and as soon as reasonably practicable deliver or resume the impacted Service.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">4.2</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">The format for the provision of the Information shall be as CRISIL generally provides to its clients from time to time. If on Client request CRISIL agrees to provide the Information in a format requested for by the Client, additional Fees may apply which CRISIL will notify Client on request.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">4.3</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">The Order Form may state that the Services will be delivered through a Distributor. In such a case, the Client acknowledges that: (a) Client's use of the Services will continue to be governed by this Agreement and that the role of the Distributor will be limited to delivering the Services under an agreement between the Client and the Distributor; (b) the Distributor will be responsible for delivery of the Services to Client (subject to CRISIL delivering the Services to the Distributor).</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>5.Charges</strong></span><br />
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">5.1</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Client shall pay to CRISIL the Chargeswithout deduction except as stated in clause 5.4(b) below. Invoiced amounts are payable within 15calendar days of Client's receipt of the relevant invoice from CRISIL (Due Date).</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="width: 50%; padding-left: 20px;">
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Charges are payable in equivalent Indian Rupees.CRISIL will use the reference rate published by the Reserve Bank of India (or if that is not available another generally accepted conversion rate) as available proximate to the date of raising invoices for conversion of the Charges to equivalent Indian Rupees. CRISIL may apply a service charge calculated at the rate of 1.5% per month for each day from the Due Date that Charges remain unpaid. Except as stated in clause 7.8, Charges are not refundable. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">5.2</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Payment schedule for the Charges will be as stated in the Order Form. If the Order Form does not state any payment schedule, then CRISIL shall invoice annually in advance in the case of on-going Services and the whole of the Charges at the start of the Order Form in the case of one-time Services. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">5.3</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">In the case of on-going Services, CRISIL may revise the Fees by giving Client a written notice. To the extent practicable, CRISIL will discuss with Client its intentions of revising the Fees. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">5.4</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;">
+                                        <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Taxes and Statutory Levies</span></p>
+                                        <span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">In addition to Fees, Client shall pay CRISIL all applicable taxes and statutory levies as may apply, such that after paying the applicable taxes and statutory levies, the Fees that CRISIL receives, is not less than as set out in the Order Form. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%; font-family: arial, helvetica, sans-serif; font-size: 10pt;" valign="top">b</td>
+                                    <td style="width: 92.8169%; text-align: justify;">
+                                        <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Taxes and Statutory Levies</span></p>
+                                        <span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Where Client is located in India and makes payment under the Agreement out of its offices in India (and not otherwise) the following provisions shall apply with respect to payment of Charges: </span> <span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;"> Client may deduct income tax at source from the payments it makes under this Agreement at the least rate required for the Client to comply with applicable tax laws (TDS).<br /></span> <span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;"> In the case of each TDS, Client shall within the timeline specified under law (or if no timeline is specified under law, within 3 months from the date Client deducts TDS) provide CRISIL with a certificate or relevant document evidencing Client having complied with applicable tax laws with respect to the TDS (TDS Certificate).<br /></span> <span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;"> If Client fails to provide the TDS Certificate as stated afore, Client shall pay CRISIL such amount as would after TDS be equivalent to the amount covered TDS Certificate not provided by the Client.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"></td>
+                                    <td style="width: 92.8169%; text-align: justify;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="border-collapse: collapse; width: 100%;" border="0">
+            <tbody>
+                <tr>
+                    <td style="width: 50%;">
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Client agrees that such amount shall be recoverable as a debt from the Client.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">c</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">The fees and any amounts payable under the Order Form are exclusive of all applicable taxes (including GST), levies, duties etc.Any such tax will be charged over and above the fees and amounts payable to CRISIL under the Order Form. The GST registration number ("GSTIN") provided by the Client will be used by CRISIL for filing of the GST returns.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">d</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">With regards to the applicability of Goods and Services Tax, the Client's address as mentioned for the purposes of GST will be considered as the consumption location for the Services provided by CRISIL under the Order Form.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">e</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">CRISIL shall not be liable for loss of credit arising on account of incomplete, erroneous or wrong details captured by the Client in the details and documents uploaded to the GSTN. Additionally the Client shall be responsible and liable for providing its correct GSTIN and CRISIL will not be responsible for verification of the Client's GSTIN. Where the Client fails to furnish its GSTIN, CRISIL will treat the Client as being unregistered for GSTIN.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">f</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Where CRISIL issues a credit note to the Client in relation to any invoice, the Client shall adjust and upload its Input Tax Credit on the GSTN on or before the end of the month in which the credit note is issued by CRISIL to the Client. If the Client fails to do so, and this results in additional liability for CRISIL, Client shall be liable to be reimburse CRISIL for any liability incurred by CRISIL (being the tax, interest and any penalties thereon).</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>6.Warranty</strong></span><br />
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">6.1</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Each party warrants that it is a legal entity validly existing under the relevant laws and regulations governing it and that it has the right to enter into and perform the obligations in the Agreement.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">6.2</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">CRISIL warrants that it will provide the Services with reasonable care and skill. EXCEPT FOR THE FOREGOING, THERE ARE NO OTHER WARRANTIES OR REPRESENTATIONS OF WHATEVER NATURE, WHETHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, WARRANTIES OF FITNESS OF PURPOSE, NON-INFRINGEMENT, OR THAT THE SERVICES ARE ERROR-FREE OR WILL BE PROVIDED WITHOUT INTERRUPTION.</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>7.Term and Termination</strong></span><br />
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">7.1</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">In the case of on-going Services, the Order Form shall take effect on and from the date CRISIL starts providing the Services to </span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="width: 50%; padding-left: 20px;">
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">the Client under the Order Form and shall continue for successive one year periods, unless terminated earlier in accordance with this clause 7.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">7.2</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">In the case of one-time Services, (e.g. a one-time provision of historical values), the Order Form shall take effect on the date CRISIL first provides the Services under the Order Form and the term of the Services shall be for a period of 6 months thereafter, unless terminated earlier in accordance with this clause 7.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">7.3</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">A party may terminate an Order Form for an on-going Service by giving a prior written notice of at least 3 months, such notice to take effect no earlier than the end the then current one-year period. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">7.4</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">A party may terminate an Order Form with immediate effect by written notice to the other if the other party: (i) has materially breached this Agreement and that breach is incapable of remedy or where the breach is capable of remedy the other party has not remedied it within 1 month of receiving a written notice of the breach; or (ii) reorganises, reconstructs or</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"> otherwise undergoes a change in constitution (otherwise than for the purpose of solvent amalgamation or reconstruction where the emerging company assumes the obligations of the party); or (iii) becomes bankrupt, insolvent and/or is unable to pay its debts as they fall due, enters liquidation, is wound up, compounds with its creditors or has an administrator, receiver or other such person appointed over all or any part of its assets or otherwise takes or suffers any similar action in any jurisdiction, or threatens or resolves to do any of the above in consequence of debt.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">7.5</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">CRISIL may without impairing its rights or incurring liability suspendany on-going Services under an Order Form in the event Client has materially breached clauses 3.1through 3.3 (inclusive).</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">7.6</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">CRISIL may terminate an Order Form if the performance of its obligations under the Order Form is dependent upon a third party contract with CRISIL and that third party: (i) terminates its contract with CRISIL or prevents access to essential data or information; (ii) materially breaches its obligations under the contract; or (ii) refuses to renew the contract except on unreasonable terms. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">7.7</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">CRISIL may terminate an Order Formfor on-going Services with immediate effect if any organization which is a competitor of CRISIL acquires control of Client.</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br/>
+        <table style="border-collapse: collapse; width: 100%;" border="0">
+            <tbody>
+                <tr>
+                    <td style="width: 50%;">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">7.8</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Upon termination or cancellation of an Order Form in accordance with sub-items (ii) or (iii) of clause 7.4, or clauses 7.6 or 7.7, CRISIL will refund to Client any Fees paid by Client in advance for the cancelled part of the Term on a pro-rata basis of the Order Form, subject to adjustments against any unpaid dues.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">7.9</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Upon termination, Client shall cease all use of the Services and shall delete from its systems and record all copies of the Services, except: (a)for one copy that is required to be stored for compliance with law or regulation or for archival purposes, provided that such copy shall not be used for any purpose other than that; and (b)for analyses, notes and other material prepared by Client using the Services and which are retained only for Client's own internal business use.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">7.10</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Clauses 1, 5 (to the extent of unpaid dues), 6, 7.8,7.9,7.10,7.11, and 8 through 12 (inclusive) will survive termination or expiration of this Agreement for any reason.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">7.11</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Termination of an Order Form will not affect: (a)the right of a party under that Order Form as shall have accrued up to the date of expiry, termination, or cancellation; or (b) any other Order Form that may continue to be in force. If no Order Form is in force, then this Agreement shall terminate, unless the parties expressly agree otherwise in writing. </span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>8. Intellectual Property Rights</strong></span><br />
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">8.1</span></td>
+                                    <td style="width: 92.8169%;">
+                                        <p><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Client acknowledges that:</span></p>
+                                        <ol style="list-style-type: lower-alpha;">
+                                            <li style="text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">as between the parties, CRISIL exclusively owns all intellectual property rights in: (i) the Services; </span></li>
+                                            <li style="text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">CRISIL Brands; and (b) any goodwill generated by the permitted use of CRISIL Brands inure exclusively to CRISIL.</span></li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">8.2</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Nothing in this Agreement grants to Client any right, title or interest in any Service or CRISIL Brands, except for a limited licence to use the Service and the CRISIL Brands as expressly permitted by these T&amp;C. Client may not use any CRISIL Brand conjoint with its own Brands or in a manner as may create new Brand(s).</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>9.Confidentiality</strong></span></p>
+                        <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Each receiving party of the disclosing party's Confidential Information will: </span></p>
+                    </td>
+                    <td style="width: 50%; padding-left: 20px;">
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">9.1</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">(i) keep confidential the Confidential Information and not use it for any purposes other than the performance of this Agreement, except as may be permitted elsewhere by this Agreement or by the Client in writing or as may be required to comply with law, a statutory requirement or judicial, quasi-judicial, statutory or government order or demand; (ii) where needed, disclose the Confidential Information to only those directly concerned with the performance of this Agreement, so long as it binds each recipient to confidentiality obligations no less onerous than as stated in the Agreement; (iii) delete for any device containing any Confidential Information or return to the disclosing party upon demand or termination of the Agreement, the confidential information except for one copy as may be required to be retained by law, regulation, professional standards or reasonable business practice. Confidential Information with respect to a disclosing party means the information of a business, technical or financial nature belonging or pertaining to a party or its Affiliate or their customers, suppliers or parties they deal with shared or madeavailable in any form to the receiving party or its Affiliates in the course of performance of the Agreement, which is marked or otherwise indicated as being or is, or ought reasonably to be, known to be confidential.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">9.2</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">The obligation of confidentiality does not apply to information which: (a) is, at the time of the disclosure, or subsequently through no act or omission of the party or receiving party or its permitted recipients, becomes generally available to the public; (b) becomes rightfully known to the receiving party or its permitted recipients through a third party with no obligation of confidentiality; (c) the receiving party is able to show was lawfully in the possession of the receiving party or its permitted recipients prior to such disclosure; or(d) is independently developed by the receiving party or its permitted recipients.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">9.3</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">This undertaking with respect to an item of Confidential Information will be throughout the Term and for a period of 3 years after termination of the Agreement.</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>10. Liability:</strong></span>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">10.1</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Client agrees to indemnify CRISIL and hold harmless, its directors, officers and employees, against any costs, loss, damages, claims </span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br/>
+        <table style="border-collapse: collapse; width: 100%;" border="0">
+            <tbody>
+                <tr>
+                    <td style="width: 50%;">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"></td>
+                                    <td style="width: 93.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">or expenses incurred or suffered by reason of provision of the Services, including, without limitation those that arise as a result of breach of Client's warranties set out above (but excluding those that arise as a result of CRISIL's breach of this Agreement).</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">10.2</span></td>
+                                    <td style="width: 93.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Under no circumstances will a party be liable for indirect or consequential losses, exemplary or special damages, or loss of profits, loss of business or economic loss even if advised of the possibility of such losses or damages. The foregoing shall apply regardless of whether such liability is based in contract, tort, (including but not limited to negligence) and strict liability or any other theory of legal liability.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">10.3</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Client assumes the entire risk as to Client's use of the Servicesand CRISIL expressly disclaims all liability with respect to any such use.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Without limiting clause 10.1, under no circumstances will CRISIL's aggregate liability in relation to a Service exceed the Fees paid by the Client to CRISIL in the latest 12 month period preceding the date of the claim for that Service. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">10.4</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">This applies regardless of the cause or form of action and even if the losses or damages could have been foreseen or that CRISIL was notified of the possibility of the losses or damages.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">10.5</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">A party shall not be liable to the other for failure or delay in its performance of its obligations under this Agreement (other than in the case of Client, its obligation to pay Charges as are due), to the extent such delay or failure or delay is caused by a force majeure cause.</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>11.GENERAL</strong></span><br />
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">11.1</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Failure or delay by a party in exercising any right or power under this Agreement will not constitute a waiver of such right or power whether in that instance or any subsequent instance.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">11.2</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">
+                                        Client may assign, transfer or novateany of its rights or obligations under this Agreement, provided Client obtains the prior written consent of CRISIL (which will not be unreasonably withheld). 
+                                        CRISIL may assign, transfer or novate any part of this Agreement to an Affiliate or CRISIL's successors in business upon a written notice to the Client.
+                                        For the avoidance of doubt, CRISIL may subcontract any part of its obligations, provided that CRISIL shall </span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="width: 50%; padding-left: 20px;">
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">remain responsible for the performance those obligations by its subcontractors. Any assignment, novation or transfer in breach of this clause 11.2 shall be null and void.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">11.3</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">The Agreement contains the entire agreement of the parties as to its subject matter and supersedes all prior agreements and understandings written or oral in relation to the subject matter. Each party acknowledges that in entering into this Agreement it has not relied on any representations made by the other party that are not expressed in this Agreement. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">11.4</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Except as otherwise stated in this Agreement, any amendment to this Agreement shall only be effective if in writing and executed by a duly authorized representative of each party. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">11.5</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">If any non-fundamental provision of this Agreement is determined to be illegal or unenforceable by any court of competent jurisdiction it shall be deemed to have been deleted without affecting the remaining provisions</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">11.6</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">This Agreement will be governed by and construed in accordance with the laws of India and the parties irrevocably submit to the jurisdiction of the courts of law in Mumbai, </span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">India and their appeal courts to settle any disputes that relate to this Agreement.</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>12.Sanctions:</strong></span>
+                        <p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">As of the date of this Agreement, (a) neither the Client nor any of its subsidiaries, or any director or corporate officer of any of the foregoing entities, is the subject of any economic or trade sanctions or restrictive measures issued by the United Nations, United States or European Union ("Sanctions"), (b) the Client is 50% or more owned or controlled, directly or indirectly, individually or collectively, by one or more persons or entities that is or are the subject of Sanctions, and (c) to the best of the Client's knowledge, no entity 50% or more owned or controlled by a direct or indirect parent of the Client is the subject of Sanctions.</span></p>
+                        <span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>13.Definitions:</strong></span>
+                        <p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Unless opposed to the context, the following terms have the meanings given to them when used in this Agreement. Where the context requires, grammatical variations of the defined terms below will have corollary meaning.</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        &amp;nbsp;
+        <table style="border-collapse: collapse; width: 100%;" border="0">
+            <tbody>
+                <tr>
+                    <td><br />
+                        <table style="border-collapse: collapse; width: 100%;" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">13.1</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Affiliate</strong> with respect to a party means an entity which controls, is controlled by or is under common control with, the party. "Control" means the ability to direct the policies and management of an entity.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.2</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Agreement</strong> means these T&amp;C together with the relevant Order Form and any schedules and annexure executed by the parties in respect of the Services.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.3</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Analysis</strong> means an internal analysis by the Client of the Portfolio. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.4</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Benchmarking</strong> means Client's use of a Service to measure relative performance of the Portfolio. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.5</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Brands</strong> means brands, logos, trade names, trademarks, brand features or other identifiers.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.6</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Charges</strong> means the Fees and other amounts payable by Client under this Agreement. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.7</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>CRISIL Index</strong> means the index calculated and provided by CRISIL under the relevant Service - as specified in the Order Form. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.8</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Distributor</strong> means a distributor, information provider or data aggregator through whom Client may choose to receive delivery of Services</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.9</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Fees</strong> means the Fees set out in the Order Form subject to revision in accordance with this Agreement. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.10</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Index Constituents</strong> means the constituents of the relevant CRISIL Index including, where applicable, their weightages - in each case as provided by CRISIL from time to time, provided that CRISIL is not obliged to provide the constituents comprising third party data or information. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.11</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Index Value</strong> is the numerical values of the relevant CRISIL Index.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.12</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Information</strong> means the information, data, values and other items and materials contained in or provided as a part of or in relation to a Service. </span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="width: 50%; padding-left: 20px;">
+                        <table>
+                            <tbody>
+                                
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.13</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Limited Extracts</strong> means extracts of (or charts prepared on the basis of) the Index Values made by Client for the purpose of performance assessment of either the CRISIL Index or Client's Portfolio. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.14</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Order</strong> Form means an order form executed by the relevant parties incorporating or referencing the T&amp;C, together with any related schedules and annexure. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.15</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Permitted</strong> Use means Analysis, [insert details]. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.16</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Portfolio</strong> meansthe portfolio of the Client or where the Client is a wealth manager, the portfolio of the Client's client in respect of whom the Client is a wealth manager. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.17</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Publishing</strong> means incorporating or using Limited Extracts in Client's factsheets or reports prepared to provide to: (i) Client's investors or Client's clients for their own internal business use; or (ii) Client's regulators. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.18</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Redistribute</strong> means distribution of any part of the Service outside the Client's organisation. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.19</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Service(s)</strong> means the relevant Service(s) subscribed to by Client from time to time - in each case as stated in the Order Form. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.21</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Start</strong> <strong>Date</strong> means the start date of an Order Form. </span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.21</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">T<strong>&amp;C</strong> means these index licensing terms and conditions together with any related annexure or schedule that the parties have agreed in writing.</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 7.1831%;" valign="top"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">13.22</span></td>
+                                    <td style="width: 92.8169%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Term</strong> means the term of the Order Form.</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br/>
+        <p style="font-family: arial, sans-serif; font-size: 10pt;">
+            AGREED:
+        </p>
+        <table style="border-collapse: collapse; width: 100%;" border="0">
+            <tbody>
+                <tr>
+                    <td style="width: 20.7386%; border: 1pt solid windowtext; padding: 0cm 5.4pt;" width="133">
+                        <p><span style="font-family: arial, sans-serif; font-size: 10pt;">Authorised Signature</span></p>
+                    </td>
+                    <td style="width: 39.0625%; border-top: 1pt solid windowtext; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-image: initial; border-left: none; padding: 0cm 5.4pt;" width="264">
+                        <p><span style="font-family: arial, sans-serif; font-size: 10pt;">{!iOpp.Account.Name}</span></p>
+                    </td>
+                    <td style="width: 40.0568%; border-top: 1pt solid windowtext; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-image: initial; border-left: none; padding: 0cm 5.4pt;" width="272">
+                        <p><span style="font-family: arial, sans-serif; font-size: 10pt;">CRISIL Limited</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 20.7386%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt;" width="133">
+                        <p><span style="font-size: 10pt; font-family: arial, sans-serif;">Name</span></p>
+                    </td>
+                    <td style="width: 39.0625%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt;" width="264">
+                        <p><span style="font-size: 10pt; font-family: arial, sans-serif;">{!iOpp.Billing_Contact_Person__r.Name}</span></p>
+                    </td>
+                    <td style="width: 40.0568%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt;" width="272">
+                        <p><span style="font-family: arial, sans-serif; font-size: 10pt;">{!iOpp.Director__r.Name}</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 20.7386%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt;" width="133">
+                        <p><span style="font-family: arial, sans-serif; font-size: 10pt;">Title</span></p>
+                    </td>
+                    <td style="width: 39.0625%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt;" width="264">
+                        <p><span style="font-family: arial, sans-serif; font-size: 10pt;">{!iOpp.Billing_Contact_Person__r.Designation__c}</span></p>
+                    </td>
+                    <td style="width: 40.0568%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt;" width="272">
+                        <p><span style="font-family: arial, sans-serif; font-size: 10pt;">{!iOpp.Director__r.HRMS_Designation__c}</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 20.7386%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt;" width="133">
+                        <p><span style="font-family: arial, sans-serif; font-size: 10pt;">Date of Signature</span></p>
+                    </td>
+                    <td style="width: 39.0625%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt;" width="264">
+                        <p></p>
+                    </td>
+                    <td style="width: 40.0568%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt;" width="272">
+                        <p></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </html>
+</apex:page>
